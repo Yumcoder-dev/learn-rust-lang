@@ -41,14 +41,14 @@
 %  \end{frame}
 %}
 \AtBeginSection[]{
-  \begin{frame}
-  \vfill
-  \centering
-  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
-    \usebeamerfont{title}\insertsectionhead\par%
-  \end{beamercolorbox}
-  \vfill
-  \end{frame}
+\begin{frame}
+\vfill
+\centering
+\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+\usebeamerfont{title}\insertsectionhead\par%
+\end{beamercolorbox}
+\vfill
+\end{frame}
 }
 %------------------------------------------------------------
 
@@ -63,27 +63,14 @@
 %------------------------------------------------------------
 \section{Installation}
 \begin{frame}[fragile]
-	\frametitle{Installing rustup on Linux or macOS}
-	If you’re using Linux or macOS, open a terminal and enter the following command:
-	\scriptsize
-	\begin{minted}[bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape]{shell}
-		curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
-	\end{minted}
+\frametitle{Installing rustup on Linux or macOS}
+If you’re using Linux or macOS, open a terminal and enter the following command:
+\scriptsize
+\inputminted[bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape]{shell}{/Users/yumcoder/Desktop/rust-lang/install.shell.tex}
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{Python Code listing in Beamer}
-	The following Python code adds two numbers and display the result using \verb|print()| function:
-	\scriptsize
-	\begin{minted}[bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape]{python}
-# This program adds two numbers
-num1 = 1.5
-num2 = 6.3
-# Add two numbers
-sum = num1 + num2
-# Display the sum
-print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
-	\end{minted}
+\frametitle{Python Code listing in Beamer}
 \end{frame}
 
 \section{Summary}
