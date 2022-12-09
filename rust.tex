@@ -1,0 +1,106 @@
+\documentclass{beamer}
+%\usepackage[utf8]{inputenc}
+%\usepackage{graphicx}
+%usepackage {mathtools}
+%\usepackage{utopia} %font utopia imported
+\usetheme{CambridgeUS}
+%\usecolortheme{default}
+\usepackage{minted}
+
+% set colors
+\definecolor{greyColor}{RGB}{242,242,245} % grey
+\definecolor{greenColor}{RGB}{51,112,98} % green
+\definecolor{yellowColor}{RGB}{246,202,84} % yellow
+
+\setbeamercolor*{palette primary}{bg=yellowColor}
+\setbeamercolor*{palette secondary}{bg=greyColor}
+\setbeamercolor*{palette tertiary}{bg=greenColor, fg = white}
+\setbeamercolor*{titlelike}{fg=greyColor}
+\setbeamercolor*{title}{bg=greenColor, fg = white}
+\setbeamercolor*{item}{fg=greenColor}
+\setbeamercolor*{caption}{fg=greenColor}
+
+\setbeamercolor{frametitle}{fg=black,bg=greyColor}
+
+%\usefonttheme{professionalfonts}
+%\usepackage{natbib}
+%\usepackage{hyperref}
+%------------------------------------------------------------
+
+\title[Rust-Lang]{Rust Programming Language}
+\author[Yumcoder]{Yumcoder}
+
+\institute[UoT]{University of Toronto}
+\date[{\today} ]
+{\today}
+
+%------------------------------------------------------------
+%This block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+%\AtBeginSection[]
+%{
+%  \begin{frame}
+%    \frametitle{Contents}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+%------------------------------------------------------------
+
+\begin{document}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+\begin{frame}
+\frametitle{Contents}
+\tableofcontents
+\end{frame}
+%------------------------------------------------------------
+\section{Installation}
+    \begin{frame}{Installing rustup on Linux or macOS}
+    	test 2
+    	One-line code formatting also works with \texttt{minted}. For example, a small fragment of HTML like this:
+    	\mint{html}|<h2>Something <b>here</b></h2>|
+    	\noindent can be formatted correctly.
+    \end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Python Code listing in Beamer}
+	The following Python code adds two numbers and display the result using \verb|print()| function:
+	%\rule{\textwidth}{1pt}
+	\scriptsize
+	\begin{minted}[bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape]{python}
+# This program adds two numbers
+num1 = 1.5
+num2 = 6.3
+# Add two numbers
+sum = num1 + num2
+# Display the sum
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
+	\end{minted}
+	%\rule{\textwidth}{1pt}
+\end{frame}
+
+\section{Summary}
+    \begin{frame}{Summary}
+ Summary of the above...
+    \end{frame}
+
+\section*{Acknowledgement}  
+\begin{frame}
+\Huge{\centerline{Thank you!}}
+\end{frame}
+
+\end{document}
+
+
+
