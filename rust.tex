@@ -23,8 +23,10 @@
 \setbeamercolor*{item}{fg=greenColor}
 \setbeamercolor*{caption}{fg=greenColor}
 \setbeamercolor{frametitle}{fg=black,bg=greyColor}
-
-\usemintedstyle{friendly_grayscale}
+% see https://pygments.org/styles/
+\usemintedstyle{friendly}
+% [bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape]
+\setminted[shell]{bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape}
 %------------------------------------------------------------
 \title[Rust-Lang]{Rust Programming Language}
 \author[Yumcoder]{Yumcoder}
@@ -87,7 +89,4 @@ Summary of the above...
 \end{frame}
 
 \end{document}
-
-
-% [bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape]
 
