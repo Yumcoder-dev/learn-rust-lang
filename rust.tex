@@ -474,24 +474,30 @@
 		\inputminted{shell}{./code/function-return3.shell}
 	\end{frame}
 	
-		\begin{frame}[fragile]
+	\begin{frame}[fragile]
 		\frametitle{if Expressions}
+		if expressions are sometimes called arms
 		\inputminted{rust}{./code/if.rs}
 	\end{frame}
-
-		\begin{frame}[fragile]
-	\frametitle{if Expressions (2)}
-	It’s also worth noting that the condition in this code must be a bool. If the condition isn’t a bool, we’ll get an error.
-	\begin{columns}
-	\column{0.4\textwidth}
-		\inputminted{rust}{./code/if-err.rs}
+	
+	\begin{frame}[fragile]
+		\frametitle{if Expressions (2)}
+		It’s also worth noting that the condition in this code must be a bool. If the condition isn’t a bool, we’ll get an error.
+		\begin{columns}
+			\column{0.5\textwidth}
+			\inputminted{rust}{./code/if-err.rs}
+			
+			\column{0.5\textwidth}
+			\inputminted{rust}{./code/if-err-correct.rs}
+		\end{columns}
 		\inputminted{shell}{./code/if-err.shell}
-	\column{0.5\textwidth}
-		\inputminted{rust}{./code/if-err-correct.rs}
-\end{columns}
-
-\end{frame}
-
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Using if in a let Statement}
+			\inputminted{rust}{./code/if-let.rs}
+	\end{frame}
+	
 	\section{Understanding Ownership}
 	\section{Using Structs to Structure Related Data}
 	\section{Enums and Pattern Matching}
