@@ -426,48 +426,58 @@
 		
 		\tiny
 		functions \textbf{parameters} are special variables that are part of a function’s signature. When a function has parameters, you can provide it with concrete values for those parameters. Technically, the concrete values are called \textbf{arguments}, but in casual conversation, people tend to use the words parameter and argument interchangeably.
-
+		
 	\end{frame}
-
+	
 	\begin{frame}[fragile]
 		\frametitle{Statements vs Expressions}
 		\begin{columns}
 			\column{0.4\textwidth}
 			\begin{block}{Statements}
-			are instructions that perform some action and do not return a value.
-		\end{block}
+				are instructions that perform some action and do not return a value.
+			\end{block}
 			\column{0.5\textwidth}
-				\begin{block}{Expressions}
+			\begin{block}{Expressions}
 				evaluate to a resulting value.
 			\end{block}
 		\end{columns}
-	\inputminted{rust}{./code/statements-expressions.rs}
+		\inputminted{rust}{./code/statements-expressions.rs}
 	\end{frame}
-
-
-\begin{frame}[fragile]
-	\frametitle{Functions with Return Values}
-	\begin{itemize}
-		\item Function bodies are made up of a series of statements optionally ending in an expression.
-		\item Calling a function is an expression.
-		\item Functions can return values to the code that calls them. 
-		\item We don’t name return values, but we must declare their type after an arrow (\mintinline{rust}| ->|). 
-		\item In Rust, the \textbf{return value of the function} is synonymous with \textbf{the value of the final expression in the block of the body} of a function. 
-		\item You can return early from a function by using the return keyword and specifying a value, but most functions return the last expression implicitly.
-	\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile]
-	\frametitle{Functions with Return Values (2)}
-	\inputminted{rust}{./code/function-return.rs}
-\end{frame}
-
-\begin{frame}[fragile]
-	\frametitle{Functions with Return Values (3)}
-	\inputminted{rust}{./code/function-return2.rs}
 	
-	The definition of the function \mintinline{rust}|plus_one|  says that it will return an \mintinline{rust}|i32| , but statements don’t evaluate to a value, which is expressed by \mintinline{rust}|()|, the unit type.
-\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Functions with Return Values}
+		\begin{itemize}
+			\item Function bodies are made up of a series of statements optionally ending in an expression.
+			\item Calling a function is an expression.
+			\item Functions can return values to the code that calls them. 
+			\item We don’t name return values, but we must declare their type after an arrow (\mintinline{rust}| ->|). 
+			\item In Rust, the \textbf{return value of the function} is synonymous with \textbf{the value of the final expression in the block of the body} of a function. 
+			\item You can return early from a function by using the return keyword and specifying a value, but most functions return the last expression implicitly.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Functions with Return Values (2)}
+		\inputminted{rust}{./code/function-return.rs}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Functions with Return Values (3)}
+		\inputminted{rust}{./code/function-return2.rs}
+		
+		The definition of the function \mintinline{rust}|plus_one|  says that it will return an \mintinline{rust}|i32| , but statements don’t evaluate to a value, which is expressed by \mintinline{rust}|()|, the unit type.
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Functions with Return Values (4)}
+		\inputminted{shell}{./code/function-return3.shell}
+	\end{frame}
+	
+		\begin{frame}[fragile]
+		\frametitle{if Expressions}
+		\inputminted{shell}{./code/function-return3.shell}
+	\end{frame}
 
 	\section{Understanding Ownership}
 	\section{Using Structs to Structure Related Data}
@@ -495,7 +505,7 @@
 	
 \end{document}
 
-	\begin{comment}
+\begin{comment}
 	\begin{frame}[fragile]
 		\frametitle{title}
 	\end{frame}
