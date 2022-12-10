@@ -495,9 +495,34 @@
 	
 	\begin{frame}[fragile]
 		\frametitle{Using if in a let Statement}
-			\inputminted{rust}{./code/if-let.rs}
+		Remember that blocks of code evaluate to the last expression in them, and numbers by themselves are also expressions
+		\inputminted{rust}{./code/if-let.rs}
+		
+		The results of both the if arm and the else arm should be in the same type. So, \mintinline{rust}|let number = if condition { 5 } else { "six" };| get panic error.
 	\end{frame}
 	
+
+	\begin{frame}[fragile]
+		\frametitle{Repetition with Loops}
+	\end{frame}
+
+	\begin{frame}[fragile]
+	\frametitle{Returning Values from Loops}
+\end{frame}
+
+Loop Labels to Disambiguate Between Multiple Loops
+
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Conditional Loops with while}
+\end{frame}
+
+	\begin{frame}[fragile]
+	\frametitle{Repetition with for}
+\end{frame}
+
 	\section{Understanding Ownership}
 	\section{Using Structs to Structure Related Data}
 	\section{Enums and Pattern Matching}
