@@ -26,7 +26,7 @@
 % see https://pygments.org/styles/
 \usemintedstyle{friendly}
 % [bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape]
-\setminted[shell]{bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape}
+\setminted[shell]{bgcolor=greyColor, breaklines, numbersep=1pt,mathescape}
 %------------------------------------------------------------
 \title[Rust-Lang]{Rust Programming Language}
 \author[Yumcoder]{Yumcoder}
@@ -80,10 +80,27 @@
 	\end{frame}
 	
 	\begin{frame}[fragile]
-		\frametitle{Updating and Uninstalling}
+		\frametitle{Updating, Uninstalling and Local Documentation}
+		Once Rust is installed via rustup, when a new version of Rust is released, updating to the latest version is easy. From your shell, run the following update script:
+		\scriptsize
+		\inputminted{shell}{./code/install-update.shell}
 		
+		To uninstall Rust and rustup, run the following uninstall script from your shell:
+		\inputminted{shell}{./code/install-uninstall.shell}
+		
+		The installation of Rust also includes a local copy of the documentation, so you can read it offline. Run \mintinline{shell}{rustup doc}  to open the local documentation in your browser.
 	\end{frame}
 	
+	\begin{frame}[fragile]
+		\frametitle{Hello, World!}
+		Open a terminal and enter the following commands to make a projects directory and a directory for the “Hello, world!” project within the projects directory.
+		\scriptsize
+		\inputminted[linenos, breaklines,frame=leftline, numbersep=1pt]{shell}{./code/hello-world.shell}
+		
+		Filename: main.rs
+		\inputminted{rust}{./code/hello-world-main.rs}
+	\end{frame}
+
 	\begin{frame}[fragile]
 		\frametitle{title}
 	\end{frame}
