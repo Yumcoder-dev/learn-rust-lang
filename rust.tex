@@ -9,6 +9,8 @@
 %\usefonttheme{professionalfonts}
 %\usepackage{natbib}
 %\usepackage{hyperref}
+
+\usepackage{pifont} % Custom bullets
 %------------------------------------------------------------
 % set colors
 \definecolor{greyColor}{RGB}{242,242,245} % grey
@@ -20,14 +22,14 @@
 \setbeamercolor*{palette tertiary}{bg=greenColor, fg = white}
 \setbeamercolor*{titlelike}{fg=greyColor}
 \setbeamercolor*{title}{bg=greenColor, fg = white}
-\setbeamercolor*{item}{fg=greenColor}
+\setbeamercolor*{item}{fg=greyColor}
 \setbeamercolor*{caption}{fg=greenColor}
 \setbeamercolor{frametitle}{fg=black,bg=greyColor}
 % see https://pygments.org/styles/
 \usemintedstyle{friendly}
 % [bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape]
-\setminted[shell]{bgcolor=greyColor, breaklines, numbersep=1pt,mathescape}
-\setminted[rust]{bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape}
+\setminted[shell]{bgcolor=greyColor, breaklines, numbersep=1pt,mathescape, fontsize=\footnotesize}
+\setminted[rust]{bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape, fontsize=\footnotesize}
 %------------------------------------------------------------
 \title[Rust-Lang]{Rust Programming Language}
 \author[Yumcoder]{Yumcoder}
@@ -66,11 +68,11 @@
 		\tableofcontents
 	\end{frame}
 	%------------------------------------------------------------
-	\section{Installation}
+	\section{Introduction}
 	\begin{frame}[fragile]
 		\frametitle{Installing rustup on Linux or macOS}
 		If you’re using Linux or macOS, open a terminal and enter the following command:
-		\scriptsize
+		
 		\inputminted{shell}{./code/install.shell}
 		If the install is successful, the following line will appear:
 		\begin{minted}[linenos=false, breaklines,frame=none]{shell}
@@ -83,7 +85,7 @@
 	\begin{frame}[fragile]
 		\frametitle{Updating, Uninstalling and Local Documentation}
 		Once Rust is installed via rustup, when a new version of Rust is released, updating to the latest version is easy. From your shell, run the following update script:
-		\scriptsize
+		
 		\inputminted{shell}{./code/install-update.shell}
 		
 		To uninstall Rust and rustup, run the following uninstall script from your shell:
@@ -94,19 +96,26 @@
 	
 	\begin{frame}[fragile]
 		\frametitle{Hello, World!}
-		Open a terminal and enter the following commands to make a projects directory and a directory for the “Hello, world!” project within the projects directory.
-		\scriptsize
+		Open a terminal and enter the following commands:
+		
 		\inputminted[linenos, breaklines,frame=leftline, numbersep=1pt]{shell}{./code/hello-world.shell}
 		
-		Filename: main.rs
+		Make a new source file and save it as main.rs:
 		\inputminted{rust}{./code/hello-world-main.rs}
 		
-		Save the file and go back to your terminal and enter the following commands to compile and run the file:
+		Compile and run the file:
 		\inputminted{shell}{./code/hello-world-compile.shell}
 	\end{frame}
 
 	\begin{frame}[fragile]
-		\frametitle{title}
+		\frametitle{Cargo}
+		\begin{itemize}
+			\item Cargo is \textbf{Rust’s build system and package manager}. 
+			\item Most \textbf{Rustaceans} use this tool to manage their Rust projects because Cargo handles a lot of tasks for you, such as building your code, downloading the libraries your code depends on, and building those libraries. 
+			\begin{itemize}
+				\item[\ding{43}] \textbf{Rustaceans} are people who use Rust, contribute to Rust, or are interested in the development of Rust.
+			\end{itemize}
+		\end{itemize}
 	\end{frame}
 	
 	\section{Summary}
@@ -121,4 +130,11 @@
 	\end{frame}
 	
 \end{document}
+
+\begin{comment}
+		\begin{frame}[fragile]
+		\frametitle{title}
+	\end{frame}
+\end{comment}
+
 
