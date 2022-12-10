@@ -430,9 +430,9 @@
 	\end{frame}
 
 	\begin{frame}[fragile]
-		\frametitle{Functions (2) - Statements vs Expressions}
+		\frametitle{Statements vs Expressions}
 		\begin{columns}
-			\column{0.5\textwidth}
+			\column{0.4\textwidth}
 			\begin{block}{Statements}
 			are instructions that perform some action and do not return a value.
 		\end{block}
@@ -441,15 +441,21 @@
 				evaluate to a resulting value.
 			\end{block}
 		\end{columns}
-	
-	
-	
+	\inputminted{rust}{./code/statements-expressions.rs}
+	\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Functions with Return Values}
 	\begin{itemize}
 		\item Function bodies are made up of a series of statements optionally ending in an expression.
 		\item Calling a function is an expression.
+		\item Functions can return values to the code that calls them. 
+		\item We don’t name return values, but we must declare their type after an arrow (\mintinline{rust}| ->|). 
+		\item In Rust, the \textbf{return value of the function} is synonymous with \textbf{the value of the final expression in the block of the body} of a function. 
+		\item You can return early from a function by using the return keyword and specifying a value, but most functions return the last expression implicitly.
 	\end{itemize}
-	\inputminted{rust}{./code/statements-expressions.rs}
-	\end{frame}
+\end{frame}
 
 	\section{Understanding Ownership}
 	\section{Using Structs to Structure Related Data}
