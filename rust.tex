@@ -78,7 +78,14 @@
 	\frame{\titlepage}
 	\begin{frame}
 		\frametitle{Contents}
-		\tableofcontents
+		\linespread{2.3}
+		\tiny
+		\begin{columns}
+			\column{0.5\textwidth}
+			\tableofcontents[sections = 1-10]
+			\column{0.5\textwidth}
+			\tableofcontents[sections = 11-20]
+		\end{columns}
 	\end{frame}
 	%------------------------------------------------------------
 	\section{Introduction}
@@ -358,8 +365,7 @@
 	\section{Understanding Ownership}  
 	\section{Using Structs to Structure Related Data}  
 	\section{Enums and Pattern Matching}  
-	
-	\section{Managing Growing Projects with Packages, Crates, and Modules}
+	\section{Managing Projects with Packages, Crates, and Modules}
 	\section{Common Collections}  
 	\section{Error Handling}  
 	\section{Generic Types, Traits, and Lifetimes}  
@@ -372,7 +378,7 @@
 	\section{Object-Oriented Programming Features of Rust}  
 	\section{Patterns and Matching}  
 	\section{Advanced Features}  
-	\section{Building a Multithreaded Web Server}  
+	\section{Multithread Web Server}  
 	\section{Tokio}  
 	
 	\section*{Acknowledgement}  
