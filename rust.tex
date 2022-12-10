@@ -501,29 +501,63 @@
 		The results of both the if arm and the else arm should be in the same type. So, \mintinline{rust}|let number = if condition { 5 } else { "six" };| get panic error.
 	\end{frame}
 	
-
+	
 	\begin{frame}[fragile]
 		\frametitle{Repetition with Loops}
-			\inputminted{rust}{./code/loop.rs}
+		The loop keyword tells Rust to execute a block of code over and over again forever or until you explicitly tell it to stop.
+		\inputminted{rust}{./code/loop.rs}
 	\end{frame}
-
+	
 	\begin{frame}[fragile]
-	\frametitle{Returning Values from Loops}
-\end{frame}
-
-\begin{frame}[fragile]
-	\frametitle{Loop Labels to Disambiguate Between Multiple Loops}
-\end{frame}
-
-\begin{frame}[fragile]
-	\frametitle{Conditional Loops with while}
-\end{frame}
-
+		\frametitle{Returning Values from Loops}
+		\inputminted{rust}{./code/loop-return.rs}
+	\end{frame}
+	
 	\begin{frame}[fragile]
-	\frametitle{Repetition with for}
-\end{frame}
-
+		\frametitle{Loop Labels to Disambiguate Between Multiple Loops}
+		Loop labels must begin with a single quote
+		\scriptsize
+		\inputminted{rust}{./code/loop-label.rs}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Conditional Loops with while}
+		\inputminted{rust}{./code/while.rs}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Repetition with for}
+		\inputminted{rust}{./code/for.rs}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{for with range}
+		\inputminted{rust}{./code/for-range.rs}
+	\end{frame}
+	
 	\section{Understanding Ownership}
+		
+	\begin{frame}[fragile]
+		\frametitle{What Is Ownership?}
+		\begin{itemize}
+			\item \textbf{Ownership} is a set of rules that governs how a Rust program manages memory.
+			\item 		Some languages have \textbf{garbage collection} that \textbf{regularly looks} (performance?) for no-longer used memory as the program runs;
+			\item 		 in other languages, the \textbf{programmer} must \textbf{explicitly allocate and free} the memory.
+			\item 		 Rust uses a third approach: memory is managed through a system of ownership with \textbf{a set of rules} that the\textbf{ compiler checks}. If any of the rules are violated, the program won’t compile.
+		\end{itemize}
+			\begin{block}{Note}
+			None of the features of ownership will slow down your program while it’s running.
+		\end{block}
+		
+	\end{frame}
+	
+		
+	\begin{frame}[fragile]
+		\frametitle{for with range}
+		\inputminted{rust}{./code/for-range.rs}
+	\end{frame}
+	
+	
 	\section{Using Structs to Structure Related Data}
 	\section{Enums and Pattern Matching}
 	\section{Managing Projects with Packages, Crates, and Modules}
