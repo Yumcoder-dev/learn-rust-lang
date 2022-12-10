@@ -16,20 +16,28 @@
 \definecolor{greyColor}{RGB}{242,242,245} % grey
 \definecolor{greenColor}{RGB}{51,112,98} % green
 \definecolor{yellowColor}{RGB}{246,202,84} % yellow
+\definecolor{blackColor}{RGB}{84,84,84} % yellow
 %------------------------------------------------------------
 \setbeamercolor*{palette primary}{bg=yellowColor}
 \setbeamercolor*{palette secondary}{bg=greyColor}
 \setbeamercolor*{palette tertiary}{bg=greenColor, fg = white}
 \setbeamercolor*{titlelike}{fg=greyColor}
 \setbeamercolor*{title}{bg=greenColor, fg = white}
-\setbeamercolor*{item}{fg=greyColor}
+\setbeamercolor*{item}{fg=blackColor}
 \setbeamercolor*{caption}{fg=greenColor}
 \setbeamercolor{frametitle}{fg=black,bg=greyColor}
+
+% customize the caption
+\setbeamerfont{caption}{size=\footnotesize}
+\setbeamercolor{caption}{fg=blackColor}
+\setbeamercolor{caption name}{fg=greenColor}
+
 % see https://pygments.org/styles/
 \usemintedstyle{friendly}
 % [bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape]
 \setminted[shell]{bgcolor=greyColor, breaklines, numbersep=1pt,mathescape, fontsize=\footnotesize}
 \setminted[rust]{bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape, fontsize=\footnotesize}
+\setminted[toml]{bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape, fontsize=\footnotesize}
 %------------------------------------------------------------
 \title[Rust-Lang]{Rust Programming Language}
 \author[Yumcoder]{Yumcoder}
@@ -115,13 +123,58 @@
 			\begin{itemize}
 				\item[\ding{43}] \textbf{Rustaceans} are people who use Rust, contribute to Rust, or are interested in the development of Rust.
 			\end{itemize}
+		\item  Cargo comes installed with Rust if you used the official installer.
+		\begin{itemize}
+			\item[] \inputminted{shell}{./code/cargo.shell}
+		\end{itemize}
 		\end{itemize}
 	\end{frame}
 	
-	\section{Summary}
+	\begin{frame}[fragile]
+		\frametitle{Hello, Cargo!}
+		Creating a Project with Cargo:
+		\inputminted{shell}{./code/hello-cargo.shell}
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.65\textwidth]{./img/rust-project-folder-structure.png}
+			\caption{Folder structure for projects in rust programming language.}
+			\label{fig:folderRustLang}
+		\end{figure}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Cargo.toml}
+		This file is in the \textbf{TOML} (Tom’s Obvious, Minimal Language) format, which is \textbf{Cargo’s configuration} format.
+		
+		\inputminted{toml}{./code/cargo.toml}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Building and Running a Cargo Project}
+		Now open src/main.rs and take a look:
+		\inputminted{rust}{./code/hello-world-main.rs}
+		
+		Build your project by entering the following command:
+		
+		\inputminted{shell}{./code/hello-world-build.shell}
+		
+		\begin{itemize}
+			\item Use \mintinline{shell}{cargo run} to compile and then run (all in one command).
+			\item When your project is finally ready for release, you can use \mintinline{shell}{cargo build --release} to compile it with optimizations (create an executable in target/release instead of target/debug). 
+		\end{itemize}
+	\end{frame}
 	
-	\begin{frame}{Summary}
-		Summary of the above...
+	\section{Common Programming Concepts}
+	
+	\begin{frame}{Variables and Mutability}
+		\begin{itemize}
+			\item by default variables are \textbf{immutable}. 
+			\item This is one of many \textbf{\href{https://en.wikipedia.org/wiki/Nudge_theory}{nudges} Rust}   gives you to write your code in a way that takes advantage of the \textbf{safety and easy concurrency }that Rust offers. 
+			\begin{itemize}
+				\item However, you still have the option to make your variables \textbf{mutable}. 
+			\end{itemize}
+		\end{itemize}
 	\end{frame}
 	
 	\section*{Acknowledgement}  
@@ -132,7 +185,7 @@
 \end{document}
 
 \begin{comment}
-		\begin{frame}[fragile]
+	\begin{frame}[fragile]
 		\frametitle{title}
 	\end{frame}
 \end{comment}
