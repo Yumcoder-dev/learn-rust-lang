@@ -341,14 +341,40 @@
 	\begin{frame}[fragile]
 		\frametitle{Floating-Point Types}
 		\begin{itemize}
-			\inputminted{rust}{./code/floating-types.rs}
-			\item Rust’s floating-point types are f32 (32 bits) and f64(64 bits ), (\href{https://en.wikipedia.org/wiki/IEEE_754}{\textsc{IEEE-754 standard}}).
-			\inputminted{rust}{./code/IEEE-754.rs}
+			
+			\item Rust’s floating-point types are f32 (32 bits) and f64(64 bits), see (\href{https://en.wikipedia.org/wiki/IEEE_754}{\textsc{IEEE-754 standard}}).
+			
 			\item The default type is f64 because on modern CPUs it’s roughly the same speed as f32 but is capable of more precision. 
 			\item All floating-point types are signed.
 		\end{itemize}
+	 \begin{columns}
+		\column{0.5\textwidth}
+		\inputminted{rust}{./code/floating-types.rs}
+		\column{0.5\textwidth}
+		\inputminted{rust}{./code/IEEE-754.rs}
+	\end{columns}
 	\end{frame}
 
+	\section{Understanding Ownership}  
+	\section{Using Structs to Structure Related Data}  
+	\section{Enums and Pattern Matching}  
+	
+	\section{Managing Growing Projects with Packages, Crates, and Modules}
+	\section{Common Collections}  
+	\section{Error Handling}  
+	\section{Generic Types, Traits, and Lifetimes}  
+	\section{Writing Automated Tests}  
+	\section{An I/O Project: Building a Command Line Program}  
+	\section{Functional Language Features: Iterators and Closures}  
+	\section{More About Cargo and Crates.io}  
+	\section{Smart Pointers}  
+	\section{Fearless Concurrency}  
+	\section{Object-Oriented Programming Features of Rust}  
+	\section{Patterns and Matching}  
+	\section{Advanced Features}  
+	\section{Building a Multithreaded Web Server}  
+	\section{Tokio}  
+	
 	\section*{Acknowledgement}  
 	\begin{frame}
 		\Huge{\centerline{Thank you!}}
