@@ -33,7 +33,7 @@
 \setbeamercolor{caption name}{fg=greenColor}
 
 % see https://pygments.org/styles/
-\usemintedstyle{friendly}
+\usemintedstyle{solarized-light}
 % [bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape]
 \setminted[shell]{bgcolor=greyColor, breaklines, numbersep=1pt,mathescape, fontsize=\footnotesize}
 \setminted[rust]{bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape, fontsize=\footnotesize}
@@ -170,13 +170,71 @@
 	\begin{frame}{Variables and Mutability}
 		\begin{itemize}
 			\item by default variables are \textbf{immutable}. 
-			\item This is one of many \textbf{\href{https://en.wikipedia.org/wiki/Nudge_theory}{nudges} Rust}   gives you to write your code in a way that takes advantage of the \textbf{safety and easy concurrency }that Rust offers. 
+			\item This is one of many \textbf{\href{https://en.wikipedia.org/wiki/Nudge_theory}{\underline{nudges}} Rust}   gives you to write your code in a way that takes advantage of the \textbf{safety and easy concurrency }that Rust offers. 
 			\begin{itemize}
 				\item However, you still have the option to make your variables \textbf{mutable}. 
 			\end{itemize}
 		\end{itemize}
 	\end{frame}
 	
+	\begin{frame}[fragile]
+		\frametitle{Immutable variables}
+		When a variable is immutable, \textit{once a value is bound to a name, you can’t change that value.}
+		
+		\inputminted{rust}{./code/immutable-variable.rs}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Immutable variables (2)}
+		 You should receive an error message, as shown in this output:
+		 
+		\inputminted{shell}{./code/immutable-variable.shell}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Mutable variables}
+		Although variables are immutable by default, you can make them mutable by adding \mintinline{rust}{mut} in front of the variable name.
+		
+		\inputminted{rust}{./code/mutable-variable.rs}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Mutable variables (2)}
+		\inputminted{shell}{./code/mutable-variable.shell}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Constants}
+		Rust’s naming convention for constants is to use \textit{all uppercase with underscores between words}.
+		\begin{minted}{rust}
+const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
+		\end{minted}
+		Like immutable variables, constants are values that are bound to a name and are not allowed to change, but there are a few differences between constants and variables.
+		
+		\begin{itemize}
+			\item you aren’t allowed to use \mintinline{rust}{mut} with constants. Constants aren’t just immutable by default—\textbf{they’re always immutable}. You declare constants using the const keyword instead of the let keyword, and \textbf{the type of the value must be annotated}.
+
+			\item 		constants may be set only to a constant expression, \textbf{not the result of a value that could only be computed at runtime}.
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Shadowings}
+		Rustaceans say that the first variable is shadowed by the second, which means that the second variable is what the compiler will see when you use the name of the variable.  We can shadow a variable by using the same variable’s name and repeating the use of the \mintinline{rust}{let} keyword as follows
+		
+		\inputminted{rust}{./code/shadowing.rs}
+	\end{frame}
+	
+	\begin{frame}[fragile]
+		\frametitle{Shadowing (2)}
+		\inputminted{shell}{./code/shadowing.shell}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Shadowing vs Mutable variables}
+	
+	\end{frame}
+
 	\section*{Acknowledgement}  
 	\begin{frame}
 		\Huge{\centerline{Thank you!}}
