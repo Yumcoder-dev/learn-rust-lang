@@ -1,5 +1,6 @@
 \documentclass{beamer}
 %\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
 %\usepackage{graphicx}
 %\usepackage {mathtools}
 %\usepackage{utopia} %font utopia imported
@@ -11,10 +12,6 @@
 %\usepackage{hyperref}
 \usepackage{colortbl}
 \usepackage{pifont} % Custom bullets
-%------------------------------------------------------------
-% define unicode char in code
-\DeclareUnicodeCharacter{2124}{\textendas}
-\DeclareUnicodeCharacter{1F63B}{\textendas}
 %------------------------------------------------------------
 % set colors
 \definecolor{greyColor}{RGB}{242,242,245} % grey
@@ -387,7 +384,6 @@
 			\item Note that we specify char literals with \textbf{single quotes}, as opposed to string literals, which use double quotes. 
 			\item \textbf{Rust’s char type is four bytes in size} and represents a Unicode Scalar Value, which means it can represent a lot more than just ASCII.
 		\end{itemize}
-		
 		\inputminted{rust}{./code/char-types.rs}
 	\end{frame}
 
