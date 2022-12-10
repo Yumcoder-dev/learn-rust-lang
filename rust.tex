@@ -9,7 +9,7 @@
 %\usefonttheme{professionalfonts}
 %\usepackage{natbib}
 %\usepackage{hyperref}
-
+\usepackage{colortbl}
 \usepackage{pifont} % Custom bullets
 %------------------------------------------------------------
 % set colors
@@ -244,7 +244,7 @@
 			The first spaces variable is a string type and the second spaces variable is a number type. 
 			\column{0.5\textwidth}
 			\inputminted{rust}{./code/shadowing-vs-mutable-var2.rs}
-			we’ll get a \textbf{compile-time error}: mismatched types, expected `&str`, found `usize`.
+			we’ll get a \textbf{compile-time error}: mismatched types, expected `\&str`, found `usize`.
 		\end{columns}
 	\end{frame}
 	
@@ -279,16 +279,65 @@
 		
 	\end{frame}
 	
-	
 	\begin{frame}[fragile]
 		\frametitle{Integer Types}
 		\begin{itemize}
 			\item An integer is a number without a fractional component.
 			\item This type declaration indicates that the value it’s associated with should be an unsigned integer (signed integer types start with \textbf{i}, instead of \textbf{u}) that takes up 32 bits of space.
 		\end{itemize}
+		
+		\begin{table}
+			\begin{tabular}{|c|c|c|}
+				\hline
+				\rowcolor{greyColor}
+				Length & Signed & Unsigned \\
+				\hline
+				8-bit & i8 & u8 \\
+				16-bit & i16 & u16 \\
+				32-bit & i32 & u32 \\
+				64-bit & i64 & u64 \\
+				128-bit & i128 & u128 \\
+				arch\footnote{the isize and usize types depend on the architecture: 64 bits if you’re on a 64-bit architecture and 32 bits if you’re on a 32-bit architecture.} & isize & usize \\
+				\hline
+			\end{tabular}
+		\end{table}
 
 	\end{frame}
 	
+	\begin{frame}[fragile]
+		\frametitle{Integer literals}
+		\begin{itemize}
+			\item A number literal is a type suffix, such as \mintinline{rust}{57u8}, to designate the type
+			\item Number literals can also use \mintinline{rust}{_} as a visual separator to make the number easier to read, such as  \mintinline{rust}{1_000} , which will have the same value as if you had specified \mintinline{rust}{1000}
+		\end{itemize}
+		\begin{table}
+		\begin{tabular}{|c|c|}
+			\hline
+			\rowcolor{greyColor}
+			Number literals	& Example \\
+			\hline
+			Decimal & \mintinline{rust}{let x = 98_222} \\
+			Hex & \mintinline{rust}{let x = 0xff} \\
+			Octal & \mintinline{rust}{let x = 0o77} \\
+			Binary & \mintinline{rust}{let x = 0b1111_0000} \\
+			Byte (u8 only) & \mintinline{rust}{let x = b'A'} \\
+			\hline
+		\end{tabular}
+	\end{table}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Integer Overflow}
+		\begin{itemize}
+			\item Let’s say you have a variable of type u8 that can hold values between 0 and 255. 
+			\item 		If you try to change the variable to a value outside of that range, such as 256, integer overflow will occur, which can result in one of two behaviors. 
+					\begin{itemize}
+				\item When you’re compiling in debug mode, Rust includes checks for integer overflow that cause your program to panic at runtime if this behavior occurs.
+				\item 		When you’re compiling in release mode with the --release flag, Rust does not include checks for integer overflow that cause panics (In the case of a u8, the value 256 becomes 0, the value 257 becomes 1, and so on).
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+
 	\section*{Acknowledgement}  
 	\begin{frame}
 		\Huge{\centerline{Thank you!}}
