@@ -431,13 +431,24 @@
 
 	\begin{frame}[fragile]
 		\frametitle{Functions (2) - Statements vs Expressions}
-		\begin{block}{Statements}
-			Statements are instructions that perform some action and do not return a value 
+		\begin{columns}
+			\column{0.5\textwidth}
+			\begin{block}{Statements}
+			are instructions that perform some action and do not return a value.
 		\end{block}
-		\begin{block}{Expressions}
-			Expressions evaluate to a resulting value.
-		\end{block}
-		
+			\column{0.5\textwidth}
+				\begin{block}{Expressions}
+				evaluate to a resulting value.
+			\end{block}
+		\end{columns}
+	
+	
+	
+	\begin{itemize}
+		\item Function bodies are made up of a series of statements optionally ending in an expression.
+		\item Calling a function is an expression.
+	\end{itemize}
+	\inputminted{rust}{./code/statements-expressions.rs}
 	\end{frame}
 
 	\section{Understanding Ownership}
