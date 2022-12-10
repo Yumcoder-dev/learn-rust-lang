@@ -78,10 +78,10 @@
 	\frame{\titlepage}
 	\begin{frame}
 		\frametitle{Contents}
-		\mbox{	
+		\mbox{
 			\linespread{2.3}
 			\tiny
-			\begin{columns}[inner]
+			\begin{columns}
 				\column{0.5\textwidth}
 				\tableofcontents[sections = 1-10]
 				\column{0.5\textwidth}
@@ -364,6 +364,30 @@
 		\end{columns}
 	\end{frame}
 	
+	\begin{frame}[fragile]
+		\frametitle{Numeric Operations}
+			\inputminted{rust}{./code/numeric-operations.rs}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Boolean Types}
+		Booleans are one byte in size.
+		
+		\inputminted{rust}{./code/bool-types.rs}
+	\end{frame}
+
+
+	\begin{frame}[fragile]
+		\frametitle{Character Types}
+		\begin{itemize}
+			\item Note that we specify char literals with \textbf{single quotes}, as opposed to string literals, which use double quotes. 
+			\item Rust’s char type is four bytes in size and represents a Unicode Scalar Value, which means it can represent a lot more than just ASCII.
+		\end{itemize}
+		
+		\inputminted{rust}{./code/char-types.rs}
+	\end{frame}
+
+
 	\section{Understanding Ownership}  
 	\section{Using Structs to Structure Related Data}  
 	\section{Enums and Pattern Matching}  
