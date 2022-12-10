@@ -330,11 +330,22 @@
 		\frametitle{Integer Overflow}
 		\begin{itemize}
 			\item Let’s say you have a variable of type u8 that can hold values between 0 and 255. 
-			\item 		If you try to change the variable to a value outside of that range, such as 256, integer overflow will occur, which can result in one of two behaviors. 
+			\item 		If you try to change the variable to a value outside of that range, such as 256, integer overflow will occur, which can result in one of two behaviors:
 					\begin{itemize}
-				\item When you’re compiling in debug mode, Rust includes checks for integer overflow that cause your program to panic at runtime if this behavior occurs.
-				\item 		When you’re compiling in release mode with the --release flag, Rust does not include checks for integer overflow that cause panics (In the case of a u8, the value 256 becomes 0, the value 257 becomes 1, and so on).
+				\item When you’re compiling in \textbf{debug mode}, Rust includes checks for integer overflow that cause your program to panic at runtime if this behavior occurs.
+				\item 		When you’re compiling in \textbf{release mode} with the --release flag, Rust does not include checks for integer overflow that cause panics (In the case of a u8, the value 256 becomes 0, the value 257 becomes 1, and so on).
 			\end{itemize}
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}[fragile]
+		\frametitle{Floating-Point Types}
+		\begin{itemize}
+			\inputminted{rust}{./code/floating-types.rs}
+			\item Rust’s floating-point types are f32 (32 bits) and f64(64 bits ), (\href{https://en.wikipedia.org/wiki/IEEE_754}{\textsc{IEEE-754 standard}}).
+			\inputminted{rust}{./code/IEEE-754.rs}
+			\item The default type is f64 because on modern CPUs it’s roughly the same speed as f32 but is capable of more precision. 
+			\item All floating-point types are signed.
 		\end{itemize}
 	\end{frame}
 
