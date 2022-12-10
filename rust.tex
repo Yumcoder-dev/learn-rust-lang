@@ -87,8 +87,8 @@
 				\tableofcontents[sections = 1-10]
 				\column{0.5\textwidth}
 				\tableofcontents[sections = 11-20]
-		\end{columns}
-	}
+			\end{columns}
+		}
 	\end{frame}
 	%------------------------------------------------------------
 	\section{Introduction}
@@ -367,43 +367,57 @@
 	
 	\begin{frame}[fragile]
 		\frametitle{Numeric Operations}
-			\inputminted{rust}{./code/numeric-operations.rs}
+		\inputminted{rust}{./code/numeric-operations.rs}
 	\end{frame}
-
+	
 	\begin{frame}[fragile]
 		\frametitle{Boolean Types}
 		Booleans are one byte in size.
 		
 		\inputminted{rust}{./code/bool-types.rs}
 	\end{frame}
-
-
+	
+	
 	\begin{frame}[fragile]
 		\frametitle{Character Types}
 		\begin{itemize}
 			\item Note that we specify char literals with \textbf{single quotes}, as opposed to string literals, which use double quotes. 
 			\item \textbf{Rust’s char type is four bytes in size} and represents a Unicode Scalar Value, which means it can represent a lot more than just ASCII.
 		\end{itemize}
-				\begin{figure}
+		\begin{figure}
 			\centering
 			\includegraphics[width=0.65\textwidth]{./img/char.png}
 		\end{figure}
 	\end{frame}
-
+	
 	\begin{frame}[fragile]
 		\frametitle{Tuple Types}
 		A tuple is a general way of grouping together a number of values with a variety of types into one \textbf{compound type}.
 		
 		\inputminted{rust}{./code/tuple-types.rs}
 	\end{frame}
-
+	
 	\begin{frame}[fragile]
-		\frametitle{Tuple Types}
-		A tuple is a general way of grouping together a number of values with a variety of types into one \textbf{compound type}.
+		\frametitle{Array Types}
+		\begin{itemize}
+			\item Another way to have a collection of multiple values is with an array. 
+			\item Unlike a tuple, every element of \textbf{an array must have the same type}. 
+			\item Unlike arrays in some other languages, \textbf{arrays in Rust have a fixed length}.
+			\item If you try to access an element of an array that is past the end of the array, you get a runtime error at the point of using an invalid value in the indexing operation.
+		\end{itemize}
+		\begin{block}{Note}
+			Arrays are useful when you want your data allocated on the \textbf{stack} rather than the \textbf{heap} 
+		\end{block}
 		
-		\inputminted{rust}{./code/tuple-types.rs}
+		%\inputminted{rust}{./code/tuple-types.rs}
 	\end{frame}
-
+	
+	\begin{frame}[fragile]
+		\frametitle{Array Types (2)}
+		
+		\inputminted{rust}{./code/array.rs}
+	\end{frame}
+	
 	\section{Understanding Ownership}
 	\section{Using Structs to Structure Related Data}
 	\section{Enums and Pattern Matching}
