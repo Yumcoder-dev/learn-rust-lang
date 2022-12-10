@@ -32,6 +32,11 @@
 \setbeamercolor{caption}{fg=blackColor}
 \setbeamercolor{caption name}{fg=greenColor}
 
+% https://latex-beamer.com/tutorials/blocks/
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamercolor{block title}{bg=greenColor, fg=white}
+\setbeamercolor{block body}{bg=greyColor, fg=blackColor}
+
 % see https://pygments.org/styles/
 \usemintedstyle{solarized-light}
 % [bgcolor=greyColor,linenos, breaklines,frame=leftline, numbersep=1pt,mathescape]
@@ -86,8 +91,8 @@
 		\begin{minted}[linenos=false, breaklines,frame=none]{shell}
 			Rust is installed now. Great!
 		\end{minted}
-	To check whether you have Rust installed correctly, open a shell and enter this line:
-	\inputminted{shell}{./code/install-check.shell}
+		To check whether you have Rust installed correctly, open a shell and enter this line:
+		\inputminted{shell}{./code/install-check.shell}
 	\end{frame}
 	
 	\begin{frame}[fragile]
@@ -114,7 +119,7 @@
 		Compile and run the file:
 		\inputminted{shell}{./code/hello-world-compile.shell}
 	\end{frame}
-
+	
 	\begin{frame}[fragile]
 		\frametitle{Cargo}
 		\begin{itemize}
@@ -123,10 +128,10 @@
 			\begin{itemize}
 				\item[\ding{43}] \textbf{Rustaceans} are people who use Rust, contribute to Rust, or are interested in the development of Rust.
 			\end{itemize}
-		\item  Cargo comes installed with Rust if you used the official installer.
-		\begin{itemize}
-			\item[] \inputminted{shell}{./code/cargo.shell}
-		\end{itemize}
+			\item  Cargo comes installed with Rust if you used the official installer.
+			\begin{itemize}
+				\item[] \inputminted{shell}{./code/cargo.shell}
+			\end{itemize}
 		\end{itemize}
 	\end{frame}
 	
@@ -142,14 +147,14 @@
 			\label{fig:folderRustLang}
 		\end{figure}
 	\end{frame}
-
+	
 	\begin{frame}[fragile]
 		\frametitle{Cargo.toml}
 		This file is in the \textbf{TOML} (Tom’s Obvious, Minimal Language) format, which is \textbf{Cargo’s configuration} format.
 		
 		\inputminted{toml}{./code/cargo.toml}
 	\end{frame}
-
+	
 	\begin{frame}[fragile]
 		\frametitle{Building and Running a Cargo Project}
 		Now open src/main.rs and take a look:
@@ -183,41 +188,39 @@
 		
 		\inputminted{rust}{./code/immutable-variable.rs}
 	\end{frame}
-
+	
 	\begin{frame}[fragile]
 		\frametitle{Immutable variables (2)}
-		 You should receive an error message, as shown in this output:
-		 
+		You should receive an error message, as shown in this output:
+		
 		\inputminted{shell}{./code/immutable-variable.shell}
 	\end{frame}
-
+	
 	\begin{frame}[fragile]
 		\frametitle{Mutable variables}
 		Although variables are immutable by default, you can make them mutable by adding \mintinline{rust}{mut} in front of the variable name.
 		
 		\inputminted{rust}{./code/mutable-variable.rs}
 	\end{frame}
-
+	
 	\begin{frame}[fragile]
 		\frametitle{Mutable variables (2)}
 		\inputminted{shell}{./code/mutable-variable.shell}
 	\end{frame}
-
+	
 	\begin{frame}[fragile]
 		\frametitle{Constants}
 		Rust’s naming convention for constants is to use \textit{all uppercase with underscores between words}.
-		\begin{minted}{rust}
-const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
-		\end{minted}
+		\inputminted[linenos=false, frame=none]{rust}{./code/const.rs}
 		Like immutable variables, constants are values that are bound to a name and are not allowed to change, but there are a few differences between constants and variables.
 		
 		\begin{itemize}
 			\item you aren’t allowed to use \mintinline{rust}{mut} with constants. Constants aren’t just immutable by default—\textbf{they’re always immutable}. You declare constants using the const keyword instead of the let keyword, and \textbf{the type of the value must be annotated}.
-
+			
 			\item 		constants may be set only to a constant expression, \textbf{not the result of a value that could only be computed at runtime}.
 		\end{itemize}
 	\end{frame}
-
+	
 	\begin{frame}[fragile]
 		\frametitle{Shadowings}
 		Rustaceans say that the first variable is shadowed by the second, which means that the second variable is what the compiler will see when you use the name of the variable.  We can shadow a variable by using the same variable’s name and repeating the use of the \mintinline{rust}{let} keyword as follows
@@ -229,12 +232,71 @@ const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 		\frametitle{Shadowing (2)}
 		\inputminted{shell}{./code/shadowing.shell}
 	\end{frame}
-
+	
 	\begin{frame}[fragile]
 		\frametitle{Shadowing vs Mutable variables}
-	
+		
+		We’re effectively creating a new variable when we use the let keyword again, we can change the type of the value but reuse the same name.
+		
+		\begin{columns}
+			\column{0.5\textwidth}
+			\inputminted{rust}{./code/shadowing-vs-mutable-var1.rs}
+			The first spaces variable is a string type and the second spaces variable is a number type. 
+			\column{0.5\textwidth}
+			\inputminted{rust}{./code/shadowing-vs-mutable-var2.rs}
+			we’ll get a \textbf{compile-time error}: mismatched types, expected `&str`, found `usize`.
+		\end{columns}
 	\end{frame}
-
+	
+	\begin{frame}[fragile]
+		\frametitle{Data Types}
+		\begin{columns}
+			\column{0.5\textwidth}
+			Data type subsets: 
+			\begin{itemize}
+				\item Scalar
+				\begin{itemize}
+					\item Integers
+					\item Floating-point numbers
+					\item Booleans
+					\item Characters
+				\end{itemize}
+				\item Compound
+				\begin{itemize}
+					\item Tuples 
+					\item Arrays
+				\end{itemize}
+			\end{itemize}
+			\column{0.5\textwidth}
+			\inputminted{rust}{./code/data-types.rs}
+		\end{columns}
+		
+		\begin{block}{Statically typed language}
+			Keep in mind that Rust is a statically typed language, which means that \textbf{it must know the types of all variables at compile time}. 
+		\end{block}
+		
+		The compiler can usually \textbf{infer} what type we want to use based on the value and how we use it (example: \mintinline{rust}{let x = 2.0; // f64}).
+		
+	\end{frame}
+	
+	
+	\begin{frame}[fragile]
+		\frametitle{Integer Types}
+		\begin{itemize}
+			\item An integer is a number without a fractional component.
+			\item This type declaration indicates that the value it’s associated with should be an unsigned integer (signed integer types start with \textbf{i}, instead of \textbf{u}) that takes up 32 bits of space.
+		\end{itemize}
+		
+		\centering
+		\begin{tabular}{lccc}
+			Name & Exam 1 & Exam 2 & Global \\
+			\hline\hline
+			Alice & 8.0 & 9.0 & 8.5 \\
+			Bob & 9.0 & 9.8 & 9.4 \\
+		\end{tabular}
+		
+	\end{frame}
+	
 	\section*{Acknowledgement}  
 	\begin{frame}
 		\Huge{\centerline{Thank you!}}
