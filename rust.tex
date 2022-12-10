@@ -403,7 +403,7 @@
 			\item Another way to have a collection of multiple values is with an array. 
 			\item Unlike a tuple, every element of \textbf{an array must have the same type}. 
 			\item Unlike arrays in some other languages, \textbf{arrays in Rust have a fixed length}.
-			\item If you try to access an element of an array that is past the end of the array, you get a runtime error at the point of using an invalid value in the indexing operation.
+			\item \textbf{Rust panics if index out of bounds}.
 		\end{itemize}
 		\begin{block}{Note}
 			Arrays are useful when you want your data allocated on the \textbf{stack} rather than the \textbf{heap} 
@@ -418,6 +418,16 @@
 		\inputminted{rust}{./code/array.rs}
 	\end{frame}
 	
+	\begin{frame}[fragile]
+		\frametitle{Functions}
+	\end{frame}
+	
+	\begin{comment}
+		\begin{frame}[fragile]
+			\frametitle{title}
+		\end{frame}
+	\end{comment}
+
 	\section{Understanding Ownership}
 	\section{Using Structs to Structure Related Data}
 	\section{Enums and Pattern Matching}
@@ -443,11 +453,5 @@
 	\end{frame}
 	
 \end{document}
-
-\begin{comment}
-	\begin{frame}[fragile]
-		\frametitle{title}
-	\end{frame}
-\end{comment}
 
 
