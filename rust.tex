@@ -850,7 +850,7 @@ Data races cause undefined behavior and can be difficult to diagnose and fix whe
 
 \begin{frame}[fragile]
 	\frametitle{Mutable references restriction example}
-	\textbf{If you have a mutable reference to a value, you can have no other references to that value}. 
+As always, we can use curly brackets to create a new scope, allowing for multiple mutable references, just not simultaneous ones:
 	\inputminted{rust}{./code/borrowing-simultaneous.rs.rs}
 \end{frame}
 
