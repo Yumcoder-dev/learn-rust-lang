@@ -903,6 +903,18 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 	\inputminted[fontsize=\scriptsize]{rust}{./code/slice.rs}
 \end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{Learn application of Slice Type by example}
+\begin{itemize}
+	\item This program compiles without any errors and would also do so if we used word after calling s.clear(). Because word isn’t connected to the state of s at all, word still contains the value 5. We could use that value 5 with the variable s to try to extract the first word out, but this would be a bug because the contents of s have changed since we saved 5 in word.
+	\item Luckily, Rust has a solution to this problem: string slices.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{String Slices}
+
+\end{frame}
 
 
 
