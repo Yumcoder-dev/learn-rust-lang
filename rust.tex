@@ -890,6 +890,20 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 	This works without any problems. \textbf{Ownership is moved out, and nothing is deallocated.}
 \end{frame}
 
+
+\begin{frame}[fragile]
+	\frametitle{The Slice Type}
+	\textbf{Slices} let you \textbf{reference a contiguous sequence of elements in a collection} rather than the whole collection. A slice is \textbf{a kind of reference, so it does not have ownership}.
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{The Slice Type}
+	Here’s a small programming problem: write a function that takes a string of words separated by spaces and returns the first word it finds in that string.
+\end{frame}
+
+
+
+
 \section{Using Structs to Structure Related Data}
 \section{Enums and Pattern Matching}
 \section{Managing Projects with Packages, Crates, and Modules}
