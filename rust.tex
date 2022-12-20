@@ -944,11 +944,24 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 
 \begin{frame}[fragile]
 	\frametitle{ Improve first\_word function}
-	A more experienced Rustacean would write the signature shown in below instead because it allows us to use the same function on both \mintinline{rust}|&String|  values and  \mintinline{rust}|&str|  values.
+	\mintinline{rust}|fn first_word(s: &String) -> &str {/*...*/}| 
+	
+	A more experienced Rustacean would write the signature as in below instead because it allows us to use the same function on both \mintinline{rust}|&String|  values and  \mintinline{rust}|&str|  values.
+
+	\mintinline{rust}|fn first_word(s: &str) -> &str {/*...*/}| 
 \end{frame}
 
 
 \section{Using Structs to Structure Related Data}
+
+\begin{frame}[fragile]
+	\frametitle{ Improve first\_word function}
+	A struct, or structure, is a custom data type that lets you package together and name multiple related values that make up a meaningful group. If you’re familiar with an object-oriented language, a struct is like an object’s data attributes.
+\end{frame}
+
+
+
+
 \section{Enums and Pattern Matching}
 \section{Managing Projects with Packages, Crates, and Modules}
 \section{Common Collections}
