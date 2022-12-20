@@ -715,9 +715,24 @@
 
 \begin{frame}[fragile]
 	\frametitle{Move notes}
-
+			
+	\begin{block}{Memory safety bugs}
+		That solves our problem! With only s2 valid, when it goes out of scope it alone will free the memory, and we’re done.
+	\end{block}
+	
+			
+	\begin{block}{Design choice}
+		Rust will never automatically create “deep” copies of your data. Therefore, any automatic copying can be assumed to be inexpensive in terms of runtime performance.
+	\end{block}
+	
 \end{frame}
 
+
+
+\begin{frame}[fragile]
+	\frametitle{Deeply copy with clone}
+	
+\end{frame}
 
 \section{Using Structs to Structure Related Data}
 \section{Enums and Pattern Matching}
