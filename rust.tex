@@ -915,9 +915,9 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 	\frametitle{String Slices}
 	
 		\begin{columns}
-		\column{0.7\textwidth}
+		\column{0.6\textwidth}
 		\inputminted{rust}{./code/string-slice.rs}
-		\column{0.3\textwidth}
+		\column{0.4\textwidth}
 		\begin{figure}
 			\centering
 			\includegraphics[width=0.8\textwidth]{./img/trpl04-06.png}
@@ -927,7 +927,21 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 
 \end{frame}
 
-
+\begin{frame}[fragile]
+	\frametitle{ Rewrite first_word to return a slice}
+	
+	\begin{columns}
+		\column{0.6\textwidth}
+		\inputminted{rust}{./code/string-slice.rs}
+		\column{0.4\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.8\textwidth]{./img/trpl04-06.png}
+		\end{figure}
+		
+	\end{columns}
+	
+\end{frame}
 
 \section{Using Structs to Structure Related Data}
 \section{Enums and Pattern Matching}
