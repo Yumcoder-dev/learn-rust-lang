@@ -851,7 +851,17 @@ Data races cause undefined behavior and can be difficult to diagnose and fix whe
 \begin{frame}[fragile]
 	\frametitle{Mutable references restriction example}
 As always, we can use curly brackets to create a new scope, allowing for multiple mutable references, just not simultaneous ones:
-	\inputminted{rust}{./code/borrowing-simultaneous.rs.rs}
+	\inputminted{rust}{./code/borrowing-simultaneous.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Mutable references restriction example (combining mutable and immutable references)}
+	\inputminted{rust}{./code/borrowing-combining.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Mutable references restriction example (combining mutable and immutable references)}
+	\inputminted{shell}{./code/borrowing-combining.shell}
 \end{frame}
 
 \section{Using Structs to Structure Related Data}
