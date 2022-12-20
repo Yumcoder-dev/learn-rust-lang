@@ -796,8 +796,12 @@ The reason is that types such as integers that have \textbf{a known size at comp
 
 \begin{frame}[fragile]
 	\frametitle{Borrowing}
-	 the action of creating a reference borrowing
+	\textbf{borrowing}: \textit{the action of creating a reference}.
+	As in real life, if a person owns something, you can borrow it from them. When you’re done, you have to give it back. You don’t own it. So, what happens if we try to modify something we’re borrowing?
 		\inputminted{rust}{./code/borrowing.rs}
+		
+		\small
+	Just as variables are immutable by default, so are references. We’re not allowed to modify something we have a reference to.
 \end{frame}
 
 \begin{frame}[fragile]
