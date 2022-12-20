@@ -1,0 +1,6 @@
+\frametitle{Dangling References (3)}
+	The solution here is to return the String directly:
+	
+	\inputminted{rust}{./code/dangling-sol.rs}
+	
+	This works without any problems. \textbf{Ownership is moved out, and nothing is deallocated.}

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{number}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{condition}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}six\PYGZdq{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{};}
+\end{Verbatim}

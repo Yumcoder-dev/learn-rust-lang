@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{s}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}hello\PYGZdq{}}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{r1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{s}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{c+c1}{// r1 goes out of scope here, so we can make a new reference with no problems.}
+
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{r2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{s}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

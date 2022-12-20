@@ -1,0 +1,4 @@
+$ mkdir ~/projects
+$ cd ~/projects
+$ mkdir hello_world
+$ cd hello_world

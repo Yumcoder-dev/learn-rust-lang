@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo run
+   ...
+\PYG{l+m}{4} \PYG{p}{|}     \PYG{k}{if} number \PYG{o}{\PYGZob{}}
+  \PYG{p}{|}        \PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{} expected \PYG{l+s+sb}{`}bool\PYG{l+s+sb}{`}, found integer
+\end{Verbatim}

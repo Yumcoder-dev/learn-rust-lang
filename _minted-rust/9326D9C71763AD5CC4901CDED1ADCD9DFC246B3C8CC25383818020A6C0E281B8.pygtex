@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{reference\PYGZus{}to\PYGZus{}nothing}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{dangle}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{fn} \PYG{n+nf}{dangle}\PYG{p}{()}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kp}{\PYGZam{}}\PYG{n+nb}{String} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// dangle returns a reference to a String}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{s}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}hello\PYGZdq{}}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// s is a new String}
+\PYG{+w}{    }\PYG{o}{\PYGZam{}}\PYG{n}{s}\PYG{+w}{ }\PYG{c+c1}{// we return a reference to the String, s}
+\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{c+c1}{// Here, s goes out of scope, and is dropped. Its memory goes away. Danger!}
+\end{Verbatim}

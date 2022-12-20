@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{number}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{6}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{number}\PYG{+w}{ }\PYG{o}{\PYGZpc{}}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}number is divisible by 4\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{number}\PYG{+w}{ }\PYG{o}{\PYGZpc{}}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}number is divisible by 3\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{number}\PYG{+w}{ }\PYG{o}{\PYGZpc{}}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}number is divisible by 2\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}number is not divisible by 4, 3, or 2\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

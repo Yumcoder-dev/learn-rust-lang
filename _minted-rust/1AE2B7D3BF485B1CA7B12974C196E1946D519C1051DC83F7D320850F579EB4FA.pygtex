@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{s}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}hello\PYGZdq{}}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{n}{change}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{s}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{fn} \PYG{n+nf}{change}\PYG{p}{(}\PYG{n}{some\PYGZus{}string}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nb}{String}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{some\PYGZus{}string}\PYG{p}{.}\PYG{n}{push\PYGZus{}str}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}, world\PYGZdq{}}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// Attempting to modify a borrowed value!}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

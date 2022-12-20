@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{20}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{30}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{40}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{50}\PYG{p}{];}
+
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{element}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}the value is: \PYGZob{}element\PYGZcb{}\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

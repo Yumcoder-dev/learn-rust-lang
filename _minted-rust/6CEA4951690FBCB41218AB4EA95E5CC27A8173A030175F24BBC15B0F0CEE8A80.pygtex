@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{string}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{no\PYGZus{}dangle}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{fn} \PYG{n+nf}{no\PYGZus{}dangle}\PYG{p}{()}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{String} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{s}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}hello\PYGZdq{}}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{n}{s}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

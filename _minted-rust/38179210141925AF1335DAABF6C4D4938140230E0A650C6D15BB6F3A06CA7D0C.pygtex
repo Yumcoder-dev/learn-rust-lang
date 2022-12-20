@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo run
+   Compiling ownership v0.1.0 \PYG{o}{(}file:///projects/ownership\PYG{o}{)}
+error\PYG{o}{[}E0499\PYG{o}{]}: cannot borrow \PYG{l+s+sb}{`}s\PYG{l+s+sb}{`} as mutable more than once at a \PYG{n+nb}{time}
+ \PYGZhy{}\PYGZhy{}\PYGZgt{} src/main.rs:5:14
+  \PYG{p}{|}
+\PYG{l+m}{4} \PYG{p}{|}     \PYG{n+nb}{let} \PYG{n+nv}{r1} \PYG{o}{=} \PYG{p}{\PYGZam{}}mut s\PYG{p}{;}
+  \PYG{p}{|}              \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{} first mutable borrow occurs here
+\PYG{l+m}{5} \PYG{p}{|}     \PYG{n+nb}{let} \PYG{n+nv}{r2} \PYG{o}{=} \PYG{p}{\PYGZam{}}mut s\PYG{p}{;}
+  \PYG{p}{|}              \PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{} second mutable borrow occurs here
+\PYG{l+m}{6} \PYG{p}{|} 
+\PYG{l+m}{7} \PYG{p}{|}     println!\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZob{}\PYGZcb{}, \PYGZob{}\PYGZcb{}\PYGZdq{}}, r1, r2\PYG{o}{)}\PYG{p}{;}
+  \PYG{p}{|}                        \PYGZhy{}\PYGZhy{} first borrow later used here
+
+For more information about this error, try \PYG{l+s+sb}{`}rustc \PYGZhy{}\PYGZhy{}explain E0499\PYG{l+s+sb}{`}.
+error: could not compile \PYG{l+s+sb}{`}ownership\PYG{l+s+sb}{`} due to previous error
+\end{Verbatim}

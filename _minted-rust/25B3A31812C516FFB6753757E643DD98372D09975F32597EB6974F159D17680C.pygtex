@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// addition}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{sum}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// subtraction}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{difference}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{95.5}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mf}{4.3}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// multiplication}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{product}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mi}{30}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// division}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{quotient}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{56.7}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mf}{32.2}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{floored}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Results in 0}
+
+\PYG{+w}{    }\PYG{c+c1}{// remainder}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{remainder}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{43}\PYG{+w}{ }\PYG{o}{\PYGZpc{}}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

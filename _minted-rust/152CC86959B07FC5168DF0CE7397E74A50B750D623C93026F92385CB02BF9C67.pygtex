@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo new hello\PYGZus{}cargo
+\PYGZdl{} \PYG{n+nb}{cd} hello\PYGZus{}cargo
+\end{Verbatim}

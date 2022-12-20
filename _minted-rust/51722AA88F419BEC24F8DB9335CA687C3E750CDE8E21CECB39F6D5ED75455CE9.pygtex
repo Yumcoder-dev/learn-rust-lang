@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{];}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{months}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s}{\PYGZdq{}January\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}February\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}March\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}April\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}May\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}June\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}July\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}August\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}September\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}October\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}November\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}December\PYGZdq{}}\PYG{p}{];}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{b}: \PYG{p}{[}\PYG{k+kt}{i32}\PYG{p}{;}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{];}\PYG{+w}{ }\PYG{c+c1}{// Here, i32 is the type of each element. After the semicolon, the number 5 indicates the array contains five elements}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{first}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{];}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{second}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{a}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{];}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{five}\PYG{p}{()}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{i32} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{l+m+mi}{5}\PYG{+w}{ }\PYG{c+c1}{// no semicolon because it’s an expression whose value we want to return}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{five}\PYG{p}{();}
+
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}The value of x is: \PYGZob{}x\PYGZcb{}\PYGZdq{}}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// 6}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

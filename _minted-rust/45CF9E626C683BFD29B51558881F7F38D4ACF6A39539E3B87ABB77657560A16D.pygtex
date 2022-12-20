@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{number}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{..}\PYG{l+m+mi}{4}\PYG{p}{).}\PYG{n}{rev}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZob{}number\PYGZcb{}!\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}LIFTOFF!!!\PYGZdq{}}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{// output:}
+\PYG{c+c1}{// 3!}
+\PYG{c+c1}{// 2!}
+\PYG{c+c1}{// 1!}
+\PYG{c+c1}{// LIFTOFF!!!}
+\end{Verbatim}

@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{[package]}
+\PYG{n}{name}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}hello\PYGZus{}cargo\PYGZdq{}}
+\PYG{n}{version}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}0.1.0\PYGZdq{}}
+\PYG{n}{edition}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}2021\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} See more keys and their definitions at https://doc.rust\PYGZhy{}lang.org/cargo/reference/manifest.html}
+
+\PYG{k}{[dependencies]}
+\end{Verbatim}

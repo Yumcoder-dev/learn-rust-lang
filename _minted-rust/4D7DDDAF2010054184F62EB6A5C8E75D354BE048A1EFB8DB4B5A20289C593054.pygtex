@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo run
+   Compiling ownership v0.1.0 \PYG{o}{(}file:///projects/ownership\PYG{o}{)}
+error\PYG{o}{[}E0106\PYG{o}{]}: missing lifetime specifier
+ \PYGZhy{}\PYGZhy{}\PYGZgt{} src/main.rs:5:16
+  \PYG{p}{|}
+\PYG{l+m}{5} \PYG{p}{|} fn dangle\PYG{o}{()} \PYGZhy{}\PYGZgt{} \PYG{p}{\PYGZam{}}String \PYG{o}{\PYGZob{}}
+  \PYG{p}{|}                \PYGZca{} expected named lifetime parameter
+  \PYG{p}{|}
+  \PYG{o}{=} help: this \PYG{k}{function}\PYG{l+s+s1}{\PYGZsq{}s return type contains a borrowed value, but there is no value for it to be borrowed from}
+\PYG{l+s+s1}{help: consider using the `\PYGZsq{}}static\PYG{l+s+sb}{`} lifetime
+  \PYG{p}{|}
+\PYG{l+m}{5} \PYG{p}{|} fn dangle\PYG{o}{()} \PYGZhy{}\PYGZgt{} \PYG{p}{\PYGZam{}}\PYG{err}{\PYGZsq{}}static String \PYG{o}{\PYGZob{}}
+  \PYG{p}{|}                \PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}\PYGZti{}
+
+For more information about this error, try \PYG{l+s+sb}{`}rustc \PYGZhy{}\PYGZhy{}explain E0106\PYG{l+s+sb}{`}.
+error: could not compile \PYG{l+s+sb}{`}ownership\PYG{l+s+sb}{`} due to previous error
+\end{Verbatim}

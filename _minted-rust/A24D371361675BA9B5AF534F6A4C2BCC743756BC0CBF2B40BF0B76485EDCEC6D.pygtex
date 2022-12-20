@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// (all the type annotations are superfluous)}
+\PYG{+w}{    }\PYG{c+c1}{// A reference to a string allocated in read only memory}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{pangram}: \PYG{k+kp}{\PYGZam{}}\PYG{o}{\PYGZsq{}}\PYG{n+nb}{static} \PYG{k+kt}{str} \PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}the quick brown fox jumps over the lazy dog\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Pangram: \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{pangram}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{string}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{String}::\PYG{n}{new}\PYG{p}{();}\PYG{+w}{ }\PYG{c+c1}{// Create an empty and growable `String`}
+\PYG{+w}{    }\PYG{n}{string}\PYG{p}{.}\PYG{n}{push\PYGZus{}str}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}yumcoder\PYGZdq{}}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{c+c1}{// Heap allocate a string}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{alice}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}I like dogs\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{c+c1}{// Allocate new memory and store the modified string there}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{bob}: \PYG{n+nb}{String} \PYG{o}{=}\PYG{+w}{ }\PYG{n}{alice}\PYG{p}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}dog\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}cat\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Alice says: \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{alice}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Bob says: \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{bob}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

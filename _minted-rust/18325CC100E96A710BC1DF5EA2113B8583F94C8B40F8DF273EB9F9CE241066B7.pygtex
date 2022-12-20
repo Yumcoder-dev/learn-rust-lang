@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{spaces}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}   \PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{spaces}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{spaces}\PYG{p}{.}\PYG{n}{len}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{another\PYGZus{}function}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{fn} \PYG{n+nf}{another\PYGZus{}function}\PYG{p}{(}\PYG{n}{x}: \PYG{k+kt}{i32}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}The value of x is: \PYGZob{}x\PYGZcb{}\PYGZdq{}}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

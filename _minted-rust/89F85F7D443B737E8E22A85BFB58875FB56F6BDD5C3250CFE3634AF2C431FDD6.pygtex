@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{s1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{gives\PYGZus{}ownership}\PYG{p}{();}\PYG{+w}{ }\PYG{c+c1}{// gives\PYGZus{}ownership moves its return}
+\PYG{+w}{                                }\PYG{c+c1}{// value into s1}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{s2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}hello\PYGZdq{}}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// s2 comes into scope}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{s3}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{takes\PYGZus{}and\PYGZus{}gives\PYGZus{}back}\PYG{p}{(}\PYG{n}{s2}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// s2 is moved into}
+\PYG{+w}{                                       }\PYG{c+c1}{// takes\PYGZus{}and\PYGZus{}gives\PYGZus{}back, which also}
+\PYG{+w}{                                       }\PYG{c+c1}{// moves its return value into s3}
+\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{c+c1}{// Here, s3 goes out of scope and is dropped. s2 was moved, so nothing}
+\PYG{+w}{  }\PYG{c+c1}{// happens. s1 goes out of scope and is dropped.}
+\PYG{k}{fn} \PYG{n+nf}{gives\PYGZus{}ownership}\PYG{p}{()}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{String} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// gives\PYGZus{}ownership will move its return value into the function that calls it}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{some\PYGZus{}string}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}yours\PYGZdq{}}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// some\PYGZus{}string comes into scope}
+\PYG{+w}{    }\PYG{n}{some\PYGZus{}string}\PYG{+w}{ }\PYG{c+c1}{// some\PYGZus{}string is returned and moves out to the calling function}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{// This function takes a String and returns one}
+\PYG{k}{fn} \PYG{n+nf}{takes\PYGZus{}and\PYGZus{}gives\PYGZus{}back}\PYG{p}{(}\PYG{n}{a\PYGZus{}string}: \PYG{n+nb}{String}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{String} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// a\PYGZus{}string comes into scope}
+\PYG{+w}{    }\PYG{n}{a\PYGZus{}string}\PYG{+w}{ }\PYG{c+c1}{// a\PYGZus{}string is returned and moves out to the calling function}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

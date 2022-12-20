@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo run
+   Compiling variables v0.1.0 \PYG{o}{(}file:///projects/variables\PYG{o}{)}
+    Finished dev \PYG{o}{[}unoptimized + debuginfo\PYG{o}{]} target\PYG{o}{(}s\PYG{o}{)} \PYG{k}{in} \PYG{l+m}{0}.31s
+     Running \PYG{l+s+sb}{`}target/debug/variables\PYG{l+s+sb}{`}
+The value of x \PYG{k}{in} the inner scope is: \PYG{l+m}{12}
+The value of x is: \PYG{l+m}{6}
+\end{Verbatim}

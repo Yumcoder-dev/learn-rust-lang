@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{count}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{+w}{    }\PYG{o}{\PYGZsq{}}\PYG{n+na}{counting\PYGZus{}up}: \PYG{n+nc}{loop}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}count = \PYGZob{}count\PYGZcb{}\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{remaining}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{loop}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}remaining = \PYGZob{}remaining\PYGZcb{}\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{remaining}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+m+mi}{9}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{break}\PYG{p}{;\PYGZcb{}}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{count}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{break}\PYG{+w}{ }\PYG{n+nl}{\PYGZsq{}counting\PYGZus{}up}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{n}{remaining}\PYG{+w}{ }\PYG{o}{\PYGZhy{}=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{n}{count}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}End count = \PYGZob{}count\PYGZcb{}\PYGZdq{}}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// End count = 2}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

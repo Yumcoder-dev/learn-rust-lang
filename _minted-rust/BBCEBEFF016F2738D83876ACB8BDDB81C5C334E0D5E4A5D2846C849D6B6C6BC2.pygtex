@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{tup}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{l+m+mi}{500}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{6.4}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{z}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{tup}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}The value of y is: \PYGZob{}y\PYGZcb{}\PYGZdq{}}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// 6.4}
+
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{five\PYGZus{}hundred}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{tup}\PYG{p}{.}\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{six\PYGZus{}point\PYGZus{}four}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{tup}\PYG{p}{.}\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{one}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{tup}\PYG{p}{.}\PYG{l+m+mi}{2}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

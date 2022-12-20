@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo run
+   Compiling functions v0.1.0 \PYG{o}{(}file:///projects/functions\PYG{o}{)}
+error\PYG{o}{[}E0308\PYG{o}{]}: mismatched types
+ \PYGZhy{}\PYGZhy{}\PYGZgt{} src/main.rs:7:24
+  \PYG{p}{|}
+\PYG{l+m}{7} \PYG{p}{|} fn plus\PYGZus{}one\PYG{o}{(}x: i32\PYG{o}{)} \PYGZhy{}\PYGZgt{} i32 \PYG{o}{\PYGZob{}}
+  \PYG{p}{|}    \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}            \PYGZca{}\PYGZca{}\PYGZca{} expected \PYG{l+s+sb}{`}i32\PYG{l+s+sb}{`}, found \PYG{l+s+sb}{`}\PYG{o}{()}\PYG{l+s+sb}{`}
+  \PYG{p}{|}    \PYG{p}{|}
+  \PYG{p}{|}    implicitly returns \PYG{l+s+sb}{`}\PYG{o}{()}\PYG{l+s+sb}{`} as its body has no tail or \PYG{l+s+sb}{`}\PYG{k}{return}\PYG{l+s+sb}{`} expression
+\PYG{l+m}{8} \PYG{p}{|}     x + \PYG{l+m}{1}\PYG{p}{;}
+  \PYG{p}{|}          \PYGZhy{} help: remove this semicolon
+
+For more information about this error, try \PYG{l+s+sb}{`}rustc \PYGZhy{}\PYGZhy{}explain E0308\PYG{l+s+sb}{`}.
+error: could not compile \PYG{l+s+sb}{`}functions\PYG{l+s+sb}{`} due to previous error
+\end{Verbatim}

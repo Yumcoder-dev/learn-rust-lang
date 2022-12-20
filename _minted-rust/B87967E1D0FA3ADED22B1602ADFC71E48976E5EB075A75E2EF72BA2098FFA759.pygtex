@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{y}: \PYG{k+kt}{f32} \PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{3.0}\PYG{p}{;}\PYG{+w}{ }
+\PYG{c+c1}{// y is variable name}
+\PYG{c+c1}{// f32 is IEEE\PYGZhy{}754 double precision standard variable type}
+\PYG{c+c1}{// 3.0 is iniatail value}
+\end{Verbatim}

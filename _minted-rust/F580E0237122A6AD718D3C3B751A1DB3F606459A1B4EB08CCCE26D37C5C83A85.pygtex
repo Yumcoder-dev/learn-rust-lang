@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{number}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k}{while}\PYG{+w}{ }\PYG{n}{number}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZob{}number\PYGZcb{}!\PYGZdq{}}\PYG{p}{);}
+
+\PYG{+w}{        }\PYG{n}{number}\PYG{+w}{ }\PYG{o}{\PYGZhy{}=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}LIFTOFF!!!\PYGZdq{}}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

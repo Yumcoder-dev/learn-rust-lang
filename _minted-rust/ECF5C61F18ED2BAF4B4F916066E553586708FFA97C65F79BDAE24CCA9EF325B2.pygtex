@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo run
+   ...
+error\PYG{o}{[}E0382\PYG{o}{]}: borrow of moved value: \PYG{l+s+sb}{`}s1\PYG{l+s+sb}{`}
+ \PYGZhy{}\PYGZhy{}\PYGZgt{} src/main.rs:5:28
+  \PYG{p}{|}
+\PYG{l+m}{2} \PYG{p}{|}     \PYG{n+nb}{let} \PYG{n+nv}{s1} \PYG{o}{=} String::from\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}hello\PYGZdq{}}\PYG{o}{)}\PYG{p}{;}
+  \PYG{p}{|}         \PYGZhy{}\PYGZhy{} move occurs because \PYG{l+s+sb}{`}s1\PYG{l+s+sb}{`} has \PYG{n+nb}{type} \PYG{l+s+sb}{`}String\PYG{l+s+sb}{`}, which does not implement the \PYG{l+s+sb}{`}Copy\PYG{l+s+sb}{`} trait
+\PYG{l+m}{3} \PYG{p}{|}     \PYG{n+nb}{let} \PYG{n+nv}{s2} \PYG{o}{=} s1\PYG{p}{;}
+  \PYG{p}{|}              \PYGZhy{}\PYGZhy{} value moved here
+\PYG{l+m}{4} \PYG{p}{|} 
+\PYG{l+m}{5} \PYG{p}{|}     println!\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZob{}\PYGZcb{}, world!\PYGZdq{}}, s1\PYG{o}{)}\PYG{p}{;}
+  \PYG{p}{|}                            \PYGZca{}\PYGZca{} value borrowed here after move
+  \PYG{p}{|}
+...
+\end{Verbatim}

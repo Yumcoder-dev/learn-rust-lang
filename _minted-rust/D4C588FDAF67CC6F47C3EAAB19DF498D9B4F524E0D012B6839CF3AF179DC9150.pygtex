@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo build
+   Compiling hello\PYGZus{}cargo v0.1.0 \PYG{o}{(}file:///projects/hello\PYGZus{}cargo\PYG{o}{)}
+    Finished dev \PYG{o}{[}unoptimized + debuginfo\PYG{o}{]} target\PYG{o}{(}s\PYG{o}{)} \PYG{k}{in} \PYG{l+m}{2}.85 secs
+\end{Verbatim}

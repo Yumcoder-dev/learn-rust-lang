@@ -1,0 +1,4 @@
+$ cargo run
+   ...
+4 |     if number {
+  |        ^^^^^^ expected `bool`, found integer

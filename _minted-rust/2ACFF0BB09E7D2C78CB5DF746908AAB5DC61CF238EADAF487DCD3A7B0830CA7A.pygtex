@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{y}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{;}
+
+\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}x = \PYGZob{}\PYGZcb{}, y = \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y}\PYG{p}{);}
+\end{Verbatim}

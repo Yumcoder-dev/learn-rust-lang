@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{counter}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{result}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{loop}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{counter}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{n}{counter}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{break}\PYG{+w}{ }\PYG{n}{counter}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{};}
+
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}The result is \PYGZob{}result\PYGZcb{}\PYGZdq{}}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// 20}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

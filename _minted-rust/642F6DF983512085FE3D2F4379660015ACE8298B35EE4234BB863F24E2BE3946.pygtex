@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{s}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}hello\PYGZdq{}}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// s comes into scope}
+\PYG{+w}{    }\PYG{n}{takes\PYGZus{}ownership}\PYG{p}{(}\PYG{n}{s}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// s\PYGZsq{}s value moves into the function...}
+\PYG{+w}{                        }\PYG{c+c1}{// ... and so is no longer valid here}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// x comes into scope}
+\PYG{+w}{    }\PYG{n}{makes\PYGZus{}copy}\PYG{p}{(}\PYG{n}{x}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// x would move into the function,}
+\PYG{+w}{                   }\PYG{c+c1}{// but i32 is Copy, so it\PYGZsq{}s okay to still use x afterward}
+\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{c+c1}{// Here, x goes out of scope, then s. But because s\PYGZsq{}s value was moved, nothing}
+\PYG{+w}{  }\PYG{c+c1}{// special happens.}
+\PYG{k}{fn} \PYG{n+nf}{takes\PYGZus{}ownership}\PYG{p}{(}\PYG{n}{some\PYGZus{}string}: \PYG{n+nb}{String}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// some\PYGZus{}string comes into scope}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{some\PYGZus{}string}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{c+c1}{// Here, some\PYGZus{}string goes out of scope and `drop` is called. The backing memory is freed.}
+\PYG{k}{fn} \PYG{n+nf}{makes\PYGZus{}copy}\PYG{p}{(}\PYG{n}{some\PYGZus{}integer}: \PYG{k+kt}{i32}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// some\PYGZus{}integer comes into scope}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{some\PYGZus{}integer}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{c+c1}{// Here, some\PYGZus{}integer goes out of scope. Nothing special happens.}
+\end{Verbatim}

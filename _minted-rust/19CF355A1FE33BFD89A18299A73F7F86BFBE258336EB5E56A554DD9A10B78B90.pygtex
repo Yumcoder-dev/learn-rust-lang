@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} curl \PYGZhy{}\PYGZhy{}proto \PYG{l+s+s1}{\PYGZsq{}=https\PYGZsq{}} \PYGZhy{}\PYGZhy{}tlsv1.3 https://sh.rustup.rs \PYGZhy{}sSf \PYG{p}{|} sh
+\end{Verbatim}

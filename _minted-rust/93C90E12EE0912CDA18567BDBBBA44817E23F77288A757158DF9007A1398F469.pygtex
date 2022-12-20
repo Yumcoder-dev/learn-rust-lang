@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{y}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{func}\PYG{p}{(}\PYG{n}{x}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// y = x, func paramater bind on stack}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{fn} \PYG{n+nf}{func}\PYG{p}{(}\PYG{n}{y}: \PYG{k+kt}{u8}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{y}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

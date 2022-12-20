@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo run
+   Compiling variables v0.1.0 \PYG{o}{(}file:///projects/variables\PYG{o}{)}
+error\PYG{o}{[}E0384\PYG{o}{]}: cannot assign twice to immutable variable \PYG{l+s+sb}{`}x\PYG{l+s+sb}{`}
+ \PYGZhy{}\PYGZhy{}\PYGZgt{} src/main.rs:4:5
+  \PYG{p}{|}
+\PYG{l+m}{2} \PYG{p}{|}     \PYG{n+nb}{let} \PYG{n+nv}{x} \PYG{o}{=} \PYG{l+m}{5}\PYG{p}{;}
+  \PYG{p}{|}         \PYGZhy{}
+  \PYG{p}{|}         \PYG{p}{|}
+  \PYG{p}{|}         first assignment to \PYG{l+s+sb}{`}x\PYG{l+s+sb}{`}
+  \PYG{p}{|}         help: consider making this binding mutable: \PYG{l+s+sb}{`}mut x\PYG{l+s+sb}{`}
+\PYG{l+m}{3} \PYG{p}{|}     println!\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}The value of x is: \PYGZob{}x\PYGZcb{}\PYGZdq{}}\PYG{o}{)}\PYG{p}{;}
+\PYG{l+m}{4} \PYG{p}{|}     \PYG{n+nv}{x} \PYG{o}{=} \PYG{l+m}{6}\PYG{p}{;}
+  \PYG{p}{|}     \PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{} cannot assign twice to immutable variable
+
+For more information about this error, try \PYG{l+s+sb}{`}rustc \PYGZhy{}\PYGZhy{}explain E0384\PYG{l+s+sb}{`}.
+error: could not compile \PYG{l+s+sb}{`}variables\PYG{l+s+sb}{`} due to previous error
+\end{Verbatim}

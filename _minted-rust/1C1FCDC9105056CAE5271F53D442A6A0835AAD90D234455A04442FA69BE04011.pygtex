@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{const}\PYG{+w}{ }\PYG{n}{THREE\PYGZus{}HOURS\PYGZus{}IN\PYGZus{}SECONDS}: \PYG{k+kt}{u32} \PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{60}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mi}{60}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{;}
+\end{Verbatim}

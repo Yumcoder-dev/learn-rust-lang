@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} mkdir \PYGZti{}/projects
+\PYGZdl{} \PYG{n+nb}{cd} \PYGZti{}/projects
+\PYGZdl{} mkdir hello\PYGZus{}world
+\PYGZdl{} \PYG{n+nb}{cd} hello\PYGZus{}world
+\end{Verbatim}

@@ -1,0 +1,1929 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  20 DEC 2022 21:10
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**rust.tex
+(./rust.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2022-11-02>
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamer.cls
+Document Class: beamer 2022/09/13 v3.68 A class for typesetting presentations
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count185
+)
+\beamer@tempbox=\box51
+\beamer@tempcount=\count186
+\c@beamerpauses=\count187
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasedecode.sty
+\beamer@slideinframe=\count188
+\beamer@minimum=\count189
+\beamer@decode@box=\box52
+)
+\beamer@commentbox=\box53
+\beamer@modecount=\count190
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+\headdp=\dimen140
+\footheight=\dimen141
+\sidebarheight=\dimen142
+\beamer@tempdim=\dimen143
+\beamer@finalheight=\dimen144
+\beamer@animht=\dimen145
+\beamer@animdp=\dimen146
+\beamer@animwd=\dimen147
+\beamer@leftmargin=\dimen148
+\beamer@rightmargin=\dimen149
+\beamer@leftsidebar=\dimen150
+\beamer@rightsidebar=\dimen151
+\beamer@boxsize=\dimen152
+\beamer@vboxoffset=\dimen153
+\beamer@descdefault=\dimen154
+\beamer@descriptionwidth=\dimen155
+\beamer@lastskip=\skip48
+\beamer@areabox=\box54
+\beamer@animcurrent=\box55
+\beamer@animshowbox=\box56
+\beamer@sectionbox=\box57
+\beamer@logobox=\box58
+\beamer@linebox=\box59
+\beamer@sectioncount=\count191
+\beamer@subsubsectionmax=\count192
+\beamer@subsectionmax=\count193
+\beamer@sectionmax=\count194
+\beamer@totalheads=\count195
+\beamer@headcounter=\count196
+\beamer@partstartpage=\count197
+\beamer@sectionstartpage=\count198
+\beamer@subsectionstartpage=\count199
+\beamer@animationtempa=\count266
+\beamer@animationtempb=\count267
+\beamer@xpos=\count268
+\beamer@ypos=\count269
+\beamer@ypos@offset=\count270
+\beamer@showpartnumber=\count271
+\beamer@currentsubsection=\count272
+\beamer@coveringdepth=\count273
+\beamer@sectionadjust=\count274
+\beamer@toclastsection=\count275
+\beamer@tocsectionnumber=\count276
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaseoptions.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+))
+\beamer@paperwidth=\skip49
+\beamer@paperheight=\skip50
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count277
+\Gm@cntv=\count278
+\c@Gm@tempcnt=\count279
+\Gm@bindingoffset=\dimen156
+\Gm@wd@mp=\dimen157
+\Gm@odd@mp=\dimen158
+\Gm@even@mp=\dimen159
+\Gm@layoutwidth=\dimen160
+\Gm@layoutheight=\dimen161
+\Gm@layouthoffset=\dimen162
+\Gm@layoutvoffset=\dimen163
+\Gm@dimlist=\toks17
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks18
+\pgfutil@tempdima=\dimen164
+\pgfutil@tempdimb=\dimen165
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+sts.tex))
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box60
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks19
+\pgfkeys@temptoks=\toks20
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
+\pgfkeys@tmptoks=\toks21
+)))
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
+\pgf@x=\dimen166
+\pgf@xa=\dimen167
+\pgf@xb=\dimen168
+\pgf@xc=\dimen169
+\pgf@y=\dimen170
+\pgf@ya=\dimen171
+\pgf@yb=\dimen172
+\pgf@yc=\dimen173
+\c@pgf@counta=\count280
+\c@pgf@countb=\count281
+\c@pgf@countc=\count282
+\c@pgf@countd=\count283
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen174
+\pgfmath@count=\count284
+\pgfmath@box=\box61
+\pgfmath@toks=\toks22
+\pgfmath@stack@operand=\toks23
+\pgfmath@stack@operation=\toks24
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)))
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count285
+))) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen175
+\Gin@req@width=\dimen176
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+\pgf@x=\dimen177
+\pgf@y=\dimen178
+\pgf@xa=\dimen179
+\pgf@ya=\dimen180
+\pgf@xb=\dimen181
+\pgf@yb=\dimen182
+\pgf@xc=\dimen183
+\pgf@yc=\dimen184
+\pgf@xd=\dimen185
+\pgf@yd=\dimen186
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count286
+\c@pgf@countb=\count287
+\c@pgf@countc=\count288
+\c@pgf@countd=\count289
+\t@pgf@toka=\toks25
+\t@pgf@tokb=\toks26
+\t@pgf@tokc=\toks27
+\pgf@sys@id@count=\count290
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+)))
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfsyssoftpath@smallbuffer@items=\count291
+\pgfsyssoftpath@bigbuffer@items=\count292
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@picminx=\dimen187
+\pgf@picmaxx=\dimen188
+\pgf@picminy=\dimen189
+\pgf@picmaxy=\dimen190
+\pgf@pathminx=\dimen191
+\pgf@pathmaxx=\dimen192
+\pgf@pathminy=\dimen193
+\pgf@pathmaxy=\dimen194
+\pgf@xx=\dimen195
+\pgf@xy=\dimen196
+\pgf@yx=\dimen197
+\pgf@yy=\dimen198
+\pgf@zx=\dimen199
+\pgf@zy=\dimen256
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@path@lastx=\dimen257
+\pgf@path@lasty=\dimen258
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@shorten@end@additional=\dimen259
+\pgf@shorten@start@additional=\dimen260
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfpic=\box62
+\pgf@hbox=\box63
+\pgf@layerbox@main=\box64
+\pgf@picture@serial@count=\count293
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgflinewidth=\dimen261
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@pt@x=\dimen262
+\pgf@pt@y=\dimen263
+\pgf@pt@temp=\dimen264
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowsep=\dimen265
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgf@max=\dimen266
+\pgf@sys@shading@range@num=\count294
+\pgf@shadingcount=\count295
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfexternal@startupbox=\box65
+))
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex
+File: pgfcorerdf.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+))) (/usr/local/texlive/2022/texmf-dist/tex/latex/pgf/utilities/xxcolor.sty
+Package: xxcolor 2003/10/24 ver 0.1
+\XC@nummixins=\count296
+\XC@countmixins=\count297
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2022-11-13 v7.00u Hypertext links for LaTeX
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count298
+)
+\@linkdim=\dimen267
+\Hy@linkcounter=\count299
+\Hy@pagecounter=\count300
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2022-11-13 v7.00u Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count301
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2022-11-13 v7.00u Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `bookmarks' set `true' on input line 4045.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4045.
+Package hyperref Info: Option `implicit' set `false' on input line 4045.
+Package hyperref Info: Hyper figures OFF on input line 4162.
+Package hyperref Info: Link nesting OFF on input line 4167.
+Package hyperref Info: Hyper index ON on input line 4170.
+Package hyperref Info: Plain pages OFF on input line 4177.
+Package hyperref Info: Backreferencing OFF on input line 4182.
+Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
+Package hyperref Info: Bookmarks ON on input line 4410.
+\c@Hy@tempcnt=\count302
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4748.
+\XeTeXLinkMargin=\dimen268
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count303
+\Field@Width=\dimen269
+\Fld@charsize=\dimen270
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+\Hy@abspage=\count304
+
+
+Package hyperref Message: Stopped early.
+
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2022-11-13 v7.00u Hyperref driver for pdfTeX
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count305
+\c@bookmark@seq@number=\count306
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasecompatibility.st
+y) (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasefont.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks28
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/sansmathaccent/sansmathaccent.sty
+Package: sansmathaccent 2020/01/31
+(/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2022/10/12 v3.38 KOMA-Script package (file load hooks)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2022/10/12 v3.38 KOMA-Script package (using LaTeX hooks)
+
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2022/10/12 v3.38 KOMA-Script package (logo)
+)))))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasetranslator.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/translator/translator.sty
+Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasemisc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasetwoscreens.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
+\beamer@argscount=\count307
+\beamer@lastskipcover=\skip51
+\beamer@trivlistdepth=\count308
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasetitle.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasesection.sty
+\c@lecture=\count309
+\c@part=\count310
+\c@section=\count311
+\c@subsection=\count312
+\c@subsubsection=\count313
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
+\beamer@framebox=\box66
+\beamer@frametitlebox=\box67
+\beamer@zoombox=\box68
+\beamer@zoomcount=\count314
+\beamer@zoomframecount=\count315
+\beamer@frametextheight=\dimen271
+\c@subsectionslide=\count316
+\beamer@frametopskip=\skip52
+\beamer@framebottomskip=\skip53
+\beamer@frametopskipautobreak=\skip54
+\beamer@framebottomskipautobreak=\skip55
+\beamer@envbody=\toks29
+\framewidth=\dimen272
+\c@framenumber=\count317
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
+\beamer@verbatimfileout=\write4
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
+\beamer@splitbox=\box69
+\beamer@autobreakcount=\count318
+\beamer@autobreaklastheight=\dimen273
+\beamer@frametitletoks=\toks30
+\beamer@framesubtitletoks=\toks31
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.
+sty
+\beamer@footins=\box70
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasecolor.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
+\beamer@frameboxcopy=\box71
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasetoc.sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasetemplates.sty
+\beamer@sbttoks=\toks32
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaseauxtemplates.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
+\bmb@box=\box72
+\bmb@colorbox=\box73
+\bmb@boxwidth=\dimen274
+\bmb@boxheight=\dimen275
+\bmb@prevheight=\dimen276
+\bmb@temp=\dimen277
+\bmb@dima=\dimen278
+\bmb@dimb=\dimen279
+\bmb@prevheight=\dimen280
+)
+\beamer@blockheadheight=\dimen281
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbaselocalstructure.s
+ty (/usr/local/texlive/2022/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks33
+)
+\beamer@bibiconwidth=\skip56
+\c@figure=\count319
+\c@table=\count320
+\abovecaptionskip=\skip57
+\belowcaptionskip=\skip58
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasenavigation.sty
+\beamer@section@min@dim=\dimen282
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasetheorems.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip59
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks34
+\ex@=\dimen283
+))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen284
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count321
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count322
+\leftroot@=\count323
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count324
+\DOTSCASE@=\count325
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box74
+\strutbox@=\box75
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen285
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count326
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count327
+\dotsspace@=\muskip17
+\c@parentequation=\count328
+\dspbrk@lvl=\count329
+\tag@help=\toks35
+\row@=\count330
+\column@=\count331
+\maxfields@=\count332
+\andhelp@=\toks36
+\eqnshift@=\dimen286
+\alignsep@=\dimen287
+\tagshift@=\dimen288
+\tagwidth@=\dimen289
+\totwidth@=\dimen290
+\lineht@=\dimen291
+\@envbody=\toks37
+\multlinegap=\skip60
+\multlinetaggap=\skip61
+\mathdisplay@stack=\toks38
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks39
+\thm@bodyfont=\toks40
+\thm@headfont=\toks41
+\thm@notefont=\toks42
+\thm@headpunct=\toks43
+\thm@preskip=\skip62
+\thm@postskip=\skip63
+\thm@headsep=\skip64
+\dth@everypar=\toks44
+)
+\c@theorem=\count333
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerbasethemes.sty))
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerthemedefault.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemedefault.st
+y)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.st
+y
+\beamer@dima=\dimen292
+\beamer@dimb=\dimen293
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemedefault.st
+y))) (/usr/local/texlive/2022/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerthemeCambridgeUS.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.st
+y)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.
+sty)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamercolorthemebeaver.sty
+)) (/usr/local/texlive/2022/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2021/12/24 v2.6 Yet another Pygments shim for LaTeX
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2022/11/30 v1.5 fvextra - extensions and patches for fancyvrb
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2022/06/06 4.5 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count334
+\FV@InFile=\read3
+\FV@TabBox=\box76
+\c@FancyVerbLine=\count335
+\FV@StepNumber=\count336
+\FV@OutFile=\write5
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count337
+\output=\toks45
+\linenoprevgraf=\count338
+\linenumbersep=\dimen294
+\linenumberwidth=\dimen295
+\c@linenumber=\count339
+\c@pagewiselinenumber=\count340
+\c@LN@truepage=\count341
+\c@internallinenumber=\count342
+\c@internallinenumbers=\count343
+\quotelinenumbersep=\dimen296
+\bframerule=\dimen297
+\bframesep=\dimen298
+\bframebox=\box77
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count344
+\c@FV@TrueTabCounter=\count345
+\FV@TabBox@Group=\box78
+\FV@TmpLength=\skip65
+\c@FV@HighlightLinesStart=\count346
+\c@FV@HighlightLinesStop=\count347
+\FV@LoopCount=\count348
+\FV@NCharsBox=\box79
+\FV@BreakIndent=\dimen299
+\FV@BreakIndentNChars=\count349
+\FV@BreakSymbolSepLeft=\dimen300
+\FV@BreakSymbolSepLeftNChars=\count350
+\FV@BreakSymbolSepRight=\dimen301
+\FV@BreakSymbolSepRightNChars=\count351
+\FV@BreakSymbolIndentLeft=\dimen302
+\FV@BreakSymbolIndentLeftNChars=\count352
+\FV@BreakSymbolIndentRight=\dimen303
+\FV@BreakSymbolIndentRightNChars=\count353
+\c@FancyVerbLineBreakLast=\count354
+\FV@LineBox=\box80
+\FV@LineIndentBox=\box81
+\c@FV@BreakBufferDepth=\count355
+\FV@LineWidth=\dimen304
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count356
+\calc@Bcount=\count357
+\calc@Adimen=\dimen305
+\calc@Bdimen=\dimen306
+\calc@Askip=\skip66
+\calc@Bskip=\skip67
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count358
+\calc@Cskip=\skip68
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+(/usr/local/texlive/2022/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+runsystem(uname -s > "rust.w18")...executed.
+
+ (./rust.w18)
+runsystem(rm -- "rust.w18")...executed.
+
+) (/usr/local/texlive/2022/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/local/texlive/2022/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count359
+\decimalpart=\count360
+)
+Package: xstring 2021/07/21 v1.84 String manipulations (CT)
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip69
+\fb@frw=\dimen307
+\fb@frh=\dimen308
+\FrameRule=\dimen309
+\FrameSep=\dimen310
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count361
+\float@exts=\toks46
+\float@box=\box82
+\@float@everytoks=\toks47
+\@floatcapt=\box83
+)
+\minted@appexistsfile=\read4
+\minted@bgbox=\box84
+\minted@code=\write6
+\c@minted@FancyVerbLineTemp=\count362
+\c@minted@pygmentizecounter=\count363
+\@float@every@listing=\toks48
+\c@listing=\count364
+)
+runsystem(mkdir -p _minted-rust)...executed.
+
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen311
+\ar@mcellbox=\box85
+\extrarowheight=\dimen312
+\NC@list=\toks49
+\extratabsurround=\skip70
+\backup@length=\skip71
+\ar@cellbox=\box86
+)
+\everycr=\toks50
+\minrowclearance=\skip72
+\rownum=\count365
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+runsystem(which pygmentize && touch rust.aex)...executed.
+
+runsystem(rm rust.aex)...executed.
+
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count366
+\l__pdf_internal_box=\box87
+)
+(./rust.aux)
+\openout1 = `rust.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(10.95003pt, 342.2953pt, 10.95003pt)
+* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
+* \paperwidth=364.19536pt
+* \paperheight=273.14662pt
+* \textwidth=342.2953pt
+* \textheight=244.6939pt
+* \oddsidemargin=-61.31996pt
+* \evensidemargin=-61.31996pt
+* \topmargin=-72.26999pt
+* \headheight=14.22636pt
+* \headsep=0.0pt
+* \topskip=11.0pt
+* \footskip=14.22636pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count367
+\scratchdimen=\dimen313
+\scratchbox=\box88
+\nofMPsegments=\count368
+\nofMParguments=\count369
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count370
+\MPscratchDim=\dimen314
+\MPnumerator=\count371
+\makeMPintoPDFobject=\count372
+\everyMPtoPDFconversion=\toks52
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring OFF on input line 76.
+
+(./rust.out) (./rust.out)
+\@outlinefile=\write7
+\openout7 = `rust.out'.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 76.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 76.
+\symnumbers=\mathgroup6
+\sympureletters=\mathgroup7
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 76.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 76.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 76.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 76.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 76.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 76.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 76.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 76.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 76.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 76.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 76.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 76.
+LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 76.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 76.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 76.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 76.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 76.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 76.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 76.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 76.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 7
+6.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 7
+6.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
+ut line 76.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/translator/translator-basic-dicti
+onary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/translator/translator-bibliograph
+y-dictionary-English.dict
+Dictionary: translator-bibliography-dictionary, Language: English 
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/translator/translator-environment
+-dictionary-English.dict
+Dictionary: translator-environment-dictionary, Language: English 
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/translator/translator-months-dict
+ionary-English.dict
+Dictionary: translator-months-dictionary, Language: English 
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/translator/translator-numbers-dic
+tionary-English.dict
+Dictionary: translator-numbers-dictionary, Language: English 
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/translator/translator-theorem-dic
+tionary-English.dict
+Dictionary: translator-theorem-dictionary, Language: English 
+) (./rust.nav) [1
+
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./rust
+.toc)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 92.
+
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 92.
+
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
+ut line 92.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
+) (./rust.toc)
+Overfull \hbox (9.42502pt too wide) in paragraph at lines 92--92
+[][]  
+ []
+
+[2
+
+] [3
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb (./_minted-rust/solarized-light.pygstyle)
+(./_minted-rust/19CF355A1FE33BFD89A18299A73F7F86BFBE258336EB5E56A554DD9A10B78B9
+0.pygtex)
+\openout5 = `rust.pyg'.
+
+
+(./_minted-rust/3D3DB0FEB66824438CAC2B09FC60049A667F079DA6824D8D6F61BB5D872BA31
+9.pygtex)
+(./_minted-rust/9AC56E134F699A869B8B626A5C324F5FFFC6055F8EFC062E82FB14CD9D4DA14
+6.pygtex)) [4
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/9F67A805E8F35BC6BBE1068E14C76566811EA38BB6AF5F136BE5C5B0F0AB229
+0.pygtex)
+(./_minted-rust/61F8D2946F5FEAD34B8926302D7B3CF1D109851BE5E3445E9BCE9D3F860996A
+B.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/6A352A729213E27E8F49F04B36676B7A667F079DA6824D8D6F61BB5D872BA31
+9.pygtex)) [5
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/45D34917C0A4519C762B1AC1A70DEC0CB1CA295D5D87F8D409F48723AE060FD
+5.pygtex)
+(./_minted-rust/B64ABCB167A8B9DD4F282813C31AD0DA568F234770B58FC1E18F5738CF3548F
+5.pygtex)
+(./_minted-rust/D39B961B4E40F35848A12C46489252FA3DDC969BD85CACB72942AE8564800F9
+9.pygtex)) [6
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/F0EDCB16F293BFE3268029C695AFBEDA25C532643025B9B125B9D5FF678A265
+A.pygtex)) [7
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/152CC86959B07FC5168DF0CE7397E74A50B750D623C93026F92385CB02BF9C6
+7.pygtex)
+<./img/rust-project-folder-structure.png, id=367, 1927.2pt x 1084.05pt>
+File: ./img/rust-project-folder-structure.png Graphic file (type png)
+<use ./img/rust-project-folder-structure.png>
+Package pdftex.def Info: ./img/rust-project-folder-structure.png  used on input
+ line 7.
+(pdftex.def)             Requested size: 222.48985pt x 125.13455pt.
+)
+Overfull \vbox (1.68059pt too high) detected at line 159
+ []
+
+[8
+
+ <./img/rust-project-folder-structure.png (PNG copy)>]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/47BBE4575A8AC31060C657741E05B9B6032DE0FF635BC2CC20D662F06761E1A
+9.pygtex)) [9
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/B64ABCB167A8B9DD4F282813C31AD0DA568F234770B58FC1E18F5738CF3548F
+5.pygtex)
+(./_minted-rust/D4C588FDAF67CC6F47C3EAAB19DF498D9B4F524E0D012B6839CF3AF179DC915
+0.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/9E90157DC377C9DA58C1F0CC8852CF5D667F079DA6824D8D6F61BB5D872BA31
+9.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/5171C1BF6111942B651DB8086DFE45BC667F079DA6824D8D6F61BB5D872BA31
+9.pygtex)) [10
+
+] [11
+
+] [12
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/23EDF6A734A9D53779BE8BE1830D0EEE73581CDA2214C75200D516C2C4A68EB
+8.pygtex)) [13
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/223A44A10224B1563FAEAC699EAB6D4AC8B88F5C85502531D3561E542A94674
+C.pygtex)) [14
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/7A2FBED1C9F114B521FE78D5CF037C9FBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+(./_minted-rust/B99458291755EC217ECC885B6067171AFDBABFB6ACD6926E15D3425B41FC174
+7.pygtex)) [15
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/EE47FCA64A4F1E9CD96B97339BD37721BE341F2493D98FFA16CEE3152D72A9C
+E.pygtex)) [16
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/1C1FCDC9105056CAE5271F53D442A6A0835AAD90D234455A04442FA69BE0401
+1.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/7A2FBED1C9F114B521FE78D5CF037C9FBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)) [17
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/17C537FBC72988FFFEBA154EFA43223ABA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+(./_minted-rust/2E74E2C33D19A0EF2398EA27B3F9908805C9EEEB6429E75EC03FD4D78B01BD2
+0.pygtex)) [18
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/F19920944EBAE6644E012013D38BD68F2A895DA4AB135C23BF3335070C144DF
+E.pygtex)) [19
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/18325CC100E96A710BC1DF5EA2113B8583F94C8B40F8DF273EB9F9CE241066B
+7.pygtex)
+(./_minted-rust/B4758856CAE5CC81695B50625484DEB9F6E828F105A8BC8686B58CD77B9918D
+6.pygtex)) [20
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/B87967E1D0FA3ADED22B1602ADFC71E48976E5EB075A75E2EF72BA2098FFA75
+9.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/92ECA54870BC0C7B6155DC2BFA066197BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)) [21
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [22
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/2E7F0EFE788BB9AD687981E4D40AAF28BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/92520A5A9CF893220B9CD447F585F144BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/71F022EE06D058205CA061A242E28D9DBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/AD865D2F63B9FEB2552C220385FBB7E3BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/BF9D045328636A5DD42599C6F3889217BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/51239C0558DEC0B1465546626D4A9011BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/0DF3BF94A5077C0E4ED5168114426281BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/9BCE42517E4EAE6A0BA1B66C16665195BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/0724CF689080945D04200DE4ACF501D9BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)) [23
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [24
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <10.95> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 4.
+
+
+(./_minted-rust/0406306B50A51047BA52F18AB2CC9D65583E5D4CA16011270E20C3B722947CC
+1.pygtex)
+(./_minted-rust/2945B4C8DF21A1A06CA2A45C469A9351F8F8447798A62BF274E5193E899018A
+6.pygtex)) [25
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/25B3A31812C516FFB6753757E643DD98372D09975F32597EB6974F159D17680
+C.pygtex)) [26
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/8217771698D44EFF0C1A4876C42972C97D0CE49CE284DD252764D1090974D2C
+5.pygtex)) [27
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+<./img/char.png, id=950, 506.89375pt x 114.4275pt>
+File: ./img/char.png Graphic file (type png)
+<use ./img/char.png>
+Package pdftex.def Info: ./img/char.png  used on input line 8.
+(pdftex.def)             Requested size: 222.48985pt x 50.22427pt.
+) [28
+
+ <./img/char.png>]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/BBCEBEFF016F2738D83876ACB8BDDB81C5C334E0D5E4A5D2846C849D6B6C6BC
+2.pygtex)) [29
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [30
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/51722AA88F419BEC24F8DB9335CA687C3E750CDE8E21CECB39F6D5ED75455CE
+9.pygtex)) [31
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/5A0B89D91D49ABF0858EA4E167D1E6736B6F670CCCD2AD615A80D3A8E0080EB
+E.pygtex)) [32
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/A5EB1E2B24A64FE6505985FDDB746526CAD4CA75D8A119A73728B983F2D75AC
+F.pygtex)) [33
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/F5135FD58DB5E81453A7B6CD0D84C63BBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)) [34
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/1F44209D7277705C17969FEA1C8947FBE056B6BCD4EA84BEDF155E2A6FEADE8
+C.pygtex)) [35
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/B45C2754C02D571B8087C8A7E735659DCBBA4C041F31DE56160B4060D4B7189
+D.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/AB88D9D2AC21AB833CCF1804F68E746DBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/4F0361C08B91250453911B4381E6C65CBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/4DC8884F1E08F8511F2B61493D4B6C7DBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)) [36
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/852494A17E71F8FB7C5CE0F5F23A4B3AAD1E8FBD77A4DDF8D30DC024B66A707
+F.pygtex)) [37
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/57C2C1EF0E95A50A66C908319D5A5728488F77E5BAC9BB0281AF13138DA3D97
+E.pygtex)) [38
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/A6741475B5CB5EF4DDD8076087277482AC7517D010C800B24D480DC8B37D739
+0.pygtex)
+(./_minted-rust/F44E5FA8BB70A56D514DBCBDC7EFEFF24DDE1349A79400D8CF51D7461ADBCED
+5.pygtex)
+(./_minted-rust/827CB6D7D320420411D4DB6BB24C37F71D8FE877B34AF3DB30DB3190130F559
+F.pygtex)) [39
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/C7C4924E0FB06BE694345F7493E1BD536B99C75C0BDB7E6F914DA6F0B055422
+B.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/9A90F13A42694D1E8B2E8A31477C2F44BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)) [40
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/DC216E397F9964479A5359E9D1AF8B607CE70DBEAC0C8408576D154BCF1FEAA
+A.pygtex)) [41
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/F393EFA4D81F27CB400391A72374326585391CD1A4E158933BF3BBF63CDE6CC
+B.pygtex)) [42
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/AA7EE0CCDB5C2A4598398E413D0C62CD2CD3225BD5127854B7AD3EACDF79BEF
+A.pygtex)) [43
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/F580E0237122A6AD718D3C3B751A1DB3F606459A1B4EB08CCCE26D37C5C83A8
+5.pygtex)) [44
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/3A0E962027D4C0CD274F9BCD1DEE8208A9E1E17BB3CC20AC21E2A52BB50DB97
+0.pygtex)) [45
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/45CF9E626C683BFD29B51558881F7F38D4ACF6A39539E3B87ABB77657560A16
+D.pygtex)) [46
+
+] [47
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [48
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [49
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [50
+
+]
+\openout4 = `rust.vrb'.
+
+
+(./rust.vrb) [51
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [52
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/F9B29752B3732085DE683B0E99B0EA645D57B23C70C9FE8DB82D653EA1C32E9
+E.pygtex)) [53
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [54
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/C8CD874A88CEA198A5781F0E9BB05358BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/550AD2DC9CE7C5CFF074CCCDBFB690DBBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/550AD2DC9CE7C5CFF074CCCDBFB690DBBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/3DB4FBEA66C5571D2E5DCF9BEA4D07DBBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)) [55
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+! Extra }, or forgotten \endgroup.
+l.1 \frametitle{The String Type (3)}}
+                                     
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+(./_minted-rust/A24D371361675BA9B5AF534F6A4C2BCC743756BC0CBF2B40BF0B76485EDCEC6
+D.pygtex)) [56
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/93C90E12EE0912CDA18567BDBBBA44817E23F77288A757158DF9007A1398F46
+9.pygtex)) [57
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/1594C145D8ED01B7DA0790CE8E2CF669817E4A23C22766977F804F074B61068
+9.pygtex)
+<./img/trpl04-01.png, id=1843, 743.77875pt x 489.32813pt>
+File: ./img/trpl04-01.png Graphic file (type png)
+<use ./img/trpl04-01.png>
+Package pdftex.def Info: ./img/trpl04-01.png  used on input line 9.
+(pdftex.def)             Requested size: 88.99458pt x 58.5451pt.
+) [58
+
+ <./img/trpl04-01.png>]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+<./img/trpl04-02.png, id=1873, 743.77875pt x 758.835pt>
+File: ./img/trpl04-02.png Graphic file (type png)
+<use ./img/trpl04-02.png>
+Package pdftex.def Info: ./img/trpl04-02.png  used on input line 5.
+(pdftex.def)             Requested size: 102.68962pt x 104.76566pt.
+)
+Overfull \vbox (3.24919pt too high) detected at line 672
+ []
+
+[59
+
+ <./img/trpl04-02.png>]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+<./img/trpl04-03.png, id=1903, 743.77875pt x 947.03813pt>
+File: ./img/trpl04-03.png Graphic file (type png)
+<use ./img/trpl04-03.png>
+Package pdftex.def Info: ./img/trpl04-03.png  used on input line 5.
+(pdftex.def)             Requested size: 102.68962pt x 130.7492pt.
+) [60
+
+ <./img/trpl04-03.png>]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [61
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/1594C145D8ED01B7DA0790CE8E2CF669817E4A23C22766977F804F074B61068
+9.pygtex)) [62
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/ECF5C61F18ED2BAF4B4F916066E553586708FFA97C65F79BDAE24CCA9EF325B
+2.pygtex)) [63
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+<./img/trpl04-04.png, id=2016, 743.77875pt x 758.835pt>
+File: ./img/trpl04-04.png Graphic file (type png)
+<use ./img/trpl04-04.png>
+Package pdftex.def Info: ./img/trpl04-04.png  used on input line 5.
+(pdftex.def)             Requested size: 102.68962pt x 104.76566pt.
+) [64
+
+ <./img/trpl04-04.png>]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [65
+
+]
+\openout4 = `rust.vrb'.
+
+
+(./rust.vrb
+(./_minted-rust/66CA62970CD55E69A903AC3B40C557CFE5FA5A2D17A7ADB64C5F8C28F2AE3C2
+4.pygtex)
+File: ./img/trpl04-03.png Graphic file (type png)
+<use ./img/trpl04-03.png>
+Package pdftex.def Info: ./img/trpl04-03.png  used on input line 10.
+(pdftex.def)             Requested size: 109.53323pt x 139.46292pt.
+) [66
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/2ACFF0BB09E7D2C78CB5DF746908AAB5DC61CF238EADAF487DCD3A7B0830CA7
+A.pygtex)) [67
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/642F6DF983512085FE3D2F4379660015ACE8298B35EE4234BB863F24E2BE394
+6.pygtex)) [68
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/89F85F7D443B737E8E22A85BFB58875FB56F6BDD5C3250CFE3634AF2C431FDD
+6.pygtex))
+Overfull \vbox (2.09573pt too high) detected at line 766
+ []
+
+[69
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/749B88298A3C140266583AAFB7B1C4F6013B6262048EA690AC629EAC4C665E4
+6.pygtex)
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/bx/n' instead on input line 3.
+
+) [70
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/C0CAE7DA50B99B010246F50EE99C188E63B887F18B407901AC57DAF30BFA2F8
+B.pygtex)) [71
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/C0CAE7DA50B99B010246F50EE99C188E63B887F18B407901AC57DAF30BFA2F8
+B.pygtex)
+<./img/trpl04-05.png, id=2261, 1132.23pt x 489.32813pt>
+File: ./img/trpl04-05.png Graphic file (type png)
+<use ./img/trpl04-05.png>
+Package pdftex.def Info: ./img/trpl04-05.png  used on input line 5.
+(pdftex.def)             Requested size: 205.37926pt x 88.75471pt.
+)
+Overfull \vbox (4.85059pt too high) detected at line 795
+ []
+
+[72
+
+ <./img/trpl04-05.png>]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/1AE2B7D3BF485B1CA7B12974C196E1946D519C1051DC83F7D320850F579EB4F
+A.pygtex)) [73
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/1C6116A02C3796DE590959AF32FD8FA8011D21A17A497F45ED60D0D7C759869
+D.pygtex)) [74
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/5A8D0618470CEF940045F967D9B8E887BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+(./_minted-rust/D4BC7F5FD1E06AB039ED52BC6445831B0B7F9C7E0C722F8B8C2E1E83B7FEBEF
+C.pygtex)) [75
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/E0F7B771DD6FB995C4E5EF4A21B9CBF0A9E08918CA3A7F44CEEE1B20233F5FC
+0.pygtex)) [76
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/38179210141925AF1335DAABF6C4D4938140230E0A650C6D15BB6F3A06CA7D0
+C.pygtex)) [77
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [78
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/93402A308CBEF37100968DB70CB0E0CA0AB69F981ABA18DC1375EAD946B810A
+9.pygtex)) [79
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/90C1AC80D231DE981A5ECC52E12AFD229B6C2C28FD3C7DC31C51AEA4D2F2EF0
+3.pygtex)) [80
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/36DF9B0B7D77B2F4201AC32C28E82AE9DBF1186026CA89A1872F07E15B94D84
+B.pygtex))
+Overfull \vbox (7.59602pt too high) detected at line 865
+ []
+
+[81
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/9D9B73E40C0CDAA1C76D86B0588CCF2092164DEB65FC0D88338110659836261
+6.pygtex)) [82
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/9326D9C71763AD5CC4901CDED1ADCD9DFC246B3C8CC25383818020A6C0E281B
+8.pygtex)) [83
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/4D7DDDAF2010054184F62EB6A5C8E75D354BE048A1EFB8DB4B5A20289C59305
+4.pygtex)) [84
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/6CEA4951690FBCB41218AB4EA95E5CC27A8173A030175F24BBC15B0F0CEE8A8
+0.pygtex)) [85
+
+] [86
+
+] [87
+
+] [88
+
+] [89
+
+] [90
+
+] [91
+
+] [92
+
+] [93
+
+] [94
+
+] [95
+
+] [96
+
+] [97
+
+]
+[98
+
+] [99
+
+] [100
+
+] [101
+
+] [102
+
+] [103
+
+]
+\tf@nav=\write8
+\openout8 = `rust.nav'.
+
+\tf@toc=\write9
+\openout9 = `rust.toc'.
+
+\tf@snm=\write10
+\openout10 = `rust.snm'.
+
+ (./rust.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package rerunfilecheck Info: File `rust.out' has not changed.
+(rerunfilecheck)             Checksum: A1E2F1EB1CFBF7B9FDFFAD58C2CBA24E;3868.
+runsystem(rm rust.pyg)...executed.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 26612 strings out of 474968
+ 561668 string characters out of 5776083
+ 886055 words of memory out of 5000000
+ 46871 multiletter control sequences out of 15000+600000
+ 484240 words of font info for 82 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 128i,16n,122p,870b,1087s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pf
+b></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pf
+b></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr
+/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/tex
+live/2022/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on rust.pdf (103 pages, 1061473 bytes).
+PDF statistics:
+ 3417 PDF objects out of 3580 (max. 8388607)
+ 3073 compressed objects within 31 object streams
+ 235 named destinations out of 1000 (max. 500000)
+ 1194 words of extra memory for PDF output out of 10000 (max. 10000000)
+
