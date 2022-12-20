@@ -536,66 +536,66 @@
 	\end{frame}
 	
 	\section{Understanding Ownership}
-		
+	
 	\begin{frame}[fragile]
 		\frametitle{What Is Ownership?}
 		\begin{itemize}
 			\item \textbf{Ownership} is a set of rules that governs how a Rust program manages memory.
 			\item 		Some languages have \textbf{garbage collection} that \textbf{regularly looks} (performance?) for no-longer used memory as the program runs;
-			\item 		 in other languages, the \textbf{programmer} must \textbf{explicitly allocate and free} the memory.
+			\item 		 In other languages, the \textbf{programmer} must \textbf{explicitly allocate and free} the memory.
 			\item 		 Rust uses a third approach: memory is managed through a system of ownership with \textbf{a set of rules} that the\textbf{ compiler checks}. If any of the rules are violated, the program won’t compile.
 		\end{itemize}
-			\begin{block}{Note}
+		\begin{block}{Note}
 			None of the features of ownership will slow down your program while it’s running.
 		\end{block}
-	\tiny Because ownership is a new concept for many programmers, it does take some time to get used to.
+		\tiny Because ownership is a new concept for many programmers, it does take some time to get used to.
 	\end{frame}
 	
-		
+	
 	\begin{frame}[fragile]
 		\frametitle{The Stack and the Heap}
-	\begin{itemize}
-		\item In a systems programming language like Rust, whether a value is on the stack or the heap affects how the language behaves and why you have to make certain decisions. Parts of ownership will be described in relation to the stack and the heap later in the following, so here is a brief explanation.
-		\item 	Both the stack and the heap are parts of memory available to your code to use at runtime, but they are structured in different ways. The stack stores values in the order it gets them and removes the values in the opposite order. This is referred to as last in, first out. Adding data is called pushing onto the stack, and removing data is called popping off the stack. All data stored on the stack must have a known, fixed size. Data with an unknown size at compile time or a size that might change must be stored on the heap instead.
-	\end{itemize}
+		\begin{itemize}
+			\item In a systems programming language like Rust, whether a value is on the stack or the heap affects how the language behaves and why you have to make certain decisions. Parts of ownership will be described in relation to the stack and the heap later in the following, so here is a brief explanation.
+			\item 	Both the \textbf{stack and the heap} are \textbf{parts of memory} available to your code to use at runtime, but they are structured in different ways. 
+			\item The \textbf{stack} stores values in the order it gets them and removes the values in the opposite order. This is \textbf{referred to as last in, first out}. Adding data is called pushing onto the stack, and removing data is called popping off the stack. \textbf{All data stored on the stack must have a known, fixed size}. Data with an unknown size at compile time or a size that might change must be stored on the heap instead.
+		\end{itemize}
 	\end{frame}
 	
-		\begin{frame}[fragile]
+	\begin{frame}[fragile]
 		\frametitle{The Stack and the Heap (2)}
 		\begin{itemize}
-			\item 	The heap is less organized: when you put data on the heap, you request a certain amount of space. The memory allocator finds an empty spot in the heap that is big enough, marks it as being in use, and returns a pointer, which is the address of that location. This process is called allocating on the heap and is sometimes abbreviated as just allocating (pushing values onto the stack is not considered allocating). Because the pointer to the heap is a known, fixed size, you can store the pointer on the stack, but when you want the actual data, you must follow the pointer.
-			\item 	Pushing to the stack is faster than allocating on the heap because the allocator never has to search for a place to store new data; that location is always at the top of the stack. Comparatively, allocating space on the heap requires more work, because the allocator must first find a big enough space to hold the data and then perform bookkeeping to prepare for the next allocation.
+			\item 	The heap is less organized: when you put data on the heap, you request a certain amount of space. The \textbf{memory allocator} finds an empty spot in the heap that is big enough, marks it as being in use, and returns a pointer, which is the address of that location. This process is called allocating on the heap and is sometimes abbreviated as just allocating (pushing values onto the stack is not considered allocating). \textbf{Because the pointer to the heap is a known, fixed size, you can store the pointer on the stack, but when you want the actual data, you must follow the pointer}.
+			\item 	\textbf{Pushing to the stack is faster than allocating on the heap} because the allocator never has to search for a place to store new data; that location is always at the top of the stack. Comparatively, allocating space on the heap requires more work, because the allocator must first find a big enough space to hold the data and then perform bookkeeping to prepare for the next allocation.
 			
 		\end{itemize}
 	\end{frame}
 	
 	
-		
+	
 	\begin{frame}[fragile]
 		\frametitle{The Stack and the Heap (3)}
 		\begin{itemize}
-			\item 	Accessing data in the heap is slower than accessing data on the stack because you have to follow a pointer to get there. Contemporary processors are faster if they jump around less in memory.
 			\item 	When your code calls a function, the values passed into the function (including, potentially, pointers to data on the heap) and the function’s local variables get pushed onto the stack. When the function is over, those values get popped off the stack.
 			\item 	Keeping track of what parts of code are using what data on the heap, minimizing the amount of duplicate data on the heap, and cleaning up unused data on the heap so you don’t run out of space are all problems that ownership addresses. Once you understand ownership, you won’t need to think about the stack and the heap very often, but knowing that the main purpose of ownership is to manage heap data can help explain why it works the way it does.
 		\end{itemize}
 	\end{frame}
 	
-		\begin{frame}[fragile]
+	\begin{frame}[fragile]
 		\frametitle{Ownership Rules}
-	\begin{itemize}
-		\item Each value in Rust has an owner.
-		\item There can only be one owner at a time.
-		\item When the owner goes out of scope, the value will be dropped.
-	\end{itemize}
+		\begin{itemize}
+			\item Each value in Rust has an owner.
+			\item There can only be one owner at a time.
+			\item When the owner goes out of scope, the value will be dropped.
+		\end{itemize}
 		
 	\end{frame}
 	
-			\begin{frame}[fragile]
+	\begin{frame}[fragile]
 		\frametitle{Variable Scope}
-			\inputminted{rust}{./code/scope.rs}
+		\inputminted{rust}{./code/scope.rs}
 	\end{frame}
 	
-				\begin{frame}[fragile]
+	\begin{frame}[fragile]
 		\frametitle{The String Type}
 		\begin{itemize}
 			\item To illustrate the rules of ownership, we need a data type that is more complex than those we covered in the “Data Types” section
@@ -603,86 +603,114 @@
 			\item We want to look at \textbf{data that is stored on the heap} and explore how Rust knows when to clean up that data, and the \textbf{String} type is a great example
 		\end{itemize}
 	\end{frame}
-
-		
+	
+	
 	\begin{frame}[fragile]
 		\frametitle{The String Type (2)}
-	\begin{itemize}
-		\item String literals(\mintinline{rust}|&str|) are hard-coded into our program (\textbf{fast and efficient}). String literals are convenient, but they aren’t suitable for every situation in which we may want to use text.
-			\begin{itemize}
-		\item 	One reason is that they’re \textbf{immutable}. 
-		\item 	Another is that not every string value can be known when we write our code (for example, user input) 
-		\end{itemize}
-		\item 	For these situations, Rust has a second string type, \mintinline{rust}|String|.
 		\begin{itemize}
-		\item This type manages data allocated on the \textbf{heap} and as such is able to store an amount of text that is unknown to us at compile time.
-		\item  You can create a \mintinline{rust}|String| from a string literal using the from function, like so: \mintinline{rust}|let s = String::from("hello");|.
+			\item String literals(\mintinline{rust}|&str|) are hard-coded into our program (\textbf{fast and efficient}). String literals are convenient, but they aren’t suitable for every situation in which we may want to use text.
+			\begin{itemize}
+				\item 	One reason is that they’re \textbf{immutable}. 
+				\item 	Another is that not every string value can be known when we write our code (for example, user input) 
 			\end{itemize}
-	\end{itemize}
+			\item 	For these situations, Rust has a second string type, \mintinline{rust}|String|.
+			\begin{itemize}
+				\item This type manages data allocated on the \textbf{heap} and as such is able to store an amount of text that is unknown to us at compile time.
+				\item  You can create a \mintinline{rust}|String| from a string literal using the from function, like so: \mintinline{rust}|let s = String::from("hello");|.
+			\end{itemize}
+		\end{itemize}
 	\end{frame}
 	
-		\begin{frame}[fragile]
-		\frametitle{The String Type (3)}}
-		\scriptsize
-		\inputminted{rust}{./code/string.rs}
-	\end{frame}
-
 	\begin{frame}[fragile]
-		\frametitle{Move}
-		\inputminted{rust}{./code/move.rs}
-		
-		Bind the value 5 to x; then make a copy of the value in x and bind it to y.”  Because \textbf{integers are simple values with a known, fixed size}, and these two 5 values are pushed onto the \textbf{stack}
+		\frametitle{The String Type (3)}}
+	\scriptsize
+	\inputminted{rust}{./code/string.rs}
+\end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{Move}
+	\inputminted{rust}{./code/move.rs}
+	
+	Bind the value 5 to x; then make a copy of the value in x and bind it to y.”  Because \textbf{integers are simple values with a known, fixed size}, and these two 5 values are pushed onto the \textbf{stack}
+	
 	\begin{block}{Primitive type on stack}
 		\textbf{Primitive type}'s size known and fixed  so pushed onto the \textbf{stack}
 	\end{block}
-		
-	\end{frame}
+	
+\end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{Move (2)}
-	\inputminted{rust}{./code/move-string.rs}
 	
+	\begin{columns}
+		\column{0.6\textwidth}
+		\inputminted{rust}{./code/move-string.rs}
+		\column{0.4\textwidth}
 		\begin{figure}
-		\centering
-		\includegraphics[width=0.65\textwidth]{./img/trpl04-01.png}
-		\caption{Representation in memory of a String}
-		\label{fig:figure}
-	\end{figure}
-
-	 The second line would make a copy of the value in s1 and bind it to s2. But this isn’t quite what happens.
-	 
-	 \textbf{A String is made up of three parts, shown on the left: a pointer to the memory that holds the contents of the string, a length, and a capacity. This group of data is stored on the stack. On the right is the memory on the heap that holds the contents.}
+			\centering
+			\includegraphics[width=0.65\textwidth]{./img/trpl04-01.png}
+			\caption{a String in memory}
+			\label{fig:figureS1}
+		\end{figure}
+	\end{columns}
+	
+	The second line would make a copy of the value in s1 and bind it to s2. But this isn’t quite what happens.
+	
+	\textbf{A String is made up of three parts, shown on the left: a pointer to the memory that holds the contents of the string, a length, and a capacity. This group of data is stored on the stack. On the right is the memory on the heap that holds the contents.}
 \end{frame}
 
 
-	\section{Using Structs to Structure Related Data}
-	\section{Enums and Pattern Matching}
-	\section{Managing Projects with Packages, Crates, and Modules}
-	\section{Common Collections}
-	\section{Error Handling}
-	\section{Generic Types, Traits, and Lifetimes}
-	\section{Writing Automated Tests}
-	\section{An I/O Project: Building a Command Line Program}
-	\section{Functional Language Features: Iterators and Closures}
-	\section{More About Cargo and Crates.io}
-	\section{Smart Pointers}
-	\section{Fearless Concurrency}
-	\section{Object-Oriented Programming Features of Rust}
-	\section{Patterns and Matching}
-	\section{Advanced Features}
-	\section{Multithread Web Server}
-	\section{Tokio}
-	
-	\section*{Acknowledgement}
-	\begin{frame}
-		\Huge{\centerline{Thank you!}}
-	\end{frame}
-	
+\begin{frame}[fragile]
+	\frametitle{Move (3)}
+	When we assign s1 to s2, the String data is copied, meaning we copy the pointer, the length, and the capacity that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the data representation in memory looks like the following ( sounds like making a \textbf{shallow copy}):
+		\begin{figure}
+		\centering
+		\includegraphics[width=0.3\textwidth]{./img/trpl04-02.png}
+		\caption{Representation in memory of the variable s2 that has a copy of the pointer, length, and capacity of s1}
+		\label{fig:figureS2}
+	\end{figure}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Another possibility for what s2 = s1 might do if Rust copied the heap data as well}
+	The representation does not look like the following Figure, which is what memory would look like if Rust instead copied the heap data as well. If Rust did this, the operation s2 = s1 could be very expensive in terms of runtime performance if the data on the heap were large ()deep copy).
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.3\textwidth]{./img/trpl04-03.png}
+		\label{fig:figureSAnotherPossibility}
+	\end{figure}
+\end{frame}
+
+
+\section{Using Structs to Structure Related Data}
+\section{Enums and Pattern Matching}
+\section{Managing Projects with Packages, Crates, and Modules}
+\section{Common Collections}
+\section{Error Handling}
+\section{Generic Types, Traits, and Lifetimes}
+\section{Writing Automated Tests}
+\section{An I/O Project: Building a Command Line Program}
+\section{Functional Language Features: Iterators and Closures}
+\section{More About Cargo and Crates.io}
+\section{Smart Pointers}
+\section{Fearless Concurrency}
+\section{Object-Oriented Programming Features of Rust}
+\section{Patterns and Matching}
+\section{Advanced Features}
+\section{Multithread Web Server}
+\section{Tokio}
+
+\section*{Acknowledgement}
+\begin{frame}
+	\Huge{\centerline{Thank you!}}
+\end{frame}
+
 \end{document}
 
 \begin{comment}
-	\begin{frame}[fragile]
-		\frametitle{title}
-	\end{frame}
+\begin{frame}[fragile]
+	\frametitle{title}
+\end{frame}
 \end{comment}
