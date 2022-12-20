@@ -755,6 +755,12 @@
 The reason is that types such as integers that have \textbf{a known size at compile time} are stored entirely on the \textbf{stack}, so \textbf{copies of the actual values are quick to make}. That means there’s no reason we would want to prevent x from being valid after we create the variable y. In other words, there’s no difference between deep and shallow copying here, so calling clone wouldn’t do anything different from the usual shallow copying, and we can leave it out.
 \end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{Ownership and Functions}
+	\inputminted{rust}{./code/ownership-functions.rs}
+\end{frame}
+
+
 \section{Using Structs to Structure Related Data}
 \section{Enums and Pattern Matching}
 \section{Managing Projects with Packages, Crates, and Modules}
