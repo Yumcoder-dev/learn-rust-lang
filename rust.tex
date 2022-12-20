@@ -928,10 +928,20 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{ Rewrite first_word to return a slice}
+	\frametitle{ Rewrite first\_word to return a slice}
 		\inputminted{rust}{./code/slice2.rs}
-	
 \end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{ Rewrite first\_word to return a slice (2)}
+	\inputminted{shell}{./code/slice2.shell}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{ Rewrite first\_word to return a slice (3)}
+	Recall from the borrowing rules that if we have an immutable reference to something, we cannot also take a mutable reference. Because clear needs to truncate the String, it needs to get a mutable reference. The println! after the call to clear uses the reference in word, so the immutable reference must still be active at that point. Rust disallows the mutable reference in clear and the immutable reference in word from existing at the same time, and compilation fails. Not only has Rust made our API easier to use, but it has also eliminated an entire class of errors at compile time!
+\end{frame}
+
 
 \section{Using Structs to Structure Related Data}
 \section{Enums and Pattern Matching}
