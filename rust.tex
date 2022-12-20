@@ -774,10 +774,28 @@ The reason is that types such as integers that have \textbf{a known size at comp
 \begin{frame}[fragile]
 	\frametitle{References}
 	A reference is\textbf{ like a pointer} in that it’s \textbf{an address we can follow to access the data} stored at that address; \textbf{that data is owned by some other variable}. Unlike a pointer,\textbf{ a reference is guaranteed to point to a valid value of a particular type for the life of that reference}.
-	\inputminted{rust}{./code/references.rs}
+	\begin{columns}
+	\column{0.7\textwidth}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/references.rs}
+	\column{0.3\textwidth}
+		\small
+	Note that we pass \&s1 into calculate\_length and, in its definition, we take \&String rather than String. These ampersands represent references, and they allow you to refer to some value without taking ownership of it
+\end{columns}
+
 \end{frame}
 
  
+
+\begin{frame}[fragile]
+	\frametitle{References (2)}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/references.rs}
+		\begin{figure}
+		\centering
+		\includegraphics[width=0.6\textwidth]{./img/trpl04-05.png}
+		\label{fig:figureRef}
+	\end{figure}
+\end{frame}
+
 
 \section{Using Structs to Structure Related Data}
 \section{Enums and Pattern Matching}
