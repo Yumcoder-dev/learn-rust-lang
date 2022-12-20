@@ -748,11 +748,11 @@
 
 
 \begin{frame}[fragile]
-	\frametitle{Stack-Only Data: Copy vs Clone}
+	\frametitle{Stack-Only Data: Copy and Clone}
 	We don’t have a call to clone, but x is still valid and wasn’t moved into y.
 	\inputminted{rust}{./code/move2.rs}
 
-The reason is that types such as integers that have a known size at compile time are stored entirely on the stack, so copies of the actual values are quick to make. That means there’s no reason we would want to prevent x from being valid after we create the variable y. In other words, there’s no difference between deep and shallow copying here, so calling clone wouldn’t do anything different from the usual shallow copying, and we can leave it out.
+The reason is that types such as integers that have \textbf{a known size at compile time} are stored entirely on the \textbf{stack}, so \textbf{copies of the actual values are quick to make}. That means there’s no reason we would want to prevent x from being valid after we create the variable y. In other words, there’s no difference between deep and shallow copying here, so calling clone wouldn’t do anything different from the usual shallow copying, and we can leave it out.
 \end{frame}
 
 \section{Using Structs to Structure Related Data}
