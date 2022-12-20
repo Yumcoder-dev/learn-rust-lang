@@ -762,8 +762,22 @@ The reason is that types such as integers that have \textbf{a known size at comp
 
 \begin{frame}[fragile]
 	\frametitle{Return Values and Scope}
-	\inputminted[fontsize=\scriptsize]{rust}{./code/ownership-functions.rs}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/ownership-return.rs}
 \end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Returning ownership}
+	\inputminted{rust}{./code/ownership-return2.rs}
+	Rust has a feature for using a value without transferring ownership, called \textbf{\textit{references}}.
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{References}
+	A reference is\textbf{ like a pointer} in that it’s \textbf{an address we can follow to access the data} stored at that address; \textbf{that data is owned by some other variable}. Unlike a pointer,\textbf{ a reference is guaranteed to point to a valid value of a particular type for the life of that reference}.
+	\inputminted{rust}{./code/references.rs}
+\end{frame}
+
+ 
 
 \section{Using Structs to Structure Related Data}
 \section{Enums and Pattern Matching}
