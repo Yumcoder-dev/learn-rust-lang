@@ -817,6 +817,12 @@ The reason is that types such as integers that have \textbf{a known size at comp
 \end{frame}
 
 
+\begin{frame}[fragile]
+	\frametitle{Mutable references restriction}
+	\textbf{If you have a mutable reference to a value, you can have no other references to that value}. 
+	\inputminted{rust}{./code/borrowing-mut-ref-err1.rs}
+\end{frame}
+
 
 \section{Using Structs to Structure Related Data}
 \section{Enums and Pattern Matching}
