@@ -823,6 +823,36 @@ The reason is that types such as integers that have \textbf{a known size at comp
 	\inputminted{rust}{./code/borrowing-mut-ref-err1.rs}
 \end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{Mutable references restriction (2)}
+	\inputminted[fontsize=\scriptsize]{shell}{./code/borrowing-mut-ref-err1.shell}
+	
+	\scriptsize
+	This error says that this code is invalid because we cannot borrow s as mutable more than once at a time. The first mutable borrow is in r1 and must last until it’s used in the println!, but between the creation of that mutable reference and its usage, we tried to create another mutable reference in r2 that borrows the same data as r1.
+	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Why mutable references restriction exist in Rust?}
+	It’s something that new Rustaceans struggle with because most languages let you mutate whenever you’d like. The benefit of having this restriction is that \textbf{Rust can prevent data races at compile time}. 
+	
+	A data race is similar to a race condition and happens when these three behaviors occur:
+	
+	\begin{itemize}
+		\item Two or more pointers access the same data at the same time.
+		\item 	At least one of the pointers is being used to write to the data.
+		\item 	There’s no mechanism being used to synchronize access to the data.
+	\end{itemize}
+Data races cause undefined behavior and can be difficult to diagnose and fix when you’re trying to track them down at runtime.
+	
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Mutable references restriction example}
+	\textbf{If you have a mutable reference to a value, you can have no other references to that value}. 
+	\inputminted{rust}{./code/borrowing-simultaneous.rs.rs}
+\end{frame}
 
 \section{Using Structs to Structure Related Data}
 \section{Enums and Pattern Matching}
