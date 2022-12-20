@@ -731,7 +731,28 @@
 
 \begin{frame}[fragile]
 	\frametitle{Deeply copy with clone}
+	If we do want to deeply copy the heap data of the String, not just the stack data, we can use a common method called clone.
 	
+		\begin{columns}
+		\column{0.6\textwidth}
+			\inputminted{rust}{./code/move-clone.rs}
+		\column{0.4\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.8\textwidth]{./img/trpl04-03.png}
+				\label{fig:figureSAnotherPossibility2}
+			\end{figure}
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Stack-Only Data: Copy vs Clone}
+	We don’t have a call to clone, but x is still valid and wasn’t moved into y.
+	\inputminted{rust}{./code/move2.rs}
+
+The reason is that types such as integers that have a known size at compile time are stored entirely on the stack, so copies of the actual values are quick to make. That means there’s no reason we would want to prevent x from being valid after we create the variable y. In other words, there’s no difference between deep and shallow copying here, so calling clone wouldn’t do anything different from the usual shallow copying, and we can leave it out.
 \end{frame}
 
 \section{Using Structs to Structure Related Data}
