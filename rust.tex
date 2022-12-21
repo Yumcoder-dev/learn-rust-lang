@@ -1107,6 +1107,17 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 	\inputminted{rust}{./code/match.rs}
 \end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{Patterns that Bind to Values}
+	\begin{columns}
+	\column{0.6\textwidth}
+		\inputminted[fontsize=\scriptsize]{rust}{./code/match2.rs}
+	\column{0.4\textwidth}
+		Another useful feature of match arms is that they can bind to the parts of the values that match the pattern. This is how we can extract values out of enum variants.
+\end{columns}
+	
+\end{frame}
+
 \section{Managing Projects with Packages, Crates, and Modules}
 \section{Common Collections}
 \section{Error Handling}
