@@ -1142,6 +1142,25 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 \end{frame}
 
 \section{Managing Projects with Packages, Crates, and Modules}
+\begin{frame}[fragile]
+	\frametitle{Packages and Crates}
+	 \begin{itemize}
+	 	\item As a project grows, you should organize code by splitting it into multiple modules and then multiple files. 
+	 	\item 	 A package can contain multiple binary crates and optionally one library crate. 
+	 	\item 	 As a package grows, you can extract parts into separate crates that become external dependencies.
+	 	\item 	A crate is the smallest amount of code that the Rust compiler considers at a time.
+	 	\item 	For very large projects comprising a set of interrelated packages that evolve together, Cargo provides workspaces, which we’ll cover later.
+	 \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Packages and Crates (2)}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.65\textwidth]{./img/package.jpeg}
+	\end{figure}
+\end{frame}
+
 \section{Common Collections}
 \section{Error Handling}
 \section{Generic Types, Traits, and Lifetimes}
