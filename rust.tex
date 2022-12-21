@@ -1168,8 +1168,35 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 
 \begin{frame}[fragile]
 	\frametitle{Package}
-	A package is a bundle of one or more crates that provides a set of functionality. A package contains a Cargo.toml file that describes how to build those crates.
+	\begin{itemize}
+		\item A package is a bundle of one or more crates that provides a set of functionality. A package contains a Cargo.toml file that describes how to build those crates.
+		\item 	After we run \mintinline{shell}|cargo new|, we use \mintinline{shell}|ls| to see what Cargo creates. In the project directory, there’s a \mintinline{shell}|Cargo.toml| file, giving us a package. There’s also a src directory that contains \mintinline{shell}|main.rs|. Cargo knows that if the package directory contains \mintinline{shell}|src/lib.rs|, the package contains a library crate with the same name as the package, and src/lib.rs is its crate root.
+		\item If a package contains \mintinline{shell}|src/main.rs| and \mintinline{shell}|src/lib.rs|, it has two crates: a binary and a library, both with the same name as the package. 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Declaring modules}
+	In the crate root file, you can \textbf{declare new modules}; say, you declare a “garden” module with  \mintinline{rust}|mod garden;|. The compiler will look for the module’s code in these places:
+\begin{itemize}
+	\item 	\textbf{Inline}, within curly brackets that replace the semicolon following \mintinline{rust}|mod garden|
+	\item 	\textbf{In the file} src/garden.rs
+	\item 	\textbf{In the file} src/garden/mod.rs
+\end{itemize}
 	
+	\textbf{Declaring submodules}: In any file other than the crate root, you can declare submodules. For example, you might declare mod vegetables; in src/garden.rs. The compiler will look for the submodule’s code within the directory named for the parent module in these places:
+\begin{itemize}
+	\item 	\textbf{Inline}, directly following mod vegetables, within curly brackets instead of the semicolon
+	\item 	\textbf{In the file} src/garden/vegetables.rs
+	\item 	\textbf{In the file} src/garden/vegetables/mod.rs
+\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Paths to code in modules}
+	Once a module is part of your crate, you can refer to code in that module from anywhere else in that same crate, \underline{as long as the privacy rules allow}, using the path to the code. For example, an Asparagus type in the garden vegetables module would be found at \mintinline{rust}|crate::garden::vegetables::Asparagus|.
 \end{frame}
 
 \section{Common Collections}
