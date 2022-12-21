@@ -1148,17 +1148,28 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 	 	\item As a project grows, you should organize code by splitting it into multiple \textbf{modules} and then multiple files. 
 	 	\item 	A \textbf{package} can contain multiple binary crates and optionally one library crate. 
 	 	\item 	As a package grows, you can extract parts into separate crates that become external dependencies.
-	 	\item 	A \textbf{crate} is the smallest amount of code that the Rust compiler considers at a time.
+	 	\item 	A \textbf{crate} is the smallest amount of code that the Rust compiler considers at a time. A crate can come in one of two forms: 
+	 	\begin{itemize}
+	 		\item \textbf{Binary crates }are programs you can compile to an executable, such as a command-line program or a server. Each must have a function called \mintinline{rust}|main| that defines what happens when the executable runs. 
+	 		\item 	\textbf{Library crates} don’t have a main function, and they don’t compile to an executable. Instead, they define functionality intended to be shared with multiple projects.
+	 	\end{itemize}
+	 	
 	 	\item 	For very large projects comprising a set of interrelated packages that evolve together, Cargo provides \textbf{workspaces}, which we’ll cover later.
 	 \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{Packages and Crates (2)}
+	\frametitle{Module system}
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.65\textwidth]{./img/package.jpeg}
 	\end{figure}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Package}
+	A package is a bundle of one or more crates that provides a set of functionality. A package contains a Cargo.toml file that describes how to build those crates.
+	
 \end{frame}
 
 \section{Common Collections}
