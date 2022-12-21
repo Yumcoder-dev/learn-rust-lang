@@ -1103,10 +1103,8 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 
 \begin{frame}[fragile]
 	\frametitle{The match Control Flow Construct}
-	The Option type encodes the very common scenario in which a value could be something or it could be nothing.
-	\inputminted{rust}{./code/enum4.rs}
-	
-	see: “Null References: The Billion Dollar Mistake”
+	Rust has an extremely powerful control flow construct called \mintinline{rust}|match| that allows you to compare a value against a series of patterns and then execute code based on which pattern matches.
+	\inputminted{rust}{./code/match.rs}
 \end{frame}
 
 \section{Managing Projects with Packages, Crates, and Modules}
