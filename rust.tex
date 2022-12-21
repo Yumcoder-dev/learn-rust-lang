@@ -1184,7 +1184,7 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 	\item 	\textbf{In the file} src/garden/mod.rs
 \end{itemize}
 	
-	\textbf{Declaring submodules}: In any file other than the crate root, you can declare submodules. For example, you might declare mod vegetables; in src/garden.rs. The compiler will look for the submodule’s code within the directory named for the parent module in these places:
+	\textbf{Declaring submodules}: In any file other than the crate root, you can declare submodules. For example, you might declare \mintinline{rust}|mod vegetables;| in src/garden.rs. The compiler will look for the submodule’s code within the directory named for the parent module in these places:
 \begin{itemize}
 	\item 	\textbf{Inline}, directly following mod vegetables, within curly brackets instead of the semicolon
 	\item 	\textbf{In the file} src/garden/vegetables.rs
