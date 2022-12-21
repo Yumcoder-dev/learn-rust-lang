@@ -1023,9 +1023,13 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 	\begin{block}{Unit type}
 		The tuple without any values has a special name, unit. This value and its corresponding type are both written () and represent an empty value or an empty return type. Expressions implicitly return the unit value if they don’t return any other value.
 	\end{block}
-	
-	
 \end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Unit-Like Structs Without Any Fields (2)}
+	Unit-like structs can be useful when you need to implement a trait on some type but don’t have any data that you want to store in the type itself. 
+\end{frame}
+
 
 \section{Enums and Pattern Matching}
 \section{Managing Projects with Packages, Crates, and Modules}
