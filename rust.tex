@@ -928,7 +928,7 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{ Rewrite first\_word to return a slice}
+	\frametitle{Rewrite first\_word to return a slice}
 		\inputminted{rust}{./code/slice2.rs}
 \end{frame}
 
@@ -938,12 +938,12 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{ Rewrite first\_word to return a slice (3)}
+	\frametitle{Rewrite first\_word to return a slice (3)}
 	Recall from the borrowing rules that if we have an immutable reference to something, we cannot also take a mutable reference. Because clear needs to truncate the String, it needs to get a mutable reference. The println! after the call to clear uses the reference in word, so the immutable reference must still be active at that point. Rust disallows the mutable reference in clear and the immutable reference in word from existing at the same time, and compilation fails. Not only has Rust made our API easier to use, but it has also eliminated an entire class of errors at compile time!
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{ Improve first\_word function}
+	\frametitle{Improve first\_word function}
 	\mintinline{rust}|fn first_word(s: &String) -> &str {/*...*/}| 
 	
 	A more experienced Rustacean would write the signature as in below instead because it allows us to use the same function on both \mintinline{rust}|&String|  values and  \mintinline{rust}|&str|  values.
@@ -969,7 +969,7 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 
 \begin{frame}[fragile]
 	\frametitle{Using the Field Init Shorthand}
-	\inputminted{rust}{./code/struct.rs}
+	\inputminted{rust}{./code/field-shorthand.rs}
 \end{frame}
 
 
