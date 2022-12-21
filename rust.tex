@@ -1028,9 +1028,27 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 \begin{frame}[fragile]
 	\frametitle{Unit-Like Structs Without Any Fields (2)}
 	Unit-like structs can be useful when you need to implement a trait on some type but don’t have any data that you want to store in the type itself. 
-	example see: \href{https://doc.rust-lang.org/src/alloc/alloc.rs.html#59}{Global}
+	Example, see: The global memory allocator, \href{https://doc.rust-lang.org/src/alloc/alloc.rs.html#59}{\colorbox{lightgray}{Global}}, is a unit struct.
 \end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{Method Syntax}
+	\textbf{Methods} are similar to \textbf{functions}: we declare them with the \mintinline{rust}|fn| keyword and a name, they can have parameters and a return value, and they contain some code that’s run when the method is called from somewhere else. Unlike functions, methods are defined within the context of a struct (or an enum or a trait object, which we cover later), and their \textbf{first parameter is always self}, which represents the instance of the struct the method is being called on.
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Method Syntax(2)}
+	\inputminted{rust}{./code/method.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Associated Functions}
+	\begin{itemize}
+		\item \textbf{All functions defined within an \mintinline{rust}|impl|  block} are called associated functions because they’re associated with the type named after the  \mintinline{rust}|impl| . We can define associated functions that don’t have self as their first parameter (and\underline{ thus are not methods}) because they don’t need an instance of the type to work with. We’ve already used one function like this: the String::from function that’s defined on the String type.
+		\item 	Associated functions that aren’t methods are often used for constructors that will return \textbf{a new instance of the struct}(factory method). These are often called \textbf{new}, but new isn’t a special name and isn’t built into the language.
+	\end{itemize}
+	\inputminted{rust}{./code/factory-method.rs}
+\end{frame}
 
 \section{Enums and Pattern Matching}
 \section{Managing Projects with Packages, Crates, and Modules}
