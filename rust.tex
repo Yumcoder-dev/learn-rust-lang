@@ -1001,10 +1001,20 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 
 \begin{frame}[fragile]
 	\frametitle{Ownership of Struct Data}
-	In the User struct definition, we used the owned String type rather than the \mintinline{rust}|&str| string slice type. This is a deliberate choice because we want each instance of this struct to own all of its data and for that data to be valid for as long as the entire struct is valid.
-	
-	It’s also possible for structs to store references to data owned by something else, but to do so requires the use of lifetimes, a Rust feature that we’ll discuss later. Lifetimes ensure that the data referenced by a struct is valid for as long as the struct is.
+	\begin{itemize}
+		\item In the User struct definition,\textbf{ we used the owned String type rather than the \mintinline{rust}|&str| string slice type.} This is a deliberate choice because we want each instance of this struct to own all of its data and for that data to be valid for as long as the entire struct is valid.
+		\item 	\textbf{It’s also possible for structs to store references to data owned by something else, but to do so requires the use of lifetimes}, a Rust feature that we’ll discuss later. Lifetimes ensure that the data referenced by a struct is valid for as long as the struct is.
+	\end{itemize}
 \end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Using Tuple Structs without Named Fields to Create Different Types}
+	Rust also supports structs that look similar to tuples, called tuple structs. Tuple structs have the added meaning the struct name provides but don’t have names associated with their fields; rather, they just have the types of the fields. Tuple structs are useful when you want to give the whole tuple a name and make the tuple a different type from other tuples, and when naming each field as in a regular struct would be verbose or redundant.
+	
+\end{frame}
+
+
 
 \section{Enums and Pattern Matching}
 \section{Managing Projects with Packages, Crates, and Modules}
