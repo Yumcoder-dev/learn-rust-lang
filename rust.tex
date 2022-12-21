@@ -979,7 +979,18 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 
 \begin{frame}[fragile]
 	\frametitle{Creating Instances From Other Instances With Struct Update Syntax (2)}
-	The ..user1 must come last to specify that any remaining fields should get their values from the corresponding fields in user1.
+	The ..user1 \textbf{must come last to specify that any remaining fields should get their values from the corresponding fields} in user1.
+	
+	\begin{block}{Note that the struct update syntax uses = like an assignment}
+		This is because it moves the data. In this example, we can no longer use user1 after creating user2 because the String in the username field of user1 was moved into user2. If we had given user2 new String values for both email and username, and thus only used the active and sign\_in\_count values from user1, then user1 would still be valid after creating user2. The types of active and sign\_in\_count are types that implement the Copy trait.
+	\end{block}
+	
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Creating Instances From Other Instances With Struct Update Syntax (3)}
+		\inputminted{rust}{./code/struct-err.rs}
 \end{frame}
 
 \section{Enums and Pattern Matching}
