@@ -1047,6 +1047,10 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 		\item \textbf{All functions defined within an \mintinline{rust}|impl|  block} are called associated functions because they’re associated with the type named after the  \mintinline{rust}|impl| . We can define associated functions that don’t have self as their first parameter (and\underline{ thus are not methods}) because they don’t need an instance of the type to work with. We’ve already used one function like this: the String::from function that’s defined on the String type.
 		\item 	Associated functions that aren’t methods are often used for constructors that will return \textbf{a new instance of the struct}(factory method). These are often called \textbf{new}, but new isn’t a special name and isn’t built into the language.
 	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Associated Functions}
 	\inputminted{rust}{./code/factory-method.rs}
 \end{frame}
 
