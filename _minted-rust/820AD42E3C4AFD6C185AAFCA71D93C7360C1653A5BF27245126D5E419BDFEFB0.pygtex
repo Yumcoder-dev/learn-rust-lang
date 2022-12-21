@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{mod} \PYG{n+nn}{front\PYGZus{}of\PYGZus{}house}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{mod} \PYG{n+nn}{hosting}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{add\PYGZus{}to\PYGZus{}waitlist}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{use}\PYG{+w}{ }\PYG{k}{crate}::\PYG{n}{front\PYGZus{}of\PYGZus{}house}::\PYG{n}{hosting}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// idiomatic way!}
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{eat\PYGZus{}at\PYGZus{}restaurant}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{hosting}::\PYG{n}{add\PYGZus{}to\PYGZus{}waitlist}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

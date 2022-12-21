@@ -1195,6 +1195,15 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 
 
 \begin{frame}[fragile]
+	\frametitle{Control the privacy with modules}
+	\begin{itemize}
+		\item Modules let us organize code within a crate for readability and easy reuse. 
+		\item 	Modules also\textbf{ allow us to control the privacy of items}, because \textbf{code within a module is private by default}. Private items are internal implementation details not available for outside use.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
 	\frametitle{Paths to code in modules}
 		\begin{columns}
 		\column{0.3\textwidth}
@@ -1223,7 +1232,91 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 	\frametitle{Paths in the Module (2)}
 
 	\inputminted{rust}{./code/module.rs}
+	
+	Both \mintinline{rust}|front_of_house| module and \mintinline{rust}|add_to_waitlist|  method are public. The \mintinline{rust}|pub| keyword lets us use these paths in \mintinline{rust}|add_to_waitlist| with respect to the privacy rules.
 \end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Siblings are friend}
+	While \mintinline{rust}|front_of_house| isn’t public, because the \mintinline{rust}|eat_at_restaurant| function is defined in the same module as \mintinline{rust}|front_of_house| (that is, \mintinline{rust}|eat_at_restaurant| and \mintinline{rust}|front_of_house| are siblings), we can refer to \mintinline{rust}|front_of_house|  from \mintinline{rust}|eat_at_restaurant|. 
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Starting Relative Paths with \mintinline{rust}|super| }
+	\inputminted{rust}{./code/module2.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Making Structs Public}
+	\inputminted[fontsize=\fontsize{8pt}{8pt}]{rust}{./code/module3.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Making Enums Public}
+	\inputminted{rust}{./code/module4.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Bringing Paths into Scope with the \mintinline{rust}|use|  Keyword}
+	\begin{itemize}
+		\item Having to write out the paths to call functions can feel inconvenient and repetitive. 
+		\item 	Fortunately, there’s a way to simplify this process: we can create a shortcut to a path with the use keyword once, and then \mintinline{rust}|use| the shorter name everywhere else in the \textbf{scope}.
+	\end{itemize}
+	\inputminted{rust}{./code/module5.rs}
+	
+	Note that  \mintinline{rust}|use| only creates the shortcut for the particular scope in which the use occurs.
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Bringing Paths into Scope with the \mintinline{rust}|use|  Keyword (2)}
+	\inputminted{rust}{./code/module6.rs}
+To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust}|customer| module too, or reference the shortcut in the parent module with \mintinline{rust}|super::hosting|  within the child \mintinline{rust}|customer| module.
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Creating Idiomatic \mintinline{rust}|use| Paths}
+		\inputminted[fontsize=\scriptsize]{rust}{./code/module8.rs}
+		
+		\inputminted[fontsize=\scriptsize]{rust}{./code/module7.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Creating Idiomatic \mintinline{rust}|use| Paths (2)}
+\begin{itemize}
+	\item Bringing the function’s parent module into scope with \mintinline{rust}|use| means we have to specify the parent module when calling the function. \textbf{Specifying the parent module when calling the function makes it clear that the function isn’t locally defined while still minimizing repetition of the full path}. 
+	\item On the other hand, when bringing in structs, enums, and other items with use, it’s idiomatic to specify the full path. There’s no strong reason behind this idiom: it’s just the convention that has emerged, and folks have gotten used to reading and writing Rust code this way.
+	\inputminted[fontsize=\scriptsize]{rust}{./code/module9.rs}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Creating Idiomatic \mintinline{rust}|use| Paths (3)}
+		\inputminted[fontsize=\scriptsize]{rust}{./code/module10.rs}
+		
+		\begin{block}{Idiomatic way}
+			\begin{itemize}
+			\item 	\textbf{Function}: bringing the \textbf{function’s parent} module into scope.
+			\item 	\textbf{Structs, enums, and other items}: it’s idiomatic to specify the \textbf{full path}.
+			\begin{itemize}
+				\item The exception to this idiom is if we’re bringing two items with the same name into scope with  \mintinline{rust}|use|  statements, because Rust doesn’t allow that.
+			\end{itemize}
+		\end{itemize}
+		\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Providing New Names with the as Keyword}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/module11.rs}
+\end{frame}
+
 
 \section{Common Collections}
 \section{Error Handling}

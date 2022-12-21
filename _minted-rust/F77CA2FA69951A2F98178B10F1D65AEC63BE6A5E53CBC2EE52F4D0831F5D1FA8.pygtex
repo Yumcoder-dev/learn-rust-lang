@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{mod} \PYG{n+nn}{back\PYGZus{}of\PYGZus{}house}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{enum} \PYG{n+nc}{Appetizer}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{Soup}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{Salad}\PYG{p}{,}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{eat\PYGZus{}at\PYGZus{}restaurant}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{order1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{back\PYGZus{}of\PYGZus{}house}::\PYG{n}{Appetizer}::\PYG{n}{Soup}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{order2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{back\PYGZus{}of\PYGZus{}house}::\PYG{n}{Appetizer}::\PYG{n}{Salad}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

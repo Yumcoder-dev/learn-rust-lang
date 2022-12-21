@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{crate}::\PYG{n}{garden}::\PYG{n}{vegetables}::\PYG{n}{Asparagus}
+\end{Verbatim}

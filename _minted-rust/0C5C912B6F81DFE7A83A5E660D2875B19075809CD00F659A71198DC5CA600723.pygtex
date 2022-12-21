@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{fmt}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{io}\PYG{p}{;}
+\PYG{k}{fn} \PYG{n+nf}{function1}\PYG{p}{()}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{fmt}::\PYG{n+nb}{Result}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{fn} \PYG{n+nf}{function2}\PYG{p}{()}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{io}::\PYG{n+nb}{Result}\PYG{o}{\PYGZlt{}}\PYG{p}{()}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

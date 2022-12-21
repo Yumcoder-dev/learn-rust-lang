@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{mod} \PYG{n+nn}{back\PYGZus{}of\PYGZus{}house}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{struct} \PYG{n+nc}{Breakfast}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{pub}\PYG{+w}{ }\PYG{n}{toast}: \PYG{n+nb}{String}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{seasonal\PYGZus{}fruit}: \PYG{n+nb}{String}\PYG{p}{,}\PYG{+w}{ }\PYG{c+c1}{// private}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Breakfast}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{summer}\PYG{p}{(}\PYG{n}{toast}: \PYG{k+kp}{\PYGZam{}}\PYG{k+kt}{str}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{Breakfast}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{Breakfast}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n}{toast}: \PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{n}{toast}\PYG{p}{),}
+\PYG{+w}{                }\PYG{n}{seasonal\PYGZus{}fruit}: \PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}peaches\PYGZdq{}}\PYG{p}{),}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{eat\PYGZus{}at\PYGZus{}restaurant}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// Order a breakfast in the summer with Rye toast}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{meal}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{back\PYGZus{}of\PYGZus{}house}::\PYG{n}{Breakfast}::\PYG{n}{summer}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Rye\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{c+c1}{// Change our mind about what bread we\PYGZsq{}d like}
+\PYG{+w}{    }\PYG{n}{meal}\PYG{p}{.}\PYG{n}{toast}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Wheat\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}I\PYGZsq{}d like \PYGZob{}\PYGZcb{} toast please\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{meal}\PYG{p}{.}\PYG{n}{toast}\PYG{p}{);}
+\PYG{+w}{    }\PYG{c+c1}{// The next line won\PYGZsq{}t compile if we uncomment it; we\PYGZsq{}re not allowed}
+\PYG{+w}{    }\PYG{c+c1}{// to see or modify the seasonal fruit that comes with the meal}
+\PYG{+w}{    }\PYG{c+c1}{// meal.seasonal\PYGZus{}fruit = String::from(\PYGZdq{}blueberries\PYGZdq{});}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

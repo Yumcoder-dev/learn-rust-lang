@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{collections}::\PYG{n}{HashMap}\PYG{p}{;}
+
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{map}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{HashMap}::\PYG{n}{new}\PYG{p}{();}
+\PYG{+w}{    }\PYG{n}{map}\PYG{p}{.}\PYG{n}{insert}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
