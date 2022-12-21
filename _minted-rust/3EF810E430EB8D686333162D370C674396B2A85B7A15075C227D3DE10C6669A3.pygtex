@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cp}{\PYGZsh{}[derive(Debug)]}
+\PYG{k}{struct} \PYG{n+nc}{Rectangle}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{width}: \PYG{k+kt}{u32}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{height}: \PYG{k+kt}{u32}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Rectangle}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{area}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{u32} \PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{width}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{height}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{rect1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Rectangle}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{width}: \PYG{l+m+mi}{30}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{height}: \PYG{l+m+mi}{50}\PYG{p}{,}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}The area of the rectangle is \PYGZob{}\PYGZcb{} square pixels.\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{rect1}\PYG{p}{.}\PYG{n}{area}\PYG{p}{());}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

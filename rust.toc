@@ -1,20 +1,20 @@
 \beamer@sectionintoc {1}{Introduction}{3}{0}{1}
 \beamer@sectionintoc {2}{Common Programming Concepts}{11}{0}{2}
 \beamer@sectionintoc {3}{Understanding Ownership}{47}{0}{3}
-\beamer@sectionintoc {4}{Using Structs to Structure Related Data}{86}{0}{4}
-\beamer@sectionintoc {5}{Enums and Pattern Matching}{87}{0}{5}
-\beamer@sectionintoc {6}{Managing Projects with Packages, Crates, and Modules}{88}{0}{6}
-\beamer@sectionintoc {7}{Common Collections}{89}{0}{7}
-\beamer@sectionintoc {8}{Error Handling}{90}{0}{8}
-\beamer@sectionintoc {9}{Generic Types, Traits, and Lifetimes}{91}{0}{9}
-\beamer@sectionintoc {10}{Writing Automated Tests}{92}{0}{10}
-\beamer@sectionintoc {11}{An I/O Project: Building a Command Line Program}{93}{0}{11}
-\beamer@sectionintoc {12}{Functional Language Features: Iterators and Closures}{94}{0}{12}
-\beamer@sectionintoc {13}{More About Cargo and Crates.io}{95}{0}{13}
-\beamer@sectionintoc {14}{Smart Pointers}{96}{0}{14}
-\beamer@sectionintoc {15}{Fearless Concurrency}{97}{0}{15}
-\beamer@sectionintoc {16}{Object-Oriented Programming Features of Rust}{98}{0}{16}
-\beamer@sectionintoc {17}{Patterns and Matching}{99}{0}{17}
-\beamer@sectionintoc {18}{Advanced Features}{100}{0}{18}
-\beamer@sectionintoc {19}{Multithread Web Server}{101}{0}{19}
-\beamer@sectionintoc {20}{Tokio}{102}{0}{20}
+\beamer@sectionintoc {4}{Using Structs to Structure Related Data}{94}{0}{4}
+\beamer@sectionintoc {5}{Enums and Pattern Matching}{111}{0}{5}
+\beamer@sectionintoc {6}{Managing Projects with Packages, Crates, and Modules}{112}{0}{6}
+\beamer@sectionintoc {7}{Common Collections}{113}{0}{7}
+\beamer@sectionintoc {8}{Error Handling}{114}{0}{8}
+\beamer@sectionintoc {9}{Generic Types, Traits, and Lifetimes}{115}{0}{9}
+\beamer@sectionintoc {10}{Writing Automated Tests}{116}{0}{10}
+\beamer@sectionintoc {11}{An I/O Project: Building a Command Line Program}{117}{0}{11}
+\beamer@sectionintoc {12}{Functional Language Features: Iterators and Closures}{118}{0}{12}
+\beamer@sectionintoc {13}{More About Cargo and Crates.io}{119}{0}{13}
+\beamer@sectionintoc {14}{Smart Pointers}{120}{0}{14}
+\beamer@sectionintoc {15}{Fearless Concurrency}{121}{0}{15}
+\beamer@sectionintoc {16}{Object-Oriented Programming Features of Rust}{122}{0}{16}
+\beamer@sectionintoc {17}{Patterns and Matching}{123}{0}{17}
+\beamer@sectionintoc {18}{Advanced Features}{124}{0}{18}
+\beamer@sectionintoc {19}{Multithread Web Server}{125}{0}{19}
+\beamer@sectionintoc {20}{Tokio}{126}{0}{20}

@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{user2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{User}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{active}: \PYG{n+nc}{user1}\PYG{p}{.}\PYG{n}{active}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{username}: \PYG{n+nc}{user1}\PYG{p}{.}\PYG{n}{username}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{email}: \PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}another@example.com\PYGZdq{}}\PYG{p}{),}
+\PYG{+w}{        }\PYG{n}{sign\PYGZus{}in\PYGZus{}count}: \PYG{n+nc}{user1}\PYG{p}{.}\PYG{n}{sign\PYGZus{}in\PYGZus{}count}\PYG{p}{,}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{};}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{fn} \PYG{n+nf}{main\PYGZus{}less\PYGZus{}code}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{user2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{User}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{email}: \PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}another@example.com\PYGZdq{}}\PYG{p}{),}
+\PYG{+w}{        }\PYG{o}{..}\PYG{n}{user1}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{};}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

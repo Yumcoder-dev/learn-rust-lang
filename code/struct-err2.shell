@@ -1,0 +1,13 @@
+error[E0382]: borrow of partially moved value: `user1`
+  --> src/main.rs:22:23
+   |
+18 |       let user2 = User {
+   |  _________________-
+19 | |         email: String::from("another@example.com"),
+20 | |         ..user1
+21 | |     };
+   | |_____- value partially moved here
+22 |       println!("{:#?}", user1);
+   |                         ^^^^^ value borrowed here after partial move
+   |
+   = note: partial move occurs because `user1.username` has type `String`, which does not implement the `Copy` trait

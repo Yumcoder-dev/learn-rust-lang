@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo run
+   Compiling ownership v0.1.0 \PYG{o}{(}file:///projects/ownership\PYG{o}{)}
+error\PYG{o}{[}E0502\PYG{o}{]}: cannot borrow \PYG{l+s+sb}{`}s\PYG{l+s+sb}{`} as mutable because it is also borrowed as immutable
+  \PYGZhy{}\PYGZhy{}\PYGZgt{} src/main.rs:18:5
+   \PYG{p}{|}
+\PYG{l+m}{16} \PYG{p}{|}     \PYG{n+nb}{let} \PYG{n+nv}{word} \PYG{o}{=} first\PYGZus{}word\PYG{o}{(}\PYG{p}{\PYGZam{}}s\PYG{o}{)}\PYG{p}{;}
+   \PYG{p}{|}                           \PYGZhy{}\PYGZhy{} immutable borrow occurs here
+\PYG{l+m}{17} \PYG{p}{|} 
+\PYG{l+m}{18} \PYG{p}{|}     s.clear\PYG{o}{()}\PYG{p}{;} // error!
+   \PYG{p}{|}     \PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{} mutable borrow occurs here
+\PYG{l+m}{19} \PYG{p}{|} 
+\PYG{l+m}{20} \PYG{p}{|}     println!\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}the first word is: \PYGZob{}\PYGZcb{}\PYGZdq{}}, word\PYG{o}{)}\PYG{p}{;}
+   \PYG{p}{|}                                       \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{} immutable borrow later used here
+
+For more information about this error, try \PYG{l+s+sb}{`}rustc \PYGZhy{}\PYGZhy{}explain E0502\PYG{l+s+sb}{`}.
+error: could not compile \PYG{l+s+sb}{`}ownership\PYG{l+s+sb}{`} due to previous error
+\end{Verbatim}

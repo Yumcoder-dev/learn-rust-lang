@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+error\PYG{o}{[}E0382\PYG{o}{]}: borrow of partially moved value: \PYG{l+s+sb}{`}user1\PYG{l+s+sb}{`}
+  \PYGZhy{}\PYGZhy{}\PYGZgt{} src/main.rs:22:23
+   \PYG{p}{|}
+\PYG{l+m}{18} \PYG{p}{|}       \PYG{n+nb}{let} \PYG{n+nv}{user2} \PYG{o}{=} User \PYG{o}{\PYGZob{}}
+   \PYG{p}{|}  \PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZhy{}
+\PYG{l+m}{19} \PYG{p}{|} \PYG{p}{|}         email: String::from\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}another@example.com\PYGZdq{}}\PYG{o}{)},
+\PYG{l+m}{20} \PYG{p}{|} \PYG{p}{|}         ..user1
+\PYG{l+m}{21} \PYG{p}{|} \PYG{p}{|}     \PYG{o}{\PYGZcb{}}\PYG{p}{;}
+   \PYG{p}{|} \PYG{p}{|}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZhy{} value partially moved here
+\PYG{l+m}{22} \PYG{p}{|}       println!\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZob{}:\PYGZsh{}?\PYGZcb{}\PYGZdq{}}, user1\PYG{o}{)}\PYG{p}{;}
+   \PYG{p}{|}                         \PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{} value borrowed here after partial move
+   \PYG{p}{|}
+   \PYG{o}{=} note: partial move occurs because \PYG{l+s+sb}{`}user1.username\PYG{l+s+sb}{`} has \PYG{n+nb}{type} \PYG{l+s+sb}{`}String\PYG{l+s+sb}{`}, which does not implement the \PYG{l+s+sb}{`}Copy\PYG{l+s+sb}{`} trait
+\end{Verbatim}

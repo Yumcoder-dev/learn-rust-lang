@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{struct} \PYG{n+nc}{User}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{active}: \PYG{k+kt}{bool}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{username}: \PYG{n+nb}{String}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{email}: \PYG{n+nb}{String}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{sign\PYGZus{}in\PYGZus{}count}: \PYG{k+kt}{u64}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{user1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{User}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{email}: \PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}someone@example.com\PYGZdq{}}\PYG{p}{),}
+\PYG{+w}{        }\PYG{n}{username}: \PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}someusername123\PYGZdq{}}\PYG{p}{),}
+\PYG{+w}{        }\PYG{n}{active}: \PYG{n+nc}{true}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{sign\PYGZus{}in\PYGZus{}count}: \PYG{l+m+mi}{1}\PYG{p}{,}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{};}
+
+\PYG{+w}{    }\PYG{n}{user1}\PYG{p}{.}\PYG{n}{email}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}anotheremail@example.com\PYGZdq{}}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

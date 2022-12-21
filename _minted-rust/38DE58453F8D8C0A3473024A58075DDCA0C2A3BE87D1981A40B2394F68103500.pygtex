@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cp}{\PYGZsh{}[derive(Debug)]}
+\PYG{k}{struct} \PYG{n+nc}{Rectangle}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{width}: \PYG{k+kt}{u32}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{height}: \PYG{k+kt}{u32}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Rectangle}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{square}\PYG{p}{(}\PYG{n}{size}: \PYG{k+kt}{u32}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{Self}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nb+bp}{Self}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{width}: \PYG{n+nc}{size}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n}{height}: \PYG{n+nc}{size}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{sq}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Rectangle}::\PYG{n}{square}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

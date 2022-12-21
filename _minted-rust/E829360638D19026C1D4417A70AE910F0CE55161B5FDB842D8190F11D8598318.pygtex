@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{struct} \PYG{n+nc}{AlwaysEqual}\PYG{p}{;}
+
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{subject}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{AlwaysEqual}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
