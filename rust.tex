@@ -1063,10 +1063,27 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 \begin{frame}[fragile]
 	\frametitle{Defining an Enum}
 	Enums allow you to define a type by enumerating its possible variants.
-	\begin{block}{struct vs enum}
-		Where structs give you a way of grouping together related fields and data, like a Rectangle with its width and height, enums give you a way of saying a value is one of a possible set of values. 
+	\begin{block}{Struct vs Enum}
+	Where structs give you a way of grouping together related fields and data, like a Rectangle with its width and height, enums give you a way of saying a value is one of a possible set of values. 
 	\end{block}
+	\inputminted{rust}{./code/enum.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Defining an Enum (2)}
+	There’s another advantage to using an enum rather than a struct:\textbf{ each variant can have different types and amounts of associated data}. 
+	\inputminted{rust}{./code/enum2.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Defining an Enum (3)}
 	
+	\inputminted{rust}{./code/enum3.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{The Option Enum and Its Advantages Over Null Values}
+	\inputminted{rust}{./code/enum3.rs}
 \end{frame}
 
 
