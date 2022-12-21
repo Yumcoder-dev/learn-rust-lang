@@ -1196,7 +1196,18 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 
 \begin{frame}[fragile]
 	\frametitle{Paths to code in modules}
+		\begin{columns}
+		\column{0.5\textwidth}
 	Once a module is part of your crate, you can refer to code in that module from anywhere else in that same crate, \underline{as long as the privacy rules allow}, using the path to the code. For example, an Asparagus type in the garden vegetables module would be found at \mintinline{rust}|crate::garden::vegetables::Asparagus|.
+		\column{0.5\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.8\textwidth]{./img/trpl04-07.png}
+	\end{figure}
+	\end{columns}
+	
+	
+		
 \end{frame}
 
 \section{Common Collections}
@@ -1225,4 +1236,11 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 \begin{frame}[fragile]
 	\frametitle{title}
 \end{frame}
+
+	\begin{columns}
+	\column{0.5\textwidth}
+	\tableofcontents[sections = 1-10]
+	\column{0.5\textwidth}
+	\tableofcontents[sections = 11-20]
+\end{columns}
 \end{comment}
