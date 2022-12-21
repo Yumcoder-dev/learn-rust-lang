@@ -1017,8 +1017,14 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 
 \begin{frame}[fragile]
 	\frametitle{Unit-Like Structs Without Any Fields}
-	Rust also supports structs that look similar to tuples, called tuple structs. Tuple structs have the added meaning the struct name provides but don’t have names associated with their fields; rather, they just have the types of the fields. Tuple structs are useful when you want to give the whole tuple a name and make the tuple a different type from other tuples, and when naming each field as in a regular struct would be verbose or redundant.
-	\inputminted{rust}{./code/tuple-struct.rs}
+	You can also define structs that don’t have any fields! These are called \textbf{unit-like structs} because they behave similarly to ().
+	\inputminted{rust}{./code/unit-like-struct.rs}
+	
+	\begin{block}{Unit type}
+		The tuple without any values has a special name, unit. This value and its corresponding type are both written () and represent an empty value or an empty return type. Expressions implicitly return the unit value if they don’t return any other value.
+	\end{block}
+	
+	
 \end{frame}
 
 \section{Enums and Pattern Matching}
