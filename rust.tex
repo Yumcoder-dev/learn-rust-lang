@@ -999,6 +999,13 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 	\inputminted{shell}{./code/struct-err2.shell}
 \end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{Ownership of Struct Data}
+	In the User struct definition, we used the owned String type rather than the \mintinline{rust}|&str| string slice type. This is a deliberate choice because we want each instance of this struct to own all of its data and for that data to be valid for as long as the entire struct is valid.
+	
+	It’s also possible for structs to store references to data owned by something else, but to do so requires the use of lifetimes, a Rust feature that we’ll discuss later. Lifetimes ensure that the data referenced by a struct is valid for as long as the struct is.
+\end{frame}
+
 \section{Enums and Pattern Matching}
 \section{Managing Projects with Packages, Crates, and Modules}
 \section{Common Collections}
