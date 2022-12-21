@@ -1197,17 +1197,27 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 \begin{frame}[fragile]
 	\frametitle{Paths to code in modules}
 		\begin{columns}
-		\column{0.5\textwidth}
-	Once a module is part of your crate, you can refer to code in that module from anywhere else in that same crate, \underline{as long as the privacy rules allow}, using the path to the code. For example, an Asparagus type in the garden vegetables module would be found at \mintinline{rust}|crate::garden::vegetables::Asparagus|.
-		\column{0.5\textwidth}
+		\column{0.3\textwidth}
+	Once a module is part of your crate, you can refer to code in that module from anywhere else in that same crate, as long as the privacy rules allow, using the path to the code. For example, an Asparagus type in the garden vegetables module would be found at \mintinline{rust}|crate::garden::vegetables::Asparagus|.
+		\column{0.6\textwidth}
 	\begin{figure}
 		\centering
-		\includegraphics[width=0.8\textwidth]{./img/trpl04-07.png}
+		\includegraphics[width=0.9\textwidth]{./img/trpl04-07.png}
 	\end{figure}
 	\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Paths in the Module}
+	A path can take two forms:
 	
+\begin{itemize}
+	\item 	An \textbf{absolute} path is the full path starting from a crate root; for code from an external crate, \textbf{the absolute path begins with the crate name}, and for code from the current crate, it starts with the literal crate.
+	\item 	A \textbf{relative} path starts from the current module and \textbf{uses self, super, or an identifier in the current module}.
+\end{itemize}
+	Both absolute and relative paths are followed by one or more identifiers separated by double colons (::).
 	
-		
+		\inputminted{rust}{./code/module.rs}
 \end{frame}
 
 \section{Common Collections}
