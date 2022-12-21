@@ -1011,10 +1011,15 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 \begin{frame}[fragile]
 	\frametitle{Using Tuple Structs without Named Fields to Create Different Types}
 	Rust also supports structs that look similar to tuples, called tuple structs. Tuple structs have the added meaning the struct name provides but don’t have names associated with their fields; rather, they just have the types of the fields. Tuple structs are useful when you want to give the whole tuple a name and make the tuple a different type from other tuples, and when naming each field as in a regular struct would be verbose or redundant.
-	
+	\inputminted{rust}{./code/tuple-struct.rs}
 \end{frame}
 
 
+\begin{frame}[fragile]
+	\frametitle{Unit-Like Structs Without Any Fields}
+	Rust also supports structs that look similar to tuples, called tuple structs. Tuple structs have the added meaning the struct name provides but don’t have names associated with their fields; rather, they just have the types of the fields. Tuple structs are useful when you want to give the whole tuple a name and make the tuple a different type from other tuples, and when naming each field as in a regular struct would be verbose or redundant.
+	\inputminted{rust}{./code/tuple-struct.rs}
+\end{frame}
 
 \section{Enums and Pattern Matching}
 \section{Managing Projects with Packages, Crates, and Modules}
