@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{x}: \PYG{k+kt}{i8} \PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{y}: \PYG{n+nb}{Option}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{i8}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{Some}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{);}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{sum}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{y}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// Error!}
+\PYG{c+c1}{// no implementation for `i8 + Option\PYGZlt{}i8\PYGZgt{}`}
+\PYG{c+c1}{// the trait `Add\PYGZlt{}Option\PYGZlt{}i8\PYGZgt{}\PYGZgt{}` is not implemented for `i8`}
+\end{Verbatim}

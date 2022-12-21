@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{enum} \PYG{n+nc}{UsState}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Alabama}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{Alaska}\PYG{p}{,}
+\PYG{+w}{    }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{enum} \PYG{n+nc}{Coin}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Penny}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{Nickel}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{Dime}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{Quarter}\PYG{p}{(}\PYG{n}{UsState}\PYG{p}{),}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{fn} \PYG{n+nf}{value\PYGZus{}in\PYGZus{}cents}\PYG{p}{(}\PYG{n}{coin}: \PYG{n+nc}{Coin}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{u8} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{match}\PYG{+w}{ }\PYG{n}{coin}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{Coin}::\PYG{n}{Penny}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{Coin}::\PYG{n}{Nickel}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{Coin}::\PYG{n}{Dime}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{Coin}::\PYG{n}{Quarter}\PYG{p}{(}\PYG{n}{state}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}State quarter from \PYGZob{}:?\PYGZcb{}!\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{state}\PYG{p}{);}
+\PYG{+w}{            }\PYG{l+m+mi}{25}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

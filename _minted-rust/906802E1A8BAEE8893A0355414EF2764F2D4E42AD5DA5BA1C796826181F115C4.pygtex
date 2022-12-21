@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{enum} \PYG{n+nc}{IpAddrKind}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{V4}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{V6}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{four}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{IpAddrKind}::\PYG{n}{V4}\PYG{p}{;}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{six}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{IpAddrKind}::\PYG{n}{V6}\PYG{p}{;}
+
+\PYG{k}{fn} \PYG{n+nf}{route}\PYG{p}{(}\PYG{n}{ip\PYGZus{}kind}: \PYG{n+nc}{IpAddrKind}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{n}{route}\PYG{p}{(}\PYG{n}{IpAddrKind}::\PYG{n}{V4}\PYG{p}{);}
+\PYG{n}{route}\PYG{p}{(}\PYG{n}{IpAddrKind}::\PYG{n}{V6}\PYG{p}{);}
+\end{Verbatim}

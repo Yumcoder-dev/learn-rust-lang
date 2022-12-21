@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{enum} \PYG{n+nc}{IpAddr}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{V4}\PYG{p}{(}\PYG{k+kt}{u8}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{u8}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{u8}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{u8}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{V6}\PYG{p}{(}\PYG{n+nb}{String}\PYG{p}{),}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{home}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{IpAddr}::\PYG{n}{V4}\PYG{p}{(}\PYG{l+m+mi}{127}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{);}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{loopback}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{IpAddr}::\PYG{n}{V6}\PYG{p}{(}\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}::1\PYGZdq{}}\PYG{p}{));}
+\end{Verbatim}

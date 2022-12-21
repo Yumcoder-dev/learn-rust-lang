@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{enum} \PYG{n+nc}{Message}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Quit}\PYG{p}{,}\PYG{+w}{ }\PYG{c+c1}{// has no data associated with it at all.}
+\PYG{+w}{    }\PYG{n}{Move}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{x}: \PYG{k+kt}{i32}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y}: \PYG{k+kt}{i32} \PYG{p}{\PYGZcb{},}\PYG{+w}{ }\PYG{c+c1}{// has named fields like a struct does.}
+\PYG{+w}{    }\PYG{n}{Write}\PYG{p}{(}\PYG{n+nb}{String}\PYG{p}{),}\PYG{+w}{ }\PYG{c+c1}{// includes a single String.}
+\PYG{+w}{    }\PYG{n}{ChangeColor}\PYG{p}{(}\PYG{k+kt}{i32}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{i32}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{i32}\PYG{p}{),}\PYG{+w}{ }\PYG{c+c1}{// includes three i32 values.}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{// defining different kinds of struct}
+\PYG{k}{struct} \PYG{n+nc}{QuitMessage}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// unit struct}
+\PYG{k}{struct} \PYG{n+nc}{MoveMessage}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{x}: \PYG{k+kt}{i32}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{y}: \PYG{k+kt}{i32}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{struct} \PYG{n+nc}{WriteMessage}\PYG{p}{(}\PYG{n+nb}{String}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// tuple struct}
+\PYG{k}{struct} \PYG{n+nc}{ChangeColorMessage}\PYG{p}{(}\PYG{k+kt}{i32}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{i32}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{i32}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// tuple struct}
+\end{Verbatim}

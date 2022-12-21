@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{dice\PYGZus{}roll}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{9}\PYG{p}{;}
+\PYG{k}{match}\PYG{+w}{ }\PYG{n}{dice\PYGZus{}roll}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{l+m+mi}{3}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{add\PYGZus{}fancy\PYGZus{}hat}\PYG{p}{(),}
+\PYG{+w}{    }\PYG{l+m+mi}{7}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{remove\PYGZus{}fancy\PYGZus{}hat}\PYG{p}{(),}
+\PYG{+w}{    }\PYG{n}{other}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{move\PYGZus{}player}\PYG{p}{(}\PYG{n}{other}\PYG{p}{),}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{match}\PYG{+w}{ }\PYG{n}{dice\PYGZus{}roll}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{l+m+mi}{3}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{add\PYGZus{}fancy\PYGZus{}hat}\PYG{p}{(),}
+\PYG{+w}{    }\PYG{l+m+mi}{7}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{remove\PYGZus{}fancy\PYGZus{}hat}\PYG{p}{(),}
+\PYG{+w}{    }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{reroll}\PYG{p}{(),}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,2 +1,3 @@
-\frametitle{Multiple \mintinline{rust}|impl| Blocks}
-	\inputminted{rust}{./code/multi-impl.rs}
+\frametitle{Concise Control Flow with if let}
+	The if let syntax lets you combine if and let into a less verbose way to handle values that match one pattern while ignoring the rest.
+	\inputminted{rust}{./code/match6.rs}
