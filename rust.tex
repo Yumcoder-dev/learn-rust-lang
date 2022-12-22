@@ -1303,7 +1303,7 @@ To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust
 			\item 	\textbf{Function}: bringing the \textbf{function’s parent} module into scope.
 			\item 	\textbf{Structs, enums, and other items}: it’s idiomatic to specify the \textbf{full path}.
 			\begin{itemize}
-				\item The exception to this idiom is if we’re bringing two items with the same name into scope with  \mintinline{rust}|use|  statements, because Rust doesn’t allow that.
+				\item The exception to this idiom is if we’re bringing two items with the same name into scope with \mintinline{rust}|use|  statements, because Rust doesn’t allow that.
 			\end{itemize}
 		\end{itemize}
 		\end{block}
@@ -1317,6 +1317,24 @@ To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust
 	\inputminted[fontsize=\scriptsize]{rust}{./code/module11.rs}
 \end{frame}
 
+
+
+\begin{frame}[fragile]
+	\frametitle{Re-exporting Names with \mintinline{rust}|pub use|}
+	When we bring a name into scope with the use keyword, the name available in the new scope is private. To enable the code that calls our code to refer to that name as if it had been defined in that code’s scope, we can combine  \mintinline{rust}|pub| and  \mintinline{rust}|use|.
+	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/module12.rs}
+	
+	\scriptsize
+	It makes our library well organized for programmers working on the library and programmers calling the library. 
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Using External Packages}
+	Members of the Rust community have made many packages available at crates.io, and pulling any of them into your package involves these same steps: listing them in your package’s Cargo.toml file and using use to bring items from their crates into scope.
+\end{frame}
 
 \section{Common Collections}
 \section{Error Handling}
