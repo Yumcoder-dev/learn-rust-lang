@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{cmp}::\PYG{n}{Ordering}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{io}\PYG{p}{;}
+\PYG{c+c1}{// we can use nested paths to bring the same items into scope in one line.}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{p}{\PYGZob{}}\PYG{n}{cmp}::\PYG{n}{Ordering}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{io}\PYG{p}{\PYGZcb{};}
+
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{io}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{io}::\PYG{n}{Write}\PYG{p}{;}
+\PYG{c+c1}{// To merge these two paths into one use statement, we can use self in the nested path}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{io}::\PYG{p}{\PYGZob{}}\PYG{n+nb+bp}{self}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Write}\PYG{p}{\PYGZcb{};}
+
+\PYG{c+c1}{// If we want to bring all public items defined in a path into scope, we can specify that path followed by the * glob operator}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{collections}::\PYG{o}{*}\PYG{p}{;}
+\end{Verbatim}

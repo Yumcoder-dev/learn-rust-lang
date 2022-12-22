@@ -1333,7 +1333,40 @@ To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust
 
 \begin{frame}[fragile]
 	\frametitle{Using External Packages}
-	Members of the Rust community have made many packages available at crates.io, and pulling any of them into your package involves these same steps: listing them in your package’s Cargo.toml file and using use to bring items from their crates into scope.
+	Members of the Rust community have made many packages available at \url{crates.io}, and pulling any of them into your package involves these same steps: listing them in your package’s \mintinline{rust}|Cargo.toml| file and using use to bring items from their crates into scope. Example:
+	
+	1) Add the following line to \mintinline{rust}|Cargo.toml| file.
+	
+	 \mintinline{toml}|rand = "0.8.5"|
+	 
+	 2) bring items from the crates into scope (with \mintinline{rust}|use|) and used it.
+	 \inputminted{rust}{./code/module13.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Using Nested Paths to Clean Up Large \mintinline{rust}|use| Lists}
+	 \inputminted{rust}{./code/module14.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Separating Modules into Different Files}
+	\begin{itemize}
+		\item For a module named  \mintinline{rust}|front_of_house| declared in the crate root, the compiler will look for the module’s code in:
+			\begin{itemize}
+				\item \mintinline{rust}|src/front_of_house.rs| (what we covered)
+				\item 	\mintinline{rust}|src/front_of_house/mod.rs| (older style, still supported path)
+			\end{itemize}
+		\item 	For a module named hosting that is a submodule of \mintinline{rust}|front_of_house| , the compiler will look for the module’s code in:
+			\begin{itemize}
+				\item \mintinline{rust}|src/front_of_house/hosting.rs| (what we covered)
+				\item 	\mintinline{rust}|src/front_of_house/hosting/mod.rs| (older style, still supported path)
+			\end{itemize}
+		\item 	If you use both styles for the same module, you’ll get a compiler error. Using a mix of both styles for different modules in the same project is allowed, but might be confusing for people navigating your project.
+		\item The main downside to the style that uses files named mod.rs is that your project can end up with many files named mod.rs, which is confusing.
+	\end{itemize}
+	
 \end{frame}
 
 \section{Common Collections}

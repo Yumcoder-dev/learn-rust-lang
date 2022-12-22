@@ -1,2 +1,16 @@
-\frametitle{Providing New Names with the as Keyword}
-	\inputminted[fontsize=\scriptsize]{rust}{./code/module11.rs}
+\frametitle{Separating Modules into Different Files}
+	\begin{itemize}
+		\item For a module named  \mintinline{rust}|front_of_house| declared in the crate root, the compiler will look for the module’s code in:
+			\begin{itemize}
+				\item \mintinline{rust}|src/front_of_house.rs| (what we covered)
+				\item 	\mintinline{rust}|src/front_of_house/mod.rs| (older style, still supported path)
+			\end{itemize}
+		\item 	For a module named hosting that is a submodule of \mintinline{rust}|front_of_house| , the compiler will look for the module’s code in:
+			\begin{itemize}
+				\item \mintinline{rust}|src/front_of_house/hosting.rs| (what we covered)
+				\item 	\mintinline{rust}|src/front_of_house/hosting/mod.rs| (older style, still supported path)
+			\end{itemize}
+		\item 	If you use both styles for the same module, you’ll get a compiler error. Using a mix of both styles for different modules in the same project is allowed, but might be confusing for people navigating your project.
+		\item The main downside to the style that uses files named mod.rs is that your project can end up with many files named mod.rs, which is confusing.
+	\end{itemize}
+	

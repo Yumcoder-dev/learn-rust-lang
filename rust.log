@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  22 DEC 2022 00:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  22 DEC 2022 08:00
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2496,21 +2496,104 @@ C.pygtex))
 \openout4 = `rust.vrb'.
 
  (./rust.vrb
-runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P str
-ipnl=False -P mathescape=True -o _minted-rust/9BA8A52BFB6A68CDF36452F88DACE79A7
-5AB0A137217CEE0FF817B667ACCB051.pygtex ./code/module11.rs)...executed.
-
-
 (./_minted-rust/9BA8A52BFB6A68CDF36452F88DACE79A75AB0A137217CEE0FF817B667ACCB05
 1.pygtex)) [141
 
-] [142
+]
+\openout4 = `rust.vrb'.
 
-] [143
+ (./rust.vrb
+\openout6 = `rust.pyg'.
 
-] [144
 
-] [145
+(./_minted-rust/2D477196F36D93DE966009E51A95A13FBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/3FC55EC19CABE5C2D41512941734C90BBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+(./_minted-rust/332D4AD22CD5C611778BBC3EBBE655FA40FE446215BF05171600B56673D137F
+A.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/52DECBEF766685AD0037EFB190C95A19BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex) [142
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/6B7C4D40CF907951AAA444096A6E4B80BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/6B7C4D40CF907951AAA444096A6E4B80BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/83EF4CF39934D84D2680EF83AFFA1331419C7F52CC0184153B8517AD583A75C
+0.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/3FC55EC19CABE5C2D41512941734C90BBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+(./_minted-rust/5298C3ED2BF8AC9BB5D0EC0C38CEA25D5A60F9C840B87143D3F83641CF42F6C
+6.pygtex)) [143
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/E389E32AB57102E0D65D3D49E4245823321BC6C7FA0E5F1DE2708683C92BD0C
+D.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/3FC55EC19CABE5C2D41512941734C90BBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex) [144
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/592D385BD1B4DF83608A9A591A7E5DA5BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/355868FACECDE95DB822418A42A2833EBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/11FDE18D6CE96EF37A77363E0E073491BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/592D385BD1B4DF83608A9A591A7E5DA5BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/C5EE5C7A9A447B0F50B618F344353510BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/0D63EE436D8BD71FC19F9061B23964D4BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)) [145
 
 ] [146
 
@@ -2524,8 +2607,7 @@ ipnl=False -P mathescape=True -o _minted-rust/9BA8A52BFB6A68CDF36452F88DACE79A7
 
 ] [151
 
-]
-[152
+] [152
 
 ] [153
 
@@ -2533,7 +2615,16 @@ ipnl=False -P mathescape=True -o _minted-rust/9BA8A52BFB6A68CDF36452F88DACE79A7
 
 ] [155
 
-] [156
+]
+[156
+
+] [157
+
+] [158
+
+] [159
+
+] [160
 
 ]
 \tf@nav=\write8
@@ -2555,11 +2646,11 @@ runsystem(rm rust.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 27414 strings out of 474968
- 602716 string characters out of 5776083
- 919717 words of memory out of 5000000
- 47213 multiletter control sequences out of 15000+600000
- 484534 words of font info for 83 fonts, out of 8000000 for 9000
+ 27516 strings out of 474968
+ 609166 string characters out of 5776083
+ 925620 words of memory out of 5000000
+ 47254 multiletter control sequences out of 15000+600000
+ 484702 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,870b,1087s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pf
@@ -2574,13 +2665,14 @@ cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/loca
 l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loc
 al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/loc
 al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/t
-exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/tex
-live/2022/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on rust.pdf (156 pages, 1472997 bytes).
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texl
+ive/2022/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on rust.pdf (160 pages, 1494381 bytes).
 PDF statistics:
- 4951 PDF objects out of 5155 (max. 8388607)
- 4508 compressed objects within 46 object streams
- 341 named destinations out of 1000 (max. 500000)
+ 5069 PDF objects out of 5155 (max. 8388607)
+ 4619 compressed objects within 47 object streams
+ 349 named destinations out of 1000 (max. 500000)
  1365 words of extra memory for PDF output out of 10000 (max. 10000000)
 
