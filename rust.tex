@@ -1404,14 +1404,35 @@ To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust
 
 \begin{frame}[fragile]
 	\frametitle{Iterating over the Values in a Vector}
-	\inputminted[fontsize=\scriptsize]{rust}{./code/vector3.rs}
+	\inputminted{rust}{./code/vector3.rs}
 \end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{Using an Enum to Store Multiple Types}
-	\inputminted[fontsize=\scriptsize]{rust}{./code/vector4.rs}
+	\inputminted{rust}{./code/vector4.rs}
 \end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{Using an Enum to Store Multiple Types}
+	\inputminted{rust}{./code/vector4.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{What Is a \mintinline{rust}|String|?}
+	
+\begin{itemize}
+	\item 	Many of the same operations available with \mintinline{rust}|Vec<T>|  are available with \mintinline{rust}|String| as well, because String is actually implemented as a wrapper around \textbf{a vector of bytes} with some extra guarantees, restrictions, and capabilities.
+	\item 	Rust has only one \textbf{string type}\textit{ in the core language}, which is the \textbf{string slice} \mintinline{rust}|str| that is usually seen in its borrowed form \mintinline{rust}|&str|. 
+	\item 	The \textbf{String type}, which is provided by\textbf{ Rust’s standard library} rather than coded into the core language, is \textit{a growable, mutable, owned, UTF-8 encoded string type}. When Rustaceans refer to “strings” in Rust, they might be referring to either the String or the string slice \mintinline{rust}|&str| types, not just one of those types. 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Creating a New String}
+	\inputminted{rust}{./code/string_vec.rs}
+	Because strings are used for so many things, we can use many different generic APIs for strings, providing us with a lot of options. Some of them can seem redundant, but they all have their place! In this case, \mintinline{rust}|String::from| and \mintinline{rust}|to_string| do the same thing, so which you choose is a matter of style and readability.
+\end{frame}
 
 \section{Error Handling}
 \section{Generic Types, Traits, and Lifetimes}
