@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{enum} \PYG{n+nc}{SpreadsheetCell}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{Int}\PYG{p}{(}\PYG{k+kt}{i32}\PYG{p}{),}
+\PYG{+w}{        }\PYG{n}{Float}\PYG{p}{(}\PYG{k+kt}{f64}\PYG{p}{),}
+\PYG{+w}{        }\PYG{n}{Text}\PYG{p}{(}\PYG{n+nb}{String}\PYG{p}{),}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{row}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf+fm}{vec!}\PYG{p}{[}
+\PYG{+w}{        }\PYG{n}{SpreadsheetCell}::\PYG{n}{Int}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{),}
+\PYG{+w}{        }\PYG{n}{SpreadsheetCell}::\PYG{n}{Text}\PYG{p}{(}\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}blue\PYGZdq{}}\PYG{p}{)),}
+\PYG{+w}{        }\PYG{n}{SpreadsheetCell}::\PYG{n}{Float}\PYG{p}{(}\PYG{l+m+mf}{10.12}\PYG{p}{),}
+\PYG{+w}{    }\PYG{p}{];}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

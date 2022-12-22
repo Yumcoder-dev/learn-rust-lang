@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{collections}::\PYG{n}{HashMap}\PYG{p}{;}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{scores}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{HashMap}::\PYG{n}{new}\PYG{p}{();}
+
+\PYG{n}{scores}\PYG{p}{.}\PYG{n}{insert}\PYG{p}{(}\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Blue\PYGZdq{}}\PYG{p}{),}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{);}
+\PYG{n}{scores}\PYG{p}{.}\PYG{n}{insert}\PYG{p}{(}\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Yellow\PYGZdq{}}\PYG{p}{),}\PYG{+w}{ }\PYG{l+m+mi}{50}\PYG{p}{);}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{team\PYGZus{}name}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Blue\PYGZdq{}}\PYG{p}{);}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{score}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{scores}\PYG{p}{.}\PYG{n}{get}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{team\PYGZus{}name}\PYG{p}{).}\PYG{n}{copied}\PYG{p}{().}\PYG{n}{unwrap\PYGZus{}or}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+\PYG{c+c1}{// This program handles the Option by calling copied to get an Option\PYGZlt{}i32\PYGZgt{} rather than an Option\PYGZlt{}\PYGZam{}i32\PYGZgt{}, then unwrap\PYGZus{}or to set score to zero if scores doesn\PYGZsq{}t have an entry for the key.}
+
+\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{key}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{value}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{scores}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZob{}key\PYGZcb{}: \PYGZob{}value\PYGZcb{}\PYGZdq{}}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

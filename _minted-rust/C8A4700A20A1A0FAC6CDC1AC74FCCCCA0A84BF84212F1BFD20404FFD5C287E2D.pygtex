@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{collections}::\PYG{n}{HashMap}\PYG{p}{;}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{field\PYGZus{}name}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Favorite color\PYGZdq{}}\PYG{p}{);}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{field\PYGZus{}value}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Blue\PYGZdq{}}\PYG{p}{);}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{map}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{HashMap}::\PYG{n}{new}\PYG{p}{();}
+\PYG{n}{map}\PYG{p}{.}\PYG{n}{insert}\PYG{p}{(}\PYG{n}{field\PYGZus{}name}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{field\PYGZus{}value}\PYG{p}{);}
+\PYG{c+c1}{// field\PYGZus{}name and field\PYGZus{}value are invalid at this point, try using them and see what compiler error you get!}
+\end{Verbatim}
