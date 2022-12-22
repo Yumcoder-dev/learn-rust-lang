@@ -1392,6 +1392,14 @@ To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust
 	\inputminted{rust}{./code/vector.rs}
 \end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{Reading Elements of Vectors}
+	There are two ways to reference a value stored in a vector: via indexing or using the get method. 
+	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/vector2.rs}
+	
+	The reason Rust provides these two ways to reference an element is so you can choose how the program behaves when you try to use an index value outside the range of existing elements.
+\end{frame}
 \section{Error Handling}
 \section{Generic Types, Traits, and Lifetimes}
 \section{Writing Automated Tests}
