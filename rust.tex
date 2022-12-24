@@ -1455,6 +1455,39 @@ To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust
 \end{frame}
 
 \section{Error Handling}
+
+\begin{frame}[fragile]
+	\frametitle{Rust errors categories}
+	Rust groups errors into two major categories: \textbf{recoverable} and \textbf{unrecoverable} errors. 
+	\begin{itemize}
+		\item For a \textbf{recoverable} error, such as a file not found error, we most likely just want to report the problem to the user and retry the operation. 
+		\item 	\textbf{Unrecoverable} errors are always \textbf{symptoms of bugs}, like trying to access a location beyond the end of an array, and so we want to immediately \textbf{stop the program}.
+		\item  Rust doesn’t have exceptions. Instead, it has the type \mintinline{rust}|Result<T, E>| for recoverable errors and the  \mintinline{rust}|panic!| macro that stops execution when the program encounters an unrecoverable error.
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Unrecoverable Errors with panic!}
+		\inputminted{rust}{./code/panic.rs}
+		
+		\begin{block}{Unwinding the Stack }
+			By default, when a panic occurs, the program starts unwinding, which means Rust walks back up the stack and cleans up the data from each function it encounters. However, this walking back and cleanup is a lot of work. Rust, therefore, allows you to choose the alternative of immediately aborting, which ends the program without cleaning up.
+			\end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Recoverable Errors with Result}
+	Most errors aren’t serious enough to require the program to stop entirely. Sometimes, when a function fails, it’s for a reason that you can easily interpret and respond to (For example, open a file that doesn’t exist).
+	
+		\inputminted{rust}{./code/result.rs}
+		
+		\inputminted{rust}{./code/result2.rs}
+	
+\end{frame}
+
+
 \section{Generic Types, Traits, and Lifetimes}
 \section{Writing Automated Tests}
 \section{An I/O Project: Building a Command Line Program}
