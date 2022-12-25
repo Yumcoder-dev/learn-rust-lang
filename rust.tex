@@ -1594,7 +1594,36 @@
 
 \begin{frame}[fragile]
 	\frametitle{Monomorphization}
-	\inputminted[fontsize=\scriptsize]{rust}{./code/generic7.rs}
+	 Monomorphization is the process of turning generic code into specific code by filling in the concrete types that are used when \textbf{compiled}. In this process, the compiler does the opposite of the steps we used to create the generic function: the compiler looks at all the places where generic code is called and generates code for the concrete types the generic code is called with.
+	 
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Monomorphization}
+
+	\inputminted[fontsize=\scriptsize]{rust}{./code/generic8.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Traits: Defining Shared Behavior}
+	\begin{itemize}
+		\item A trait defines functionality a particular type has and can share with other types. We can use traits \textbf{to define shared behavior in an abstract way}. We can use trait bounds to specify that a generic type can be any type that has certain behavior.
+		\item 	Note: Traits are similar to a feature often called \textbf{interfaces in other languages}, although with some differences.
+		\item 	Trait definitions are a way to group method signatures together to define a set of behaviors necessary to accomplish some purpose.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Traits: Defining Shared Behavior (2)}
+		\inputminted[fontsize=\scriptsize]{rust}{./code/Trait1.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Traits: Default Implementations}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/Trait2.rs}
 \end{frame}
 
 
