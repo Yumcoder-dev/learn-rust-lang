@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{struct} \PYG{n+nc}{Point}\PYG{o}{\PYGZlt{}}\PYG{n}{X1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Y1}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{x}: \PYG{n+nc}{X1}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{y}: \PYG{n+nc}{Y1}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{impl}\PYG{o}{\PYGZlt{}}\PYG{n}{X1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Y1}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{Point}\PYG{o}{\PYGZlt{}}\PYG{n}{X1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Y1}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{mixup}\PYG{o}{\PYGZlt{}}\PYG{n}{X2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Y2}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{other}: \PYG{n+nc}{Point}\PYG{o}{\PYGZlt{}}\PYG{n}{X2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Y2}\PYG{o}{\PYGZgt{}}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{Point}\PYG{o}{\PYGZlt{}}\PYG{n}{X1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Y2}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{Point}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{x}: \PYG{n+nc}{self}\PYG{p}{.}\PYG{n}{x}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n}{y}: \PYG{n+nc}{other}\PYG{p}{.}\PYG{n}{y}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{p1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Point}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{x}: \PYG{l+m+mi}{5}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y}: \PYG{l+m+mf}{10.4}\PYG{+w}{ }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{p2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Point}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{x}: \PYG{l+s}{\PYGZdq{}Hello\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y}: \PYG{o}{\PYGZsq{}}\PYG{n+na}{c}\PYG{o}{\PYGZsq{}} \PYG{p}{\PYGZcb{};}
+
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{p3}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{p1}\PYG{p}{.}\PYG{n}{mixup}\PYG{p}{(}\PYG{n}{p2}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}p3.x = \PYGZob{}\PYGZcb{}, p3.y = \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{p3}\PYG{p}{.}\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{p3}\PYG{p}{.}\PYG{n}{y}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

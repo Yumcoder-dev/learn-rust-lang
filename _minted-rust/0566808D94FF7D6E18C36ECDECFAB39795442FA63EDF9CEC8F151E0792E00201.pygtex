@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{notify}\PYG{p}{(}\PYG{n}{item}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{impl}\PYG{+w}{ }\PYG{n}{Summary}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Breaking news! \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{item}\PYG{p}{.}\PYG{n}{summarize}\PYG{p}{());}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{// The impl Trait syntax works for straightforward cases but is actually syntax sugar for a longer form known as a trait bound; it looks like this:}
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{notify}\PYG{o}{\PYGZlt{}}\PYG{n}{T}: \PYG{n+nc}{Summary}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{item}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{T}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Breaking news! \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{item}\PYG{p}{.}\PYG{n}{summarize}\PYG{p}{());}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{// Specifying Multiple Trait Bounds with the + Syntax}
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{notify}\PYG{p}{(}\PYG{n}{item}: \PYG{k+kp}{\PYGZam{}}\PYG{p}{(}\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Summary}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{Display}\PYG{p}{))}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{c+c1}{// The + syntax is also valid with trait bounds on generic types:}
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{notify}\PYG{o}{\PYGZlt{}}\PYG{n}{T}: \PYG{n+nc}{Summary}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{Display}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{item}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{T}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\end{Verbatim}

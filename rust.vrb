@@ -1,5 +1,2 @@
-\frametitle{Where The \mintinline{rust}|?| Operator Can Be Used (2)}
-	\inputminted{rust}{./code/result12.rs}
-	
-	The \mintinline{rust}| Box<dyn Error>| type is a trait object, which we’ll talk about later. For now, you can read \mintinline{rust}| Box<dyn Error>|  to mean “any kind of error.”
-	
+\frametitle{Traits as Parameters}
+	\inputminted{rust}{./code/Trait3.rs}

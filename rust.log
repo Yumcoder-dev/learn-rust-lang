@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  25 DEC 2022 21:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  25 DEC 2022 23:10
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2868,10 +2868,6 @@ E.pygtex)
 A.pygtex)
 \openout6 = `rust.pyg'.
 
-runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P str
-ipnl=False -P mathescape=True -o _minted-rust/327B21B3BAC26A70C26A9B6D381C1449B
-A5FFB870F3277695E59D5E7C5E4ACD6.pygtex rust.pyg)...executed.
-
 
 (./_minted-rust/327B21B3BAC26A70C26A9B6D381C1449BA5FFB870F3277695E59D5E7C5E4ACD
 6.pygtex)
@@ -2888,30 +2884,128 @@ A5FFB870F3277695E59D5E7C5E4ACD6.pygtex rust.pyg)...executed.
 
 ] [170
 
-] [171
+]
+\openout4 = `rust.vrb'.
 
-] [172
-
-] [173
-
-] [174
-
-] [175
-
-] [176
-
-] [177
-
-] [178
-
-] [179
+ (./rust.vrb
+(./_minted-rust/FCBE883CAA993BD50FD81569F1EDD07BDF5107D682F86D6E3426ADEFE134963
+9.pygtex)
+(./_minted-rust/459A4216C99710A0FADA2D433AE81ADACD8D131A8E079B46E79EA1CE9AF8394
+2.pygtex)) [171
 
 ]
-[180
+\openout4 = `rust.vrb'.
 
-] [181
+ (./rust.vrb
+(./_minted-rust/E63005A8E63E70EB40DF9DEF567EAA483B0E41EF1C054E053E8BB2A20078EB9
+E.pygtex))
+Overfull \vbox (2.0957pt too high) detected at line 1571
+ []
 
-] [182
+[172
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/FC6E4AE07DDDE36FBED602805D65C22A5885583F628273E583D794FCB99AC34
+E.pygtex))
+Overfull \vbox (0.59602pt too high) detected at line 1576
+ []
+
+[173
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/A904D0B789F6CD369ED57961049D5876C1C97C4AA9AC60115C8E5049C8E63F1
+1.pygtex)) [174
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/C3E3FD80C98186CC8AE9AF8F8344AED4F4415BD19FE853ABDC5090ADD582CFF
+5.pygtex))
+Overfull \vbox (11.59573pt too high) detected at line 1587
+ []
+
+[175
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/2C4D86D8EC33151769C06D3093713B9E0C6FC8D5D3CC0E028D3C3EB9B100339
+0.pygtex)) [176
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [177
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/9A2CF609077876D553FDE79850D0A49FEB0AC5F9BD657AEB6C944F5BA2325D0
+1.pygtex)) [178
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [179
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/E89AC3F1C663D8A50142B179FD7EC1AAB41DB62147A2A02D366F17F817CD683
+2.pygtex)) [180
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/3D9045C37E09BD614DC696604DA7D6BCBA5787EA019095DDD1C40D734B0305B
+E.pygtex))
+Overfull \vbox (2.0957pt too high) detected at line 1627
+ []
+
+[181
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/0566808D94FF7D6E18C36ECDECFAB39795442FA63EDF9CEC8F151E0792E0020
+1.pygtex)) [182
+
+] [183
+
+] [184
+
+] [185
+
+] [186
+
+] [187
+
+] [188
+
+] [189
+
+] [190
+
+] [191
+
+] [192
+
+]
+[193
+
+] [194
 
 ]
 \tf@nav=\write8
@@ -2933,10 +3027,10 @@ runsystem(rm rust.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 27880 strings out of 474968
- 629529 string characters out of 5776083
- 942415 words of memory out of 5000000
- 47403 multiletter control sequences out of 15000+600000
+ 28018 strings out of 474968
+ 635702 string characters out of 5776083
+ 948005 words of memory out of 5000000
+ 47460 multiletter control sequences out of 15000+600000
  484702 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,870b,1087s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2956,10 +3050,10 @@ al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
 texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on rust.pdf (182 pages, 1555230 bytes).
+Output written on rust.pdf (194 pages, 1586904 bytes).
 PDF statistics:
- 5694 PDF objects out of 6186 (max. 8388607)
- 5210 compressed objects within 53 object streams
- 393 named destinations out of 1000 (max. 500000)
+ 6028 PDF objects out of 6186 (max. 8388607)
+ 5529 compressed objects within 56 object streams
+ 417 named destinations out of 1000 (max. 500000)
  1401 words of extra memory for PDF output out of 10000 (max. 10000000)
 
