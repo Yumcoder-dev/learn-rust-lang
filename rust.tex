@@ -1522,25 +1522,33 @@
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{A Shortcut for Propagating Errors: the ? Operator}
+	\frametitle{A Shortcut for Propagating Errors: the \mintinline{rust}|?| Operator}
 	\inputminted{rust}{./code/result7.rs}
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{A Shortcut for Propagating Errors: the ? Operator}
+	\frametitle{A Shortcut for Propagating Errors: the \mintinline{rust}|?| Operator}
 	\inputminted[fontsize=\scriptsize]{rust}{./code/result9.rs}
 	
 	\inputminted[fontsize=\scriptsize]{rust}{./code/result10.rs}
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{Where The ? Operator Can Be Used}
+	\frametitle{Where The \mintinline{rust}|?| Operator Can Be Used}
 		\begin{itemize}
-			\item 	The ? operator can only be used in functions whose return type is compatible with the value the ? is used on.
-			\item 	we’re only allowed to use the ? operator in a function that returns Result, Option, or another type that implements FromResidual.
+			\item 	The \mintinline{rust}|?| operator can only be used in functions whose return type is compatible with the value the \mintinline{rust}|?| is used on.
+			\item 	we’re only allowed to use the ? operator in a function that returns \mintinline{rust}|Result|, \mintinline{rust}|Option|, or another type that implements \mintinline{rust}|FromResidual|.
 		\end{itemize}
 	
-	\inputminted[fontsize=\scriptsize]{rust}{./code/result10.rs}
+	\inputminted{rust}{./code/result11.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Where The \mintinline{rust}|?| Operator Can Be Used (2)}
+	\inputminted{rust}{./code/result12.rs}
+	
+	The \mintinline{rust}| Box<dyn Error>| type is a trait object, which we’ll talk about later. For now, you can read \mintinline{rust}| Box<dyn Error>|  to mean “any kind of error.” 
+	
 \end{frame}
 
 \section{Generic Types, Traits, and Lifetimes}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{v}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf+fm}{vec!}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{];}
+\PYG{+w}{    }\PYG{n}{v}\PYG{p}{[}\PYG{l+m+mi}{99}\PYG{p}{];}\PYG{+w}{ }\PYG{c+c1}{// panic}
+
+\PYG{+w}{    }\PYG{n+nf+fm}{panic!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}crash and burn\PYGZdq{}}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// panic macro}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

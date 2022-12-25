@@ -1,4 +1,5 @@
-\frametitle{Hash Maps and Ownership}
-	For types that implement the Copy trait, like i32, the values are copied into the hash map. For owned values like String, the values will be moved and the hash map will be the owner of those values.
+\frametitle{Where The \mintinline{rust}|?| Operator Can Be Used (2)}
+	\inputminted{rust}{./code/result12.rs}
 	
-	\inputminted{rust}{./code/map2.rs}
+	The \mintinline{rust}| Box<dyn Error>| type is a trait object, which we’ll talk about later. For now, you can read \mintinline{rust}| Box<dyn Error>|  to mean “any kind of error.”
+	
