@@ -663,7 +663,7 @@
 \begin{frame}[fragile]
 	\frametitle{Move (3)}
 	When we assign s1 to s2, the String data is copied, meaning we copy the pointer, the length, and the capacity that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the data representation in memory looks like the following ( sounds like making a \textbf{shallow copy}):
-		\begin{figure}
+	\begin{figure}
 		\centering
 		\includegraphics[width=0.3\textwidth]{./img/trpl04-02.png}
 		\caption{Representation in memory of the variable s2 that has a copy of the pointer, length, and capacity of s1}
@@ -685,22 +685,22 @@
 
 \begin{frame}[fragile]
 	\frametitle{s1 was moved into s2}
-\begin{itemize}
-	\item When a variable goes out of scope, \textbf{Rust automatically calls the drop function and cleans up the heap memor}y for that variable. 
-	\item When s2 and s1 go out of scope, they will both try to free the same memory. This is known as a \textbf{double free error} and is one of the memory safety bugs.
-	\item \textbf{Freeing memory twice} can lead to memory corruption, which can potentially lead to security vulnerabilities.
-	\item To ensure memory safety, after the line let s2 = s1;, Rust considers s1 as no longer valid. Therefore, Rust doesn’t need to free anything when s1 goes out of scope.
-\end{itemize}
-
+	\begin{itemize}
+		\item When a variable goes out of scope, \textbf{Rust automatically calls the drop function and cleans up the heap memor}y for that variable. 
+		\item When s2 and s1 go out of scope, they will both try to free the same memory. This is known as a \textbf{double free error} and is one of the memory safety bugs.
+		\item \textbf{Freeing memory twice} can lead to memory corruption, which can potentially lead to security vulnerabilities.
+		\item To ensure memory safety, after the line let s2 = s1;, Rust considers s1 as no longer valid. Therefore, Rust doesn’t need to free anything when s1 goes out of scope.
+	\end{itemize}
+	
 \end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{s1 was moved into s2 (2)}
-			\inputminted{rust}{./code/move-string.rs}
+	\inputminted{rust}{./code/move-string.rs}
 \end{frame}
 \begin{frame}[fragile]
 	\frametitle{s1 was moved into s2 (3)}
-		\inputminted{shell}{./code/move-string.shell}
+	\inputminted{shell}{./code/move-string.shell}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -715,12 +715,12 @@
 
 \begin{frame}[fragile]
 	\frametitle{Move notes}
-			
+	
 	\begin{block}{Memory safety bugs}
 		That solves our problem! With only s2 valid, when it goes out of scope it alone will free the memory, and we’re done.
 	\end{block}
 	
-			
+	
 	\begin{block}{Design choice}
 		Rust will never automatically create “deep” copies of your data. Therefore, any automatic copying can be assumed to be inexpensive in terms of runtime performance.
 	\end{block}
@@ -733,15 +733,15 @@
 	\frametitle{Deeply copy with clone}
 	If we do want to deeply copy the heap data of the String, not just the stack data, we can use a common method called clone.
 	
-		\begin{columns}
+	\begin{columns}
 		\column{0.6\textwidth}
-			\inputminted{rust}{./code/move-clone.rs}
+		\inputminted{rust}{./code/move-clone.rs}
 		\column{0.4\textwidth}
-			\begin{figure}
-				\centering
-				\includegraphics[width=0.8\textwidth]{./img/trpl04-03.png}
-				\label{fig:figureSAnotherPossibility2}
-			\end{figure}
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.8\textwidth]{./img/trpl04-03.png}
+			\label{fig:figureSAnotherPossibility2}
+		\end{figure}
 	\end{columns}
 \end{frame}
 
@@ -751,8 +751,8 @@
 	\frametitle{Stack-Only Data: Copy and Clone}
 	We don’t have a call to clone, but x is still valid and wasn’t moved into y.
 	\inputminted{rust}{./code/move2.rs}
-
-The reason is that types such as integers that have \textbf{a known size at compile time} are stored entirely on the \textbf{stack}, so \textbf{copies of the actual values are quick to make}. That means there’s no reason we would want to prevent x from being valid after we create the variable y. In other words, there’s no difference between deep and shallow copying here, so calling clone wouldn’t do anything different from the usual shallow copying, and we can leave it out.
+	
+	The reason is that types such as integers that have \textbf{a known size at compile time} are stored entirely on the \textbf{stack}, so \textbf{copies of the actual values are quick to make}. That means there’s no reason we would want to prevent x from being valid after we create the variable y. In other words, there’s no difference between deep and shallow copying here, so calling clone wouldn’t do anything different from the usual shallow copying, and we can leave it out.
 \end{frame}
 
 \begin{frame}[fragile]
@@ -775,19 +775,19 @@ The reason is that types such as integers that have \textbf{a known size at comp
 	\frametitle{References}
 	A reference is\textbf{ like a pointer} in that it’s \textbf{an address we can follow to access the data} stored at that address; \textbf{that data is owned by some other variable}. Unlike a pointer,\textbf{ a reference is guaranteed to point to a valid value of a particular type for the life of that reference}.
 	\begin{columns}
-	\column{0.7\textwidth}
-	\inputminted[fontsize=\scriptsize]{rust}{./code/references.rs}
-	\column{0.3\textwidth}
+		\column{0.7\textwidth}
+		\inputminted[fontsize=\scriptsize]{rust}{./code/references.rs}
+		\column{0.3\textwidth}
 		\small
-	Note that we pass \&s1 into calculate\_length and, in its definition, we take \&String rather than String. These ampersands represent references, and they allow you to refer to some value without taking ownership of it
-\end{columns}
-
+		Note that we pass \&s1 into calculate\_length and, in its definition, we take \&String rather than String. These ampersands represent references, and they allow you to refer to some value without taking ownership of it
+	\end{columns}
+	
 \end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{References (2)}
 	\inputminted[fontsize=\scriptsize]{rust}{./code/references.rs}
-		\begin{figure}
+	\begin{figure}
 		\centering
 		\includegraphics[width=0.6\textwidth]{./img/trpl04-05.png}
 		\label{fig:figureRef}
@@ -798,9 +798,9 @@ The reason is that types such as integers that have \textbf{a known size at comp
 	\frametitle{Borrowing}
 	\textbf{borrowing}: \textit{the action of creating a reference}.
 	As in real life, if a person owns something, you can borrow it from them. When you’re done, you have to give it back. You don’t own it. So, what happens if we try to modify something we’re borrowing?
-		\inputminted{rust}{./code/borrowing.rs}
-		
-		\small
+	\inputminted{rust}{./code/borrowing.rs}
+	
+	\small
 	Just as variables are immutable by default, so are references. We’re not allowed to modify something we have a reference to.
 \end{frame}
 
@@ -843,14 +843,14 @@ The reason is that types such as integers that have \textbf{a known size at comp
 		\item 	At least one of the pointers is being used to write to the data.
 		\item 	There’s no mechanism being used to synchronize access to the data.
 	\end{itemize}
-Data races cause undefined behavior and can be difficult to diagnose and fix when you’re trying to track them down at runtime.
+	Data races cause undefined behavior and can be difficult to diagnose and fix when you’re trying to track them down at runtime.
 	
 \end{frame}
 
 
 \begin{frame}[fragile]
 	\frametitle{Mutable references restriction example}
-As always, we can use curly brackets to create a new scope, allowing for multiple mutable references, just not simultaneous ones:
+	As always, we can use curly brackets to create a new scope, allowing for multiple mutable references, just not simultaneous ones:
 	\inputminted{rust}{./code/borrowing-simultaneous.rs}
 \end{frame}
 
@@ -905,16 +905,16 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 
 \begin{frame}[fragile]
 	\frametitle{Learn application of Slice Type by example}
-\begin{itemize}
-	\item This program compiles without any errors and would also do so if we used word after calling s.clear(). Because word isn’t connected to the state of s at all, word still contains the value 5. We could use that value 5 with the variable s to try to extract the first word out, but this would be a bug because the contents of s have changed since we saved 5 in word.
-	\item Luckily, Rust has a solution to this problem: string slices.
-\end{itemize}
+	\begin{itemize}
+		\item This program compiles without any errors and would also do so if we used word after calling s.clear(). Because word isn’t connected to the state of s at all, word still contains the value 5. We could use that value 5 with the variable s to try to extract the first word out, but this would be a bug because the contents of s have changed since we saved 5 in word.
+		\item Luckily, Rust has a solution to this problem: string slices.
+	\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{String Slices}
 	
-		\begin{columns}
+	\begin{columns}
 		\column{0.6\textwidth}
 		\inputminted{rust}{./code/string-slice.rs}
 		\column{0.4\textwidth}
@@ -924,12 +924,12 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 		\end{figure}
 		
 	\end{columns}
-
+	
 \end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{Rewrite first\_word to return a slice}
-		\inputminted{rust}{./code/slice2.rs}
+	\inputminted{rust}{./code/slice2.rs}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -947,7 +947,7 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 	\mintinline{rust}|fn first_word(s: &String) -> &str {/*...*/}| 
 	
 	A more experienced Rustacean would write the signature as in below instead because it allows us to use the same function on both \mintinline{rust}|&String|  values and  \mintinline{rust}|&str|  values.
-
+	
 	\mintinline{rust}|fn first_word(s: &str) -> &str {/*...*/}| 
 \end{frame}
 
@@ -964,7 +964,7 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 
 \begin{frame}[fragile]
 	\frametitle{Defining and Instantiating Structs (2)}
-\inputminted{rust}{./code/struct.rs}
+	\inputminted{rust}{./code/struct.rs}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -990,7 +990,7 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 
 \begin{frame}[fragile]
 	\frametitle{Creating Instances From Other Instances With Struct Update Syntax (3)}
-		\inputminted{rust}{./code/struct-err.rs}
+	\inputminted{rust}{./code/struct-err.rs}
 \end{frame}
 
 
@@ -1064,7 +1064,7 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 	\frametitle{Defining an Enum}
 	Enums allow you to define a type by enumerating its possible variants.
 	\begin{block}{Struct vs Enum}
-	Where structs give you a way of grouping together related fields and data, like a Rectangle with its width and height, enums give you a way of saying a value is one of a possible set of values. 
+		Where structs give you a way of grouping together related fields and data, like a Rectangle with its width and height, enums give you a way of saying a value is one of a possible set of values. 
 	\end{block}
 	\inputminted{rust}{./code/enum.rs}
 \end{frame}
@@ -1083,7 +1083,7 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 
 \begin{frame}[fragile]
 	\frametitle{The Option Enum and Its Advantages Over Null Values}
-	 The Option type encodes the very common scenario in which a value could be something or it could be nothing.
+	The Option type encodes the very common scenario in which a value could be something or it could be nothing.
 	\inputminted{rust}{./code/enum4.rs}
 	
 	see: “Null References: The Billion Dollar Mistake”
@@ -1091,12 +1091,12 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 
 \begin{frame}[fragile]
 	\frametitle{Advantage of Option Over Null}
-\begin{itemize}
-	\item 	When we have a Some value, we know that a value is present and the value is held within the Some. When we have a None value, in some sense, it means the same thing as null: we don’t have a valid value. So why is having \mintinline{rust}|Option<T>| any better than having null?
-\begin{itemize}
-	\item 	In short, because \mintinline{rust}|Option<T>| and T (where T can be any type) are different types, the compiler won’t let us use an \mintinline{rust}|Option<T>| value as if it were definitely a valid value. For example, this code won’t compile because it’s trying to add an \mintinline{rust}|i8| to an \mintinline{rust}|Option<i8>|:
-\end{itemize}
-\end{itemize}
+	\begin{itemize}
+		\item 	When we have a Some value, we know that a value is present and the value is held within the Some. When we have a None value, in some sense, it means the same thing as null: we don’t have a valid value. So why is having \mintinline{rust}|Option<T>| any better than having null?
+		\begin{itemize}
+			\item 	In short, because \mintinline{rust}|Option<T>| and T (where T can be any type) are different types, the compiler won’t let us use an \mintinline{rust}|Option<T>| value as if it were definitely a valid value. For example, this code won’t compile because it’s trying to add an \mintinline{rust}|i8| to an \mintinline{rust}|Option<i8>|:
+		\end{itemize}
+	\end{itemize}
 	
 	\inputminted{rust}{./code/enum5.rs}
 \end{frame}
@@ -1110,11 +1110,11 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 \begin{frame}[fragile]
 	\frametitle{Patterns that Bind to Values}
 	\begin{columns}
-	\column{0.8\textwidth}
+		\column{0.8\textwidth}
 		\inputminted[fontsize=\scriptsize]{rust}{./code/match2.rs}
-	\column{0.2\textwidth}
+		\column{0.2\textwidth}
 		Another useful feature of match arms is that they can bind to the parts of the values that match the pattern. This is how we can extract values out of enum variants.
-\end{columns}
+	\end{columns}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -1144,18 +1144,18 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 \section{Managing Projects with Packages, Crates, and Modules}
 \begin{frame}[fragile]
 	\frametitle{Packages and Crates}
-	 \begin{itemize}
-	 	\item As a project grows, you should organize code by splitting it into multiple \textbf{modules} and then multiple files. 
-	 	\item 	A \textbf{package} can contain multiple binary crates and optionally one library crate. 
-	 	\item 	As a package grows, you can extract parts into separate crates that become external dependencies.
-	 	\item 	A \textbf{crate} is the smallest amount of code that the Rust compiler considers at a time. A crate can come in one of two forms: 
-	 	\begin{itemize}
-	 		\item \textbf{Binary crates }are programs you can compile to an executable, such as a command-line program or a server. Each must have a function called \mintinline{rust}|main| that defines what happens when the executable runs. 
-	 		\item 	\textbf{Library crates} don’t have a main function, and they don’t compile to an executable. Instead, they define functionality intended to be shared with multiple projects.
-	 	\end{itemize}
-	 	
-	 	\item 	For very large projects comprising a set of interrelated packages that evolve together, Cargo provides \textbf{workspaces}, which we’ll cover later.
-	 \end{itemize}
+	\begin{itemize}
+		\item As a project grows, you should organize code by splitting it into multiple \textbf{modules} and then multiple files. 
+		\item 	A \textbf{package} can contain multiple binary crates and optionally one library crate. 
+		\item 	As a package grows, you can extract parts into separate crates that become external dependencies.
+		\item 	A \textbf{crate} is the smallest amount of code that the Rust compiler considers at a time. A crate can come in one of two forms: 
+		\begin{itemize}
+			\item \textbf{Binary crates }are programs you can compile to an executable, such as a command-line program or a server. Each must have a function called \mintinline{rust}|main| that defines what happens when the executable runs. 
+			\item 	\textbf{Library crates} don’t have a main function, and they don’t compile to an executable. Instead, they define functionality intended to be shared with multiple projects.
+		\end{itemize}
+		
+		\item 	For very large projects comprising a set of interrelated packages that evolve together, Cargo provides \textbf{workspaces}, which we’ll cover later.
+	\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -1178,18 +1178,18 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 \begin{frame}[fragile]
 	\frametitle{Declaring modules}
 	In the crate root file, you can \textbf{declare new modules}; say, you declare a “garden” module with  \mintinline{rust}|mod garden;|. The compiler will look for the module’s code in these places:
-\begin{itemize}
-	\item 	\textbf{Inline}, within curly brackets that replace the semicolon following \mintinline{rust}|mod garden|
-	\item 	\textbf{In the file} src/garden.rs
-	\item 	\textbf{In the file} src/garden/mod.rs
-\end{itemize}
+	\begin{itemize}
+		\item 	\textbf{Inline}, within curly brackets that replace the semicolon following \mintinline{rust}|mod garden|
+		\item 	\textbf{In the file} src/garden.rs
+		\item 	\textbf{In the file} src/garden/mod.rs
+	\end{itemize}
 	
 	\textbf{Declaring submodules}: In any file other than the crate root, you can declare submodules. For example, you might declare \mintinline{rust}|mod vegetables;| in src/garden.rs. The compiler will look for the submodule’s code within the directory named for the parent module in these places:
-\begin{itemize}
-	\item 	\textbf{Inline}, directly following mod vegetables, within curly brackets instead of the semicolon
-	\item 	\textbf{In the file} src/garden/vegetables.rs
-	\item 	\textbf{In the file} src/garden/vegetables/mod.rs
-\end{itemize}
+	\begin{itemize}
+		\item 	\textbf{Inline}, directly following mod vegetables, within curly brackets instead of the semicolon
+		\item 	\textbf{In the file} src/garden/vegetables.rs
+		\item 	\textbf{In the file} src/garden/vegetables/mod.rs
+	\end{itemize}
 	
 \end{frame}
 
@@ -1205,14 +1205,14 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 
 \begin{frame}[fragile]
 	\frametitle{Paths to code in modules}
-		\begin{columns}
+	\begin{columns}
 		\column{0.3\textwidth}
-	Once a module is part of your crate, you can refer to code in that module from anywhere else in that same crate, as long as the privacy rules allow, using the path to the code. For example, an Asparagus type in the garden vegetables module would be found at \mintinline{rust}|crate::garden::vegetables::Asparagus|.
+		Once a module is part of your crate, you can refer to code in that module from anywhere else in that same crate, as long as the privacy rules allow, using the path to the code. For example, an Asparagus type in the garden vegetables module would be found at \mintinline{rust}|crate::garden::vegetables::Asparagus|.
 		\column{0.6\textwidth}
-	\begin{figure}
-		\centering
-		\includegraphics[width=0.9\textwidth]{./img/trpl04-07.png}
-	\end{figure}
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.9\textwidth]{./img/trpl04-07.png}
+		\end{figure}
 	\end{columns}
 \end{frame}
 
@@ -1220,17 +1220,17 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 	\frametitle{Paths in the Module}
 	A path can take two forms:
 	
-\begin{itemize}
-	\item 	An \textbf{absolute} path is the full path starting from a crate root; for code from an external crate, \textbf{the absolute path begins with the crate name}, and for code from the current crate, it starts with the literal crate.
-	\item 	A \textbf{relative} path starts from the current module and \textbf{uses self, super, or an identifier in the current module}.
-\end{itemize}
+	\begin{itemize}
+		\item 	An \textbf{absolute} path is the full path starting from a crate root; for code from an external crate, \textbf{the absolute path begins with the crate name}, and for code from the current crate, it starts with the literal crate.
+		\item 	A \textbf{relative} path starts from the current module and \textbf{uses self, super, or an identifier in the current module}.
+	\end{itemize}
 	Both absolute and relative paths are followed by one or more identifiers separated by double colons (::).
 \end{frame}
 
 
 \begin{frame}[fragile]
 	\frametitle{Paths in the Module (2)}
-
+	
 	\inputminted{rust}{./code/module.rs}
 	
 	Both \mintinline{rust}|front_of_house| module and \mintinline{rust}|add_to_waitlist|  method are public. The \mintinline{rust}|pub| keyword lets us use these paths in \mintinline{rust}|add_to_waitlist| with respect to the privacy rules.
@@ -1272,42 +1272,42 @@ As always, we can use curly brackets to create a new scope, allowing for multipl
 \begin{frame}[fragile]
 	\frametitle{Bringing Paths into Scope with the \mintinline{rust}|use|  Keyword (2)}
 	\inputminted{rust}{./code/module6.rs}
-To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust}|customer| module too, or reference the shortcut in the parent module with \mintinline{rust}|super::hosting|  within the child \mintinline{rust}|customer| module.
+	To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust}|customer| module too, or reference the shortcut in the parent module with \mintinline{rust}|super::hosting|  within the child \mintinline{rust}|customer| module.
 \end{frame}
 
 
 
 \begin{frame}[fragile]
 	\frametitle{Creating Idiomatic \mintinline{rust}|use| Paths}
-		\inputminted[fontsize=\scriptsize]{rust}{./code/module8.rs}
-		
-		\inputminted[fontsize=\scriptsize]{rust}{./code/module7.rs}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/module8.rs}
+	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/module7.rs}
 \end{frame}
 
 
 \begin{frame}[fragile]
 	\frametitle{Creating Idiomatic \mintinline{rust}|use| Paths (2)}
-\begin{itemize}
-	\item Bringing the function’s parent module into scope with \mintinline{rust}|use| means we have to specify the parent module when calling the function. \textbf{Specifying the parent module when calling the function makes it clear that the function isn’t locally defined while still minimizing repetition of the full path}. 
-	\item On the other hand, when bringing in structs, enums, and other items with use, it’s idiomatic to specify the full path. There’s no strong reason behind this idiom: it’s just the convention that has emerged, and folks have gotten used to reading and writing Rust code this way.
-	\inputminted[fontsize=\scriptsize]{rust}{./code/module9.rs}
-\end{itemize}
+	\begin{itemize}
+		\item Bringing the function’s parent module into scope with \mintinline{rust}|use| means we have to specify the parent module when calling the function. \textbf{Specifying the parent module when calling the function makes it clear that the function isn’t locally defined while still minimizing repetition of the full path}. 
+		\item On the other hand, when bringing in structs, enums, and other items with use, it’s idiomatic to specify the full path. There’s no strong reason behind this idiom: it’s just the convention that has emerged, and folks have gotten used to reading and writing Rust code this way.
+		\inputminted[fontsize=\scriptsize]{rust}{./code/module9.rs}
+	\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{Creating Idiomatic \mintinline{rust}|use| Paths (3)}
-		\inputminted[fontsize=\scriptsize]{rust}{./code/module10.rs}
-		
-		\begin{block}{Idiomatic way}
-			\begin{itemize}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/module10.rs}
+	
+	\begin{block}{Idiomatic way}
+		\begin{itemize}
 			\item 	\textbf{Function}: bringing the \textbf{function’s parent} module into scope.
 			\item 	\textbf{Structs, enums, and other items}: it’s idiomatic to specify the \textbf{full path}.
 			\begin{itemize}
 				\item The exception to this idiom is if we’re bringing two items with the same name into scope with \mintinline{rust}|use|  statements, because Rust doesn’t allow that.
 			\end{itemize}
 		\end{itemize}
-		\end{block}
-
+	\end{block}
+	
 \end{frame}
 
 
@@ -1337,16 +1337,16 @@ To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust
 	
 	1) Add the following line to \mintinline{rust}|Cargo.toml| file.
 	
-	 \mintinline{toml}|rand = "0.8.5"|
-	 
-	 2) bring items from the crates into scope (with \mintinline{rust}|use|) and used it.
-	 \inputminted{rust}{./code/module13.rs}
+	\mintinline{toml}|rand = "0.8.5"|
+	
+	2) bring items from the crates into scope (with \mintinline{rust}|use|) and used it.
+	\inputminted{rust}{./code/module13.rs}
 \end{frame}
 
 
 \begin{frame}[fragile]
 	\frametitle{Using Nested Paths to Clean Up Large \mintinline{rust}|use| Lists}
-	 \inputminted{rust}{./code/module14.rs}
+	\inputminted{rust}{./code/module14.rs}
 \end{frame}
 
 
@@ -1354,15 +1354,15 @@ To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust
 	\frametitle{Separating Modules into Different Files}
 	\begin{itemize}
 		\item For a module named  \mintinline{rust}|front_of_house| declared in the crate root, the compiler will look for the module’s code in:
-			\begin{itemize}
-				\item \mintinline{rust}|src/front_of_house.rs| (what we covered)
-				\item 	\mintinline{rust}|src/front_of_house/mod.rs| (older style, still supported path)
-			\end{itemize}
+		\begin{itemize}
+			\item \mintinline{rust}|src/front_of_house.rs| (what we covered)
+			\item 	\mintinline{rust}|src/front_of_house/mod.rs| (older style, still supported path)
+		\end{itemize}
 		\item 	For a module named hosting that is a submodule of \mintinline{rust}|front_of_house| , the compiler will look for the module’s code in:
-			\begin{itemize}
-				\item \mintinline{rust}|src/front_of_house/hosting.rs| (what we covered)
-				\item 	\mintinline{rust}|src/front_of_house/hosting/mod.rs| (older style, still supported path)
-			\end{itemize}
+		\begin{itemize}
+			\item \mintinline{rust}|src/front_of_house/hosting.rs| (what we covered)
+			\item 	\mintinline{rust}|src/front_of_house/hosting/mod.rs| (older style, still supported path)
+		\end{itemize}
 		\item 	If you use both styles for the same module, you’ll get a compiler error. Using a mix of both styles for different modules in the same project is allowed, but might be confusing for people navigating your project.
 		\item The main downside to the style that uses files named mod.rs is that your project can end up with many files named mod.rs, which is confusing.
 	\end{itemize}
@@ -1378,12 +1378,12 @@ To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust
 		\item 	Unlike the built-in array and tuple types, the data these collections point to is stored on the \textbf{heap}, which means the amount of data does not need to be known at compile time and can grow or shrink as the program runs.
 		\item 	Each kind of collection has different capabilities and costs, and choosing an appropriate one for your current situation is a skill you’ll develop over time. 
 		\item Rust’s collections can be grouped into four major categories:
-	\begin{itemize}
-		\item 	\textbf{Sequences}: Vec, VecDeque(double-ended queue), LinkedList
-		\item 	\textbf{Maps}: HashMap, BTreeMap
-		\item 	\textbf{Sets}: HashSet, BTreeSet
-		\item 	\textbf{Misc}: BinaryHeap
-	\end{itemize}
+		\begin{itemize}
+			\item 	\textbf{Sequences}: Vec, VecDeque(double-ended queue), LinkedList
+			\item 	\textbf{Maps}: HashMap, BTreeMap
+			\item 	\textbf{Sets}: HashSet, BTreeSet
+			\item 	\textbf{Misc}: BinaryHeap
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
@@ -1420,11 +1420,11 @@ To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust
 \begin{frame}[fragile]
 	\frametitle{What Is a \mintinline{rust}|String|?}
 	
-\begin{itemize}
-	\item 	Many of the same operations available with \mintinline{rust}|Vec<T>|  are available with \mintinline{rust}|String| as well, because String is actually implemented as a wrapper around \textbf{a vector of bytes} with some extra guarantees, restrictions, and capabilities.
-	\item 	Rust has only one \textbf{string type}\textit{ in the core language}, which is the \textbf{string slice} \mintinline{rust}|str| that is usually seen in its borrowed form \mintinline{rust}|&str|. 
-	\item 	The \textbf{String type}, which is provided by\textbf{ Rust’s standard library} rather than coded into the core language, is \textit{a growable, mutable, owned, UTF-8 encoded string type}. When Rustaceans refer to “strings” in Rust, they might be referring to either the String or the string slice \mintinline{rust}|&str| types, not just one of those types. 
-\end{itemize}
+	\begin{itemize}
+		\item 	Many of the same operations available with \mintinline{rust}|Vec<T>|  are available with \mintinline{rust}|String| as well, because String is actually implemented as a wrapper around \textbf{a vector of bytes} with some extra guarantees, restrictions, and capabilities.
+		\item 	Rust has only one \textbf{string type}\textit{ in the core language}, which is the \textbf{string slice} \mintinline{rust}|str| that is usually seen in its borrowed form \mintinline{rust}|&str|. 
+		\item 	The \textbf{String type}, which is provided by\textbf{ Rust’s standard library} rather than coded into the core language, is \textit{a growable, mutable, owned, UTF-8 encoded string type}. When Rustaceans refer to “strings” in Rust, they might be referring to either the String or the string slice \mintinline{rust}|&str| types, not just one of those types. 
+	\end{itemize}
 \end{frame}
 
 
@@ -1438,7 +1438,7 @@ To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust
 
 \begin{frame}[fragile]
 	\frametitle{Updating a String}
-		\inputminted{rust}{./code/string_vec2.rs}
+	\inputminted{rust}{./code/string_vec2.rs}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -1469,11 +1469,11 @@ To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust
 
 \begin{frame}[fragile]
 	\frametitle{Unrecoverable Errors with panic!}
-		\inputminted{rust}{./code/panic.rs}
-		
-		\begin{block}{Unwinding the Stack }
-			By default, when a panic occurs, the program starts unwinding, which means Rust walks back up the stack and cleans up the data from each function it encounters. However, this walking back and cleanup is a lot of work. Rust, therefore, allows you to choose the alternative of immediately aborting, which ends the program without cleaning up.
-			\end{block}
+	\inputminted{rust}{./code/panic.rs}
+	
+	\begin{block}{Unwinding the Stack }
+		By default, when a panic occurs, the program starts unwinding, which means Rust walks back up the stack and cleans up the data from each function it encounters. However, this walking back and cleanup is a lot of work. Rust, therefore, allows you to choose the alternative of immediately aborting, which ends the program without cleaning up.
+	\end{block}
 \end{frame}
 
 
@@ -1481,10 +1481,49 @@ To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust
 	\frametitle{Recoverable Errors with Result}
 	Most errors aren’t serious enough to require the program to stop entirely. Sometimes, when a function fails, it’s for a reason that you can easily interpret and respond to (For example, open a file that doesn’t exist).
 	
-		\inputminted{rust}{./code/result.rs}
-		
-		\inputminted{rust}{./code/result2.rs}
+	\scriptsize
 	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/result.rs}
+	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/result2.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Matching on Different Errors}
+
+	\inputminted[fontsize=\scriptsize]{rust}{./code/result3.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Alternatives to Using match with \mintinline{rust}|Result<T, E>| }
+	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/result4.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Shortcuts for Panic on Error: unwrap and expect }
+	\scriptsize
+   The \mintinline{rust}|Result<T, E>| type has many helper methods defined on it to do various, more specific tasks. If the Result value is the Ok variant, unwrap will return the value inside the Ok. If the Result is the Err variant, unwrap will call the panic! macro for us.
+   
+	\inputminted[fontsize=\scriptsize]{rust}{./code/result5.rs}
+	
+	We use  \mintinline{rust}|expect| in the same way as unwrap: to return the file handle or call the panic! macro.
+	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/result6.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Propagating Errors with  \mintinline{rust}|?| Operator}
+
+	\inputminted{rust}{./code/result7.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Propagating Errors with  \mintinline{rust}|?| Operator (2)}
+	
+	\inputminted{rust}{./code/result8.rs}
 \end{frame}
 
 
@@ -1513,7 +1552,7 @@ To fix this problem, move the \mintinline{rust}|use| within the \mintinline{rust
 	\frametitle{title}
 \end{frame}
 
-	\begin{columns}
+\begin{columns}
 	\column{0.5\textwidth}
 	\tableofcontents[sections = 1-10]
 	\column{0.5\textwidth}
