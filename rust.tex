@@ -1522,10 +1522,26 @@
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{Propagating Errors with  \mintinline{rust}|?| Operator  (2)}
+	\frametitle{A Shortcut for Propagating Errors: the ? Operator}
 	\inputminted{rust}{./code/result7.rs}
 \end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{A Shortcut for Propagating Errors: the ? Operator}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/result9.rs}
+	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/result10.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Where The ? Operator Can Be Used}
+		\begin{itemize}
+			\item 	The ? operator can only be used in functions whose return type is compatible with the value the ? is used on.
+			\item 	we’re only allowed to use the ? operator in a function that returns Result, Option, or another type that implements FromResidual.
+		\end{itemize}
+	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/result10.rs}
+\end{frame}
 
 \section{Generic Types, Traits, and Lifetimes}
 \section{Writing Automated Tests}
