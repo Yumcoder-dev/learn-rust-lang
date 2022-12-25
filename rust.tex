@@ -1556,7 +1556,28 @@
 \begin{frame}[fragile]
 	\frametitle{Generic Data Types}
 	We use generics to create definitions for items like function signatures or structs, which we can then use with many different concrete data types.
-	
+
+	\begin{columns}
+		\column{0.5\textwidth}
+			\inputminted{rust}{./code/generic1.rs}
+		\column{0.5\textwidth}
+			\inputminted{rust}{./code/generic2.rs}
+	\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Generic Data Types (3)}
+		\inputminted[fontsize=\scriptsize]{rust}{./code/generic3.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Generic Data Types In Struct Definitions}
+	\inputminted{rust}{./code/generic4.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Generic Data Types In Enum Definitions}
+	\inputminted{rust}{./code/generic4.rs}
 \end{frame}
 
 \section{Writing Automated Tests}
