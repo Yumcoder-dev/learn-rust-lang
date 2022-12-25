@@ -1633,6 +1633,15 @@
 \end{frame}
 
 
+
+\begin{frame}[fragile]
+	\frametitle{Clearer Trait Bounds with where Clauses}
+	A functions with multiple generic type parameters can contain lots of trait bound information between the function’s name and its parameter list, making the function signature hard to read. For this reason, Rust has alternate syntax for specifying trait bounds inside a where clause after the function signature. So instead of writing this:
+	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/trait4.rs}
+\end{frame}
+
+
 \section{Writing Automated Tests}
 \section{An I/O Project: Building a Command Line Program}
 \section{Functional Language Features: Iterators and Closures}
