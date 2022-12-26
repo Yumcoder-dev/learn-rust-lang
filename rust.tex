@@ -1647,13 +1647,75 @@
 
 \begin{frame}[fragile]
 	\frametitle{Validating References with Lifetimes}
-	lifetimes ensure that references are valid as long as we need them to be.
-	Lifetimes are another kind of generic that we’ve already been using.
-	Most of the time, lifetimes are implicit and inferred, just like most of the time, types are inferred. We only must annotate types when multiple types are possible.
+	\begin{itemize}
+		\item lifetimes \textbf{ensure that references are valid as long as we need them to be}.
+		\item 	Lifetimes are another \textbf{kind of generic} that we’ve already been using.
+		\item 	Most of the time, lifetimes are implicit and inferred, just like most of the time, types are inferred. We only must annotate types when multiple types are possible.
+		\item 	Annotating lifetimes is not even a concept most other programming languages have, so this is going to feel \textbf{unfamiliar}.
+		\item The Rust compiler has a\textbf{ borrow checker} that compares scopes to determine whether all borrows are valid.
+		\begin{itemize}
+			\item borrowing: the action of creating a reference.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Preventing Dangling References with Lifetimes}
+	Annotations of the lifetimes of r and x, named 'a and 'b, respectively
+	
+	\inputminted{rust}{./code/dangling-ref.rs}
+	
+	The variable x doesn’t “live long enough.” The reason is that x will be out of scope when the inner scope ends on line 7. But r is still valid for the outer scope; because its scope is larger, we say that it “lives longer.” 
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Preventing Dangling References with Lifetimes(2)}
+	\inputminted{shell}{./code/dangling-ref.shell}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Generic Lifetimes in Functions}
+	We’ll write a function that returns the longer of two string slices. This function will take two string slices and return a single string slice.
+	
+	\inputminted{rust}{./code/lifetime.rs}
 \end{frame}
 
 
 
+\begin{frame}[fragile]
+	\frametitle{Generic Lifetimes in Functions (2)}
+	Rust can’t tell whether the reference being returned refers to x or y. Actually, we don’t know either, because the if block in the body of this function returns a reference to x and the else block returns a reference to y!
+	
+	\inputminted{rust}{./code/lifetime2.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Generic Lifetimes in Functions (3)}
+	\inputminted{shell}{./code/lifetime2.shell}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Lifetime Annotation Syntax}
+\begin{itemize}
+	\item 	Lifetime annotations \textbf{don’t change how long any of the references live}. Rather, they \textbf{describe the relationships of the lifetimes of multiple references to each other }without affecting the lifetimes.
+	\item 	Lifetime annotations have a slightly \textbf{unusual syntax}: the names of lifetime parameters must start with an apostrophe (') and are usually all lowercase and very short, like generic types. Most people use the name 'a for the first lifetime annotation. We place lifetime parameter annotations after the \mintinline{rust}|&| of a reference, using a space to separate the annotation from the reference’s type.
+	
+	\inputminted{rust}{./code/lifetime3.rs}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Lifetime Annotation Syntax (2)}
+	\inputminted{rust}{./code/lifetime4.rs}
+	
+	 the generic lifetime 'a will get the concrete lifetime that is equal to the smaller of the lifetimes of x and y.
+\end{frame}
+
+
+ 
 \section{Writing Automated Tests}
 \section{An I/O Project: Building a Command Line Program}
 \section{Functional Language Features: Iterators and Closures}
