@@ -1711,9 +1711,18 @@
 	\frametitle{Lifetime Annotation Syntax (2)}
 	\inputminted{rust}{./code/lifetime4.rs}
 	
-	 The generic lifetime 'a will get the concrete lifetime that is equal to the smaller of the lifetimes of x and y. In practice, it means that the lifetime of the reference returned by the longest function is the same as the smaller of the lifetimes of the values referred to by the function arguments. These relationships are what we want Rust to use when analyzing this code.
+	 The generic lifetime 'a will get the concrete \textbf{lifetime that is equal to the smaller of the lifetimes }of x and y. In practice, it means that the lifetime of the reference returned by the longest function is the same as the smaller of the lifetimes of the values referred to by the function arguments. These relationships are what we want Rust to use when analyzing this code.
 \end{frame}
 
+
+\begin{frame}[fragile]
+	\frametitle{Lifetime Annotation Syntax (3)}
+	\inputminted{rust}{./code/lifetime5.rs}
+	
+	The error shows that for result to be valid for the println! statement, string2 would need to be valid until the end of the outer scope. Rust knows this because we annotated the lifetimes of the function parameters and return values using the same lifetime parameter 'a.
+	
+	
+\end{frame}
 
  
 \section{Writing Automated Tests}
