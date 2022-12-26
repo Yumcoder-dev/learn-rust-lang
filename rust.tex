@@ -1711,7 +1711,7 @@
 	\frametitle{Lifetime Annotation Syntax (2)}
 	\inputminted{rust}{./code/lifetime4.rs}
 	
-	 The generic lifetime 'a will get the concrete lifetime that is equal to the smaller of the lifetimes of x and y.
+	 The generic lifetime 'a will get the concrete lifetime that is equal to the smaller of the lifetimes of x and y. In practice, it means that the lifetime of the reference returned by the longest function is the same as the smaller of the lifetimes of the values referred to by the function arguments. These relationships are what we want Rust to use when analyzing this code.
 \end{frame}
 
 
