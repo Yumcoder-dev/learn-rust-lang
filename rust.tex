@@ -1767,7 +1767,10 @@
 \begin{frame}[fragile]
 	\frametitle{Lifetime Annotations in Method Definitions}
 	When we implement methods on a struct with lifetimes, we use the same syntax as that of generic type parameters shown: 
-	\inputminted[fontsize=\scriptsize]{rust}{./code/lifetime8.rs}
+	
+	\inputminted{rust}{./code/lifetime8.rs}
+	
+	The lifetime parameter declaration after impl and its use after the type name are required, but we’re not required to annotate the lifetime of the reference to self because of the first elision rule.
 \end{frame}
 
 
