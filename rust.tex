@@ -1821,8 +1821,9 @@
 
 \begin{frame}[fragile]
 	\frametitle{Adding Custom Failure Messages}
+	You can also add a custom message to be printed with the failure message as optional arguments to the \mintinline{rust}|assert!|, \mintinline{rust}|assert_eq!|, and \mintinline{rust}|assert_ne!| macros. Any arguments specified after the required arguments are passed along to the \mintinline{rust}|format!| macro
 	
-	\inputminted{rust}{./code/test4.rs}
+	\inputminted{rust}{./code/test5.rs}
 \end{frame}
 
 
