@@ -1773,8 +1773,30 @@
 	The lifetime parameter declaration after impl and its use after the type name are required, but we’re not required to annotate the lifetime of the reference to self because of the first elision rule.
 \end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{The Static Lifetime}
+	One special lifetime we need to discuss is \mintinline{rust}|'static|, which denotes that the affected reference can live for the entire duration of the program. All string literals have the \mintinline{rust}|'static| lifetime, which we can annotate as follows:
+	
+	\inputminted{rust}{./code/lifetime9.rs}
+	
+	The text of this string is stored directly in the program’s binary, which is always available. Therefore, the lifetime of all string literals is 'static.
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Generic Type Parameters, Trait Bounds, and Lifetimes Together}
+
+	\inputminted{rust}{./code/lifetime10.rs}
+\end{frame}
 
 \section{Writing Automated Tests}
+\begin{frame}[fragile]
+	\frametitle{The Anatomy of a Test Function}
+	
+	\inputminted{rust}{./code/test1.rs}
+\end{frame}
+
+
 \section{An I/O Project: Building a Command Line Program}
 \section{Functional Language Features: Iterators and Closures}
 \section{More About Cargo and Crates.io}
