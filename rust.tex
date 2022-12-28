@@ -1823,9 +1823,33 @@
 	\frametitle{Adding Custom Failure Messages}
 	You can also add a custom message to be printed with the failure message as optional arguments to the \mintinline{rust}|assert!|, \mintinline{rust}|assert_eq!|, and \mintinline{rust}|assert_ne!| macros. Any arguments specified after the required arguments are passed along to the \mintinline{rust}|format!| macro
 	
-	\inputminted{rust}{./code/test5.rs}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/test5.rs}
 \end{frame}
 
+
+
+\begin{frame}[fragile]
+	\frametitle{Checking for Panics with \mintinline{rust}|should_panic|}
+	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/test6.rs}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Using \mintinline{rust}|Result<T, E>| in Tests}
+	
+	\inputminted{rust}{./code/test7.rs}
+	
+	Writing tests so they return a \mintinline{rust}|Result<T, E>| enables you to use the question mark operator in the body of tests, which can be a convenient way to write tests that should fail if any operation within them returns an Err variant.
+	
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Controlling How Tests Are Run}
+	
+\end{frame}\
 
 \section{An I/O Project: Building a Command Line Program}
 \section{Functional Language Features: Iterators and Closures}
