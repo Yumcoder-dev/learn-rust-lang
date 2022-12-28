@@ -1790,12 +1790,27 @@
 \end{frame}
 
 \section{Writing Automated Tests}
+
 \begin{frame}[fragile]
 	\frametitle{The Anatomy of a Test Function}
 	
 	\inputminted{rust}{./code/test1.rs}
+	
+	\inputminted[fontsize=\scriptsize]{shell}{./code/test1.shell}
 \end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{ Adding a second test that will fail because we call the \mintinline{rust}|panic!| macro}
+	
+	\inputminted{rust}{./code/test2.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Checking Results with the  \mintinline{rust}|assert!| Macro}
+	
+	\inputminted{rust}{./code/test2.rs}
+\end{frame}
 
 \section{An I/O Project: Building a Command Line Program}
 \section{Functional Language Features: Iterators and Closures}
