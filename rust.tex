@@ -1808,9 +1808,23 @@
 
 \begin{frame}[fragile]
 	\frametitle{Checking Results with the  \mintinline{rust}|assert!| Macro}
+	The \mintinline{rust}|assert!| macro, provided by the standard library, is useful when you want to ensure that some condition in a test evaluates to true. 
 	
-	\inputminted{rust}{./code/test2.rs}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/test3.rs}
 \end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Checking Results with the \mintinline{rust}|assert_eq!| and \mintinline{rust}|assert_ne!| Macro}
+	
+	\inputminted{rust}{./code/test4.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Adding Custom Failure Messages}
+	
+	\inputminted{rust}{./code/test4.rs}
+\end{frame}
+
 
 \section{An I/O Project: Building a Command Line Program}
 \section{Functional Language Features: Iterators and Closures}
