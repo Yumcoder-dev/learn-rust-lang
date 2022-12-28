@@ -1721,10 +1721,23 @@
 	
 	The error shows that for result to be valid for the println! statement, string2 would need to be valid until the end of the outer scope. Rust knows this because we annotated the lifetimes of the function parameters and return values using the same lifetime parameter 'a.
 	
+\end{frame}
+
+ \begin{frame}[fragile]
+ 	\frametitle{Lifetime Annotation Syntax (4)}
+ 	\inputminted{shell}{./code/lifetime5.shell}
+ 
+ \end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Lifetime Annotations in Struct Definitions}
+	\inputminted{rust}{./code/lifetime6.rs}
+	
+	We can define structs to hold references, but in that case we would need to add a lifetime annotation on every reference in the struct’s definition.
 	
 \end{frame}
 
- 
+
 \section{Writing Automated Tests}
 \section{An I/O Project: Building a Command Line Program}
 \section{Functional Language Features: Iterators and Closures}
