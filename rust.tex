@@ -1700,7 +1700,7 @@
 	\frametitle{Lifetime Annotation Syntax}
 \begin{itemize}
 	\item 	Lifetime annotations \textbf{don’t change how long any of the references live}. Rather, they \textbf{describe the relationships of the lifetimes of multiple references to each other }without affecting the lifetimes.
-	\item 	Lifetime annotations have a slightly \textbf{unusual syntax}: the names of lifetime parameters must start with an apostrophe (') and are usually all lowercase and very short, like generic types. Most people use the name 'a for the first lifetime annotation. We place lifetime parameter annotations after the \mintinline{rust}|&| of a reference, using a space to separate the annotation from the reference’s type.
+	\item 	Lifetime annotations have a slightly \textbf{unusual syntax}: the names of lifetime parameters must start with an apostrophe (') and are usually all lowercase and very short, like generic types. Most people use the name \mintinline{rust}|'a| for the first lifetime annotation. We place lifetime parameter annotations after the \mintinline{rust}|&| of a reference, using a space to separate the annotation from the reference’s type.
 	
 	\inputminted{rust}{./code/lifetime3.rs}
 \end{itemize}
@@ -1708,23 +1708,23 @@
 
 
 \begin{frame}[fragile]
-	\frametitle{Lifetime Annotation Syntax (2)}
+	\frametitle{Lifetime Annotations in Function Signatures}
 	\inputminted{rust}{./code/lifetime4.rs}
 	
-	 The generic lifetime 'a will get the concrete \textbf{lifetime that is equal to the smaller of the lifetimes }of x and y. In practice, it means that the lifetime of the reference returned by the longest function is the same as the smaller of the lifetimes of the values referred to by the function arguments. These relationships are what we want Rust to use when analyzing this code.
+	 The generic lifetime \mintinline{rust}|'a| will get the concrete \textbf{lifetime that is equal to the smaller of the lifetimes }of x and y. In practice, it means that the lifetime of the reference returned by the longest function is the same as the smaller of the lifetimes of the values referred to by the function arguments. These relationships are what we want Rust to use when analyzing this code.
 \end{frame}
 
 
 \begin{frame}[fragile]
-	\frametitle{Lifetime Annotation Syntax (3)}
+	\frametitle{Lifetime Annotations in Function Signatures (2)}
 	\inputminted{rust}{./code/lifetime5.rs}
 	
-	The error shows that for result to be valid for the println! statement, string2 would need to be valid until the end of the outer scope. Rust knows this because we annotated the lifetimes of the function parameters and return values using the same lifetime parameter 'a.
+	The error shows that for result to be valid for the \mintinline{rust}|println!| statement, string2 would need to be valid until the end of the outer scope. Rust knows this because we annotated the lifetimes of the function parameters and return values using the same lifetime parameter \mintinline{rust}|'a|.
 	
 \end{frame}
 
  \begin{frame}[fragile]
- 	\frametitle{Lifetime Annotation Syntax (4)}
+ 	\frametitle{Lifetime Annotations in Function Signatures (3)}
  	\inputminted{shell}{./code/lifetime5.shell}
  
  \end{frame}
@@ -1736,6 +1736,13 @@
 	We can define structs to hold references, but in that case we would need to add a lifetime annotation on every reference in the struct’s definition.
 	
 \end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Lifetime Elision}
+	In early versions (pre-1.0) of Rust, every reference needed an explicit lifetime. After writing a lot of Rust code, the Rust team found that Rust programmers were entering the same lifetime annotations over and over in particular situations. These situations were predictable and followed a few deterministic patterns. After writing a lot of Rust code, the Rust team found that Rust programmers were entering the same lifetime annotations over and over in particular situations. These situations were predictable and followed a few deterministic patterns. 
+	
+\end{frame}
+
 
 
 \section{Writing Automated Tests}
