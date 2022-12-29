@@ -1491,7 +1491,7 @@
 
 \begin{frame}[fragile]
 	\frametitle{Matching on Different Errors}
-
+	
 	\inputminted[fontsize=\scriptsize]{rust}{./code/result3.rs}
 \end{frame}
 
@@ -1505,8 +1505,8 @@
 \begin{frame}[fragile]
 	\frametitle{Shortcuts for Panic on Error: unwrap and expect }
 	\scriptsize
-   The \mintinline{rust}|Result<T, E>| type has many helper methods defined on it to do various, more specific tasks. If the Result value is the Ok variant, unwrap will return the value inside the Ok. If the Result is the Err variant, unwrap will call the panic! macro for us.
-   
+	The \mintinline{rust}|Result<T, E>| type has many helper methods defined on it to do various, more specific tasks. If the Result value is the Ok variant, unwrap will return the value inside the Ok. If the Result is the Err variant, unwrap will call the panic! macro for us.
+	
 	\inputminted[fontsize=\scriptsize]{rust}{./code/result5.rs}
 	
 	We use  \mintinline{rust}|expect| in the same way as unwrap: to return the file handle or call the panic! macro.
@@ -1535,10 +1535,10 @@
 
 \begin{frame}[fragile]
 	\frametitle{Where The \mintinline{rust}|?| Operator Can Be Used}
-		\begin{itemize}
-			\item 	The \mintinline{rust}|?| operator can only be used in functions whose return type is compatible with the value the \mintinline{rust}|?| is used on.
-			\item 	we’re only allowed to use the ? operator in a function that returns \mintinline{rust}|Result|, \mintinline{rust}|Option|, or another type that implements \mintinline{rust}|FromResidual|.
-		\end{itemize}
+	\begin{itemize}
+		\item 	The \mintinline{rust}|?| operator can only be used in functions whose return type is compatible with the value the \mintinline{rust}|?| is used on.
+		\item 	we’re only allowed to use the ? operator in a function that returns \mintinline{rust}|Result|, \mintinline{rust}|Option|, or another type that implements \mintinline{rust}|FromResidual|.
+	\end{itemize}
 	
 	\inputminted{rust}{./code/result11.rs}
 \end{frame}
@@ -1556,18 +1556,18 @@
 \begin{frame}[fragile]
 	\frametitle{Generic Data Types}
 	We use generics to create definitions for items like function signatures or structs, which we can then use with many different concrete data types.
-
+	
 	\begin{columns}
 		\column{0.5\textwidth}
-			\inputminted{rust}{./code/generic1.rs}
+		\inputminted{rust}{./code/generic1.rs}
 		\column{0.5\textwidth}
-			\inputminted{rust}{./code/generic2.rs}
+		\inputminted{rust}{./code/generic2.rs}
 	\end{columns}
 \end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{Generic Data Types (3)}
-		\inputminted[fontsize=\scriptsize]{rust}{./code/generic3.rs}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/generic3.rs}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -1594,13 +1594,13 @@
 
 \begin{frame}[fragile]
 	\frametitle{Monomorphization}
-	 Monomorphization is the process of turning generic code into specific code by filling in the concrete types that are used when \textbf{compiled}. In this process, the compiler does the opposite of the steps we used to create the generic function: the compiler looks at all the places where generic code is called and generates code for the concrete types the generic code is called with.
-	 
+	Monomorphization is the process of turning generic code into specific code by filling in the concrete types that are used when \textbf{compiled}. In this process, the compiler does the opposite of the steps we used to create the generic function: the compiler looks at all the places where generic code is called and generates code for the concrete types the generic code is called with.
+	
 \end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{Monomorphization}
-
+	
 	\inputminted[fontsize=\scriptsize]{rust}{./code/generic8.rs}
 \end{frame}
 
@@ -1617,7 +1617,7 @@
 
 \begin{frame}[fragile]
 	\frametitle{Traits: Defining Shared Behavior (2)}
-		\inputminted[fontsize=\scriptsize]{rust}{./code/Trait1.rs}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/Trait1.rs}
 \end{frame}
 
 
@@ -1698,12 +1698,12 @@
 
 \begin{frame}[fragile]
 	\frametitle{Lifetime Annotation Syntax}
-\begin{itemize}
-	\item 	Lifetime annotations \textbf{don’t change how long any of the references live}. Rather, they \textbf{describe the relationships of the lifetimes of multiple references to each other }without affecting the lifetimes.
-	\item 	Lifetime annotations have a slightly \textbf{unusual syntax}: the names of lifetime parameters must start with an apostrophe (') and are usually all lowercase and very short, like generic types. Most people use the name \mintinline{rust}|'a| for the first lifetime annotation. We place lifetime parameter annotations after the \mintinline{rust}|&| of a reference, using a space to separate the annotation from the reference’s type.
-	
-	\inputminted{rust}{./code/lifetime3.rs}
-\end{itemize}
+	\begin{itemize}
+		\item 	Lifetime annotations \textbf{don’t change how long any of the references live}. Rather, they \textbf{describe the relationships of the lifetimes of multiple references to each other }without affecting the lifetimes.
+		\item 	Lifetime annotations have a slightly \textbf{unusual syntax}: the names of lifetime parameters must start with an apostrophe (') and are usually all lowercase and very short, like generic types. Most people use the name \mintinline{rust}|'a| for the first lifetime annotation. We place lifetime parameter annotations after the \mintinline{rust}|&| of a reference, using a space to separate the annotation from the reference’s type.
+		
+		\inputminted{rust}{./code/lifetime3.rs}
+	\end{itemize}
 \end{frame}
 
 
@@ -1711,7 +1711,7 @@
 	\frametitle{Lifetime Annotations in Function Signatures}
 	\inputminted{rust}{./code/lifetime4.rs}
 	
-	 The generic lifetime \mintinline{rust}|'a| will get the concrete \textbf{lifetime that is equal to the smaller of the lifetimes }of x and y. In practice, it means that the lifetime of the reference returned by the longest function is the same as the smaller of the lifetimes of the values referred to by the function arguments. These relationships are what we want Rust to use when analyzing this code.
+	The generic lifetime \mintinline{rust}|'a| will get the concrete \textbf{lifetime that is equal to the smaller of the lifetimes }of x and y. In practice, it means that the lifetime of the reference returned by the longest function is the same as the smaller of the lifetimes of the values referred to by the function arguments. These relationships are what we want Rust to use when analyzing this code.
 \end{frame}
 
 
@@ -1723,11 +1723,11 @@
 	
 \end{frame}
 
- \begin{frame}[fragile]
- 	\frametitle{Lifetime Annotations in Function Signatures (3)}
- 	\inputminted{shell}{./code/lifetime5.shell}
- 
- \end{frame}
+\begin{frame}[fragile]
+	\frametitle{Lifetime Annotations in Function Signatures (3)}
+	\inputminted{shell}{./code/lifetime5.shell}
+	
+\end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{Lifetime Annotations in Struct Definitions}
@@ -1785,7 +1785,7 @@
 
 \begin{frame}[fragile]
 	\frametitle{Generic Type Parameters, Trait Bounds, and Lifetimes Together}
-
+	
 	\inputminted{rust}{./code/lifetime10.rs}
 \end{frame}
 
@@ -1864,8 +1864,8 @@
 			\item 	We can pass the name of any test function to  \mintinline{shell}|cargo test| to run only that test.
 			\item 	We can specify part of a test name, and any test whose name matches that value will be run.
 		\end{itemize}
-	\item Sometimes a few specific tests can be very time-consuming to execute, so you might want to exclude them during most runs of \mintinline{shell}|cargo test|. After  \mintinline{shell}|#[test]| we add the  \mintinline{shell}|#[ignore]| line to the test we want to exclude.   If we want to run only the ignored tests, we can use  \mintinline{shell}|cargo test -- --ignored|.
-	\inputminted[fontsize=\scriptsize]{rust}{./code/test8.rs}
+		\item Sometimes a few specific tests can be very time-consuming to execute, so you might want to exclude them during most runs of \mintinline{shell}|cargo test|. After  \mintinline{shell}|#[test]| we add the  \mintinline{shell}|#[ignore]| line to the test we want to exclude.   If we want to run only the ignored tests, we can use  \mintinline{shell}|cargo test -- --ignored|.
+		\inputminted[fontsize=\scriptsize]{rust}{./code/test8.rs}
 	\end{itemize}
 \end{frame}
 
@@ -1875,11 +1875,11 @@
 	\frametitle{Test Organization}
 	\begin{itemize}
 		\item The Rust community thinks about tests in terms of two main categories: \textbf{unit tests} and \textbf{integration tests}. 
-			\begin{itemize}
-		\item Unit tests are small and more focused, \textbf{testing one module in isolation at a time}, and \textbf{can test private interfaces}.  You’ll put unit tests in the \mintinline{shell}|src| directory in each file with the code that they’re testing. The convention is to create a module named tests in each file to contain the test functions and to annotate the module with \mintinline{rust}|#[cfg(test)]|.
-		\item Integration tests are entirely external to your library and use your code in the same way any other external code would,\textbf{ using only the public interface and potentially exercising multiple modules per test}. Their purpose is to test \textbf{whether many parts of your library work together correctly}.
+		\begin{itemize}
+			\item Unit tests are small and more focused, \textbf{testing one module in isolation at a time}, and \textbf{can test private interfaces}.  You’ll put unit tests in the \mintinline{shell}|src| directory in each file with the code that they’re testing. The convention is to create a module named tests in each file to contain the test functions and to annotate the module with \mintinline{rust}|#[cfg(test)]|.
+			\item Integration tests are entirely external to your library and use your code in the same way any other external code would,\textbf{ using only the public interface and potentially exercising multiple modules per test}. Their purpose is to test \textbf{whether many parts of your library work together correctly}.
+		\end{itemize}
 	\end{itemize}
-\end{itemize}
 \end{frame}
 
 
@@ -1887,22 +1887,22 @@
 	\frametitle{Integration test}
 	We create a tests directory at the top level of our project directory, next to src. Cargo knows to look for integration test files in this directory. We can then make as many test files as we want, and Cargo will compile each of the files as an individual crate.
 	
-
-\begin{columns}
-	\column{0.4\textwidth}
-			\begin{figure}
-		\centering
-		\includegraphics[width=0.8\linewidth]{img/test.png}
-	\end{figure}
-	\column{0.6\textwidth}
-	\scriptsize
-Filename: \mintinline{shell}|tests/integration_test.rs|
-\inputminted[fontsize=\scriptsize]{rust}{./code/test9.rs}
-
- \mintinline{shell}|$ cargo test|
- 
- \mintinline{shell}|$ cargo test --test integration_test|
-\end{columns}
+	
+	\begin{columns}
+		\column{0.4\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.8\linewidth]{img/test.png}
+		\end{figure}
+		\column{0.6\textwidth}
+		\scriptsize
+		Filename: \mintinline{shell}|tests/integration_test.rs|
+		\inputminted[fontsize=\scriptsize]{rust}{./code/test9.rs}
+		
+		\mintinline{shell}|$ cargo test|
+		
+		\mintinline{shell}|$ cargo test --test integration_test|
+	\end{columns}
 \end{frame}
 
 
@@ -1920,18 +1920,45 @@ Filename: \mintinline{shell}|tests/integration_test.rs|
 		\end{figure}
 		\column{0.6\textwidth}
 		\scriptsize
-			Filename: \mintinline{shell}|tests/common.rs|
+		Filename: \mintinline{shell}|tests/common.rs|
 		\inputminted[fontsize=\scriptsize]{rust}{./code/test10.rs}
 	\end{columns}
-\scriptsize
-Filename: \mintinline{shell}|tests/integration_test.rs|
-
-\inputminted[fontsize=\scriptsize]{rust}{./code/test11.rs}
-
+	\scriptsize
+	Filename: \mintinline{shell}|tests/integration_test.rs|
+	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/test11.rs}
+	
 \end{frame}
 
 \section{An I/O Project: Building a Command Line Program}
+
+
+\begin{frame}[fragile]
+	\frametitle{minigrep example}
+	\begin{itemize}
+		\item 	We’ll make our own version of the classic command line search tool grep (globally search a regular expression and print). In the simplest use case, grep searches a specified file for a specified string. 
+		\item 	The first task is to make \textbf{minigrep} accept its two command line arguments: the \textbf{file path} and \textbf{a string to search for}. That is, we want to be able to run our program with cargo run, \textbf{two hyphens to indicate the following arguments are for our program rather than for cargo}, a string to search for, and a path to a file to search in, like so: \mintinline{shell}|$ cargo run -- searchstring example-filename.txt|
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{minigrep - Reading the Argument Values}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/grep1.rs}
+	
+	\inputminted[fontsize=\scriptsize]{shell}{./code/grep1.shell}
+	
+	Notice that the first value in the vector is the name of our binary.
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{minigrep - Saving the Argument Values in Variables}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/grep2.rs}
+\end{frame}
+
+
 \section{Functional Language Features: Iterators and Closures}
+
 \section{More About Cargo and Crates.io}
 \section{Smart Pointers}
 \section{Fearless Concurrency}
