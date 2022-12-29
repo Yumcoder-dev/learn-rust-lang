@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{// Each file in the tests directory is a separate crate, so we need to bring our library into each test crate’s scope.}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{adder}\PYG{p}{;}
+
+\PYG{c+cp}{\PYGZsh{}[test]}
+\PYG{k}{fn} \PYG{n+nf}{it\PYGZus{}adds\PYGZus{}two}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf+fm}{assert\PYGZus{}eq!}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{adder}::\PYG{n}{add\PYGZus{}two}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{));}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

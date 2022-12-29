@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cp}{\PYGZsh{}[cfg(test)]}
+\PYG{k}{mod} \PYG{n+nn}{tests}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{use}\PYG{+w}{ }\PYG{k}{super}::\PYG{o}{*}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+cp}{\PYGZsh{}[test]}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{larger\PYGZus{}can\PYGZus{}hold\PYGZus{}smaller}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{larger}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Rectangle}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{width}: \PYG{l+m+mi}{8}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n}{height}: \PYG{l+m+mi}{7}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{smaller}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Rectangle}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{width}: \PYG{l+m+mi}{5}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n}{height}: \PYG{l+m+mi}{1}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{};}
+
+\PYG{+w}{        }\PYG{n+nf+fm}{assert!}\PYG{p}{(}\PYG{n}{larger}\PYG{p}{.}\PYG{n}{can\PYGZus{}hold}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{smaller}\PYG{p}{));}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

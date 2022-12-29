@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cp}{\PYGZsh{}[test]}
+\PYG{c+cp}{\PYGZsh{}[ignore]}
+\PYG{k}{fn} \PYG{n+nf}{expensive\PYGZus{}test}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// code that takes an hour to run}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

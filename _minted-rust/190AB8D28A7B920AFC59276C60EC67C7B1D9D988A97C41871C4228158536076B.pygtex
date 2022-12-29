@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo run
+   Compiling chapter10 v0.1.0 \PYG{o}{(}file:///projects/chapter10\PYG{o}{)}
+error\PYG{o}{[}E0597\PYG{o}{]}: \PYG{l+s+sb}{`}string2\PYG{l+s+sb}{`} does not live long enough
+ \PYGZhy{}\PYGZhy{}\PYGZgt{} src/main.rs:6:44
+  \PYG{p}{|}
+\PYG{l+m}{6} \PYG{p}{|}         \PYG{n+nv}{result} \PYG{o}{=} longest\PYG{o}{(}string1.as\PYGZus{}str\PYG{o}{()}, string2.as\PYGZus{}str\PYG{o}{())}\PYG{p}{;}
+  \PYG{p}{|}                                            \PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{} borrowed value does not live long enough
+\PYG{l+m}{7} \PYG{p}{|}     \PYG{o}{\PYGZcb{}}
+  \PYG{p}{|}     \PYGZhy{} \PYG{l+s+sb}{`}string2\PYG{l+s+sb}{`} dropped here \PYG{k}{while} still borrowed
+\PYG{l+m}{8} \PYG{p}{|}     println!\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}The longest string is \PYGZob{}\PYGZcb{}\PYGZdq{}}, result\PYG{o}{)}\PYG{p}{;}
+  \PYG{p}{|}                                          \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{} borrow later used here
+
+For more information about this error, try \PYG{l+s+sb}{`}rustc \PYGZhy{}\PYGZhy{}explain E0597\PYG{l+s+sb}{`}.
+error: could not compile \PYG{l+s+sb}{`}chapter10\PYG{l+s+sb}{`} due to previous error
+\end{Verbatim}

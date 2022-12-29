@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{s}: \PYG{k+kp}{\PYGZam{}}\PYG{o}{\PYGZsq{}}\PYG{n+nb}{static} \PYG{k+kt}{str} \PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}I have a static lifetime.\PYGZdq{}}\PYG{p}{;}
+\end{Verbatim}

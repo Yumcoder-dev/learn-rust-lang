@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{first\PYGZus{}word}\PYG{p}{(}\PYG{n}{s}: \PYG{k+kp}{\PYGZam{}}\PYG{k+kt}{str}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kp}{\PYGZam{}}\PYG{k+kt}{str} \PYG{p}{\PYGZob{}\PYGZcb{}}\PYG{+w}{ }\PYG{c+c1}{// Ok, lifetime elision rules are applied!}
+\PYG{c+c1}{// Then the compiler applies the first rule, which specifies that each parameter gets its own lifetime. We’ll call it \PYGZsq{}a as usual, so now the signature is this:}
+\PYG{k}{fn} \PYG{n+nf}{first\PYGZus{}word}\PYG{o}{\PYGZlt{}\PYGZsq{}}\PYG{n+na}{a}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{s}: \PYG{k+kp}{\PYGZam{}}\PYG{o}{\PYGZsq{}}\PYG{n+na}{a} \PYG{k+kt}{str}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kp}{\PYGZam{}}\PYG{k+kt}{str} \PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{c+c1}{// The second rule applies because there is exactly one input lifetime. The second rule specifies that the lifetime of the one input parameter gets assigned to the output lifetime, so the signature is now this:}
+\PYG{k}{fn} \PYG{n+nf}{first\PYGZus{}word}\PYG{o}{\PYGZlt{}\PYGZsq{}}\PYG{n+na}{a}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{s}: \PYG{k+kp}{\PYGZam{}}\PYG{o}{\PYGZsq{}}\PYG{n+na}{a} \PYG{k+kt}{str}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kp}{\PYGZam{}}\PYG{o}{\PYGZsq{}}\PYG{n+na}{a} \PYG{k+kt}{str} \PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{c+c1}{//}
+\PYG{c+c1}{// example 2:}
+\PYG{k}{fn} \PYG{n+nf}{longest}\PYG{p}{(}\PYG{n}{x}: \PYG{k+kp}{\PYGZam{}}\PYG{k+kt}{str}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y}: \PYG{k+kp}{\PYGZam{}}\PYG{k+kt}{str}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kp}{\PYGZam{}}\PYG{k+kt}{str} \PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{k}{fn} \PYG{n+nf}{longest}\PYG{o}{\PYGZlt{}\PYGZsq{}}\PYG{n+na}{a}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZsq{}}\PYG{n+na}{b}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{x}: \PYG{k+kp}{\PYGZam{}}\PYG{o}{\PYGZsq{}}\PYG{n+na}{a} \PYG{k+kt}{str}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y}: \PYG{k+kp}{\PYGZam{}}\PYG{o}{\PYGZsq{}}\PYG{n+na}{b} \PYG{k+kt}{str}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kp}{\PYGZam{}}\PYG{k+kt}{str} \PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{c+c1}{// You can see that the second rule doesn’t apply because there is more than one input lifetime. The third rule doesn’t apply either, because longest is a function rather than a method, so none of the parameters are self. After working through all three rules, we still haven’t figured out what the return type’s lifetime is. This is why we got an error trying to compile the code.}
+\end{Verbatim}

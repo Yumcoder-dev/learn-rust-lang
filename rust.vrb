@@ -1,2 +1,20 @@
-\frametitle{Traits as Parameters}
-	\inputminted{rust}{./code/Trait3.rs}
+\frametitle{Submodules in Integration Tests}
+	For example, if we create \mintinline{shell}|tests/common.rs| and place a function named setup in it, we can add some code to \mintinline{rust}|tsetup| that we want to call from multiple test functions in multiple test files:
+	
+	
+	\begin{columns}
+		\column{0.4\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.8\linewidth]{img/test2.png}
+		\end{figure}
+		\column{0.6\textwidth}
+		\scriptsize
+			Filename: \mintinline{shell}|tests/common.rs|
+		\inputminted[fontsize=\scriptsize]{rust}{./code/test10.rs}
+	\end{columns}
+\scriptsize
+Filename: \mintinline{shell}|tests/integration_test.rs|
+
+\inputminted[fontsize=\scriptsize]{rust}{./code/test11.rs}
+

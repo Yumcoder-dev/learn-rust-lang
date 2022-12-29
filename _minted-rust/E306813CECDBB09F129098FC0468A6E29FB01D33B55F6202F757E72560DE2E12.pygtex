@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{struct} \PYG{n+nc}{ImportantExcerpt}\PYG{o}{\PYGZlt{}\PYGZsq{}}\PYG{n+na}{a}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{part}: \PYG{k+kp}{\PYGZam{}}\PYG{o}{\PYGZsq{}}\PYG{n+na}{a} \PYG{k+kt}{str}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{novel}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Call me Ishmael. Some years ago...\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{first\PYGZus{}sentence}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{novel}\PYG{p}{.}\PYG{n}{split}\PYG{p}{(}\PYG{l+s+sc}{\PYGZsq{}.\PYGZsq{}}\PYG{p}{).}\PYG{n}{next}\PYG{p}{().}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Could not find a \PYGZsq{}.\PYGZsq{}\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{ImportantExcerpt}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{part}: \PYG{n+nc}{first\PYGZus{}sentence}\PYG{p}{,}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{};}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

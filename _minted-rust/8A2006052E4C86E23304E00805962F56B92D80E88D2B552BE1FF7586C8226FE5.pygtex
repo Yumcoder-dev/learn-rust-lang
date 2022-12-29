@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{greeting}\PYG{p}{(}\PYG{n}{name}: \PYG{k+kp}{\PYGZam{}}\PYG{k+kt}{str}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{String} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf+fm}{format!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Hello \PYGZob{}\PYGZcb{}!\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{name}\PYG{p}{)}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+cp}{\PYGZsh{}[cfg(test)]}
+\PYG{k}{mod} \PYG{n+nn}{tests}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{use}\PYG{+w}{ }\PYG{k}{super}::\PYG{o}{*}\PYG{p}{;}
+\PYG{+w}{    }\PYG{c+cp}{\PYGZsh{}[test]}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{greeting\PYGZus{}contains\PYGZus{}name}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{result}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{greeting}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Carol\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n+nf+fm}{assert!}\PYG{p}{(}
+\PYG{+w}{            }\PYG{n}{result}\PYG{p}{.}\PYG{n}{contains}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Carol\PYGZdq{}}\PYG{p}{),}
+\PYG{+w}{            }\PYG{l+s}{\PYGZdq{}Greeting did not contain name, value was `\PYGZob{}\PYGZcb{}`\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n}{result}
+\PYG{+w}{        }\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

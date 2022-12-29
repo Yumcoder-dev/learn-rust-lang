@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo \PYG{n+nb}{test}
+   ...
+
+running \PYG{l+m}{1} \PYG{n+nb}{test}
+\PYG{n+nb}{test} tests::it\PYGZus{}works ... ok
+
+\PYG{n+nb}{test} result: ok. \PYG{l+m}{1} passed\PYG{p}{;} \PYG{l+m}{0} failed\PYG{p}{;} \PYG{l+m}{0} ignored\PYG{p}{;} \PYG{l+m}{0} measured\PYG{p}{;} \PYG{l+m}{0} filtered out\PYG{p}{;} finished \PYG{k}{in} \PYG{l+m}{0}.00s
+...
+\end{Verbatim}

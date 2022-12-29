@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{o}{\PYGZam{}}\PYG{k+kt}{i32}\PYG{+w}{        }\PYG{c+c1}{// a reference}
+\PYG{o}{\PYGZam{}\PYGZsq{}}\PYG{n+na}{a}\PYG{+w}{ }\PYG{k+kt}{i32}\PYG{+w}{     }\PYG{c+c1}{// a reference with an explicit lifetime}
+\PYG{o}{\PYGZam{}\PYGZsq{}}\PYG{n+na}{a}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{k+kt}{i32}\PYG{+w}{ }\PYG{c+c1}{// a mutable reference with an explicit lifetime}
+\end{Verbatim}

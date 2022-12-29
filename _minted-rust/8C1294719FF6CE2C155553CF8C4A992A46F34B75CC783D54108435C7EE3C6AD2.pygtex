@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{some\PYGZus{}function}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{U}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{t}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{T}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{u}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{U}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{i32}
+\PYG{n+nc}{where}
+\PYG{+w}{    }\PYG{n}{T}: \PYG{n+nc}{Display}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nb}{Clone}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{U}: \PYG{n+nb}{Clone} \PYG{o}{+}\PYG{+w}{ }\PYG{n}{Debug}\PYG{p}{,}
+\PYG{p}{\PYGZob{}}
+\end{Verbatim}

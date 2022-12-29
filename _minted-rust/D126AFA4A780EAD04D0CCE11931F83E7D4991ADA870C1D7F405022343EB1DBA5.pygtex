@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{r}\PYG{p}{;}\PYG{+w}{                }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}+\PYGZhy{}\PYGZhy{} \PYGZsq{}a}
+\PYG{+w}{                          }\PYG{c+c1}{//          |}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}\PYG{+w}{                     }\PYG{c+c1}{//          |}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}\PYG{+w}{        }\PYG{c+c1}{// \PYGZhy{}+\PYGZhy{}\PYGZhy{} \PYGZsq{}b  |}
+\PYG{+w}{        }\PYG{n}{r}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{x}\PYG{p}{;}\PYG{+w}{           }\PYG{c+c1}{//  |       |}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{                     }\PYG{c+c1}{// \PYGZhy{}+       |}
+\PYG{+w}{                          }\PYG{c+c1}{//          |}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}r: \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{r}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{//          |}
+\PYG{p}{\PYGZcb{}}\PYG{+w}{                         }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}+}
+\end{Verbatim}

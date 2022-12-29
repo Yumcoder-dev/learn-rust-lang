@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo run
+   Compiling chapter10 v0.1.0 \PYG{o}{(}file:///projects/chapter10\PYG{o}{)}
+error\PYG{o}{[}E0106\PYG{o}{]}: missing lifetime specifier
+ \PYGZhy{}\PYGZhy{}\PYGZgt{} src/main.rs:9:33
+  \PYG{p}{|}
+\PYG{l+m}{9} \PYG{p}{|} fn longest\PYG{o}{(}x: \PYG{p}{\PYGZam{}}str, y: \PYG{p}{\PYGZam{}}str\PYG{o}{)} \PYGZhy{}\PYGZgt{} \PYG{p}{\PYGZam{}}str \PYG{o}{\PYGZob{}}
+  \PYG{p}{|}               \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}     \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}     \PYGZca{} expected named lifetime parameter
+  \PYG{p}{|}
+  \PYG{o}{=} help: this \PYG{k}{function}\PYG{l+s+s1}{\PYGZsq{}s return type contains a borrowed value, but the signature does not say whether it is borrowed from `x` or `y`}
+\PYG{l+s+s1}{help: consider introducing a named lifetime parameter}
+\PYG{l+s+s1}{  |}
+\PYG{l+s+s1}{9 | fn longest\PYGZlt{}\PYGZsq{}}a\PYGZgt{}\PYG{o}{(}x: \PYG{p}{\PYGZam{}}\PYG{l+s+s1}{\PYGZsq{}a str, y: \PYGZam{}\PYGZsq{}}a str\PYG{o}{)} \PYGZhy{}\PYGZgt{} \PYG{p}{\PYGZam{}}\PYG{err}{\PYGZsq{}}a str \PYG{o}{\PYGZob{}}
+  \PYG{p}{|}           ++++     ++          ++          ++
+
+For more information about this error, try \PYG{l+s+sb}{`}rustc \PYGZhy{}\PYGZhy{}explain E0106\PYG{l+s+sb}{`}.
+error: could not compile \PYG{l+s+sb}{`}chapter10\PYG{l+s+sb}{`} due to previous error
+\end{Verbatim}
