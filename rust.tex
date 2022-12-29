@@ -1958,7 +1958,52 @@
 
 \begin{frame}[fragile]
 	\frametitle{minigrep - Reading a File}
-	\inputminted{rust}{./code/grep2.rs}
+	\inputminted{rust}{./code/grep3.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{minigrep - Refactoring to Improve Modularity and Error Handling}
+	\begin{itemize}
+		\item Split your program into a \mintinline{shell}|main.rs| and a \mintinline{shell}|lib.rs| and move your \textbf{program’s logic to} \mintinline{shell}|lib.rs|.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{minigrep - Refactoring (Extracting the Argument Parser)}
+	\inputminted{rust}{./code/grep4.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{minigrep - Refactoring (Grouping Configuration Values)}
+	\inputminted{rust}{./code/grep5.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{minigrep - Refactoring (Grouping Configuration Values)}
+	\inputminted{rust}{./code/grep5.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{minigrep - Refactoring (Creating a Constructor for Config)}
+	\inputminted{rust}{./code/grep6.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{minigrep - Refactoring (Improving the Error Message)}
+	\inputminted{rust}{./code/grep7.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{minigrep - Refactoring (Improving the Error Message(2))}
+	\inputminted{rust}{./code/grep8.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{minigrep - Refactoring (Extracting Logic from main)}
+	\inputminted{rust}{./code/grep8.rs}
 \end{frame}
 
 \section{Functional Language Features: Iterators and Closures}
