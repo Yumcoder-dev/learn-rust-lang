@@ -1848,8 +1848,22 @@
 
 \begin{frame}[fragile]
 	\frametitle{Controlling How Tests Are Run}
-	
-\end{frame}\
+	\begin{itemize}
+		\item \mintinline{shell}|cargo test| compiles your code in test mode and runs the resulting test binary. The default behavior of the binary produced by cargo test is to \textbf{run all the tests in parallel} and capture output generated during test runs,\textbf{ preventing the output from being displayed} and making it easier to read the output related to the test results. You can, however, specify command line options to change this default behavior.
+		\item If you don’t want to run the tests in parallel or if you want more fine-grained control over the number of threads used, you can send the \mintinline{shell}|--test-threads|  flag and the number of threads you want to use to the test binary (ex: \mintinline{shell}|cargo test -- --test-threads=1| ).
+		\item If we call \mintinline{rust}|println!|  in a test, we won’t see the \mintinline{rust}|println!| output in the terminal. If we want to see printed values for passing tests, we can tell Rust to also show the output of successful tests with \mintinline{shell}|cargo test -- --show-output|.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Controlling How Tests Are Run}
+	\begin{itemize}
+		\item Sometimes, running a full test suite can take a long time.
+		If we run the tests without passing any arguments, all the tests will run in parallel
+		We can pass the name of any test function to  \mintinline{shell}|cargo test| to run only that test
+	\end{itemize}
+\end{frame}
+
 
 \section{An I/O Project: Building a Command Line Program}
 \section{Functional Language Features: Iterators and Closures}
