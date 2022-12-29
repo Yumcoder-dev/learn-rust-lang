@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{args}: \PYG{n+nb}{Vec}\PYG{o}{\PYGZlt{}}\PYG{n+nb}{String}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{env}::\PYG{n}{args}\PYG{p}{().}\PYG{n}{collect}\PYG{p}{();}
+
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{config}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Config}::\PYG{n}{new}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{args}\PYG{p}{);}
+\PYG{+w}{    }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Config}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{new}\PYG{p}{(}\PYG{n}{args}: \PYG{k+kp}{\PYGZam{}}\PYG{p}{[}\PYG{n+nb}{String}\PYG{p}{])}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{Config}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{query}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{args}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{].}\PYG{n}{clone}\PYG{p}{();}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{file\PYGZus{}path}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{args}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{].}\PYG{n}{clone}\PYG{p}{();}
+
+\PYG{+w}{        }\PYG{n}{Config}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{query}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{file\PYGZus{}path}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -9,12 +9,12 @@
 \beamer@sectionintoc {9}{Generic Types, Traits, and Lifetimes}{170}{0}{9}
 \beamer@sectionintoc {10}{Writing Automated Tests}{201}{0}{10}
 \beamer@sectionintoc {11}{An I/O Project: Building a Command Line Program}{214}{0}{11}
-\beamer@sectionintoc {12}{Functional Language Features: Iterators and Closures}{215}{0}{12}
-\beamer@sectionintoc {13}{More About Cargo and Crates.io}{216}{0}{13}
-\beamer@sectionintoc {14}{Smart Pointers}{217}{0}{14}
-\beamer@sectionintoc {15}{Fearless Concurrency}{218}{0}{15}
-\beamer@sectionintoc {16}{Object-Oriented Programming Features of Rust}{219}{0}{16}
-\beamer@sectionintoc {17}{Patterns and Matching}{220}{0}{17}
-\beamer@sectionintoc {18}{Advanced Features}{221}{0}{18}
-\beamer@sectionintoc {19}{Multithread Web Server}{222}{0}{19}
-\beamer@sectionintoc {20}{Tokio}{223}{0}{20}
+\beamer@sectionintoc {12}{Functional Language Features: Iterators and Closures}{234}{0}{12}
+\beamer@sectionintoc {13}{More About Cargo and Crates.io}{235}{0}{13}
+\beamer@sectionintoc {14}{Smart Pointers}{236}{0}{14}
+\beamer@sectionintoc {15}{Fearless Concurrency}{237}{0}{15}
+\beamer@sectionintoc {16}{Object-Oriented Programming Features of Rust}{238}{0}{16}
+\beamer@sectionintoc {17}{Patterns and Matching}{239}{0}{17}
+\beamer@sectionintoc {18}{Advanced Features}{240}{0}{18}
+\beamer@sectionintoc {19}{Multithread Web Server}{241}{0}{19}
+\beamer@sectionintoc {20}{Tokio}{242}{0}{20}

@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{env}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{fs}\PYG{p}{;}
+
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}In file \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{file\PYGZus{}path}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{c+c1}{// TODO: handling errors as well as we could}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{contents}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{fs}::\PYG{n}{read\PYGZus{}to\PYGZus{}string}\PYG{p}{(}\PYG{n}{file\PYGZus{}path}\PYG{p}{).}\PYG{n}{expect}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Should have been able to read the file\PYGZdq{}}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}With text:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZob{}contents\PYGZcb{}\PYGZdq{}}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

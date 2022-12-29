@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{env}\PYG{p}{;}
+\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Config}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{build}\PYG{p}{(}\PYG{n}{args}: \PYG{k+kp}{\PYGZam{}}\PYG{p}{[}\PYG{n+nb}{String}\PYG{p}{])}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{Result}\PYG{o}{\PYGZlt{}}\PYG{n}{Config}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZsq{}}\PYG{n+nb}{static}\PYG{+w}{ }\PYG{k+kt}{str}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{ignore\PYGZus{}case}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{env}::\PYG{n}{var}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}IGNORE\PYGZus{}CASE\PYGZdq{}}\PYG{p}{).}\PYG{n}{is\PYGZus{}ok}\PYG{p}{();}
+
+\PYG{+w}{        }\PYG{n+nb}{Ok}\PYG{p}{(}\PYG{n}{Config}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{query}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n}{file\PYGZus{}path}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n}{ignore\PYGZus{}case}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{})}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

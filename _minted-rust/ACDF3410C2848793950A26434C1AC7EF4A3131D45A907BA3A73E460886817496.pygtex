@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo run \PYGZhy{}\PYGZhy{} needle haystack
+   Compiling minigrep v0.1.0 \PYG{o}{(}file:///projects/minigrep\PYG{o}{)}
+    Finished dev \PYG{o}{[}unoptimized + debuginfo\PYG{o}{]} target\PYG{o}{(}s\PYG{o}{)} \PYG{k}{in} \PYG{l+m}{1}.57s
+     Running \PYG{l+s+sb}{`}target/debug/minigrep needle haystack\PYG{l+s+sb}{`}
+\PYG{o}{[}src/main.rs:5\PYG{o}{]} \PYG{n+nv}{args} \PYG{o}{=} \PYG{o}{[}
+    \PYG{l+s+s2}{\PYGZdq{}target/debug/minigrep\PYGZdq{}},
+    \PYG{l+s+s2}{\PYGZdq{}needle\PYGZdq{}},
+    \PYG{l+s+s2}{\PYGZdq{}haystack\PYGZdq{}},
+\PYG{o}{]}
+\end{Verbatim}

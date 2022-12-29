@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Searching for \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{config}\PYG{p}{.}\PYG{n}{query}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}In file \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{config}\PYG{p}{.}\PYG{n}{file\PYGZus{}path}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{n}{run}\PYG{p}{(}\PYG{n}{config}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{fn} \PYG{n+nf}{run}\PYG{p}{(}\PYG{n}{config}: \PYG{n+nc}{Config}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{Result}\PYG{o}{\PYGZlt{}}\PYG{p}{(),}\PYG{+w}{ }\PYG{n+nb}{Box}\PYG{o}{\PYGZlt{}}\PYG{k}{dyn}\PYG{+w}{ }\PYG{n}{Error}\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{contents}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{fs}::\PYG{n}{read\PYGZus{}to\PYGZus{}string}\PYG{p}{(}\PYG{n}{config}\PYG{p}{.}\PYG{n}{file\PYGZus{}path}\PYG{p}{)}\PYG{o}{?}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}With text:}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZob{}contents\PYGZcb{}\PYGZdq{}}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{n+nb}{Ok}\PYG{p}{(())}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+\end{Verbatim}

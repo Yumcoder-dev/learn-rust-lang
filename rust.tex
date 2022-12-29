@@ -2036,13 +2036,18 @@
 	\end{itemize}
 \end{frame}
 
-Writing Error Messages to Standard Error Instead of Standard Output
 \begin{frame}[fragile]
 	\frametitle{minigrep - Writing Error Messages to Standard Error Instead of Standard Output}
 	\begin{itemize}
-		\item The env::var function returns a Result that will be the successful Ok variant that contains the value of the environment variable if the environment variable is set to any value. It will return the Err variant if the environment variable is not set.
-		\item 	We’re using the \mintinline{rust}|is_ok| method on the Result to check whether the environment variable is set. If the \mintinline{rust}|IGNORE_CASE|  environment variable isn’t set to anything, \mintinline{rust}|is_ok|  will return false.
+		\item At the moment, we’re writing all of our output to the terminal using the \mintinline{rust}|println!| macro. In most terminals, there are two kinds of output: standard output (\mintinline{rust}|stdout|) for general information and standard error (\mintinline{rust}|stderr|) for error messages. \textbf{This distinction enables users to choose to direct the successful output of a program to a file but still print error messages to the screen}.
+		\item 	To demonstrate this behavior, we’ll run the program with \mintinline{shell}|>| and the file path, output.txt, that we want to redirect the standard output stream to. (\mintinline{shell}|$ cargo run > output.txt|).
 	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{minigrep - Printing Errors to Standard Error}
+	\inputminted{rust}{./code/grep14.rs}
+
 \end{frame}
 
 \section{Functional Language Features: Iterators and Closures}
