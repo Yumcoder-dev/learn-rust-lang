@@ -2052,6 +2052,34 @@
 
 \section{Functional Language Features: Iterators and Closures}
 
+
+\begin{frame}[fragile]
+	\frametitle{Closures: Anonymous Functions that Capture Their Environment}
+\begin{itemize}
+	\item Rust’s closures are \textbf{anonymous functions} you can save in a variable or pass as arguments to other functions. 
+	\item You can create the closure in one place and then call the closure elsewhere to evaluate it in a different context.
+	\item  Unlike functions, closures \textbf{can capture values from the scope} in which they’re defined. 
+	\item  We’ll demonstrate how these closure features allow for \textbf{code reuse} and \textbf{behavior customization}.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Capturing the Environment with Closures}
+	\begin{itemize}
+		\item Rust’s closures are \textbf{anonymous functions} you can save in a variable or pass as arguments to other functions. 
+		\item You can create the closure in one place and then call the closure elsewhere to evaluate it in a different context.
+		\item  Unlike functions, closures \textbf{can capture values from the scope} in which they’re defined. 
+		\item  We’ll demonstrate how these closure features allow for \textbf{code reuse} and \textbf{behavior customization}.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Closure Type Inference and Annotation}
+	\inputminted{rust}{./code/closure.rs}
+\end{frame}
+
+
 \section{More About Cargo and Crates.io}
 \section{Smart Pointers}
 \section{Fearless Concurrency}
