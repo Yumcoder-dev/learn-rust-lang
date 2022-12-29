@@ -1984,7 +1984,6 @@
 	\inputminted{rust}{./code/grep5.rs}
 \end{frame}
 
-
 \begin{frame}[fragile]
 	\frametitle{minigrep - Refactoring (Creating a Constructor for Config)}
 	\inputminted{rust}{./code/grep6.rs}
@@ -2003,7 +2002,47 @@
 
 \begin{frame}[fragile]
 	\frametitle{minigrep - Refactoring (Extracting Logic from main)}
-	\inputminted{rust}{./code/grep8.rs}
+	\inputminted{rust}{./code/grep9.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{minigrep - Refactoring (Handling Errors Returned from run in main)}
+	\inputminted{rust}{./code/grep10.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{minigrep - Refactoring (Splitting Code into a Library Crate)}
+	Filename: \mintinline{shell}|src/lib.rs|
+	\inputminted{rust}{./code/grep11.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{minigrep - Refactoring (Splitting Code into a Library Crate(2))}
+	Filename: \mintinline{shell}|src/main.rs|
+	\inputminted{rust}{./code/grep12.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{minigrep - Working with Environment Variables}
+	\inputminted{rust}{./code/grep13.rs}
+
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{minigrep - Working with Environment Variables (2)}
+	\begin{itemize}
+		\item The env::var function returns a Result that will be the successful Ok variant that contains the value of the environment variable if the environment variable is set to any value. It will return the Err variant if the environment variable is not set.
+		\item 	We’re using the \mintinline{rust}|is_ok| method on the Result to check whether the environment variable is set. If the \mintinline{rust}|IGNORE_CASE|  environment variable isn’t set to anything, \mintinline{rust}|is_ok|  will return false.
+	\end{itemize}
+\end{frame}
+
+Writing Error Messages to Standard Error Instead of Standard Output
+\begin{frame}[fragile]
+	\frametitle{minigrep - Writing Error Messages to Standard Error Instead of Standard Output}
+	\begin{itemize}
+		\item The env::var function returns a Result that will be the successful Ok variant that contains the value of the environment variable if the environment variable is set to any value. It will return the Err variant if the environment variable is not set.
+		\item 	We’re using the \mintinline{rust}|is_ok| method on the Result to check whether the environment variable is set. If the \mintinline{rust}|IGNORE_CASE|  environment variable isn’t set to anything, \mintinline{rust}|is_ok|  will return false.
+	\end{itemize}
 \end{frame}
 
 \section{Functional Language Features: Iterators and Closures}
