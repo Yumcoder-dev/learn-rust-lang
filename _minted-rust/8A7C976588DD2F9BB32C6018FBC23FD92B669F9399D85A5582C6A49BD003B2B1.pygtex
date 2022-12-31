@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{// a function definition}
+\PYG{k}{fn}  \PYG{n+nf}{add\PYGZus{}one\PYGZus{}v1}\PYG{+w}{   }\PYG{p}{(}\PYG{n}{x}: \PYG{k+kt}{u32}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{u32} \PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{p}{\PYGZcb{};}\PYG{+w}{ }
+\PYG{c+c1}{// a fully annotated closure definition}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{add\PYGZus{}one\PYGZus{}v2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{|}\PYG{n}{x}: \PYG{k+kt}{u32}\PYG{o}{|}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{u32} \PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{p}{\PYGZcb{};}\PYG{+w}{ }
+\PYG{c+c1}{// we remove the type annotations from the closure definition}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{add\PYGZus{}one\PYGZus{}v3}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{|}\PYG{n}{x}\PYG{o}{|}\PYG{+w}{             }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{p}{\PYGZcb{};}\PYG{+w}{ }
+\PYG{c+c1}{// we remove the brackets, which are optional because the closure body has only one expression}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{add\PYGZus{}one\PYGZus{}v4}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{|}\PYG{n}{x}\PYG{o}{|}\PYG{+w}{               }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{  }\PYG{p}{;}\PYG{+w}{ }
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{example\PYGZus{}closure}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{|}\PYG{n}{x}\PYG{o}{|}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{;}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{s}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{example\PYGZus{}closure}\PYG{p}{(}\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}hello\PYGZdq{}}\PYG{p}{));}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{n}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{example\PYGZus{}closure}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// Error: Attempting to call a closure whose types are inferred with two different types}
+\end{Verbatim}

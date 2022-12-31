@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cp}{\PYGZsh{}[test]}
+\PYG{k}{fn} \PYG{n+nf}{iterator\PYGZus{}demonstration}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{v1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf+fm}{vec!}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{];}
+
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{v1\PYGZus{}iter}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{v1}\PYG{p}{.}\PYG{n}{iter}\PYG{p}{();}
+
+\PYG{+w}{    }\PYG{n+nf+fm}{assert\PYGZus{}eq!}\PYG{p}{(}\PYG{n}{v1\PYGZus{}iter}\PYG{p}{.}\PYG{n}{next}\PYG{p}{(),}\PYG{+w}{ }\PYG{n+nb}{Some}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{l+m+mi}{1}\PYG{p}{));}
+\PYG{+w}{    }\PYG{n+nf+fm}{assert\PYGZus{}eq!}\PYG{p}{(}\PYG{n}{v1\PYGZus{}iter}\PYG{p}{.}\PYG{n}{next}\PYG{p}{(),}\PYG{+w}{ }\PYG{n+nb}{Some}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{l+m+mi}{2}\PYG{p}{));}
+\PYG{+w}{    }\PYG{n+nf+fm}{assert\PYGZus{}eq!}\PYG{p}{(}\PYG{n}{v1\PYGZus{}iter}\PYG{p}{.}\PYG{n}{next}\PYG{p}{(),}\PYG{+w}{ }\PYG{n+nb}{Some}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{l+m+mi}{3}\PYG{p}{));}
+\PYG{+w}{    }\PYG{n+nf+fm}{assert\PYGZus{}eq!}\PYG{p}{(}\PYG{n}{v1\PYGZus{}iter}\PYG{p}{.}\PYG{n}{next}\PYG{p}{(),}\PYG{+w}{ }\PYG{n+nb}{None}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

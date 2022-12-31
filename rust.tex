@@ -2072,6 +2072,7 @@
 		\item  Unlike functions, closures \textbf{can capture values from the scope} in which they’re defined. 
 		\item  We’ll demonstrate how these closure features allow for \textbf{code reuse} and \textbf{behavior customization}.
 	\end{itemize}
+\inputminted{rust}{./code/closure1.rs}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -2080,6 +2081,127 @@
 \end{frame}
 
 
+\begin{frame}[fragile]
+	\frametitle{Capturing References or Moving Ownership}
+	\inputminted{rust}{./code/closure2.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Capturing References or Moving Ownership(2)}
+	\inputminted{rust}{./code/closure3.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Capturing References or Moving Ownership(3)}
+	\inputminted{rust}{./code/closure4.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Moving Captured Values Out of Closures and the \mintinline{rust}|Fn| Traits}
+	Once a closure has captured a reference or captured ownership of a value from the environment where the closure is defined, \textbf{the code in the body of the closure defines what happens to the references or values when the closure is evaluated later}. A closure body can do any of the following: 
+	\begin{itemize}
+		\item move a captured value out of the closure, 
+		\item mutate the captured value, 
+		\item neither move nor mutate the value, or capture nothing from the environment to begin with.
+	\end{itemize}
+
+The way a closure captures and handles values from the environment affects which traits the closure implements, and traits are how functions and structs can specify what kinds of closures they can use. Closures will automatically implement\textbf{ one, two, or all three of these \mintinline{rust}|Fn|  traits}, in an additive fashion, depending on how the closure’s body handles the values:
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Moving Captured Values Out of Closures and the \mintinline{rust}|Fn| Traits(2)}
+	\begin{itemize}
+		\item \mintinline{rust}|FnOnce| applies to closures that \textbf{can be called once.} \textbf{All closures implement at least this trait}, because all closures can be called. A closure that moves captured values out of its body will only implement \mintinline{rust}|FnOnce| and none of the other \mintinline{rust}|Fn| traits, because it can only be called once.
+		\item  \mintinline{rust}|FnMut| applies to closures that don’t move captured values out of their body, but that \textbf{might mutate the captured values}. These closures can be called more than once.
+		\item 	\mintinline{rust}|Fn| applies to closures that don’t move captured values out of their body and that don’t mutate captured values, as well as \textbf{closures that capture nothing from their environment}. These closures can be called more than once without mutating their environment, which is important in cases such as calling a closure multiple times concurrently.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Moving Captured Values Out of Closures and the \mintinline{rust}|Fn| Traits(3)}
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{img/closure.png}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Processing a Series of Items with Iterators}
+	\begin{itemize}
+		\item The iterator pattern allows you to perform some task on a sequence of items in turn.
+		\item 	In Rust, iterators are \textbf{lazy}, meaning they have no effect until you call methods that consume the iterator to use it up. 
+		\inputminted{rust}{./code/iterator.rs}
+		\item 	All iterators implement a trait named \mintinline{rust}|Iterator| that is defined in the standard library.
+	\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{The Iterator Trait and the next Method}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/iterator2.rs}
+	
+		\inputminted[fontsize=\scriptsize]{rust}{./code/iterator3.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{The Iterator Trait and the next Method(2)}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/iterator3.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Consuming Adaptors and Iterator Adaptors}
+	Methods that call next are called \textbf{consuming adaptors}, because calling them uses up the iterator. 
+	
+		\inputminted[fontsize=\scriptsize]{rust}{./code/iterator4.rs}
+		
+		
+		\textbf{Iterator adaptors }are methods defined on the Iterator trait that don’t consume the iterator. Instead, they \textbf{produce different iterators} by changing some aspect of the original iterator.
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Consuming Adaptors and Iterator Adaptors(2)}
+
+	\inputminted{rust}{./code/iterator5.rs}
+	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Improving Our I/O Project, removing clone Using Iterator}
+	
+	\inputminted{rust}{./code/iterator6.rs}
+	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Improving Our I/O Project, removing clone Using Iterator(2)}
+	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/iterator7.rs}
+	
+\end{frame}
+ 
+ \begin{frame}[fragile]
+ 	\frametitle{Improving Our I/O Project, removing clone Using Iterator(3)}
+ 	
+ 	\inputminted[fontsize=\scriptsize]{rust}{./code/iterator8.rs}
+ 	
+ \end{frame}
+
+ \begin{frame}[fragile]
+	\frametitle{Improving Our I/O Project, removing clone Using Iterator(4)}
+	\begin{itemize}
+		\item We can write this code in a more concise way using iterator adaptor methods. Doing so also lets us avoid having a \textbf{mutable intermediate results vector}. The functional programming style prefers to minimize the amount of mutable state to make code clearer. \textbf{Removing the mutable state might enable a future enhancement to make searching happen in parallel}, because we wouldn’t have to manage concurrent access to the results vector. 
+		\item 	To determine whether to use loops or iterators, you need to know which implementation is faster: \textbf{The iterator version was slightly faster! }(for more info see \href{https://doc.rust-lang.org/book/ch13-04-performance.html}{here}).
+	\end{itemize}
+\end{frame}
+
+
+ 
+ 
 \section{More About Cargo and Crates.io}
 \section{Smart Pointers}
 \section{Fearless Concurrency}

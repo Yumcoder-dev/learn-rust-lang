@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  29 DEC 2022 15:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  31 DEC 2022 23:13
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3645,33 +3645,211 @@ Overfull \vbox (3.19603pt too high) detected at line 2017
 \openout4 = `rust.vrb'.
 
  (./rust.vrb
-runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P str
-ipnl=False -P mathescape=True -o _minted-rust/F15822CCAFB68040D4F8DBDF043B875C4
-41E1F64989217C5937B6054245FEF4A.pygtex ./code/grep14.rs)...executed.
-
-
 (./_minted-rust/F15822CCAFB68040D4F8DBDF043B875C441E1F64989217C5937B6054245FEF4
 A.pygtex)) [233
 
 ] [234
 
-] [235
+]
+\openout4 = `rust.vrb'.
 
-] [236
+ (./rust.vrb) [235
 
-] [237
+]
+\openout4 = `rust.vrb'.
 
-] [238
+ (./rust.vrb
+(./_minted-rust/01DF6B8BD87CA6D4AC06669FE647E06B12D591DC9FFC1DD8C268FA8A9806554
+C.pygtex)) [236
 
-] [239
+]
+\openout4 = `rust.vrb'.
 
-] [240
+ (./rust.vrb
+(./_minted-rust/8A7C976588DD2F9BB32C6018FBC23FD92B669F9399D85A5582C6A49BD003B2B
+1.pygtex)) [237
 
-] [241
+]
+\openout4 = `rust.vrb'.
 
-] [242
+ (./rust.vrb
+(./_minted-rust/B36A8A3B03DA9A695C619A71ADD359ACC1B4AE34286C60B86EA3DD03A88561E
+6.pygtex)) [238
 
-] [243
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/184606C9F73505E0BA78B31798CC2264EF5BA6DDE9FA7034E5DCB35542352D1
+3.pygtex)) [239
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/C0E4AF468ADC5440F55B15271DC86B44D47A7815ADB74A0951E0367F99A5A79
+4.pygtex)) [240
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/C1A0B4E21BA1A5892F40AB1F70C5AB6CBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/C1A0B4E21BA1A5892F40AB1F70C5AB6CBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex) [241
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/11063EA59C943AF24818C484101D9013BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/11063EA59C943AF24818C484101D9013BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/C1A0B4E21BA1A5892F40AB1F70C5AB6CBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/7D57760F98DA104472FD2C4964A6666DBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/C1A0B4E21BA1A5892F40AB1F70C5AB6CBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/C1A0B4E21BA1A5892F40AB1F70C5AB6CBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex) [242
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+<img/closure.png, id=7116, 1231.60126pt x 687.56876pt>
+File: img/closure.png Graphic file (type png)
+<use img/closure.png>
+Package pdftex.def Info: img/closure.png  used on input line 4.
+(pdftex.def)             Requested size: 342.2953pt x 191.0911pt.
+)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/C1A0B4E21BA1A5892F40AB1F70C5AB6CBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex) [243
+
+ <./img/closure.png>]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/AB310F531A7D835A6DC3BC71E161B07723B617677C8DCB84E2399B4B15D9FC6
+A.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/811C75D96DB7A1C3FCF1BE7221B81D2ABA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)) [244
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/5B173D4AECCBFEC877115CF2DCCF7010489A2FD451068084B14A73B9A47A660
+F.pygtex)
+(./_minted-rust/452F8C9511E07BDD07BAFD7F0296DF9E2342026AFDD1D33535047B9C5F87D57
+2.pygtex)) [245
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/452F8C9511E07BDD07BAFD7F0296DF9E2342026AFDD1D33535047B9C5F87D57
+2.pygtex)) [246
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/A9FD1E9AD52BC321E5C3F3FCD402298BC6EB2679F8B26AC3D1E57AB6ED89F1C
+4.pygtex)) [247
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/66B7AD8C06B9D6D1945C619E52DE8794A4CC54A011215198AE93AA697AE98C4
+9.pygtex)) [248
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/7177BA624D8EB6B86326F6C8E244B6C32F4BFE4B562F5680611E84EFA74F429
+7.pygtex))
+Overfull \vbox (0.59602pt too high) detected at line 2178
+ []
+
+[249
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/550B6A76825108FD45D9B11BED940E5E5118E3B057FD5ECF3DEE5C58A92B174
+B.pygtex)) [250
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/05735A5115D8FFA46FA5AFA7EDEF6CE07F7623E59A411E74FCB9C8977901642
+6.pygtex))
+Overfull \vbox (1.09573pt too high) detected at line 2192
+ []
+
+[251
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [252
+
+] [253
+
+] [254
+
+] [255
+
+] [256
+
+] [257
+
+] [258
+
+] [259
+
+] [260
+
+]
+[261
 
 ]
 \tf@nav=\write8
@@ -3683,8 +3861,7 @@ A.pygtex)) [233
 \tf@snm=\write10
 \openout10 = `rust.snm'.
 
-
-(./rust.aux)
+ (./rust.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -3694,10 +3871,10 @@ runsystem(rm rust.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 28851 strings out of 474968
- 682540 string characters out of 5776083
- 984971 words of memory out of 5000000
- 47808 multiletter control sequences out of 15000+600000
+ 29084 strings out of 474968
+ 693389 string characters out of 5776083
+ 994172 words of memory out of 5000000
+ 47903 multiletter control sequences out of 15000+600000
  484702 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,870b,1087s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3717,10 +3894,10 @@ al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
 texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on rust.pdf (243 pages, 1742217 bytes).
+Output written on rust.pdf (261 pages, 1958554 bytes).
 PDF statistics:
- 7399 PDF objects out of 7423 (max. 8388607)
- 6834 compressed objects within 69 object streams
- 515 named destinations out of 1000 (max. 500000)
- 1411 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 7904 PDF objects out of 8907 (max. 8388607)
+ 7314 compressed objects within 74 object streams
+ 551 named destinations out of 1000 (max. 500000)
+ 1416 words of extra memory for PDF output out of 10000 (max. 10000000)
 

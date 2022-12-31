@@ -502,53 +502,89 @@
 \headcommand {\sectionentry {12}{Functional Language Features: Iterators and Closures}{234}{Functional Language Features: Iterators and Closures}{0}}
 \headcommand {\slideentry {12}{0}{1}{234/234}{}{0}}
 \headcommand {\beamer@framepages {234}{234}}
-\headcommand {\beamer@sectionpages {234}{234}}
-\headcommand {\beamer@subsectionpages {234}{234}}
-\headcommand {\sectionentry {13}{More About Cargo and Crates.io}{235}{More About Cargo and Crates.io}{0}}
-\headcommand {\slideentry {13}{0}{1}{235/235}{}{0}}
+\headcommand {\slideentry {12}{0}{2}{235/235}{}{0}}
 \headcommand {\beamer@framepages {235}{235}}
-\headcommand {\beamer@sectionpages {235}{235}}
-\headcommand {\beamer@subsectionpages {235}{235}}
-\headcommand {\sectionentry {14}{Smart Pointers}{236}{Smart Pointers}{0}}
-\headcommand {\slideentry {14}{0}{1}{236/236}{}{0}}
+\headcommand {\slideentry {12}{0}{3}{236/236}{}{0}}
 \headcommand {\beamer@framepages {236}{236}}
-\headcommand {\beamer@sectionpages {236}{236}}
-\headcommand {\beamer@subsectionpages {236}{236}}
-\headcommand {\sectionentry {15}{Fearless Concurrency}{237}{Fearless Concurrency}{0}}
-\headcommand {\slideentry {15}{0}{1}{237/237}{}{0}}
+\headcommand {\slideentry {12}{0}{4}{237/237}{}{0}}
 \headcommand {\beamer@framepages {237}{237}}
-\headcommand {\beamer@sectionpages {237}{237}}
-\headcommand {\beamer@subsectionpages {237}{237}}
-\headcommand {\sectionentry {16}{Object-Oriented Programming Features of Rust}{238}{Object-Oriented Programming Features of Rust}{0}}
-\headcommand {\slideentry {16}{0}{1}{238/238}{}{0}}
+\headcommand {\slideentry {12}{0}{5}{238/238}{}{0}}
 \headcommand {\beamer@framepages {238}{238}}
-\headcommand {\beamer@sectionpages {238}{238}}
-\headcommand {\beamer@subsectionpages {238}{238}}
-\headcommand {\sectionentry {17}{Patterns and Matching}{239}{Patterns and Matching}{0}}
-\headcommand {\slideentry {17}{0}{1}{239/239}{}{0}}
+\headcommand {\slideentry {12}{0}{6}{239/239}{}{0}}
 \headcommand {\beamer@framepages {239}{239}}
-\headcommand {\beamer@sectionpages {239}{239}}
-\headcommand {\beamer@subsectionpages {239}{239}}
-\headcommand {\sectionentry {18}{Advanced Features}{240}{Advanced Features}{0}}
-\headcommand {\slideentry {18}{0}{1}{240/240}{}{0}}
+\headcommand {\slideentry {12}{0}{7}{240/240}{}{0}}
 \headcommand {\beamer@framepages {240}{240}}
-\headcommand {\beamer@sectionpages {240}{240}}
-\headcommand {\beamer@subsectionpages {240}{240}}
-\headcommand {\sectionentry {19}{Multithread Web Server}{241}{Multithread Web Server}{0}}
-\headcommand {\slideentry {19}{0}{1}{241/241}{}{0}}
+\headcommand {\slideentry {12}{0}{8}{241/241}{}{0}}
 \headcommand {\beamer@framepages {241}{241}}
-\headcommand {\beamer@sectionpages {241}{241}}
-\headcommand {\beamer@subsectionpages {241}{241}}
-\headcommand {\sectionentry {20}{Tokio}{242}{Tokio}{0}}
-\headcommand {\slideentry {20}{0}{1}{242/242}{}{0}}
+\headcommand {\slideentry {12}{0}{9}{242/242}{}{0}}
 \headcommand {\beamer@framepages {242}{242}}
-\headcommand {\beamer@sectionpages {242}{242}}
-\headcommand {\beamer@subsectionpages {242}{242}}
-\headcommand {\sectionentry {21}{Acknowledgement}{243}{Acknowledgement}{0}}
-\headcommand {\slideentry {21}{0}{1}{243/243}{}{0}}
+\headcommand {\slideentry {12}{0}{10}{243/243}{}{0}}
 \headcommand {\beamer@framepages {243}{243}}
-\headcommand {\beamer@partpages {1}{243}}
-\headcommand {\beamer@subsectionpages {243}{243}}
-\headcommand {\beamer@sectionpages {243}{243}}
-\headcommand {\beamer@documentpages {243}}
-\headcommand {\gdef \inserttotalframenumber {243}}
+\headcommand {\slideentry {12}{0}{11}{244/244}{}{0}}
+\headcommand {\beamer@framepages {244}{244}}
+\headcommand {\slideentry {12}{0}{12}{245/245}{}{0}}
+\headcommand {\beamer@framepages {245}{245}}
+\headcommand {\slideentry {12}{0}{13}{246/246}{}{0}}
+\headcommand {\beamer@framepages {246}{246}}
+\headcommand {\slideentry {12}{0}{14}{247/247}{}{0}}
+\headcommand {\beamer@framepages {247}{247}}
+\headcommand {\slideentry {12}{0}{15}{248/248}{}{0}}
+\headcommand {\beamer@framepages {248}{248}}
+\headcommand {\slideentry {12}{0}{16}{249/249}{}{0}}
+\headcommand {\beamer@framepages {249}{249}}
+\headcommand {\slideentry {12}{0}{17}{250/250}{}{0}}
+\headcommand {\beamer@framepages {250}{250}}
+\headcommand {\slideentry {12}{0}{18}{251/251}{}{0}}
+\headcommand {\beamer@framepages {251}{251}}
+\headcommand {\slideentry {12}{0}{19}{252/252}{}{0}}
+\headcommand {\beamer@framepages {252}{252}}
+\headcommand {\beamer@sectionpages {234}{252}}
+\headcommand {\beamer@subsectionpages {234}{252}}
+\headcommand {\sectionentry {13}{More About Cargo and Crates.io}{253}{More About Cargo and Crates.io}{0}}
+\headcommand {\slideentry {13}{0}{1}{253/253}{}{0}}
+\headcommand {\beamer@framepages {253}{253}}
+\headcommand {\beamer@sectionpages {253}{253}}
+\headcommand {\beamer@subsectionpages {253}{253}}
+\headcommand {\sectionentry {14}{Smart Pointers}{254}{Smart Pointers}{0}}
+\headcommand {\slideentry {14}{0}{1}{254/254}{}{0}}
+\headcommand {\beamer@framepages {254}{254}}
+\headcommand {\beamer@sectionpages {254}{254}}
+\headcommand {\beamer@subsectionpages {254}{254}}
+\headcommand {\sectionentry {15}{Fearless Concurrency}{255}{Fearless Concurrency}{0}}
+\headcommand {\slideentry {15}{0}{1}{255/255}{}{0}}
+\headcommand {\beamer@framepages {255}{255}}
+\headcommand {\beamer@sectionpages {255}{255}}
+\headcommand {\beamer@subsectionpages {255}{255}}
+\headcommand {\sectionentry {16}{Object-Oriented Programming Features of Rust}{256}{Object-Oriented Programming Features of Rust}{0}}
+\headcommand {\slideentry {16}{0}{1}{256/256}{}{0}}
+\headcommand {\beamer@framepages {256}{256}}
+\headcommand {\beamer@sectionpages {256}{256}}
+\headcommand {\beamer@subsectionpages {256}{256}}
+\headcommand {\sectionentry {17}{Patterns and Matching}{257}{Patterns and Matching}{0}}
+\headcommand {\slideentry {17}{0}{1}{257/257}{}{0}}
+\headcommand {\beamer@framepages {257}{257}}
+\headcommand {\beamer@sectionpages {257}{257}}
+\headcommand {\beamer@subsectionpages {257}{257}}
+\headcommand {\sectionentry {18}{Advanced Features}{258}{Advanced Features}{0}}
+\headcommand {\slideentry {18}{0}{1}{258/258}{}{0}}
+\headcommand {\beamer@framepages {258}{258}}
+\headcommand {\beamer@sectionpages {258}{258}}
+\headcommand {\beamer@subsectionpages {258}{258}}
+\headcommand {\sectionentry {19}{Multithread Web Server}{259}{Multithread Web Server}{0}}
+\headcommand {\slideentry {19}{0}{1}{259/259}{}{0}}
+\headcommand {\beamer@framepages {259}{259}}
+\headcommand {\beamer@sectionpages {259}{259}}
+\headcommand {\beamer@subsectionpages {259}{259}}
+\headcommand {\sectionentry {20}{Tokio}{260}{Tokio}{0}}
+\headcommand {\slideentry {20}{0}{1}{260/260}{}{0}}
+\headcommand {\beamer@framepages {260}{260}}
+\headcommand {\beamer@sectionpages {260}{260}}
+\headcommand {\beamer@subsectionpages {260}{260}}
+\headcommand {\sectionentry {21}{Acknowledgement}{261}{Acknowledgement}{0}}
+\headcommand {\slideentry {21}{0}{1}{261/261}{}{0}}
+\headcommand {\beamer@framepages {261}{261}}
+\headcommand {\beamer@partpages {1}{261}}
+\headcommand {\beamer@subsectionpages {261}{261}}
+\headcommand {\beamer@sectionpages {261}{261}}
+\headcommand {\beamer@documentpages {261}}
+\headcommand {\gdef \inserttotalframenumber {261}}

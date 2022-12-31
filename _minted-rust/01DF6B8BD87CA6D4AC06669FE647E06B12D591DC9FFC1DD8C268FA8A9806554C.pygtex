@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{list}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{        }\PYG{n}{Rectangle}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{width}: \PYG{l+m+mi}{10}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{height}: \PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{        }\PYG{n}{Rectangle}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{width}: \PYG{l+m+mi}{3}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{height}: \PYG{l+m+mi}{5}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{        }\PYG{n}{Rectangle}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{width}: \PYG{l+m+mi}{7}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{height}: \PYG{l+m+mi}{12}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{    }\PYG{p}{];}
+
+\PYG{n}{list}\PYG{p}{.}\PYG{n}{sort\PYGZus{}by\PYGZus{}key}\PYG{p}{(}\PYG{o}{|}\PYG{n}{r}\PYG{o}{|}\PYG{+w}{ }\PYG{n}{r}\PYG{p}{.}\PYG{n}{width}\PYG{p}{);}
+\end{Verbatim}
