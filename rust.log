@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  31 DEC 2022 23:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  1 JAN 2023 08:44
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3834,22 +3834,174 @@ Overfull \vbox (1.09573pt too high) detected at line 2192
 
 ] [253
 
-] [254
+]
+\openout4 = `rust.vrb'.
 
-] [255
+ (./rust.vrb
+(./_minted-rust/694DC3F4B69852159C44C1912EF939D832936E40BC19E6981F878C221763C2D
+3.pygtex)
+\openout6 = `rust.pyg'.
 
-] [256
 
-] [257
-
-] [258
-
-] [259
-
-] [260
+(./_minted-rust/6B7C4D40CF907951AAA444096A6E4B80667F079DA6824D8D6F61BB5D872BA31
+9.pygtex)
+(./_minted-rust/2E20DEAEC0886436256F3D5534875072F3A868BFB47A6B45B1396DBC8FE053E
+8.pygtex)) [254
 
 ]
-[261
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/BC31641A232B78C8F1FF7DD5A1E487BF667F079DA6824D8D6F61BB5D872BA31
+9.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/BC31641A232B78C8F1FF7DD5A1E487BF667F079DA6824D8D6F61BB5D872BA31
+9.pygtex) [255
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/313BA0568DC3F44D4EB59336D5ADE2D1F4E0D2AC99FDC3C8C17BCC128C2F869
+8.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/0613D123FF3EFB757D6397CB9E696467BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)) [256
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/313BA0568DC3F44D4EB59336D5ADE2D1F4E0D2AC99FDC3C8C17BCC128C2F869
+8.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/0613D123FF3EFB757D6397CB9E696467BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)) [257
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+<img/trpl14-01.png, id=7539, 1583.9175pt x 914.41624pt>
+File: img/trpl14-01.png Graphic file (type png)
+<use img/trpl14-01.png>
+Package pdftex.def Info: img/trpl14-01.png  used on input line 5.
+(pdftex.def)             Requested size: 338.87422pt x 195.6329pt.
+) [258
+
+ <./img/trpl14-01.png>]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/0525D55B9514301FFB1A74F1B5946A69BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/649E3E60D6A4B7EC8469D8C5B9EAD323667F079DA6824D8D6F61BB5D872BA31
+9.pygtex)
+(./_minted-rust/313BA0568DC3F44D4EB59336D5ADE2D192FBA61EBB89C2158F567FE255E79AF
+9.pygtex)) [259
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+<img/trpl14-02.png, id=7596, 1268.74pt x 581.17125pt>
+File: img/trpl14-02.png Graphic file (type png)
+<use img/trpl14-02.png>
+Package pdftex.def Info: img/trpl14-02.png  used on input line 5.
+(pdftex.def)             Requested size: 338.87422pt x 155.22455pt.
+) [260
+
+ <./img/trpl14-02.png>]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/0459587B1AD59669987C6C8DB91F2115667F079DA6824D8D6F61BB5D872BA31
+9.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/6EF0D67E7F9C9DFFF88070FFE6DB9717667F079DA6824D8D6F61BB5D872BA31
+9.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/7978FD67DBD741E7EA5871F8976D2950667F079DA6824D8D6F61BB5D872BA31
+9.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/4EC086DF2EAF80EFA5E2146E611EDA38667F079DA6824D8D6F61BB5D872BA31
+9.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/025B13374B8CCC8CF79BA217AC543530419C7F52CC0184153B8517AD583A75C
+0.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/6B7C4D40CF907951AAA444096A6E4B80667F079DA6824D8D6F61BB5D872BA31
+9.pygtex)
+(./_minted-rust/671B29F0F4A05D1A66AA8D2AD55E8DD08AEC24D97B3C3AAC35D04C0BAF75C55
+D.pygtex)) [261
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/6B7C4D40CF907951AAA444096A6E4B80BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/A705A55BA1991A28AE2A1FE4CC7542C5BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+(./_minted-rust/802A1DB3AE4A356D4EB7AECF7582272FC2C4EB44205A39985C7ABB373BBFDCC
+3.pygtex)
+<img/workspace.png, id=7652, 212.795pt x 215.80624pt>
+File: img/workspace.png Graphic file (type png)
+<use img/workspace.png>
+Package pdftex.def Info: img/workspace.png  used on input line 13.
+(pdftex.def)             Requested size: 102.68962pt x 104.14232pt.
+) [262
+
+ <./img/workspace.png>] [263
+
+] [264
+
+] [265
+
+] [266
+
+] [267
+
+] [268
+
+]
+[269
+
+] [270
 
 ]
 \tf@nav=\write8
@@ -3871,10 +4023,10 @@ runsystem(rm rust.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 29084 strings out of 474968
- 693389 string characters out of 5776083
- 994172 words of memory out of 5000000
- 47903 multiletter control sequences out of 15000+600000
+ 29275 strings out of 474968
+ 703265 string characters out of 5776083
+ 1002133 words of memory out of 5000000
+ 47996 multiletter control sequences out of 15000+600000
  484702 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,870b,1087s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3894,10 +4046,10 @@ al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
 texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on rust.pdf (261 pages, 1958554 bytes).
+Output written on rust.pdf (270 pages, 2124635 bytes).
 PDF statistics:
- 7904 PDF objects out of 8907 (max. 8388607)
- 7314 compressed objects within 74 object streams
- 551 named destinations out of 1000 (max. 500000)
- 1416 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 8159 PDF objects out of 8907 (max. 8388607)
+ 7552 compressed objects within 76 object streams
+ 569 named destinations out of 1000 (max. 500000)
+ 1431 words of extra memory for PDF output out of 10000 (max. 10000000)
 

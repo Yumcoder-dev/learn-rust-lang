@@ -1,5 +1,16 @@
-\frametitle{Improving Our I/O Project, removing clone Using Iterator(4)}
-	\begin{itemize}
-		\item We can write this code in a more concise way using iterator adaptor methods. Doing so also lets us avoid having a \textbf{mutable intermediate results vector}. The functional programming style prefers to minimize the amount of mutable state to make code clearer. \textbf{Removing the mutable state might enable a future enhancement to make searching happen in parallel}, because we wouldn’t have to manage concurrent access to the results vector.
-		\item 	To determine whether to use loops or iterators, you need to know which implementation is faster: \textbf{The iterator version was slightly faster! }(for more info see \href{https://doc.rust-lang.org/book/ch13-04-performance.html}{here}).
-	\end{itemize}
+\frametitle{Cargo Workspaces}
+	 \begin{itemize}
+	 	\item As your project develops, you might find that the library crate continues to get bigger and you want to split your package further into multiple library crates.
+	 	\item 	 Cargo offers a feature called \textbf{workspaces} that can help manage multiple related packages that are developed in tandem.
+	 	\item  Change the top-level \mintinline{rust}|Cargo.toml| to specify the \mintinline{rust}|add_one| path in the members list:
+	 	
+	 	\begin{columns}
+	 		\column{0.4\textwidth}
+	 		\inputminted{toml}{./code/cargo4.toml}
+	 		\column{0.6\textwidth}
+	 		\begin{figure}
+	 			\centering
+	 			\includegraphics[width=0.5\textwidth]{img/workspace}
+	 		\end{figure}
+	 	\end{columns}
+	 \end{itemize}

@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{[workspace]}
+\PYG{n}{members}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{    }\PYG{l+s}{\PYGZdq{}adder\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s}{\PYGZdq{}add\PYGZus{}one\PYGZdq{}}\PYG{p}{,}
+\PYG{p}{]}
+\end{Verbatim}

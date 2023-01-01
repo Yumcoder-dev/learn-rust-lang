@@ -2197,12 +2197,111 @@ The way a closure captures and handles values from the environment affects which
 		\item We can write this code in a more concise way using iterator adaptor methods. Doing so also lets us avoid having a \textbf{mutable intermediate results vector}. The functional programming style prefers to minimize the amount of mutable state to make code clearer. \textbf{Removing the mutable state might enable a future enhancement to make searching happen in parallel}, because we wouldn’t have to manage concurrent access to the results vector. 
 		\item 	To determine whether to use loops or iterators, you need to know which implementation is faster: \textbf{The iterator version was slightly faster! }(for more info see \href{https://doc.rust-lang.org/book/ch13-04-performance.html}{here}).
 	\end{itemize}
-\end{frame}
-
-
- 
+\end{frame} 
  
 \section{More About Cargo and Crates.io}
+
+\begin{frame}[fragile]
+	\frametitle{Customizing Builds with Release Profiles}
+
+\inputminted{shell}{./code/profile.shell}
+
+Filename: \mintinline{shell}|Cargo.toml| 
+
+\inputminted{toml}{./code/profile2.toml}
+
+\end{frame} 
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Publishing a Crate to \mintinline{shell}|Crates.io|}
+	
+	\begin{itemize}
+		\item The crate registry at \mintinline{shell}|Crates.io| distributes the source code of your packages, so it primarily hosts code that is open source.
+		\item 	Accurately documenting your packages will help other users know how and when to use them, so it’s worth investing the time to write documentation. 
+		\item 	Documentation comments use \textbf{three slashes, ///}, instead of two and \textbf{support Markdown notation} for formatting the text.
+	\end{itemize}
+\end{frame} 
+
+
+\begin{frame}[fragile]
+	\frametitle{Making Useful Documentation Comments}
+	\inputminted{rust}{./code/documentation.rs}
+	
+	For convenience, running \mintinline{rust}|cargo doc --open | will build the HTML for your current crate’s documentation (as well as the documentation for all of your crate’s dependencies) and open the result in a web browser.
+\end{frame} 
+
+
+\begin{frame}[fragile]
+	\frametitle{Making Useful Documentation Comments(2)}
+	\inputminted{rust}{./code/documentation.rs}
+	
+	For convenience, running \mintinline{rust}|cargo doc --open | will build the HTML for your current crate’s documentation (as well as the documentation for all of your crate’s dependencies) and open the result in a web browser.
+\end{frame} 
+
+\begin{frame}[fragile]
+\frametitle{Making Useful Documentation Comments(3)}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.99\linewidth]{img/trpl14-01}
+\end{figure}
+
+\end{frame} 
+
+\begin{frame}[fragile]
+\frametitle{Commenting Contained Items}
+The style of doc comment \mintinline{rust}|//!| adds documentation to the item that contains the comments rather than to the items following the comments. We typically use these doc comments inside the crate root file ( \mintinline{shell}|src/lib.rs| by convention) or inside a module to document the crate or the module as a whole.
+
+\inputminted[fontsize=\scriptsize]{rust}{./code/documentation2.rs}
+
+\end{frame} 
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Making Useful Documentation Comments(3)}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.99\linewidth]{img/trpl14-02}
+	\end{figure}
+	
+\end{frame} 
+
+
+\begin{frame}[fragile]
+	\frametitle{Setting Up a Crates.io Account and Publish}
+	\begin{itemize}
+		\item Before you can publish any crates, you need to create an account on \mintinline{shell}|crates.io| and \textbf{get an API token}. 
+		\item 	Once you’re logged in, visit your account settings at \textbf{https://crates.io/me/} and retrieve your API key. 
+		\item  Then run the \mintinline{shell}|cargo login| command with your API key, like this: \mintinline{shell}|cargo login abcdefghijklmnopqrstuvwxyz012345|.
+		\item Before publishing\mintinline{shell}|cargo publish|, you’ll need to add some metadata in the \mintinline{toml}|[package]| section of the crate’s \mintinline{shell}|Cargo.toml| file.
+		\inputminted[fontsize=\scriptsize]{toml}{./code/cargo3.toml}
+	\end{itemize}
+	
+\end{frame} 
+
+\begin{frame}[fragile]
+	\frametitle{Cargo Workspaces}
+	 \begin{itemize}
+	 	\item As your project develops, you might find that the library crate continues to get bigger and you want to split your package further into multiple library crates.
+	 	\item 	 Cargo offers a feature called \textbf{workspaces} that can help manage multiple related packages that are developed in tandem.
+	 	\item  Change the top-level \mintinline{rust}|Cargo.toml| to specify the \mintinline{rust}|add_one| path in the members list:
+	 	
+	 	\begin{columns}
+	 		\column{0.4\textwidth}
+	 		\inputminted{toml}{./code/cargo4.toml}
+	 		\column{0.6\textwidth}
+	 		\begin{figure}
+	 			\centering
+	 			\includegraphics[width=0.5\textwidth]{img/workspace}
+	 		\end{figure}
+	 	\end{columns}
+	 \end{itemize}
+\end{frame} 
+
 \section{Smart Pointers}
 \section{Fearless Concurrency}
 \section{Object-Oriented Programming Features of Rust}

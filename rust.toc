@@ -11,10 +11,10 @@
 \beamer@sectionintoc {11}{An I/O Project: Building a Command Line Program}{214}{0}{11}
 \beamer@sectionintoc {12}{Functional Language Features: Iterators and Closures}{234}{0}{12}
 \beamer@sectionintoc {13}{More About Cargo and Crates.io}{253}{0}{13}
-\beamer@sectionintoc {14}{Smart Pointers}{254}{0}{14}
-\beamer@sectionintoc {15}{Fearless Concurrency}{255}{0}{15}
-\beamer@sectionintoc {16}{Object-Oriented Programming Features of Rust}{256}{0}{16}
-\beamer@sectionintoc {17}{Patterns and Matching}{257}{0}{17}
-\beamer@sectionintoc {18}{Advanced Features}{258}{0}{18}
-\beamer@sectionintoc {19}{Multithread Web Server}{259}{0}{19}
-\beamer@sectionintoc {20}{Tokio}{260}{0}{20}
+\beamer@sectionintoc {14}{Smart Pointers}{263}{0}{14}
+\beamer@sectionintoc {15}{Fearless Concurrency}{264}{0}{15}
+\beamer@sectionintoc {16}{Object-Oriented Programming Features of Rust}{265}{0}{16}
+\beamer@sectionintoc {17}{Patterns and Matching}{266}{0}{17}
+\beamer@sectionintoc {18}{Advanced Features}{267}{0}{18}
+\beamer@sectionintoc {19}{Multithread Web Server}{268}{0}{19}
+\beamer@sectionintoc {20}{Tokio}{269}{0}{20}

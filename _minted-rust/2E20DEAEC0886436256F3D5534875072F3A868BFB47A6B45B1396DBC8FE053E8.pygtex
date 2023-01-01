@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{[profile.dev]}
+\PYG{n}{opt\PYGZhy{}level}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}
+
+\PYG{k}{[profile.release]}
+\PYG{n}{opt\PYGZhy{}level}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{3}
+\end{Verbatim}

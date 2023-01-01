@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo build
+    Finished dev \PYG{o}{[}unoptimized + debuginfo\PYG{o}{]} target\PYG{o}{(}s\PYG{o}{)} \PYG{k}{in} \PYG{l+m}{0}.0s
+\PYGZdl{} cargo build \PYGZhy{}\PYGZhy{}release
+    Finished release \PYG{o}{[}optimized\PYG{o}{]} target\PYG{o}{(}s\PYG{o}{)} \PYG{k}{in} \PYG{l+m}{0}.0s
+\end{Verbatim}
