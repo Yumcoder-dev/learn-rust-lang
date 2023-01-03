@@ -2402,7 +2402,32 @@ The style of doc comment \mintinline{rust}|//!| adds documentation to the item t
 
 \begin{frame}[fragile]
 	\frametitle{\mintinline{rust}|Rc<T>|, the Reference Counted Smart Pointer}
-	In the majority of cases, ownership is clear: you know exactly which variable owns a given value. However, there are cases when a single value might have multiple owners. For example, in graph data structures, multiple edges might point to the same node, and that node is conceptually owned by all of the edges that point to it. 
+	\begin{itemize}
+		\item In the majority of cases, ownership is clear: you know exactly which variable owns a given value. However, there are cases when\textbf{ a single value might have multiple owners}. For example, in graph data structures, multiple edges might point to the same node, and that node is conceptually owned by all of the edges that point to it. 
+		\item 	You have to enable \textbf{multiple ownership explicitly }by using the Rust type \mintinline{rust}|Rc<T>|, which is an abbreviation for reference counting. \textbf{The \mintinline{rust}|Rc<T>| type keeps track of the number of references to a value to determine whether or not the value is still in use. If there are zero references to a value, the value can be cleaned up without any references becoming invalid}.
+	\end{itemize}
+\end{frame} 
+
+
+\begin{frame}[fragile]
+	\frametitle{Using \mintinline{rust}|Rc<T>| to Share Data}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.99\linewidth]{img/graph}
+	\end{figure}
+	
+\end{frame} 
+
+
+\begin{frame}[fragile]
+	\frametitle{Using \mintinline{rust}|Rc<T>| to Share Data(2)}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/smart8.rs}
+	
+\end{frame} 
+
+\begin{frame}[fragile]
+	\frametitle{Using \mintinline{rust}|Rc<T>| to Share Data(3)}
+	\inputminted[fontsize=\scriptsize]{shell}{./code/smart8.shell}
 	
 \end{frame} 
 
