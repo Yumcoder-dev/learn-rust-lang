@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo run
+   Compiling cons\PYGZhy{}list v0.1.0 \PYG{o}{(}file:///projects/cons\PYGZhy{}list\PYG{o}{)}
+error\PYG{o}{[}E0382\PYG{o}{]}: use of moved value: \PYG{l+s+sb}{`}a\PYG{l+s+sb}{`}
+  \PYGZhy{}\PYGZhy{}\PYGZgt{} src/main.rs:11:30
+   \PYG{p}{|}
+\PYG{l+m}{9}  \PYG{p}{|}     \PYG{n+nb}{let} \PYG{n+nv}{a} \PYG{o}{=} Cons\PYG{o}{(}\PYG{l+m}{5}, Box::new\PYG{o}{(}Cons\PYG{o}{(}\PYG{l+m}{10}, Box::new\PYG{o}{(}Nil\PYG{o}{))))}\PYG{p}{;}
+   \PYG{p}{|}         \PYGZhy{} move occurs because \PYG{l+s+sb}{`}a\PYG{l+s+sb}{`} has \PYG{n+nb}{type} \PYG{l+s+sb}{`}List\PYG{l+s+sb}{`}, which does not implement the \PYG{l+s+sb}{`}Copy\PYG{l+s+sb}{`} trait
+\PYG{l+m}{10} \PYG{p}{|}     \PYG{n+nb}{let} \PYG{n+nv}{b} \PYG{o}{=} Cons\PYG{o}{(}\PYG{l+m}{3}, Box::new\PYG{o}{(}a\PYG{o}{))}\PYG{p}{;}
+   \PYG{p}{|}                              \PYGZhy{} value moved here
+\PYG{l+m}{11} \PYG{p}{|}     \PYG{n+nb}{let} \PYG{n+nv}{c} \PYG{o}{=} Cons\PYG{o}{(}\PYG{l+m}{4}, Box::new\PYG{o}{(}a\PYG{o}{))}\PYG{p}{;}
+   \PYG{p}{|}                              \PYGZca{} value used here after move
+
+For more information about this error, try \PYG{l+s+sb}{`}rustc \PYGZhy{}\PYGZhy{}explain E0382\PYG{l+s+sb}{`}.
+error: could not compile \PYG{l+s+sb}{`}cons\PYGZhy{}list\PYG{l+s+sb}{`} due to previous error
+\end{Verbatim}

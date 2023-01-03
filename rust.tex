@@ -2449,22 +2449,58 @@ The style of doc comment \mintinline{rust}|//!| adds documentation to the item t
 \end{frame} 
 
 \begin{frame}[fragile]
-	\frametitle{Interior mutability with Cell}
+	\frametitle{Interior mutability with \mintinline{rust}|Cell|}
 	\inputminted[fontsize=\scriptsize]{rust}{./code/smart10.rs}
 \end{frame} 
 
 \begin{frame}[fragile]
-	\frametitle{Interior mutability with  RefCell}
-	A RefCell is another way to change values without needing to declare mut. It means "reference cell", and is like a Cell but uses references instead of copies.
+	\frametitle{Interior mutability with  \mintinline{rust}|RefCell| (reference cell) }
+	A \mintinline{rust}|RefCell| is like a \mintinline{rust}|Cell| but uses references instead of copies.
+	\inputminted[fontsize=\scriptsize]{rust}{./code/smart11.rs}
+\end{frame} 
+
+\begin{frame}[fragile]
+	\frametitle{Interior mutability example}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/smart12.rs}
+\end{frame} 
+
+\begin{frame}[fragile]
+	\frametitle{Reference Cycles Can Leak Memory}
+	Rust’s memory safety guarantees make it difficult, but not impossible, to accidentally \textbf{create memory that is never cleaned up} (known as a \textbf{memory leak}). 
+	\begin{itemize}
+		\item Preventing memory leaks entirely is not one of Rust’s guarantees, meaning \textbf{memory leaks are memory safe in Rust}. 
+	\end{itemize}
+
+	We can see that Rust allows memory leaks by using \mintinline{rust}|Rc<T>| and \mintinline{rust}|RefCell<T>|:\textbf{ it’s possible to create references where items refer to each other in a cycle}. This creates memory leaks because the reference count of each item in the cycle will never reach 0, and the values will never be dropped.
+\end{frame} 
+
+\begin{frame}[fragile]
+	\frametitle{Creating a Reference Cycle}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/smart13.rs}
+\end{frame} 
+
+\begin{frame}[fragile]
+	\frametitle{Creating a Reference Cycle (2)}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/smart14.rs}
 \end{frame} 
 
 
 \begin{frame}[fragile]
-	\frametitle{aaa}
+	\frametitle{Creating a Reference Cycle (3)}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.99\linewidth]{img/trpl15-04}
+	\end{figure}
 	
 \end{frame} 
 
 \section{Fearless Concurrency}
+
+\begin{frame}[fragile]
+	\frametitle{Creating a Reference Cycle}
+	
+\end{frame} 
+
 \section{Object-Oriented Programming Features of Rust}
 \section{Patterns and Matching}
 \section{Advanced Features}

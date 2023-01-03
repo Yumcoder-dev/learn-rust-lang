@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  1 JAN 2023 08:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  3 JAN 2023 17:25
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3988,20 +3988,385 @@ Package pdftex.def Info: img/workspace.png  used on input line 13.
 
  <./img/workspace.png>] [263
 
-] [264
+]
+\openout4 = `rust.vrb'.
 
-] [265
+ (./rust.vrb
+\openout6 = `rust.pyg'.
 
-] [266
 
-] [267
-
-] [268
+(./_minted-rust/9057F0A25694333E78EEC69CDE859DD7BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)) [264
 
 ]
-[269
+\openout4 = `rust.vrb'.
 
-] [270
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/550AD2DC9CE7C5CFF074CCCDBFB690DBBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/436C5ED0EC5A08D7D0DABAE4F916E97CBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/EA19432A3765C6D2603AD5442E304DE3BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/F713586845678649E9B1D719186F33B9BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/EA19432A3765C6D2603AD5442E304DE3BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/F713586845678649E9B1D719186F33B9BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/1EA806FA712A9A10AADE254430D949AABA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/D2015D277CCB585C67B60A9C8E0DDB8DBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/DC25D92C5726740A19088ABEDFE61B29BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/ADE71D03BA6A0F56BEEF24D86F1A9F1ABA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/A35941023D46A76B821CAE0BDE70A7BBBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)) [265
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/1EA806FA712A9A10AADE254430D949AABA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/1EA806FA712A9A10AADE254430D949AABA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex) [266
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/93E4482A2A7D758A8D2ED231734B20B663FD69010ABE01DF2D3C5BFD22A30C5
+3.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/1EA806FA712A9A10AADE254430D949AABA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex) [267
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/EC46F08B903F03C1BB4C0F2BF028D59C29920C14553EB73F2C194C2941E3785
+9.pygtex)) [268
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/B3136A962C78ED1216A17F6C0E30B9C0BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/EA19432A3765C6D2603AD5442E304DE3BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+(./_minted-rust/3F363695F473913D5D4340D16E8CAA2A2526DDB7297FFB08D92DF4E8224374B
+9.pygtex)
+(./_minted-rust/8909499CECDA415FFB2F83B2523BCE2D744EADEFAD9767C458CCDE817C094E5
+E.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/EA19432A3765C6D2603AD5442E304DE3BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex) [269
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/8AFFAE7896F230C50E7333E4E36672247348077571015ADE34E53A7D8B314AE
+5.pygtex))
+Overfull \vbox (2.0957pt too high) detected at line 2383
+ []
+
+[270
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/EA19432A3765C6D2603AD5442E304DE3BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/2F5635C49EDAE5D5A0F83F32CB153860BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/C8CD874A88CEA198A5781F0E9BB05358BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/EA19432A3765C6D2603AD5442E304DE3BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/C8CD874A88CEA198A5781F0E9BB05358BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+(./_minted-rust/1D3EEBCBA5AD7E17FF9073BFEB68D8956A4445092A59F2E474CF518FA90D48D
+8.pygtex)) [271
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/F713586845678649E9B1D719186F33B9BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+(./_minted-rust/F678B36EA8FF82358327300AD54092CD4AFFFDF6AB5FF73F2491CCBD270502F
+C.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/F713586845678649E9B1D719186F33B9BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+Overfull \vbox (10.29575pt too high) detected at line 2399
+ []
+
+[272
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/D2015D277CCB585C67B60A9C8E0DDB8DBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/D2015D277CCB585C67B60A9C8E0DDB8DBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/D2015D277CCB585C67B60A9C8E0DDB8DBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex) [273
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+<img/graph.png, id=7993, 529.22719pt x 190.46156pt>
+File: img/graph.png Graphic file (type png)
+<use img/graph.png>
+Package pdftex.def Info: img/graph.png  used on input line 4.
+(pdftex.def)             Requested size: 338.87422pt x 121.956pt.
+)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/D2015D277CCB585C67B60A9C8E0DDB8DBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex) [274
+
+ <./img/graph.png>]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/C78C7BD203AC459A73BAD7B2BE5072E67BF8CD9A61A61DEE5216CDC1772A868
+4.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/D2015D277CCB585C67B60A9C8E0DDB8DBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex) [275
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/95821B29FAB6835B107C35A2B3C2E28D761EED46561D9537C9E74AEE103A849
+8.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/D2015D277CCB585C67B60A9C8E0DDB8DBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex) [276
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/1DC62DFD3613B1EAB390A9CBF97D96C4A4E7AA594C05EB8E589AC7DF951AEDA
+0.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/D2015D277CCB585C67B60A9C8E0DDB8DBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex) [277
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/A35941023D46A76B821CAE0BDE70A7BBBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/A35941023D46A76B821CAE0BDE70A7BBBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex) [278
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/63335E9D1EF6818124D0C0E1B11D204E356D46382A3666923748FB9A25D9EFF
+8.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/F573ACDEC43A9433D8F375A133409336BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex) [279
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/4D1258AAF9722FAAE5D3880736694981BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/F573ACDEC43A9433D8F375A133409336BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+(./_minted-rust/A5878850007DDC77BBC1FCC638F10182D502A8304FA609FCDC91AD8B7B8C8DD
+2.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/4D1258AAF9722FAAE5D3880736694981BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex) [280
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/98E10EF0629AAD67C3C823FCA9E42A7022008199731E4D772CDD92003133370
+A.pygtex)) [281
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/D2015D277CCB585C67B60A9C8E0DDB8DBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/A35941023D46A76B821CAE0BDE70A7BBBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)) [282
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/3C24D9D0F9F0F64F2F5A0A9DA8DA1C335858A8720D191A221A10ED994A459B7
+5.pygtex)) [283
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/490AA95E91E6FB475BCE466D805FBF1E1B6815AA53777ACF733DF02E4E9BC96
+B.pygtex)) [284
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+<img/trpl15-04.png, id=8295, 732.48656pt x 400.49625pt>
+File: img/trpl15-04.png Graphic file (type png)
+<use img/trpl15-04.png>
+Package pdftex.def Info: img/trpl15-04.png  used on input line 4.
+(pdftex.def)             Requested size: 338.87422pt x 185.28772pt.
+) [285
+
+ <./img/trpl15-04.png>] [286
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb)
+[287
+
+] [288
+
+] [289
+
+] [290
+
+] [291
+
+] [292
+
+] [293
 
 ]
 \tf@nav=\write8
@@ -4023,10 +4388,10 @@ runsystem(rm rust.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 29275 strings out of 474968
- 703265 string characters out of 5776083
- 1002133 words of memory out of 5000000
- 47996 multiletter control sequences out of 15000+600000
+ 29643 strings out of 474968
+ 722549 string characters out of 5776083
+ 1021674 words of memory out of 5000000
+ 48135 multiletter control sequences out of 15000+600000
  484702 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,870b,1087s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -4046,10 +4411,10 @@ al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
 texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on rust.pdf (270 pages, 2124635 bytes).
+Output written on rust.pdf (293 pages, 2215608 bytes).
 PDF statistics:
- 8159 PDF objects out of 8907 (max. 8388607)
- 7552 compressed objects within 76 object streams
- 569 named destinations out of 1000 (max. 500000)
- 1431 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 8805 PDF objects out of 8907 (max. 8388607)
+ 8165 compressed objects within 82 object streams
+ 615 named destinations out of 1000 (max. 500000)
+ 1441 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{enum} \PYG{n+nc}{List}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Cons}\PYG{p}{(}\PYG{k+kt}{i32}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nb}{Box}\PYG{o}{\PYGZlt{}}\PYG{n}{List}\PYG{o}{\PYGZgt{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{Nil}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{use}\PYG{+w}{ }\PYG{k}{crate}::\PYG{n}{List}::\PYG{p}{\PYGZob{}}\PYG{n}{Cons}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Nil}\PYG{p}{\PYGZcb{};}
+
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{list}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Cons}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nb}{Box}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{Cons}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nb}{Box}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{Cons}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nb}{Box}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{Nil}\PYG{p}{))))));}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

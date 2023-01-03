@@ -12,9 +12,9 @@
 \beamer@sectionintoc {12}{Functional Language Features: Iterators and Closures}{234}{0}{12}
 \beamer@sectionintoc {13}{More About Cargo and Crates.io}{253}{0}{13}
 \beamer@sectionintoc {14}{Smart Pointers}{263}{0}{14}
-\beamer@sectionintoc {15}{Fearless Concurrency}{264}{0}{15}
-\beamer@sectionintoc {16}{Object-Oriented Programming Features of Rust}{265}{0}{16}
-\beamer@sectionintoc {17}{Patterns and Matching}{266}{0}{17}
-\beamer@sectionintoc {18}{Advanced Features}{267}{0}{18}
-\beamer@sectionintoc {19}{Multithread Web Server}{268}{0}{19}
-\beamer@sectionintoc {20}{Tokio}{269}{0}{20}
+\beamer@sectionintoc {15}{Fearless Concurrency}{286}{0}{15}
+\beamer@sectionintoc {16}{Object-Oriented Programming Features of Rust}{288}{0}{16}
+\beamer@sectionintoc {17}{Patterns and Matching}{289}{0}{17}
+\beamer@sectionintoc {18}{Advanced Features}{290}{0}{18}
+\beamer@sectionintoc {19}{Multithread Web Server}{291}{0}{19}
+\beamer@sectionintoc {20}{Tokio}{292}{0}{20}

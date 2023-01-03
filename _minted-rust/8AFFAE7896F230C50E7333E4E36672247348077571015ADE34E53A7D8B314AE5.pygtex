@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{ops}::\PYG{n}{Deref}\PYG{p}{;}
+\PYG{k}{struct} \PYG{n+nc}{MyBox}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{T}\PYG{p}{);}
+\PYG{k}{impl}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{MyBox}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{new}\PYG{p}{(}\PYG{n}{x}: \PYG{n+nc}{T}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{MyBox}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{MyBox}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{impl}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{Deref}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{MyBox}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{type} \PYG{n+nc}{Target}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{T}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{deref}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{Self}::\PYG{n}{Target}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{l+m+mi}{0}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{y}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{MyBox}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{x}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{n+nf+fm}{assert\PYGZus{}eq!}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n+nf+fm}{assert\PYGZus{}eq!}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{*}\PYG{n}{y}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// Rust actually ran this code: *(y.deref())}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

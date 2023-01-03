@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{enum} \PYG{n+nc}{List}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Cons}\PYG{p}{(}\PYG{k+kt}{i32}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Rc}\PYG{o}{\PYGZlt{}}\PYG{n}{List}\PYG{o}{\PYGZgt{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{Nil}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{use}\PYG{+w}{ }\PYG{k}{crate}::\PYG{n}{List}::\PYG{p}{\PYGZob{}}\PYG{n}{Cons}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Nil}\PYG{p}{\PYGZcb{};}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{rc}::\PYG{n}{Rc}\PYG{p}{;}
+
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Rc}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{Cons}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Rc}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{Cons}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Rc}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{Nil}\PYG{p}{)))));}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{b}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Cons}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Rc}::\PYG{n}{clone}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{a}\PYG{p}{));}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{c}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Cons}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Rc}::\PYG{n}{clone}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{a}\PYG{p}{));}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

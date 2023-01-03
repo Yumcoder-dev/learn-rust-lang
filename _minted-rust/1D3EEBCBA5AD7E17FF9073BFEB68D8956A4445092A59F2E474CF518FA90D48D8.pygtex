@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{hello}\PYG{p}{(}\PYG{n}{name}: \PYG{k+kp}{\PYGZam{}}\PYG{k+kt}{str}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Hello, \PYGZob{}name\PYGZcb{}!\PYGZdq{}}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{m}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{MyBox}::\PYG{n}{new}\PYG{p}{(}\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Rust\PYGZdq{}}\PYG{p}{));}
+\PYG{+w}{    }\PYG{n}{hello}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{m}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{struct} \PYG{n+nc}{NaiveRc}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{inner\PYGZus{}value}: \PYG{n+nc}{T}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{references}: \PYG{n+nc}{Cell}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{usize}\PYG{o}{\PYGZgt{}}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{impl}\PYG{o}{\PYGZlt{}}\PYG{n}{T}: \PYG{n+nb}{Clone}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n+nb}{Clone}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{NaiveRc}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// Clone trait signature accept a reference(\PYGZam{}self) as argument, so who we can change fields inside our Struct?}
+\PYG{+w}{    }\PYG{c+c1}{// Note that it does not accept a mutate/unique reference (\PYGZam{}mut)}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{clone}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{Self}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{c+c1}{// mutate references\PYGZsq{} value through self!}
+\PYG{+w}{        }\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{references}\PYG{p}{.}\PYG{n}{set}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{references}\PYG{p}{.}\PYG{n}{get}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{NaiveRc}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{inner\PYGZus{}value}: \PYG{n+nc}{self}\PYG{p}{.}\PYG{n}{inner\PYGZus{}value}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{(),}
+\PYG{+w}{            }\PYG{n}{references}: \PYG{n+nc}{self}\PYG{p}{.}\PYG{n}{references}\PYG{p}{.}\PYG{n}{clone}\PYG{p}{(),}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\end{Verbatim}

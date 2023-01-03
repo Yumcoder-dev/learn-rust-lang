@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Rc}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{Cons}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{RefCell}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{Rc}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{Nil}\PYG{p}{))));}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}a initial rc count = \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Rc}::\PYG{n}{strong\PYGZus{}count}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{a}\PYG{p}{));}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}a next item = \PYGZob{}:?\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{a}\PYG{p}{.}\PYG{n}{tail}\PYG{p}{());}
+
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{b}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Rc}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{Cons}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{RefCell}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{Rc}::\PYG{n}{clone}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{a}\PYG{p}{))));}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}a rc count after b creation = \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Rc}::\PYG{n}{strong\PYGZus{}count}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{a}\PYG{p}{));}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}b initial rc count = \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Rc}::\PYG{n}{strong\PYGZus{}count}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{b}\PYG{p}{));}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}b next item = \PYGZob{}:?\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{b}\PYG{p}{.}\PYG{n}{tail}\PYG{p}{());}
+
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nb}{Some}\PYG{p}{(}\PYG{n}{link}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{a}\PYG{p}{.}\PYG{n}{tail}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{o}{*}\PYG{n}{link}\PYG{p}{.}\PYG{n}{borrow\PYGZus{}mut}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Rc}::\PYG{n}{clone}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{b}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}b rc count after changing a = \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Rc}::\PYG{n}{strong\PYGZus{}count}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{b}\PYG{p}{));}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}a rc count after changing a = \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Rc}::\PYG{n}{strong\PYGZus{}count}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{a}\PYG{p}{));}
+
+\PYG{+w}{    }\PYG{c+c1}{// Uncomment the next line to see that we have a cycle;}
+\PYG{+w}{    }\PYG{c+c1}{// it will overflow the stack}
+\PYG{+w}{    }\PYG{c+c1}{// println!(\PYGZdq{}a next item = \PYGZob{}:?\PYGZcb{}\PYGZdq{}, a.tail());}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

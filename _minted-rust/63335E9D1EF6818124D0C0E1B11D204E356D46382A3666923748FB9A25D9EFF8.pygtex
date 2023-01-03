@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{cell}::\PYG{n}{Cell}\PYG{p}{;}
+
+\PYG{k}{struct} \PYG{n+nc}{PhoneModel}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{company\PYGZus{}name}: \PYG{n+nb}{String}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{model\PYGZus{}name}: \PYG{n+nb}{String}\PYG{p}{,}
+\PYG{+w}{    }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}\PYGZhy{} snip \PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{+w}{    }\PYG{n}{on\PYGZus{}sale}: \PYG{n+nc}{Cell}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{bool}\PYG{o}{\PYGZgt{}}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{super\PYGZus{}phone\PYGZus{}3000}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{PhoneModel}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{company\PYGZus{}name}: \PYG{l+s}{\PYGZdq{}YY Electronics\PYGZdq{}}\PYG{p}{.}\PYG{n}{to\PYGZus{}string}\PYG{p}{(),}
+\PYG{+w}{        }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}\PYGZhy{} snip \PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{+w}{        }\PYG{n}{on\PYGZus{}sale}: \PYG{n+nc}{Cell}::\PYG{n}{new}\PYG{p}{(}\PYG{k+kc}{true}\PYG{p}{),}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{};}
+
+\PYG{+w}{    }\PYG{n}{super\PYGZus{}phone\PYGZus{}3000}\PYG{p}{.}\PYG{n}{on\PYGZus{}sale}\PYG{p}{.}\PYG{n}{set}\PYG{p}{(}\PYG{k+kc}{false}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// mutability inside of something that is immutable}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

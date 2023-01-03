@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{k}{crate}::\PYG{n}{List}::\PYG{p}{\PYGZob{}}\PYG{n}{Cons}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Nil}\PYG{p}{\PYGZcb{};}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{cell}::\PYG{n}{RefCell}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{rc}::\PYG{n}{Rc}\PYG{p}{;}
+
+\PYG{c+cp}{\PYGZsh{}[derive(Debug)]}
+\PYG{k}{enum} \PYG{n+nc}{List}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Cons}\PYG{p}{(}\PYG{k+kt}{i32}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{RefCell}\PYG{o}{\PYGZlt{}}\PYG{n}{Rc}\PYG{o}{\PYGZlt{}}\PYG{n}{List}\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{Nil}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{List}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{tail}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{Option}\PYG{o}{\PYGZlt{}\PYGZam{}}\PYG{n}{RefCell}\PYG{o}{\PYGZlt{}}\PYG{n}{Rc}\PYG{o}{\PYGZlt{}}\PYG{n}{List}\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{match}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{Cons}\PYG{p}{(}\PYG{n}{\PYGZus{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{item}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nb}{Some}\PYG{p}{(}\PYG{n}{item}\PYG{p}{),}
+\PYG{+w}{            }\PYG{n}{Nil}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nb}{None}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\end{Verbatim}
