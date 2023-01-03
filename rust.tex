@@ -2365,7 +2365,15 @@ The style of doc comment \mintinline{rust}|//!| adds documentation to the item t
 \end{frame} 
 
 \begin{frame}[fragile]
-	\frametitle{aaa}
+	\frametitle{Implementing the Deref trait allows you to customize the behavior of the dereference operator *}
+	Implementing the Deref trait allows you to customize the behavior of the dereference operator *(not to be confused with the multiplication or glob operator).
+	
+	\begin{columns}
+		\column{0.5\textwidth}
+		\inputminted{rust}{./code/smart3.rs}
+		\column{0.5\textwidth}
+		\inputminted{rust}{./code/smart4.rs}
+	\end{columns}
 
 \end{frame} 
 
