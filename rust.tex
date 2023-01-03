@@ -2439,8 +2439,25 @@ The style of doc comment \mintinline{rust}|//!| adds documentation to the item t
 
 \begin{frame}[fragile]
 	\frametitle{\mintinline{rust}|RefCell<T>| and the Interior Mutability Pattern}
-	
+	\textbf{Interior mutability} is a \textbf{design pattern} in Rust that allows you \textbf{to mutate data even when there are immutable references to that data}.
+	normally, this action is disallowed by the borrowing rules. 
+	\begin{itemize}
+		\item To mutate data,\textbf{ the pattern uses unsafe code inside a data structure }to bend Rust’s usual rules that govern mutation and borrowing. 
+		\item Unsafe code indicates to the compiler that we’re checking the rules manually instead of relying on the compiler to check them for us.
+		\item \textbf{Enforcing Borrowing Rules at Runtim}e with \mintinline{rust}|RefCell<T>|.
+	\end{itemize}
 \end{frame} 
+
+\begin{frame}[fragile]
+	\frametitle{Interior mutability with Cell}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/smart10.rs}
+\end{frame} 
+
+\begin{frame}[fragile]
+	\frametitle{Interior mutability with  RefCell}
+	A RefCell is another way to change values without needing to declare mut. It means "reference cell", and is like a Cell but uses references instead of copies.
+\end{frame} 
+
 
 \begin{frame}[fragile]
 	\frametitle{aaa}
