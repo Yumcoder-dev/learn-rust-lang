@@ -2365,8 +2365,8 @@ The style of doc comment \mintinline{rust}|//!| adds documentation to the item t
 \end{frame} 
 
 \begin{frame}[fragile]
-	\frametitle{Implementing the Deref trait allows you to customize the behavior of the dereference operator *}
-	Implementing the Deref trait allows you to customize the behavior of the dereference operator *(not to be confused with the multiplication or glob operator).
+	\frametitle{Implementing the \mintinline{rust}|Deref| trait allows you to customize the behavior of the dereference operator *}
+	Implementing the Deref trait allows you to customize the behavior of the dereference operator \mintinline{rust}|*| (not to be confused with the multiplication or glob operator). By implementing \mintinline{rust}|Deref| in such a way that a smart pointer can be treated like a regular reference, you can write code that operates on references and use that code with smart pointers too.
 	
 	\begin{columns}
 		\column{0.5\textwidth}
@@ -2378,9 +2378,33 @@ The style of doc comment \mintinline{rust}|//!| adds documentation to the item t
 \end{frame} 
 
  \begin{frame}[fragile]
- 	\frametitle{aaa}
- 	
+ 	\frametitle{Defining Our Own Smart Pointer}
+ 	\inputminted[fontsize=\scriptsize]{rust}{./code/smart5.rs}
  \end{frame} 
+
+\begin{frame}[fragile]
+	\frametitle{Implicit Deref Coercions with Functions and Methods}
+	\textbf{Deref coercion} converts a reference to a type that implements the \mintinline{rust}|Deref| trait into a reference to another type. 
+	\begin{itemize}
+		\item For example, deref coercion can convert \mintinline{rust}|&String| to \mintinline{rust}|&str| because String implements the \mintinline{rust}|Deref| trait such that it returns \mintinline{rust}|&str|. 
+	\end{itemize}
+	\inputminted{rust}{./code/smart6.rs}
+\end{frame} 
+
+\begin{frame}[fragile]
+	\frametitle{Running Code on Cleanup with the  \mintinline{rust}|Drop| Trait}
+	The \mintinline{rust}|Drop| trait lets you customize what happens when a value is about to go out of scope.
+	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/smart7.rs}
+\end{frame} 
+
+
+
+\begin{frame}[fragile]
+	\frametitle{\mintinline{rust}|Rc<T>|, the Reference Counted Smart Pointer}
+	In the majority of cases, ownership is clear: you know exactly which variable owns a given value. However, there are cases when a single value might have multiple owners. For example, in graph data structures, multiple edges might point to the same node, and that node is conceptually owned by all of the edges that point to it. 
+	
+\end{frame} 
 
 \begin{frame}[fragile]
 	\frametitle{aaa}
