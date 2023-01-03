@@ -2303,6 +2303,82 @@ The style of doc comment \mintinline{rust}|//!| adds documentation to the item t
 \end{frame} 
 
 \section{Smart Pointers}
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Smart Pointers}
+	\begin{itemize}
+		\item A \textbf{pointer} is a general concept for a variable that contains an address in memory. 
+		\item 	The most common kind of pointer in Rust is a \textbf{reference}, which are indicated by the  \mintinline{rust}|&|  symbol and borrow the value they point to. 
+		\item 	\textbf{Smart pointers}, on the other hand, are \textbf{data structures} that act like a pointer but also have additional metadata and capabilities. The concept of smart pointers isn’t unique to Rust: smart pointers originated in C++ and exist in other languages as well.
+		\item 	Rust has a \textbf{variety of smart pointers} defined in the standard library that provide functionality beyond that provided by references.
+		\item 	Rust, with its concept of ownership and borrowing, has an additional difference between references and smart pointers: \textbf{while references only borrow data, in many cases, smart pointers own the data they point to}.
+	\end{itemize}
+\end{frame} 
+
+
+\begin{frame}[fragile]
+	\frametitle{Smart Pointers (2)}
+\begin{itemize}
+	\item  \mintinline{rust}|String| and \mintinline{rust}|Vec<T>| are types count as smart pointers because they own some memory and allow you to manipulate it. They also have metadata and extra capabilities or guarantees. 
+	\item  Smart pointers are usually implemented using structs. Unlike an ordinary struct, smart pointers implement the \mintinline{rust}|Deref| and \mintinline{rust}|Drop| traits. The \mintinline{rust}|Deref| trait allows an instance of the smart pointer struct to behave \textbf{like a reference} so you can write your code to work with either references or smart pointers. The \mintinline{rust}|Drop| trait allows you to customize the code that’s run when an instance of the smart pointer goes out of scope. 
+	\item  the most common smart pointers in the standard library:
+	\begin{itemize}
+		\item \mintinline{rust}|Box<T>| for allocating values on the heap
+		\item 	\mintinline{rust}|Rc<T>|, a reference counting type that enables multiple ownership
+		\item 	\mintinline{rust}|Ref<T>| and \mintinline{rust}|RefMut<T>|, accessed through \mintinline{rust}|RefCell<T>|, a type that enforces the borrowing rules at runtime instead of compile time
+	\end{itemize}
+\end{itemize}
+\end{frame} 
+
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Using \mintinline{rust}|Box<T>| to Point to Data on the Heap}
+	\begin{itemize}
+		\item The most straightforward smart pointer is a box, whose type is written \mintinline{rust}|Box<T>|. Boxes allow you to \textbf{store data on the heap} rather than the stack. \textbf{What remains on the stack is the pointer to the heap data}.
+		\item 	Boxes \textbf{don’t have performance overhead}, other than storing their data on the heap instead of on the stack. But they don’t have many extra capabilities either. You’ll use them most often in these situations:
+			\begin{itemize}
+			\item When you \textbf{have a type whose size can’t be known at compile time} and you \textbf{want to use a value of that type in a context that requires an exact size}
+			\item 	When you \textbf{have a large amount of data and you want to transfer ownership but ensure the data won’t be copied} when you do so
+			\item 	When you want to own a value and you care only that it’s a type that implements a particular trait rather than being of a specific type (known as a \textbf{trait object}, we learn later)
+		\end{itemize}
+	\end{itemize}
+
+\end{frame} 
+
+
+\begin{frame}[fragile]
+	\frametitle{Using a \mintinline{rust}|Box<T>| to Store Data on the Heap}
+	\inputminted{rust}{./code/smart1.rs}
+\end{frame} 
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Enabling Recursive Types with Boxes}
+	A value of recursive type can have another value of the same type as part of itself. Recursive types pose an issue because at compile time Rust needs to know how much space a type takes up. However, the nesting of values of recursive types could theoretically continue infinitely, so Rust can’t know how much space the value needs. Because boxes have a known \textbf{size}, we can enable recursive types.
+	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/smart2.rs}
+\end{frame} 
+
+\begin{frame}[fragile]
+	\frametitle{aaa}
+
+\end{frame} 
+
+ \begin{frame}[fragile]
+ 	\frametitle{aaa}
+ 	
+ \end{frame} 
+
+\begin{frame}[fragile]
+	\frametitle{aaa}
+	
+\end{frame} 
+
 \section{Fearless Concurrency}
 \section{Object-Oriented Programming Features of Rust}
 \section{Patterns and Matching}
