@@ -2496,15 +2496,91 @@ The style of doc comment \mintinline{rust}|//!| adds documentation to the item t
 
 \begin{frame}[fragile]
 	\frametitle{Preventing Reference Cycles: Turning an \mintinline{rust}|Rc<T>|  into a \mintinline{rust}|Weak<T>|}
-	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/smart15.rs}
 \end{frame} 
+
+
+\begin{frame}[fragile]
+	\frametitle{Adding a Reference from a Child to Its Parent}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/smart16.rs}
+\end{frame} 
+
 
 \section{Fearless Concurrency}
 
 \begin{frame}[fragile]
-	\frametitle{Creating a Reference Cycle}
-	
+	\frametitle{Fearless concurrency}
+	\begin{itemize}
+		\item Handling \textbf{concurrent programming safely and efficiently }is another of Rust’s major goals. 
+		\item \textbf{Concurrent programming}, where different parts of a program execute independently, and \textbf{parallel programming}, where different parts of a program execute at the same time, are becoming increasingly important as more computers take advantage of their multiple processors. 
+		\item 	Historically, \textbf{programming in these contexts has been difficult and error prone}: Rust hopes to change that.
+		\item \textbf{Fearless concurrency} allows you to write code that is \textbf{free of subtle bugs} and is easy to refactor without introducing new bugs.
+		Using Threads to Run Code Simultaneously
+	\item In most current operating systems, an executed program’s code is run in a \textbf{process}. Within a program, you can also have independent parts that run simultaneously. The features that run these independent parts are called \textbf{threads}. 
+	\end{itemize}
 \end{frame} 
+
+
+\begin{frame}[fragile]
+	\frametitle{Concurrent Programming Problems}
+\begin{itemize}
+	\item \textbf{Race conditions}, where threads are accessing data or resources in an inconsistent order
+	\item \textbf{Deadlocks}, where two threads are waiting for each other, preventing both threads from continuing
+	\item Bugs that happen only in certain situations and are \textbf{hard to reproduce} and fix reliably
+\end{itemize}
+
+Rust attempts to mitigate the negative effects of using threads.
+\end{frame} 
+
+\begin{frame}[fragile]
+	\frametitle{Creating a New Thread with spawn}
+	\inputminted{rust}{./code/thread1.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Using move Closures with Threads}
+	\inputminted{rust}{./code/thread2.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Using move Closures with Threads(2)}
+	\inputminted{shell}{./code/thread2.shell}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Using move Closures with Threads(3)}
+	A scenario that’s more likely to have a reference to \mintinline{rust}|v| that won’t be valid:
+	\inputminted{rust}{./code/thread3.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Using move Closures with Threads(4)}
+	\inputminted{rust}{./code/thread4.rs}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Using Message Passing to Transfer Data Between Threads}
+	\begin{itemize}
+		\item One increasingly \textbf{popular approach} to ensuring \textbf{safe concurrency} is \textbf{message passing}, where threads or actors communicate by sending each other messages containing data. 
+		\item 	From the \textbf{Go language} documentation: “\textbf{Do not communicate by sharing memory; instead, share memory by communicating}.”
+		\item 	To accomplish message-sending concurrency, Rust's standard library provides an implementation of channels. A \textbf{channel} is a general programming \textbf{concept by which data is sent from one thread to another}.
+		\item A channel has two halves: a transmitter and a receiver. 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Using Message Passing Example}
+	\inputminted{rust}{./code/thread5.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Channels and Ownership Transference}
+	\inputminted{rust}{./code/thread6.rs}
+\end{frame}
 
 \section{Object-Oriented Programming Features of Rust}
 \section{Patterns and Matching}
