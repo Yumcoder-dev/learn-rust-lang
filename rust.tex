@@ -2582,7 +2582,72 @@ Rust attempts to mitigate the negative effects of using threads.
 	\inputminted{rust}{./code/thread6.rs}
 \end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{Channels and Ownership Transference}
+	\inputminted{shell}{./code/thread6.shell}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Creating Multiple Producers by Cloning the Transmitter}
+	
+	
+	\begin{columns}
+		\column{0.5\textwidth}
+		\inputminted{rust}{./code/thread7.rs}
+		
+		\column{0.5\textwidth}
+		\inputminted[firstnumber=15]{rust}{./code/thread8.rs}
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Shared-State Concurrency}
+	\begin{itemize}
+		\item \textbf{Message passing} is a fine way of handling concurrency, but\textbf{ it’s not the only one}. Another method would be for multiple \textbf{threads to access the same shared data}.
+		\item 	In a way, \textbf{channels} in any programming language are \textbf{similar to single ownership}, because once you transfer a value down a channel, you should no longer use that value. \textbf{Shared memory} concurrency is like \textbf{multiple ownership}: multiple threads can access the same memory location at the same time. 
+	\end{itemize}
+\end{frame}
+
+
 \section{Object-Oriented Programming Features of Rust}
+
+\begin{frame}[fragile]
+	\frametitle{Objects Contain Data and Behavior}
+	 \begin{block}{The book Design Patterns (The Gang of Four): }
+		Object-oriented programs are made up of objects. An object packages both \textbf{data} and the \textbf{procedures that operate on that data}. The procedures are typically called methods or operations.
+	\end{block}
+	
+	\begin{itemize}
+		\item Using this definition, \textbf{Rust is object-oriented}: structs and enums have data, and impl blocks provide methods on structs and enums.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Inheritance}
+
+	\begin{itemize}
+		\item 	Inheritance is a mechanism whereby an object can inherit elements from another object’s definition, thus gaining the parent object’s data and behavior without you having to define them again.
+		\begin{itemize}
+			\item 	If a language must have inheritance to be an object-oriented language, then \textbf{Rust is not one}.
+			\item 	You can do this in a limited way in Rust code using default trait method implementations.
+		\end{itemize}
+	
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Encapsulation}
+	
+	\begin{itemize}
+		\item 	Another aspect commonly associated with OOP is the idea of encapsulation, which means that the implementation details of an object aren’t accessible to code using that object.
+	\end{itemize}
+\end{frame}
+
+	
 \section{Patterns and Matching}
 \section{Advanced Features}
 \section{Multithread Web Server}
