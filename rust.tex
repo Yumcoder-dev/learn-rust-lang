@@ -2693,6 +2693,37 @@ Rust attempts to mitigate the negative effects of using threads.
 
 
 \section{Patterns and Matching}
+
+
+\begin{frame}[fragile]
+	\frametitle{Patterns}
+	\begin{itemize}
+		\item Using \textbf{patterns} in conjunction with match expressions and other constructs gives you more control over a program’s control flow.
+		\item 	Some example patterns include \mintinline{rust}|x|, \mintinline{rust}|(a, 3)|, and \mintinline{rust}|Some(Color::Red)|. In the contexts in which patterns are valid, these components describe the shape of data. 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Patterns in match Arms}
+	\inputminted{rust}{./code/match1.rs}
+	
+	\begin{itemize}
+		\item The patterns in this match expression are the None and Some(i) on the left of each arrow.
+		\item 	One requirement for match expressions is that they need to be exhaustive in the sense that all possibilities for the value in the match expression must be accounted for.
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Patterns in Conditional if let Expressions}
+	\inputminted{rust}{./code/pattern1.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Patterns in while and for}
+	\inputminted{rust}{./code/pattern2.rs}
+\end{frame}
+
 \section{Advanced Features}
 \section{Multithread Web Server}
 \section{Tokio}
