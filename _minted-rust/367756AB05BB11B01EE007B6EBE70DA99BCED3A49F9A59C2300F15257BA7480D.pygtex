@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{struct} \PYG{n+nc}{Point}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{x}: \PYG{k+kt}{i32}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{y}: \PYG{k+kt}{i32}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{z}: \PYG{k+kt}{i32}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{origin}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Point}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{x}: \PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y}: \PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{z}: \PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{p}{\PYGZcb{};}
+\PYG{k}{match}\PYG{+w}{ }\PYG{n}{origin}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Point}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{..}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}x is \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{),}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{numbers}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{16}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{32}\PYG{p}{);}
+\PYG{k}{match}\PYG{+w}{ }\PYG{n}{numbers}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{p}{(}\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{..}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Some numbers: \PYGZob{}first\PYGZcb{}, \PYGZob{}last\PYGZcb{}\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

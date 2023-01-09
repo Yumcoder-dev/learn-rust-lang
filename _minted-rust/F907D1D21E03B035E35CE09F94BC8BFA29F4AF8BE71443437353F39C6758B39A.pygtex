@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{p}{((}\PYG{n}{feet}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{inches}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{Point}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y}\PYG{+w}{ }\PYG{p}{\PYGZcb{})}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{((}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{Point}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{x}: \PYG{l+m+mi}{3}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y}: \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{10}\PYG{+w}{ }\PYG{p}{\PYGZcb{});}
+\end{Verbatim}

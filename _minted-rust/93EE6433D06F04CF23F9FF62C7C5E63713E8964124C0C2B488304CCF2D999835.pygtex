@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}
+\PYG{k}{match}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{l+m+mi}{1}\PYG{o}{..=}\PYG{l+m+mi}{5}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}one through five\PYGZdq{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}something else\PYGZdq{}}\PYG{p}{),}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sc}{\PYGZsq{}c\PYGZsq{}}\PYG{p}{;}
+\PYG{k}{match}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{l+s+sc}{\PYGZsq{}a\PYGZsq{}}\PYG{o}{..=}\PYG{l+s+sc}{\PYGZsq{}j\PYGZsq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}early ASCII letter\PYGZdq{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{l+s+sc}{\PYGZsq{}k\PYGZsq{}}\PYG{o}{..=}\PYG{l+s+sc}{\PYGZsq{}z\PYGZsq{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}late ASCII letter\PYGZdq{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{n}{\PYGZus{}}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}something else\PYGZdq{}}\PYG{p}{),}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
