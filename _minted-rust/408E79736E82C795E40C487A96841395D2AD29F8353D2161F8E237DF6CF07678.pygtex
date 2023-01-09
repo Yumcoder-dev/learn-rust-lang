@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo run
+   Compiling message\PYGZhy{}passing v0.1.0 \PYG{o}{(}file:///projects/message\PYGZhy{}passing\PYG{o}{)}
+error\PYG{o}{[}E0382\PYG{o}{]}: borrow of moved value: \PYG{l+s+sb}{`}val\PYG{l+s+sb}{`}
+  \PYGZhy{}\PYGZhy{}\PYGZgt{} src/main.rs:10:31
+   \PYG{p}{|}
+\PYG{l+m}{8}  \PYG{p}{|}         \PYG{n+nb}{let} \PYG{n+nv}{val} \PYG{o}{=} String::from\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}hi\PYGZdq{}}\PYG{o}{)}\PYG{p}{;}
+   \PYG{p}{|}             \PYGZhy{}\PYGZhy{}\PYGZhy{} move occurs because \PYG{l+s+sb}{`}val\PYG{l+s+sb}{`} has \PYG{n+nb}{type} \PYG{l+s+sb}{`}String\PYG{l+s+sb}{`}, which does not implement the \PYG{l+s+sb}{`}Copy\PYG{l+s+sb}{`} trait
+\PYG{l+m}{9}  \PYG{p}{|}         tx.send\PYG{o}{(}val\PYG{o}{)}.unwrap\PYG{o}{()}\PYG{p}{;}
+   \PYG{p}{|}                 \PYGZhy{}\PYGZhy{}\PYGZhy{} value moved here
+\PYG{l+m}{10} \PYG{p}{|}         println!\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}val is \PYGZob{}\PYGZcb{}\PYGZdq{}}, val\PYG{o}{)}\PYG{p}{;}
+   \PYG{p}{|}                               \PYGZca{}\PYGZca{}\PYGZca{} value borrowed here after move
+   \PYG{p}{|}
+   \PYG{o}{=} note: this error originates \PYG{k}{in} the macro \PYG{l+s+sb}{`}\PYG{n+nv}{\PYGZdl{}crate}::format\PYGZus{}args\PYGZus{}nl\PYG{l+s+sb}{`} \PYG{o}{(}\PYG{k}{in} Nightly builds, run with \PYGZhy{}Z macro\PYGZhy{}backtrace \PYG{k}{for} more info\PYG{o}{)}
+\end{Verbatim}

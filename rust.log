@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  3 JAN 2023 17:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  9 JAN 2023 20:15
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -4341,32 +4341,219 @@ B.pygtex)) [284
 \openout4 = `rust.vrb'.
 
  (./rust.vrb
-<img/trpl15-04.png, id=8295, 732.48656pt x 400.49625pt>
+<img/trpl15-04.png, id=8297, 732.48656pt x 400.49625pt>
 File: img/trpl15-04.png Graphic file (type png)
 <use img/trpl15-04.png>
 Package pdftex.def Info: img/trpl15-04.png  used on input line 4.
 (pdftex.def)             Requested size: 338.87422pt x 185.28772pt.
 ) [285
 
- <./img/trpl15-04.png>] [286
+ <./img/trpl15-04.png>]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/37114F85A39F9615778A327C546EB4ADBF2C1741FCCA9E17C2F8A0F326649D1
+7.pygtex))
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/D2015D277CCB585C67B60A9C8E0DDB8DBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/61C8E67A2F99E3CE3E9E7C6F4C5D47BABA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+Overfull \vbox (1.09573pt too high) detected at line 2500
+ []
+
+[286
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/91434689BDF8AD7D985D3725051F43D90319AE78D5BEFFA17A4837877839FE4
+7.pygtex))
+Overfull \vbox (11.59569pt too high) detected at line 2506
+ []
+
+[287
+
+] [288
 
 ]
 \openout4 = `rust.vrb'.
 
  (./rust.vrb)
-[287
+Overfull \vbox (1.72528pt too high) detected at line 2521
+ []
 
-] [288
+[289
 
-] [289
+]
+\openout4 = `rust.vrb'.
 
-] [290
+ (./rust.vrb) [290
 
-] [291
+]
+\openout4 = `rust.vrb'.
 
-] [292
+ (./rust.vrb
+(./_minted-rust/514B6C1CBC65B3F8A0E7493F5AC8D1B746293D9E7FB0E58C2DCCBBD9928C643
+1.pygtex))
+Overfull \vbox (0.59602pt too high) detected at line 2538
+ []
 
-] [293
+[291
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/0EDBF440A93B9F067CBB4FEECAC9F1712765FCB86098CA6F9EFFF4904DE081F
+3.pygtex)) [292
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/5BED392F32BFA66C7A26A3F07211126BC71E7DDC18F7DDEC26167C8C83A9D7D
+5.pygtex))
+Overfull \vbox (66.59602pt too high) detected at line 2549
+ []
+
+[293
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/E734A88A1110FA3D657454B2DD348822BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+(./_minted-rust/13831295B98A025FD56C1C03980A48A951FCF25B9C8E08DCCF39CF1A0032414
+F.pygtex)) [294
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/13831295B98A025FD56C1C03980A48A9488D93D3805C785761A46559CF30596
+6.pygtex)) [295
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [296
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/5B9DC9AC2F273621C692C69059EE0C16621BF52AB947CB8A0AE011F2FDD9F9C
+2.pygtex))
+Overfull \vbox (0.59602pt too high) detected at line 2577
+ []
+
+[297
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/4056A5F816EE81F2EED79AE6F1DCFAA574C73E5319DDE927510D49ED2F68D22
+8.pygtex)) [298
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/408E79736E82C795E40C487A96841395D2AD29F8353D2161F8E237DF6CF0767
+8.pygtex)) [299
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/76B41A4A73046072644131B3785FA4E89ACBDB62FE1C9387F4652687ADBEF3C
+F.pygtex)
+(./_minted-rust/ECB5337FB8C4FDC6DB119A95804689AE70B4C6B358F5FD7C8D8953A09607C2F
+E.pygtex)) [300
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [301
+
+] [302
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [303
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/ED055CA2729DB2BE26CD8251331B760B3FB46D0EB4AA2CC70E93B0C747BE340
+6.pygtex)
+(./_minted-rust/B288164F3F9AF3B0A441B83E74203ACC0DE05007BF86CFD248DE365B890CB3C
+A.pygtex)) [304
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [305
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/AC8BC4A974869A1EA92B7FFC3E101BC0D7B9CD7D39199DEB4924520E75E0070
+B.pygtex))
+Overfull \vbox (2.0957pt too high) detected at line 2666
+ []
+
+[306
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/B7243D2DDE379D05C7A8C86589D2251D81AF6A10865CA8A782A23491E97617F
+A.pygtex)
+(./_minted-rust/1CEF5EF42F564FCE9DCEBBBBB90A993895E74AADE7CCE5C52DBB8331B275E74
+A.pygtex)) [307
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/1400DD83DB0F5AC7D25D6F96BE6E97072AF9BE82E0BB8825C9B489C30B84260
+9.pygtex))
+Overfull \vbox (1.09573pt too high) detected at line 2683
+ []
+
+[308
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [309
+
+] [310
+
+] [311
+
+] [312
+
+] [313
+
+] [314
 
 ]
 \tf@nav=\write8
@@ -4388,10 +4575,10 @@ runsystem(rm rust.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 29643 strings out of 474968
- 722549 string characters out of 5776083
- 1021674 words of memory out of 5000000
- 48135 multiletter control sequences out of 15000+600000
+ 29900 strings out of 474968
+ 734202 string characters out of 5776083
+ 1034207 words of memory out of 5000000
+ 48246 multiletter control sequences out of 15000+600000
  484702 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,870b,1087s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -4411,10 +4598,10 @@ al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
 texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on rust.pdf (293 pages, 2215608 bytes).
+Output written on rust.pdf (314 pages, 2273235 bytes).
 PDF statistics:
- 8805 PDF objects out of 8907 (max. 8388607)
- 8165 compressed objects within 82 object streams
- 615 named destinations out of 1000 (max. 500000)
- 1441 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 9404 PDF objects out of 10688 (max. 8388607)
+ 8731 compressed objects within 88 object streams
+ 657 named destinations out of 1000 (max. 500000)
+ 1477 words of extra memory for PDF output out of 10000 (max. 10000000)
 

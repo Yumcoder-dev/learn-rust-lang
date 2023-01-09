@@ -610,45 +610,87 @@
 \headcommand {\beamer@framepages {284}{284}}
 \headcommand {\slideentry {14}{0}{23}{285/285}{}{0}}
 \headcommand {\beamer@framepages {285}{285}}
-\headcommand {\beamer@sectionpages {263}{285}}
-\headcommand {\beamer@subsectionpages {263}{285}}
-\headcommand {\sectionentry {15}{Fearless Concurrency}{286}{Fearless Concurrency}{0}}
-\headcommand {\slideentry {15}{0}{1}{286/286}{}{0}}
+\headcommand {\slideentry {14}{0}{24}{286/286}{}{0}}
 \headcommand {\beamer@framepages {286}{286}}
-\headcommand {\slideentry {15}{0}{2}{287/287}{}{0}}
+\headcommand {\slideentry {14}{0}{25}{287/287}{}{0}}
 \headcommand {\beamer@framepages {287}{287}}
-\headcommand {\beamer@sectionpages {286}{287}}
-\headcommand {\beamer@subsectionpages {286}{287}}
-\headcommand {\sectionentry {16}{Object-Oriented Programming Features of Rust}{288}{Object-Oriented Programming Features of Rust}{0}}
-\headcommand {\slideentry {16}{0}{1}{288/288}{}{0}}
+\headcommand {\beamer@sectionpages {263}{287}}
+\headcommand {\beamer@subsectionpages {263}{287}}
+\headcommand {\sectionentry {15}{Fearless Concurrency}{288}{Fearless Concurrency}{0}}
+\headcommand {\slideentry {15}{0}{1}{288/288}{}{0}}
 \headcommand {\beamer@framepages {288}{288}}
-\headcommand {\beamer@sectionpages {288}{288}}
-\headcommand {\beamer@subsectionpages {288}{288}}
-\headcommand {\sectionentry {17}{Patterns and Matching}{289}{Patterns and Matching}{0}}
-\headcommand {\slideentry {17}{0}{1}{289/289}{}{0}}
+\headcommand {\slideentry {15}{0}{2}{289/289}{}{0}}
 \headcommand {\beamer@framepages {289}{289}}
-\headcommand {\beamer@sectionpages {289}{289}}
-\headcommand {\beamer@subsectionpages {289}{289}}
-\headcommand {\sectionentry {18}{Advanced Features}{290}{Advanced Features}{0}}
-\headcommand {\slideentry {18}{0}{1}{290/290}{}{0}}
+\headcommand {\slideentry {15}{0}{3}{290/290}{}{0}}
 \headcommand {\beamer@framepages {290}{290}}
-\headcommand {\beamer@sectionpages {290}{290}}
-\headcommand {\beamer@subsectionpages {290}{290}}
-\headcommand {\sectionentry {19}{Multithread Web Server}{291}{Multithread Web Server}{0}}
-\headcommand {\slideentry {19}{0}{1}{291/291}{}{0}}
+\headcommand {\slideentry {15}{0}{4}{291/291}{}{0}}
 \headcommand {\beamer@framepages {291}{291}}
-\headcommand {\beamer@sectionpages {291}{291}}
-\headcommand {\beamer@subsectionpages {291}{291}}
-\headcommand {\sectionentry {20}{Tokio}{292}{Tokio}{0}}
-\headcommand {\slideentry {20}{0}{1}{292/292}{}{0}}
+\headcommand {\slideentry {15}{0}{5}{292/292}{}{0}}
 \headcommand {\beamer@framepages {292}{292}}
-\headcommand {\beamer@sectionpages {292}{292}}
-\headcommand {\beamer@subsectionpages {292}{292}}
-\headcommand {\sectionentry {21}{Acknowledgement}{293}{Acknowledgement}{0}}
-\headcommand {\slideentry {21}{0}{1}{293/293}{}{0}}
+\headcommand {\slideentry {15}{0}{6}{293/293}{}{0}}
 \headcommand {\beamer@framepages {293}{293}}
-\headcommand {\beamer@partpages {1}{293}}
-\headcommand {\beamer@subsectionpages {293}{293}}
-\headcommand {\beamer@sectionpages {293}{293}}
-\headcommand {\beamer@documentpages {293}}
-\headcommand {\gdef \inserttotalframenumber {293}}
+\headcommand {\slideentry {15}{0}{7}{294/294}{}{0}}
+\headcommand {\beamer@framepages {294}{294}}
+\headcommand {\slideentry {15}{0}{8}{295/295}{}{0}}
+\headcommand {\beamer@framepages {295}{295}}
+\headcommand {\slideentry {15}{0}{9}{296/296}{}{0}}
+\headcommand {\beamer@framepages {296}{296}}
+\headcommand {\slideentry {15}{0}{10}{297/297}{}{0}}
+\headcommand {\beamer@framepages {297}{297}}
+\headcommand {\slideentry {15}{0}{11}{298/298}{}{0}}
+\headcommand {\beamer@framepages {298}{298}}
+\headcommand {\slideentry {15}{0}{12}{299/299}{}{0}}
+\headcommand {\beamer@framepages {299}{299}}
+\headcommand {\slideentry {15}{0}{13}{300/300}{}{0}}
+\headcommand {\beamer@framepages {300}{300}}
+\headcommand {\slideentry {15}{0}{14}{301/301}{}{0}}
+\headcommand {\beamer@framepages {301}{301}}
+\headcommand {\beamer@sectionpages {288}{301}}
+\headcommand {\beamer@subsectionpages {288}{301}}
+\headcommand {\sectionentry {16}{Object-Oriented Programming Features of Rust}{302}{Object-Oriented Programming Features of Rust}{0}}
+\headcommand {\slideentry {16}{0}{1}{302/302}{}{0}}
+\headcommand {\beamer@framepages {302}{302}}
+\headcommand {\slideentry {16}{0}{2}{303/303}{}{0}}
+\headcommand {\beamer@framepages {303}{303}}
+\headcommand {\slideentry {16}{0}{3}{304/304}{}{0}}
+\headcommand {\beamer@framepages {304}{304}}
+\headcommand {\slideentry {16}{0}{4}{305/305}{}{0}}
+\headcommand {\beamer@framepages {305}{305}}
+\headcommand {\slideentry {16}{0}{5}{306/306}{}{0}}
+\headcommand {\beamer@framepages {306}{306}}
+\headcommand {\slideentry {16}{0}{6}{307/307}{}{0}}
+\headcommand {\beamer@framepages {307}{307}}
+\headcommand {\slideentry {16}{0}{7}{308/308}{}{0}}
+\headcommand {\beamer@framepages {308}{308}}
+\headcommand {\slideentry {16}{0}{8}{309/309}{}{0}}
+\headcommand {\beamer@framepages {309}{309}}
+\headcommand {\beamer@sectionpages {302}{309}}
+\headcommand {\beamer@subsectionpages {302}{309}}
+\headcommand {\sectionentry {17}{Patterns and Matching}{310}{Patterns and Matching}{0}}
+\headcommand {\slideentry {17}{0}{1}{310/310}{}{0}}
+\headcommand {\beamer@framepages {310}{310}}
+\headcommand {\beamer@sectionpages {310}{310}}
+\headcommand {\beamer@subsectionpages {310}{310}}
+\headcommand {\sectionentry {18}{Advanced Features}{311}{Advanced Features}{0}}
+\headcommand {\slideentry {18}{0}{1}{311/311}{}{0}}
+\headcommand {\beamer@framepages {311}{311}}
+\headcommand {\beamer@sectionpages {311}{311}}
+\headcommand {\beamer@subsectionpages {311}{311}}
+\headcommand {\sectionentry {19}{Multithread Web Server}{312}{Multithread Web Server}{0}}
+\headcommand {\slideentry {19}{0}{1}{312/312}{}{0}}
+\headcommand {\beamer@framepages {312}{312}}
+\headcommand {\beamer@sectionpages {312}{312}}
+\headcommand {\beamer@subsectionpages {312}{312}}
+\headcommand {\sectionentry {20}{Tokio}{313}{Tokio}{0}}
+\headcommand {\slideentry {20}{0}{1}{313/313}{}{0}}
+\headcommand {\beamer@framepages {313}{313}}
+\headcommand {\beamer@sectionpages {313}{313}}
+\headcommand {\beamer@subsectionpages {313}{313}}
+\headcommand {\sectionentry {21}{Acknowledgement}{314}{Acknowledgement}{0}}
+\headcommand {\slideentry {21}{0}{1}{314/314}{}{0}}
+\headcommand {\beamer@framepages {314}{314}}
+\headcommand {\beamer@partpages {1}{314}}
+\headcommand {\beamer@subsectionpages {314}{314}}
+\headcommand {\beamer@sectionpages {314}{314}}
+\headcommand {\beamer@documentpages {314}}
+\headcommand {\gdef \inserttotalframenumber {314}}

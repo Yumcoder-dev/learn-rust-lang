@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cp}{\PYGZsh{}[derive(Debug)]}
+\PYG{k}{struct} \PYG{n+nc}{Node}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{value}: \PYG{k+kt}{i32}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{parent}: \PYG{n+nc}{RefCell}\PYG{o}{\PYGZlt{}}\PYG{n}{Weak}\PYG{o}{\PYGZlt{}}\PYG{n}{Node}\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{children}: \PYG{n+nc}{RefCell}\PYG{o}{\PYGZlt{}}\PYG{n+nb}{Vec}\PYG{o}{\PYGZlt{}}\PYG{n}{Rc}\PYG{o}{\PYGZlt{}}\PYG{n}{Node}\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{leaf}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Rc}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{Node}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{value}: \PYG{l+m+mi}{3}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{parent}: \PYG{n+nc}{RefCell}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{Weak}::\PYG{n}{new}\PYG{p}{()),}
+\PYG{+w}{        }\PYG{n}{children}: \PYG{n+nc}{RefCell}::\PYG{n}{new}\PYG{p}{(}\PYG{n+nf+fm}{vec!}\PYG{p}{[]),}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{});}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}leaf parent = \PYGZob{}:?\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{leaf}\PYG{p}{.}\PYG{n}{parent}\PYG{p}{.}\PYG{n}{borrow}\PYG{p}{().}\PYG{n}{upgrade}\PYG{p}{());}
+
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{branch}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Rc}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{Node}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{value}: \PYG{l+m+mi}{5}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{parent}: \PYG{n+nc}{RefCell}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{Weak}::\PYG{n}{new}\PYG{p}{()),}
+\PYG{+w}{        }\PYG{n}{children}: \PYG{n+nc}{RefCell}::\PYG{n}{new}\PYG{p}{(}\PYG{n+nf+fm}{vec!}\PYG{p}{[}\PYG{n}{Rc}::\PYG{n}{clone}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{leaf}\PYG{p}{)]),}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{});}
+\PYG{+w}{    }\PYG{o}{*}\PYG{n}{leaf}\PYG{p}{.}\PYG{n}{parent}\PYG{p}{.}\PYG{n}{borrow\PYGZus{}mut}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Rc}::\PYG{n}{downgrade}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{branch}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}leaf parent = \PYGZob{}:?\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{leaf}\PYG{p}{.}\PYG{n}{parent}\PYG{p}{.}\PYG{n}{borrow}\PYG{p}{().}\PYG{n}{upgrade}\PYG{p}{());}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

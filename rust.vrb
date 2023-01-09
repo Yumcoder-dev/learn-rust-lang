@@ -1,2 +1,5 @@
-\frametitle{Creating a Reference Cycle}
-	
+\frametitle{Trait Objects Perform Dynamic Dispatch}
+	\begin{itemize}
+		\item  In the “Performance of Code Using Generics”, the monomorphization process performed by the \textbf{compiler} when we use \textbf{trait bounds on generics}: the compiler generates nongeneric implementations of functions and methods for each concrete type that we use in place of a generic type parameter. The code that results from monomorphization is doing \textbf{static dispatch}, which is when the compiler knows what method you’re calling at compile time (\textbf{faster}).
+		\item 	 This is opposed to \textbf{dynamic dispatch}, which is when the compiler can’t tell at compile time which method you’re calling. In dynamic dispatch cases, the compiler emits code that at \textbf{runtime} will figure out which method to call (extra \textbf{flexibility}).
+	\end{itemize}

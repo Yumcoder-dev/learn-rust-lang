@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{// data structure}
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{struct} \PYG{n+nc}{AveragedCollection}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{list}: \PYG{n+nb}{Vec}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{i32}\PYG{o}{\PYGZgt{}}\PYG{p}{,}\PYG{+w}{ }\PYG{c+c1}{// private}
+\PYG{+w}{    }\PYG{n}{average}: \PYG{k+kt}{f64}\PYG{p}{,}\PYG{+w}{   }\PYG{c+c1}{// private}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

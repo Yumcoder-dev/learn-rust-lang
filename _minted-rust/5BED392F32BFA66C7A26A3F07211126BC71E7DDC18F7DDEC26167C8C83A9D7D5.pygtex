@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo run
+   Compiling threads v0.1.0 \PYG{o}{(}file:///projects/threads\PYG{o}{)}
+error\PYG{o}{[}E0373\PYG{o}{]}: closure may outlive the current \PYG{k}{function}, but it borrows \PYG{l+s+sb}{`}v\PYG{l+s+sb}{`}, which is owned by the current \PYG{k}{function}
+ \PYGZhy{}\PYGZhy{}\PYGZgt{} src/main.rs:6:32
+  \PYG{p}{|}
+\PYG{l+m}{6} \PYG{p}{|}     \PYG{n+nb}{let} \PYG{n+nv}{handle} \PYG{o}{=} thread::spawn\PYG{o}{(||} \PYG{o}{\PYGZob{}}
+  \PYG{p}{|}                                \PYGZca{}\PYGZca{} may outlive borrowed value \PYG{l+s+sb}{`}v\PYG{l+s+sb}{`}
+\PYG{l+m}{7} \PYG{p}{|}         println!\PYG{o}{(}\PYG{l+s+s2}{\PYGZdq{}Here\PYGZsq{}s a vector: \PYGZob{}:?\PYGZcb{}\PYGZdq{}}, v\PYG{o}{)}\PYG{p}{;}
+  \PYG{p}{|}                                           \PYGZhy{} \PYG{l+s+sb}{`}v\PYG{l+s+sb}{`} is borrowed here
+  \PYG{p}{|}
+note: \PYG{k}{function} requires argument \PYG{n+nb}{type} to outlive \PYG{l+s+sb}{`}\PYG{l+s+s1}{\PYGZsq{}static`}
+\PYG{l+s+s1}{ \PYGZhy{}\PYGZhy{}\PYGZgt{} src/main.rs:6:18}
+\PYG{l+s+s1}{  |}
+\PYG{l+s+s1}{6 |       let handle = thread::spawn(|| \PYGZob{}}
+\PYG{l+s+s1}{  |  \PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZca{}}
+\PYG{l+s+s1}{7 | |         println!(\PYGZdq{}Here\PYGZsq{}}s a vector: \PYG{o}{\PYGZob{}}:?\PYG{o}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}, v);}
+\PYG{l+s+s2}{8 | |     \PYGZcb{});}
+\PYG{l+s+s2}{  | |\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZca{}}
+\PYG{l+s+s2}{help: to force the closure to take ownership of `v` (and any other referenced variables), use the `move` keyword}
+\PYG{l+s+s2}{  |}
+\PYG{l+s+s2}{6 |     let handle = thread::spawn(move || \PYGZob{}}
+\PYG{l+s+s2}{  |                                ++++}
+\end{Verbatim}
