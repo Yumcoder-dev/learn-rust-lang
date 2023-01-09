@@ -2632,7 +2632,7 @@ Rust attempts to mitigate the negative effects of using threads.
 		\item 	Inheritance is a mechanism whereby an object can inherit elements from another object’s definition, thus gaining the parent object’s data and behavior without you having to define them again.
 		\begin{itemize}
 			\item 	If a language must have inheritance to be an object-oriented language, then \textbf{Rust is not one}.
-			\item 	You can do this in a limited way in Rust code using default trait method implementations.
+			\item 	You can do this in a \textbf{limited way} in Rust code using default \textbf{trait} method implementations.
 		\end{itemize}
 	
 	\end{itemize}
@@ -2640,11 +2640,20 @@ Rust attempts to mitigate the negative effects of using threads.
 
 
 \begin{frame}[fragile]
-	\frametitle{Encapsulation}
+	\frametitle{Encapsulation that Hides Implementation Details}
 	
 	\begin{itemize}
 		\item 	Another aspect commonly associated with OOP is the idea of encapsulation, which means that the implementation details of an object aren’t accessible to code using that object.
+		\item  Therefore, the only way to interact with an object is through its \textbf{public} API.
 	\end{itemize}
+
+\begin{columns}
+	\column{0.5\textwidth}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/oop1.rs}
+	\column{0.5\textwidth}
+	\inputminted[firstnumber=15, fontsize=\scriptsize]{rust}{./code/oop2.rs}
+\end{columns}
+
 \end{frame}
 
 	
