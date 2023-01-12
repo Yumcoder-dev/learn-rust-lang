@@ -49,8 +49,8 @@
 \author[Yumcoder]{Yumcoder}
 
 \institute[UoT]{University of Toronto}
-\date[{\today} ]
-{\today}
+\date[December 1, 2022]
+{ \tiny Updated At: \small \today}
 %------------------------------------------------------------
 %This block of commands puts the table of contents at the 
 %beginning of each section and highlights the current section:
@@ -2827,6 +2827,263 @@ Rust attempts to mitigate the negative effects of using threads.
 
 
 \section{Advanced Features}
+
+\begin{frame}[fragile]
+	\frametitle{Unsafe Rust}
+	\begin{itemize}
+		\item All the code we’ve discussed so far has had Rust’s \textbf{memory safety} guarantees enforced at \textbf{compile time}.
+		\item 	Rust has a second language hidden inside it that doesn’t enforce these memory safety guarantees: it’s called unsafe Rust and works just like regular Rust, but gives us extra \textbf{superpowers}.
+		\begin{itemize}
+			\item Unsafe Rust exists because, by nature, \textbf{static analysis is conservative}. 
+			\item 	Sometime, your code might be okay, if the Rust compiler doesn’t have enough information to be confident, it will reject the code. In these cases, you can use unsafe code to \textbf{tell the compiler}, “\textbf{Trust me, I know what I’m doing.}” 
+			\item 	If you use unsafe code incorrectly, problems can occur due to memory unsafety, such as null pointer dereferencing.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Unsafe Superpowers}
+	To switch to unsafe Rust, use the \mintinline{rust}|unsafe| keyword and then start a new block that holds the unsafe code.\textbf{ You can take five actions in unsafe Rust that you can’t in safe Rust}, which we call unsafe superpowers. Those superpowers include the ability to:
+	
+	\begin{itemize}
+		\item Dereference a raw pointer
+		\item 	Call an unsafe function or method
+		\item 	Access or modify a mutable static variable
+		\item 	Implement an unsafe trait
+		\item 	Access fields of unions
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Dereferencing a Raw Pointer}
+	Compiler ensures \textbf{references are always valid}. Unsafe Rust has two new types called \textbf{raw pointers that are similar to references}. As with references, r\textbf{aw pointers can be immutable or mutable} and are written as \mintinline{rust}|*const T| and \mintinline{rust}|*mut T| , respectively. The \textbf{asterisk} isn’t the dereference operator; \textbf{it’s part of the type name}. In the context of raw pointers, immutable means that the pointer can’t be directly assigned to after being dereferenced.
+	
+	\inputminted{rust}{./code/unsafe1.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Calling an Unsafe Function or Method}
+	\inputminted{rust}{./code/unsafe2.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Creating a Safe Abstraction over Unsafe Code}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/unsafe3.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Creating a Safe Abstraction over Unsafe Code(2)}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/unsafe4.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Using extern Functions to Call External Code}
+	\inputminted{rust}{./code/unsafe5.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Calling Rust Functions from Other Languages}
+	We also need to add a \mintinline{rust}|#[no_mangle] | annotation to tell the Rust compiler not to mangle the name of this function. \textbf{Mangling is when a compiler changes the name we’ve given a function to a different name} that contains more information for other parts of the compilation process to consume but is less human readable. Every programming language compiler mangles names slightly differently, so for a Rust function to be nameable by other languages, we must disable the Rust compiler’s name mangling.
+	
+	\inputminted{rust}{./code/unsafe6.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Modifying a Mutable Static Variable}
+	\inputminted{rust}{./code/unsafe7.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Accessing Fields of a Union}
+	The final action that works only with unsafe is accessing fields of a union. A union is similar to a struct, but only one declared field is used in a particular instance at one time. Unions are primarily used to interface with unions in C code. Accessing union fields is unsafe because Rust can’t guarantee the type of the data currently being stored in the union instance. 
+	
+	\inputminted{rust}{./code/unsafe8.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Advanced Traits}
+	\begin{itemize}
+		\item Specifying Placeholder Types in Trait Definitions with Associated Types
+		\item 	Default Generic Type Parameters and Operator Overloading
+		\item 	Fully Qualified Syntax for Disambiguation: Calling Methods with the Same Name
+		\item 	Using the Newtype Pattern to Implement External Traits on External Types
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Specifying Placeholder Types in Trait Definitions with Associated Types}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/iter1.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Associated Types vs generics}
+	\begin{itemize}
+		\item The difference is that when using generics, \textbf{we must annotate the types in each implementation}
+		\item 	 We could have multiple implementations of Iterator for Counter. In other words, when a trait has a generic parameter, \textbf{it can be implemented for a type multiple times}, changing the concrete types of the generic type parameters each time. 
+		\item 	 When we use the \mintinline{rust}|next|  method on Counter, we would have to provide type annotations to indicate which implementation of Iterator we want to use.
+		\item 	With associated types, we don’t need to annotate types because we can’t implement a trait on a type multiple times. 
+	\end{itemize}
+	
+	\inputminted{rust}{./code/iter2.rs}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Default Generic Type Parameters and Operator Overloading}
+	\inputminted[fontsize=\fontsize{8.5pt}{8.5pt}]{rust}{./code/iter3.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Default Generic Type Parameters and Operator Overloading(2)}
+	The default generic type in this code is within the Add trait. Here is its definition:
+	
+	\inputminted{rust}{./code/iter4.rs}
+	
+	When we implemented Add for Point, we used the default for Rhs because we wanted to add two Point instances. 
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Default Generic Type Parameters and Operator Overloading(3)}
+	Let’s look at an example of implementing the Add trait where we want to customize the Rhs type rather than using the default.
+	
+	\inputminted{rust}{./code/iter5.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Fully Qualified Syntax for Disambiguation: Calling Methods with the Same Name}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\inputminted[fontsize=\tiny]{rust}{./code/iter6.rs}
+		\column{0.5\textwidth}
+		\inputminted[fontsize=\tiny]{rust}{./code/iter7.rs}
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Fully Qualified Syntax for Disambiguation: Calling Methods with the Same Name(2)}
+	\inputminted[fontsize=\fontsize{8.5pt}{8.5pt}]{rust}{./code/iter8.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Using Supertraits to Require One Trait’s Functionality Within Another Trait}
+	Sometimes, you might write a trait definition that depends on another trait: for a type to implement the first trait, you want to \underline{require} that type to also implement the second trait. 
+	
+	\inputminted[fontsize=\fontsize{8.5pt}{8.5pt}]{rust}{./code/iter9.rs}
+	
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Using Supertraits to Require One Trait’s Functionality Within Another Trait (2)}
+	\inputminted[firstnumber=17]{rust}{./code/iter10.rs}
+\end{frame}
+	
+	
+	
+	
+	\begin{frame}[fragile]
+		\frametitle{Using the Newtype Pattern to Implement External Traits on External Types}
+		\begin{itemize}
+			\item The \textbf{orphan rule} that states we’re only allowed to implement a trait on a type if either the trait or the type are local to our crate. It’s possible to get around this restriction using the \textbf{newtype pattern}, which involves creating a new type in a tuple struct. 
+			\item 		 Newtype is a term that \textbf{originates} from the \textbf{Haskell} programming language. 
+			\item 		 There is \textbf{no runtime performance penalty }for using this pattern, and the wrapper type is elided at compile time.
+		\end{itemize}
+	\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Using the Newtype Pattern to Implement External Traits on External Types(2)}
+	
+	\inputminted{rust}{./code/iter11.rs}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Creating Type Synonyms with Type Aliases}
+	Rust provides the ability to declare a type alias to give an existing type another name.
+	
+	\inputminted{rust}{./code/type1.rs}
+	
+	The alias type is a synonym for another type;  alias type  \textbf{is not a separate, new type}.
+	
+	\inputminted{rust}{./code/type2.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Creating Type Synonyms with Type Aliases(2)}
+	Unlike Kilometers, the Millimeters and Meters types we earlier created, are a separate, new type. 
+	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/type3.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{The main use case for type synonyms is to reduce repetition}
+	
+	\inputminted{rust}{./code/type4.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{The Never Type that Never Returns}
+	
+	\inputminted{rust}{./code/type5.rs}
+	
+	This code is read as “\textbf{the function bar returns never.}” Functions that return never are called diverging functions. We can’t create values of the type ! so bar can never possibly return.
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Dynamically Sized Types and the Sized Trait}
+	\begin{itemize}
+		\item Rust \textbf{needs to know certain details about its types}, such as \textbf{how much space} to allocate for a value of a particular type. 
+		\item 	This leaves one corner of its type system a little confusing at first: the concept of \textbf{dynamically sized types}.
+		\item 	Sometimes referred to as \textbf{DST}s or \textbf{unsized types}, these types let us write code using values whose size we can know only at runtime.
+		 \begin{itemize}
+		 	\item That’s right, not \mintinline{rust}|&str|, but \mintinline{rust}|str| on its own, is a DST. We can’t know how long the string is until runtime, meaning we can’t create a variable of type \mintinline{rust}|str|, nor can we take an argument of type \mintinline{rust}|str|.
+		 	\item 	 We can combine \mintinline{rust}|str| with all kinds of pointers: for example, \mintinline{rust}|Box<str>| or \mintinline{rust}|Rc<str>|. In fact, you’ve seen this before but with a different dynamically sized type: traits. Every trait is a dynamically sized type.
+		 \end{itemize}
+	\end{itemize}
+	 
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Dynamically Sized Types and the Sized Trait(2)}
+To work with DSTs, Rust provides the \textbf{Sized trait }to \textbf{determine whether or not a type’s size is known at compile time}. \textbf{This trait is automatically implemented} for everything \textbf{whose size is known at compile time}. In addition, Rust\textbf{ implicitly adds a bound on Sized to every generic function}. That is, a generic function definition like this:
+	
+	\inputminted{rust}{./code/type6.rs}
+	
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Dynamically Sized Types and the Sized Trait(3)}
+	By default, generic functions will work only on types that have a known size at compile time. However, you can use the following special syntax to relax this restriction:
+	
+	\inputminted{rust}{./code/type7.rs}
+	
+	\scriptsize
+	\begin{itemize}
+		\item A trait bound on  \mintinline{rust}|?Sized| means “\textbf{T may or may not be Sized}” and this notation \textbf{overrides the default that generic types must have a known size at compile time}. \textbf{The \mintinline{rust}|?Trait| syntax with this meaning is only available for Sized, not any other traits}.
+		\item 	Also note that we switched the type of the t parameter from \mintinline{rust}|T| to \mintinline{rust}|&T|. Because the type might not be Sized, we need to use it behind some kind of pointer. In this case, we’ve chosen a reference.
+	\end{itemize}
+	
+\end{frame}
+
+
+Function Pointers
+Returning Closures
+
 \section{Multithread Web Server}
 \section{Tokio}
 
