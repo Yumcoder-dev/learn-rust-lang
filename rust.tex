@@ -3233,8 +3233,89 @@ For more examples see:  \href{https://veykril.github.io/tlborm/decl-macros/macro
 
 \begin{frame}[fragile]
 	\frametitle{Improving Throughput with a Thread Pool}
-	\inputminted{rust}{./code/http2.rs}
+	A thread pool is a group of spawned threads that are waiting and ready to handle a task. When the program receives a new task, it assigns one of the threads in the pool to the task, and that thread will process the task. The remaining threads in the pool are available to handle any other tasks that come in while the first thread is processing. When the first thread is done processing its task, it’s returned to the pool of idle threads, ready to handle a new task. A thread pool allows you to process connections concurrently, increasing the throughput of your server.
 \end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Creating a Finite Number of Threads}
+	\inputminted{rust}{./code/http3.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Creating a Finite Number of Threads(2)}
+	\inputminted{rust}{./code/http4.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Creating a Finite Number of Threads(3)}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/http5.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{A Worker Struct Responsible for Sending Code from the ThreadPool to a Thread}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/http6.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{A Worker Struct Responsible for Sending Code from the ThreadPool to a Thread(2)}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/http7.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Sending Requests to Threads via Channels}
+	\inputminted[fontsize=\fontsize{8.5}{8.5}]{rust}{./code/http8.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Sending Requests to Threads via Channels}
+	\inputminted[fontsize=\fontsize{8.5}{8.5}]{rust}{./code/http8.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Sending Requests to Threads via Channels(2)}
+	\inputminted[fontsize=\fontsize{8.5}{8.5}]{rust}{./code/http9.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Sending Requests to Threads via Channels(3)}
+	\inputminted[fontsize=\fontsize{8.5}{8.5}]{rust}{./code/http10.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Implementing the execute Method}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/http11.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Implementing the execute Method(2)}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/http12.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Graceful Shutdown and Cleanup, Implementing the Drop Trait on ThreadPool}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/http14.rs}
+	
+	\scriptsize
+	The error tells us we can’t call join because we only have a mutable borrow of each worker and join takes ownership of its argument. To solve this issue, we need to move the thread out of the Worker instance that owns thread so join can consume the thread. If Worker holds an \mintinline{rust}|Option<thread::JoinHandle<()>>| instead, we can call the \mintinline{rust}|take| method on the Option to move the value out of the Some variant and leave a None variant in its place. In other words, a Worker that is running will have a Some variant in thread, and when we want to clean up a Worker, we’ll replace Some with None so the Worker doesn’t have a thread to run.
+	
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Graceful Shutdown and Cleanup, Implementing the Drop Trait on ThreadPool(2)}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/http15.rs}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Signaling to the Threads to Stop Listening for Jobs}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/http15.rs}
+\end{frame}
+
 
 \section{Tokio}
 
