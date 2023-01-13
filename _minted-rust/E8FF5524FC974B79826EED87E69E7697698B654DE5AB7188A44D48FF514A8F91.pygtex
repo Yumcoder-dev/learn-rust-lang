@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// let a = my\PYGZus{}vec!(1, 2, 3); \PYGZhy{}\PYGZgt{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{temp\PYGZus{}vec}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{Vec}::\PYG{n}{new}\PYG{p}{();}
+\PYG{+w}{        }\PYG{n}{temp\PYGZus{}vec}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{temp\PYGZus{}vec}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{temp\PYGZus{}vec}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{temp\PYGZus{}vec}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{    }\PYG{n+nf+fm}{dbg!}\PYG{p}{(}\PYG{n}{a}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

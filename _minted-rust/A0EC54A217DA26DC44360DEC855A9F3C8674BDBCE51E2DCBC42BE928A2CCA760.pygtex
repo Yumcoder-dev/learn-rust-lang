@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{proc\PYGZus{}macro}::\PYG{n}{TokenStream}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{quote}::\PYG{n}{quote}\PYG{p}{;}
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{syn}\PYG{p}{;}
+\PYG{c+cp}{\PYGZsh{}[proc\PYGZus{}macro\PYGZus{}derive(HelloMacro)]}
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{hello\PYGZus{}macro\PYGZus{}derive}\PYG{p}{(}\PYG{n}{input}: \PYG{n+nc}{TokenStream}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{TokenStream}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// Construct a representation of Rust code as a syntax tree}
+\PYG{+w}{    }\PYG{c+c1}{// that we can manipulate}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{ast}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{syn}::\PYG{n}{parse}\PYG{p}{(}\PYG{n}{input}\PYG{p}{).}\PYG{n}{unwrap}\PYG{p}{();}
+\PYG{+w}{    }\PYG{c+c1}{// Build the trait implementation}
+\PYG{+w}{    }\PYG{n}{impl\PYGZus{}hello\PYGZus{}macro}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{ast}\PYG{p}{)}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{fn} \PYG{n+nf}{impl\PYGZus{}hello\PYGZus{}macro}\PYG{p}{(}\PYG{n}{ast}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{syn}::\PYG{n}{DeriveInput}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{TokenStream}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{name}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{ast}\PYG{p}{.}\PYG{n}{ident}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{gen}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{quote}\PYG{o}{!}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{HelloMacro}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYGZsh{}\PYG{n}{name}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{fn} \PYG{n+nf}{hello\PYGZus{}macro}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Hello, Macro! My name is \PYGZob{}\PYGZcb{}!\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nf+fm}{stringify!}\PYG{p}{(}\PYGZsh{}\PYG{n}{name}\PYG{p}{));}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{    }\PYG{n}{gen}\PYG{p}{.}\PYG{n}{into}\PYG{p}{()}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

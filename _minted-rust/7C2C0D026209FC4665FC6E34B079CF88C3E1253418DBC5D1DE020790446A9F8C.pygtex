@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{trait}\PYG{+w}{ }\PYG{n}{Add}\PYG{o}{\PYGZlt{}}\PYG{n}{Rhs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb+bp}{Self}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{type} \PYG{n+nc}{Output}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{add}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{rhs}: \PYG{n+nc}{Rhs}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{Self}::\PYG{n}{Output}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

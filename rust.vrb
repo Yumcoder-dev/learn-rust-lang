@@ -1,2 +1,3 @@
-\frametitle{Pattern Syntax, Binding(3)}
-	\inputminted{rust}{./code/pattern20.rs}
+\frametitle{Function-like macros}
+	
+	\inputminted{rust}{./code/macro8.rs}

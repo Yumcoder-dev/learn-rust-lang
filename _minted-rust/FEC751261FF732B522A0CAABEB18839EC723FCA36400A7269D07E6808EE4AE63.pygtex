@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+ch}{\PYGZsh{}![feature(log\PYGZus{}syntax)]}
+// \PYG{c+c1}{\PYGZsh{}![feature(trace\PYGZus{}macros)]}
+// trace\PYGZus{}macros!\PYG{o}{(}\PYG{n+nb}{true}\PYG{o}{)}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZsh{}[macro\PYGZus{}export]}
+macro\PYGZus{}rules! my\PYGZus{}vec \PYG{o}{\PYGZob{}}
+    \PYG{o}{(}\PYG{k}{\PYGZdl{}(} \PYG{n+nv}{\PYGZdl{}x}:expr \PYG{k}{)},*\PYG{o}{)} \PYG{o}{=}\PYGZgt{} \PYG{o}{\PYGZob{}}
+        \PYG{o}{\PYGZob{}}
+            \PYG{n+nb}{let} mut \PYG{n+nv}{temp\PYGZus{}vec} \PYG{o}{=} Vec::new\PYG{o}{()}\PYG{p}{;}
+            \PYG{k}{\PYGZdl{}(}
+                log\PYGZus{}syntax!\PYG{o}{(}\PYG{n+nv}{expr}\PYG{o}{=}\PYG{n+nv}{\PYGZdl{}x}\PYG{k}{)}\PYG{p}{;} // debug
+                temp\PYGZus{}vec.push\PYG{o}{(}\PYG{n+nv}{\PYGZdl{}x}\PYG{o}{)}\PYG{p}{;}
+            \PYG{o}{)}*
+            temp\PYGZus{}vec
+        \PYG{o}{\PYGZcb{}}
+    \PYG{o}{\PYGZcb{}}\PYG{p}{;}
+\PYG{o}{\PYGZcb{}}
+fn main\PYG{o}{()} \PYG{o}{\PYGZob{}}
+    \PYG{n+nb}{let} \PYG{n+nv}{a} \PYG{o}{=} my\PYGZus{}vec!\PYG{o}{(}\PYG{l+m}{1}, \PYG{l+m}{2}, \PYG{l+m}{3}\PYG{o}{)}\PYG{p}{;} // my\PYGZus{}vec!\PYG{o}{[}\PYG{l+m}{1}, \PYG{l+m}{2}, \PYG{l+m}{3}\PYG{o}{]} or my\PYGZus{}vec!\PYG{o}{\PYGZob{}}\PYG{l+m}{1}, \PYG{l+m}{2}, \PYG{l+m}{3}\PYG{o}{]\PYGZcb{}}
+    dbg!\PYG{o}{(}a\PYG{o}{)}\PYG{p}{;}
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

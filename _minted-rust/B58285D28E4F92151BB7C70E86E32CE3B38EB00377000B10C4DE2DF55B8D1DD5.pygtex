@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cp}{\PYGZsh{}[derive(HelloMacro)]}
+\PYG{k}{struct} \PYG{n+nc}{Pancakes}\PYG{p}{;}
+
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{Pancakes}::\PYG{n}{hello\PYGZus{}macro}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

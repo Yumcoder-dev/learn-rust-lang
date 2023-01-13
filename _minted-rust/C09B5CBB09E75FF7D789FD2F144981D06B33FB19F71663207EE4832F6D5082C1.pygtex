@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+macro\PYGZus{}rules! \PYG{n+nv}{\PYGZdl{}name} \PYG{o}{\PYGZob{}}
+    \PYG{o}{(}\PYG{n+nv}{\PYGZdl{}matcher0}\PYG{o}{)} \PYG{o}{=}\PYGZgt{} \PYG{o}{\PYGZob{}}\PYG{n+nv}{\PYGZdl{}expansion0}\PYG{o}{\PYGZcb{}}\PYG{p}{;}
+    \PYG{o}{(}\PYG{n+nv}{\PYGZdl{}matcher1}\PYG{o}{)} \PYG{o}{=}\PYGZgt{} \PYG{o}{\PYGZob{}}\PYG{n+nv}{\PYGZdl{}expansion1}\PYG{o}{\PYGZcb{}}\PYG{p}{;}
+    // …
+    \PYG{o}{(}\PYG{n+nv}{\PYGZdl{}matcherN}\PYG{o}{)} \PYG{o}{=}\PYGZgt{} \PYG{o}{\PYGZob{}}\PYG{n+nv}{\PYGZdl{}expansionN}\PYG{o}{\PYGZcb{}}\PYG{p}{;}
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{ops}::\PYG{n}{Add}\PYG{p}{;}
+
+\PYG{k}{struct} \PYG{n+nc}{Millimeters}\PYG{p}{(}\PYG{k+kt}{u32}\PYG{p}{);}
+\PYG{k}{struct} \PYG{n+nc}{Meters}\PYG{p}{(}\PYG{k+kt}{u32}\PYG{p}{);}
+
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Add}\PYG{o}{\PYGZlt{}}\PYG{n}{Meters}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{Millimeters}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{type} \PYG{n+nc}{Output}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Millimeters}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{add}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{other}: \PYG{n+nc}{Meters}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{Millimeters}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{Millimeters}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{other}\PYG{p}{.}\PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mi}{1000}\PYG{p}{))}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{x}: \PYG{k+kt}{u32} \PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{y}: \PYG{n+nc}{Millimeters}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Millimeters}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}x + y = \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{y}\PYG{p}{);}
+\PYG{+w}{    }\PYG{c+c1}{//                     \PYGZca{} no implementation for `u32 + Millimeters`}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

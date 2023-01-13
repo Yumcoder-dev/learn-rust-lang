@@ -16,5 +16,5 @@
 \beamer@sectionintoc {16}{Object-Oriented Programming Features of Rust}{302}{0}{16}
 \beamer@sectionintoc {17}{Patterns and Matching}{310}{0}{17}
 \beamer@sectionintoc {18}{Advanced Features}{332}{0}{18}
-\beamer@sectionintoc {19}{Multithread Web Server}{333}{0}{19}
-\beamer@sectionintoc {20}{Tokio}{334}{0}{20}
+\beamer@sectionintoc {19}{Multithread Web Server}{375}{0}{19}
+\beamer@sectionintoc {20}{Tokio}{376}{0}{20}

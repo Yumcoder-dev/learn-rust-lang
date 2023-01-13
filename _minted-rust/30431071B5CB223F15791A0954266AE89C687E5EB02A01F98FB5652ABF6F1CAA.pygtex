@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{person}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Human}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{Pilot}::\PYG{n}{fly}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{person}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// This is your captain speaking.}
+\PYG{+w}{    }\PYG{n}{Wizard}::\PYG{n}{fly}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{person}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// Up!}
+\PYG{+w}{    }\PYG{n}{person}\PYG{p}{.}\PYG{n}{fly}\PYG{p}{();}\PYG{+w}{ }\PYG{c+c1}{// *waving arms furiously*}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

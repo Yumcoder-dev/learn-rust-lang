@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{type} \PYG{n+nc}{Kilometers}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kt}{i32}\PYG{p}{;}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{x}: \PYG{k+kt}{i32} \PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{y}: \PYG{n+nc}{Kilometers}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}
+\PYG{c+c1}{// Because Kilometers and i32 are the same type, we can add values of both types and we can pass Kilometers values to functions that take i32 parameters. }
+\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}x + y = \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{y}\PYG{p}{);}
+\end{Verbatim}

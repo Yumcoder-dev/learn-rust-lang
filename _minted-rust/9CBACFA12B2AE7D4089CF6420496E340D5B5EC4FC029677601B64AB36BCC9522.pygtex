@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{struct} \PYG{n+nc}{Counter}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{count}: \PYG{k+kt}{u32}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Counter}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{new}\PYG{p}{()}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{Counter}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{Counter}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{count}: \PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n+nb}{Iterator}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{Counter}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{type} \PYG{n+nc}{Item}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kt}{u32}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{next}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{Option}\PYG{o}{\PYGZlt{}}\PYG{n+nb+bp}{Self}::\PYG{n}{Item}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

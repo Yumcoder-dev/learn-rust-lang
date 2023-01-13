@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{sql}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{sql}\PYG{o}{!}\PYG{p}{(}\PYG{n}{SELECT}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{FROM}\PYG{+w}{ }\PYG{n}{posts}\PYG{+w}{ }\PYG{n}{WHERE}\PYG{+w}{ }\PYG{n}{id}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{);}
+
+\PYG{c+cp}{\PYGZsh{}[proc\PYGZus{}macro]}
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{sql}\PYG{p}{(}\PYG{n}{input}: \PYG{n+nc}{TokenStream}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{TokenStream}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

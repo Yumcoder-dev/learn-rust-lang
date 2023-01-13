@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cp}{\PYGZsh{}![allow(unused)]}
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{union} \PYG{n+nc}{MyUnion}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{f1}: \PYG{k+kt}{u32}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{f2}: \PYG{k+kt}{f32}\PYG{p}{,}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{u}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{MyUnion}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{f1}: \PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{f}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{unsafe}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{u}\PYG{p}{.}\PYG{n}{f1}\PYG{+w}{ }\PYG{p}{\PYGZcb{};}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{// see https://doc.rust\PYGZhy{}lang.org/reference/items/unions.html}
+\end{Verbatim}

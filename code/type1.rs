@@ -1,0 +1,1 @@
+type Kilometers = i32;

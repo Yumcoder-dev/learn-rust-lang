@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{unsafe}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{dangerous}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+
+\PYG{k}{unsafe}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{dangerous}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

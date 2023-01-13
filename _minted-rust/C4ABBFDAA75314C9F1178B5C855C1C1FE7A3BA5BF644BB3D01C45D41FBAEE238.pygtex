@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cp}{\PYGZsh{}[route(GET, }\PYG{l+s}{\PYGZdq{}/\PYGZdq{}}\PYG{c+cp}{)]}
+\PYG{k}{fn} \PYG{n+nf}{index}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+
+\PYG{c+cp}{\PYGZsh{}[proc\PYGZus{}macro\PYGZus{}attribute]}
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{route}\PYG{p}{(}\PYG{n}{attr}: \PYG{n+nc}{TokenStream}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{item}: \PYG{n+nc}{TokenStream}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{TokenStream}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\end{Verbatim}

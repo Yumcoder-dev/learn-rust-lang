@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cp}{\PYGZsh{}[no\PYGZus{}mangle]}
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{extern}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}C\PYGZdq{}}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{call\PYGZus{}from\PYGZus{}c}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Just called a Rust function from C!\PYGZdq{}}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

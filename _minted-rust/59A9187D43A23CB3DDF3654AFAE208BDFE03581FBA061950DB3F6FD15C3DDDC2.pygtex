@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{struct} \PYG{n+nc}{Dog}\PYG{p}{;}
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Dog}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{baby\PYGZus{}name}\PYG{p}{()}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{String} \PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Spot\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{trait}\PYG{+w}{ }\PYG{n}{Animal}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{baby\PYGZus{}name}\PYG{p}{()}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{String}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Animal}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{Dog}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{baby\PYGZus{}name}\PYG{p}{()}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{String} \PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nb}{String}::\PYG{n}{from}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}puppy\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}A baby dog is called a \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Dog}::\PYG{n}{baby\PYGZus{}name}\PYG{p}{());}\PYG{+w}{ }\PYG{c+c1}{// Spot}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}A baby dog is called a \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{n}{Dog}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n}{Animal}\PYG{o}{\PYGZgt{}}::\PYG{n}{baby\PYGZus{}name}\PYG{p}{());}\PYG{+w}{ }\PYG{c+c1}{// puppy}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

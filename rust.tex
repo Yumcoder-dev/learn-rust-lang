@@ -3094,6 +3094,110 @@ Functions coerce to the type \mintinline{rust}|fn| (with \textbf{a lowercase f})
 \begin{frame}[fragile]
 	\frametitle{Returning Closures}
 	Closures are represented by traits, which means you can’t return closures directly. In most cases where you might want to return a trait, you can instead use the concrete type that implements the trait as the return value of the function. However, you can’t do that with closures because they don’t have a concrete type that is returnable; 
+	
+	\inputminted{rust}{./code/fn2.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Macros(like \mintinline{rust}|println!|)}
+	\begin{itemize}
+		\item Fundamentally, macros are \textbf{a way of writing code that writes other code}, which is known as \textbf{metaprogramming}. 
+		\item Macros can take a variable number of parameters: we can call \mintinline{rust}|println!("hello")| with one argument or \mintinline{rust}|println!("hello {}", name)| with two arguments. 
+		\item The term macro refers to a family of features in Rust: 
+		\begin{itemize}
+			\item \textbf{Declarative macros} with \mintinline{rust}|macro_rules!|  and 
+			\item 	Three kinds of \textbf{procedural macros}:
+			\begin{itemize}
+				\item \textbf{Custom \mintinline{rust}|#[derive]| macros} that specify code added with the derive attribute used on \mintinline{rust}|structs| and \mintinline{rust}|enums|
+				\item 	\textbf{Attribute-like} macros that define custom attributes usable on any item
+				\item 	\textbf{Function-like macros} that look like function calls but operate on the tokens specified as their argument
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Declarative Macros with \mintinline{rust}|macro_rules!| for General Metaprogramming}
+
+The most widely used form of macros in Rust is the declarative macro. These are also sometimes referred to as “\textbf{macros by example},” “\mintinline{rust}|macro_rules!| macros,” or just plain “\textbf{macros}.” At their core, declarative macros allow you to write something similar to a Rust \textbf{match expression}.
+
+	\inputminted{shell}{./code/macro2.rs}
+	
+	There must be at least one rule, and you can omit the semicolon after the last rule. You can use brackets([]), parentheses(()) or braces({}).
+
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Declarative Macros Example}
+	\inputminted[fontsize=\scriptsize]{shell}{./code/macro1.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Declarative Macros Example(2)}
+	First, we use a set of parentheses to encompass the whole pattern. We use a dollar sign \mintinline{shell}|($)| to declare a variable in the macro system that will contain the Rust code matching the pattern. The dollar sign makes it clear this is a macro variable as opposed to a regular Rust variable. Next comes a set of parentheses that captures values that match the pattern within the parentheses for use in the replacement code. Within \mintinline{shell}|$()| is \mintinline{shell}|$x:expr|, which matches any Rust expression and gives the expression the name \mintinline{shell}|$x|.
+	The comma following \mintinline{shell}|$()| indicates that a literal comma separator character could optionally appear after the code that matches the code in \mintinline{shell}|$()|. The \mintinline{rust}|*| specifies that the pattern matches zero or more of whatever precedes the \mintinline{rust}|*|.
+	When we call this macro with \mintinline{rust}|my_vec![1, 2, 3];|, the \mintinline{shell}|$x| pattern matches three times with the three expressions 1, 2, and 3.
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Declarative Macros Example(3)}
+\inputminted{rust}{./code/macro3.rs}
+
+For more examples see:  \href{https://veykril.github.io/tlborm/decl-macros/macros-methodical.html}{“\textbf{\underline{The Little Book of Rust Macros}}”}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{How to Write a Custom derive Macro}
+\begin{itemize}
+	\item 	\textit{\textbf{Procedural macro}}, which acts more like a function (and is a type of procedure). Procedural macros accept some code as an input, operate on that code, and produce some code as an output rather than matching against patterns and replacing the code with other code as declarative macros do.
+	\item Let’s create a crate named \mintinline{rust}|hello_macro| that defines a trait named \mintinline{rust}|HelloMacro| with one associated function named \mintinline{rust}|hello_macro|. Rather than making our users implement the \mintinline{rust}|HelloMacro| trait for each of their types, we’ll provide a procedural macro so users can annotate their type with \mintinline{rust}|#[derive(HelloMacro)]| to get a default implementation of the \mintinline{rust}|hello_macro function|.
+	\inputminted[fontsize=\scriptsize]{rust}{./code/macro4.rs}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{How to Write a Custom derive Macro(2)}
+		\inputminted[fontsize=\scriptsize]{rust}{./code/macro5.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{How to Write a Custom derive Macro(2)}
+	\begin{itemize}
+		\item We need functionality from the syn and quote crates.
+		\item 	The \mintinline{rust}|syn| crate parses Rust code from a string into a data structure that we can perform operations on. 
+		\item 	The \mintinline{rust}|quote| crate turns syn data structures back into Rust code.
+		\item The \mintinline{rust}|hello_macro_derive| function first converts the input from a \mintinline{rust}|TokenStream| to a data structure that we can then interpret and perform operations on. This is where syn comes into play. The parse function in syn takes a \mintinline{rust}|TokenStream| and returns a \mintinline{rust}|DeriveInput struct| representing the parsed Rust code.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{How to Write a Custom derive Macro(2)}
+	
+	\inputminted{rust}{./code/macro6.rs}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Attribute-like macros}
+	
+	\inputminted{rust}{./code/macro7.rs}
+	
+	Here, we have two parameters of type \mintinline{rust}|TokenStream|. The first is for the contents of the attribute: the \mintinline{rust}|GET|, \mintinline{rust}|"/"| part. The second is the body of the item the attribute is attached to: in this case, \mintinline{rust}|fn index() {}| and the rest of the function’s body.
+	
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Function-like macros}
+	
+	\inputminted{rust}{./code/macro8.rs}
 \end{frame}
 
 \section{Multithread Web Server}

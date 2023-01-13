@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{ops}::\PYG{n}{Add}\PYG{p}{;}
+\PYG{c+cp}{\PYGZsh{}[derive(Debug, Copy, Clone, PartialEq)]}
+\PYG{k}{struct} \PYG{n+nc}{Point}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{x}: \PYG{k+kt}{i32}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{y}: \PYG{k+kt}{i32}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Add}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{Point}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{type} \PYG{n+nc}{Output}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Point}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{add}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{other}: \PYG{n+nc}{Point}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{Point}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{Point}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{x}: \PYG{n+nc}{self}\PYG{p}{.}\PYG{n}{x}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{other}\PYG{p}{.}\PYG{n}{x}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n}{y}: \PYG{n+nc}{self}\PYG{p}{.}\PYG{n}{y}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{other}\PYG{p}{.}\PYG{n}{y}\PYG{p}{,}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf+fm}{assert\PYGZus{}eq!}\PYG{p}{(}
+\PYG{+w}{        }\PYG{n}{Point}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{x}: \PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y}: \PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{Point}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{x}: \PYG{l+m+mi}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y}: \PYG{l+m+mi}{3}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{        }\PYG{n}{Point}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{x}: \PYG{l+m+mi}{3}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y}: \PYG{l+m+mi}{3}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

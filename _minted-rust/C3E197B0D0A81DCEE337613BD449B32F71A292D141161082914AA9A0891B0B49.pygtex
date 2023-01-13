@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{returns\PYGZus{}closure}\PYG{p}{()}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{dyn}\PYG{+w}{ }\PYG{n+nb}{Fn}\PYG{p}{(}\PYG{k+kt}{i32}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{i32} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{//                  \PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{} doesn\PYGZsq{}t have a size known at compile\PYGZhy{}time}
+\PYG{+w}{    }\PYG{o}{|}\PYG{n}{x}\PYG{o}{|}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{// The error references the Sized trait again! Rust doesn’t know how much space it will need to store the closure. We can use a trait object:}
+\PYG{k}{fn} \PYG{n+nf}{returns\PYGZus{}closure}\PYG{p}{()}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nb}{Box}\PYG{o}{\PYGZlt{}}\PYG{k}{dyn}\PYG{+w}{ }\PYG{n+nb}{Fn}\PYG{p}{(}\PYG{k+kt}{i32}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{i32}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nb}{Box}::\PYG{n}{new}\PYG{p}{(}\PYG{o}{|}\PYG{n}{x}\PYG{o}{|}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{generic}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{t}: \PYG{n+nc}{T}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{// is actually treated as though we had written this:}
+\PYG{k}{fn} \PYG{n+nf}{generic}\PYG{o}{\PYGZlt{}}\PYG{n}{T}: \PYG{n+nb}{Sized}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{t}: \PYG{n+nc}{T}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

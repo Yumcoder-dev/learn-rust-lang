@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{n}{slice}\PYG{p}{;}
+
+\PYG{k}{fn} \PYG{n+nf}{split\PYGZus{}at\PYGZus{}mut}\PYG{p}{(}\PYG{n}{values}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{mut}\PYG{+w}{ }\PYG{p}{[}\PYG{k+kt}{i32}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{mid}: \PYG{k+kt}{usize}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{p}{[}\PYG{k+kt}{i32}\PYG{p}{],}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{p}{[}\PYG{k+kt}{i32}\PYG{p}{])}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{len}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{values}\PYG{p}{.}\PYG{n}{len}\PYG{p}{();}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{ptr}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{values}\PYG{p}{.}\PYG{n}{as\PYGZus{}mut\PYGZus{}ptr}\PYG{p}{();}
+
+\PYG{+w}{    }\PYG{n+nf+fm}{assert!}\PYG{p}{(}\PYG{n}{mid}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n}{len}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{k}{unsafe}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{p}{(}
+\PYG{+w}{            }\PYG{n}{slice}::\PYG{n}{from\PYGZus{}raw\PYGZus{}parts\PYGZus{}mut}\PYG{p}{(}\PYG{n}{ptr}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mid}\PYG{p}{),}
+\PYG{+w}{            }\PYG{n}{slice}::\PYG{n}{from\PYGZus{}raw\PYGZus{}parts\PYGZus{}mut}\PYG{p}{(}\PYG{n}{ptr}\PYG{p}{.}\PYG{n}{add}\PYG{p}{(}\PYG{n}{mid}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{len}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{mid}\PYG{p}{),}
+\PYG{+w}{        }\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

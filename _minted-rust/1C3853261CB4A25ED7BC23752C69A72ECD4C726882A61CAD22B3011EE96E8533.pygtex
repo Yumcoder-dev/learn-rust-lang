@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{+w}{    }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+
+\PYG{+w}{    }\PYG{n}{ident}: \PYG{n+nc}{Ident}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{ident}: \PYG{l+s}{\PYGZdq{}Pancakes\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n}{span}: \PYGZsh{}\PYG{l+m+mi}{0}\PYG{+w}{ }\PYG{n}{bytes}\PYG{p}{(}\PYG{l+m+mi}{95}\PYG{o}{..}\PYG{l+m+mi}{103}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{    }\PYG{n}{data}: \PYG{n+nc}{Struct}\PYG{p}{(}
+\PYG{+w}{        }\PYG{n}{DataStruct}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{struct\PYGZus{}token}: \PYG{n+nc}{Struct}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n}{fields}: \PYG{n+nc}{Unit}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n}{semi\PYGZus{}token}: \PYG{n+nb}{Some}\PYG{p}{(}
+\PYG{+w}{                }\PYG{n}{Semi}
+\PYG{+w}{            }\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{)}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

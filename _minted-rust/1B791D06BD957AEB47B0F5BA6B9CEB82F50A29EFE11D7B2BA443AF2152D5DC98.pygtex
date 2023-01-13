@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{num}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{;}
+\PYG{c+c1}{// Create raw pointers in safe code; we just can’t dereference raw pointers outside an unsafe block}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{r1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{num}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{o}{*}\PYG{k}{const}\PYG{+w}{ }\PYG{k+kt}{i32}\PYG{p}{;}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{r2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{num}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{o}{*}\PYG{k}{mut}\PYG{+w}{ }\PYG{k+kt}{i32}\PYG{p}{;}
+\PYG{k}{unsafe}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}r1 is: \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{*}\PYG{n}{r1}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}r2 is: \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{*}\PYG{n}{r2}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

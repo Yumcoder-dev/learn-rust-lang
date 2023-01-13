@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{v}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nf+fm}{vec!}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{6}\PYG{p}{];}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{r}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{v}\PYG{p}{[}\PYG{o}{..}\PYG{p}{];}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{a}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{b}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{r}\PYG{p}{.}\PYG{n}{split\PYGZus{}at\PYGZus{}mut}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{);}
+
+\PYG{n+nf+fm}{assert\PYGZus{}eq!}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{]);}
+\PYG{n+nf+fm}{assert\PYGZus{}eq!}\PYG{p}{(}\PYG{n}{b}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{6}\PYG{p}{]);}
+
+\PYG{k}{fn} \PYG{n+nf}{split\PYGZus{}at\PYGZus{}mut}\PYG{p}{(}\PYG{n}{values}: \PYG{k+kp}{\PYGZam{}}\PYG{n+nc}{mut}\PYG{+w}{ }\PYG{p}{[}\PYG{k+kt}{i32}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{mid}: \PYG{k+kt}{usize}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{p}{[}\PYG{k+kt}{i32}\PYG{p}{],}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{p}{[}\PYG{k+kt}{i32}\PYG{p}{])}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{len}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{values}\PYG{p}{.}\PYG{n}{len}\PYG{p}{();}
+
+\PYG{+w}{    }\PYG{n+nf+fm}{assert!}\PYG{p}{(}\PYG{n}{mid}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{n}{len}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{values}\PYG{p}{[}\PYG{o}{..}\PYG{n}{mid}\PYG{p}{],}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{values}\PYG{p}{[}\PYG{n}{mid}\PYG{o}{..}\PYG{p}{])}\PYG{+w}{ }
+\PYG{c+c1}{// | \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZca{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{// | |     |                   |}
+\PYG{c+c1}{// | |     |                   second mutable borrow occurs here}
+\PYG{c+c1}{// | |     first mutable borrow occurs here}
+\PYG{c+c1}{// | returning this value requires that `*values` is borrowed for `\PYGZsq{}1`}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

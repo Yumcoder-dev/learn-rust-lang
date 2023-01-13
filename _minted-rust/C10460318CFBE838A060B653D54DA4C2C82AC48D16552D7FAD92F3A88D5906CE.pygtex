@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{add\PYGZus{}one}\PYG{p}{(}\PYG{n}{x}: \PYG{k+kt}{i32}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{i32} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{fn} \PYG{n+nf}{do\PYGZus{}twice}\PYG{p}{(}\PYG{n}{f}: \PYG{n+nc}{fn}\PYG{p}{(}\PYG{k+kt}{i32}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{i32}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{arg}: \PYG{k+kt}{i32}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{k+kt}{i32} \PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{f}\PYG{p}{(}\PYG{n}{arg}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{f}\PYG{p}{(}\PYG{n}{arg}\PYG{p}{)}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{answer}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{do\PYGZus{}twice}\PYG{p}{(}\PYG{n}{add\PYGZus{}one}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{5}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}The answer is: \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{answer}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
