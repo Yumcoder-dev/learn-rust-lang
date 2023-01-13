@@ -1790,7 +1790,6 @@
 \end{frame}
 
 \section{Writing Automated Tests}
-
 \begin{frame}[fragile]
 	\frametitle{The Anatomy of a Test Function}
 	
@@ -3200,7 +3199,43 @@ For more examples see:  \href{https://veykril.github.io/tlborm/decl-macros/macro
 	\inputminted{rust}{./code/macro8.rs}
 \end{frame}
 
+
 \section{Multithread Web Server}
+\begin{frame}[fragile]
+	\frametitle{Building a Single-Threaded Web Server}
+	\begin{itemize}
+		\item The two main protocols involved in \textbf{web servers} are \textbf{Hypertext Transfer Protocol (HTTP)} and \textbf{Transmission Control Protocol (TCP)}. Both protocols are \textbf{request-response protocols}, meaning a client initiates requests and a server listens to the requests and provides a response to the client. The contents of those requests and responses are defined by the protocols.
+		\item 	TCP is the lower-level protocol that describes the details of how information gets from one server to another but doesn’t specify what that information is. HTTP builds on top of TCP by defining the contents of the requests and responses.
+	\end{itemize}
+	
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Building a Single-Threaded Web Server (2)}
+	\inputminted[fontsize=\scriptsize]{rust}{./code/http1.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Building a Single-Threaded Web Server (3)}
+	\inputminted[fontsize=\scriptsize]{shell}{./code/http1.shell}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+	\frametitle{Spawning a Thread for Each Request}
+	\inputminted{rust}{./code/http2.rs}
+	
+	This will eventually overwhelm the system because you’d be making new threads without any limit
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Improving Throughput with a Thread Pool}
+	\inputminted{rust}{./code/http2.rs}
+\end{frame}
+
 \section{Tokio}
 
 \section*{Acknowledgement}
