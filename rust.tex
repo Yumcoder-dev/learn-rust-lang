@@ -3081,8 +3081,20 @@ To work with DSTs, Rust provides the \textbf{Sized trait }to \textbf{determine w
 \end{frame}
 
 
-Function Pointers
-Returning Closures
+
+\begin{frame}[fragile]
+	\frametitle{Function Pointers}
+Functions coerce to the type \mintinline{rust}|fn| (with \textbf{a lowercase f}), not to be confused with the \mintinline{rust}|Fn| \textbf{closure trait}. The \mintinline{rust}|fn| type is called a function pointer. Passing functions with function pointers will allow you to use functions as arguments to other functions.
+
+	\inputminted{rust}{./code/fn1.rs}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Returning Closures}
+	Closures are represented by traits, which means you can’t return closures directly. In most cases where you might want to return a trait, you can instead use the concrete type that implements the trait as the return value of the function. However, you can’t do that with closures because they don’t have a concrete type that is returnable; 
+\end{frame}
 
 \section{Multithread Web Server}
 \section{Tokio}
