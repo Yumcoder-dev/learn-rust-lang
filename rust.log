@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  14 JAN 2023 06:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  14 JAN 2023 06:59
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -5468,6 +5468,48 @@ A.pygtex)) [390
 \openout4 = `rust.vrb'.
 
  (./rust.vrb
+(./_minted-rust/1B8700FBB15D62BD6A053DFD331F13BAD6780C9B890B2179C8FB85A264DC99F
+3.pygtex)) [392
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/833A738861C6FFC808FB3F88C6FF51EEBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/696A67E9557FFD9D5BED06FAC16B865EBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/B670F2677D205A7707A00470B9DFAD98BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/833A738861C6FFC808FB3F88C6FF51EEBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/696A67E9557FFD9D5BED06FAC16B865EBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/C9B1CA13C1118CBA8A322599EC7A30BBBA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)) [393
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
 (./_minted-rust/2A5E1319C18D5E86561E2A55E3CB82BB4F73A75B5AB1610BEA368A06CA5B9B3
 4.pygtex)
 \openout6 = `rust.pyg'.
@@ -5479,56 +5521,51 @@ A.pygtex)) [390
 
 
 (./_minted-rust/93E5D1D0E8C4DA0F12F5BAE2C2FCED78BA5FFB870F3277695E59D5E7C5E4ACD
-6.pygtex)) [392
+6.pygtex)) [394
 
 ]
 \openout4 = `rust.vrb'.
 
  (./rust.vrb
 (./_minted-rust/68CEB6E031967FE0BDE5261537F589E16748D3FC328C9E4CBBB2089A7B510E2
-7.pygtex)) [393
+7.pygtex)) [395
 
 ]
 \openout4 = `rust.vrb'.
 
  (./rust.vrb
 (./_minted-rust/7E15CE4F2E6A9FEA2301EBAB276865107AF691668352F6010254D55AF2EF9A2
-9.pygtex)) [394
+9.pygtex)) [396
 
 ]
 \openout4 = `rust.vrb'.
 
- (./rust.vrb) [395
+ (./rust.vrb) [397
 
 ]
 \openout4 = `rust.vrb'.
 
  (./rust.vrb
 (./_minted-rust/2EB12577A06B11263335EFBED8E67EB9707C27D061C92BEE6C2D7894AEB085A
-0.pygtex)) [396
+0.pygtex)) [398
 
 ]
 \openout4 = `rust.vrb'.
 
  (./rust.vrb
 (./_minted-rust/684AE6306A2EECB4BA9BF1E553005875C3F364476F7ADDA4E0796B01FAEA1B4
-3.pygtex)) [397
+3.pygtex)) [399
 
 ]
 \openout4 = `rust.vrb'.
 
  (./rust.vrb
-runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P str
-ipnl=False -P mathescape=True -o _minted-rust/684AE6306A2EECB4BA9BF1E5530058751
-4FC8E9253423B78F6D68C782EE391E6.pygtex ./code/http19.rs)...executed.
-
-
 (./_minted-rust/684AE6306A2EECB4BA9BF1E55300587514FC8E9253423B78F6D68C782EE391E
-6.pygtex)) [398
+6.pygtex)) [400
 
-] [399
+] [401
 
-] [400
+] [402
 
 ]
 \tf@nav=\write8
@@ -5539,9 +5576,6 @@ ipnl=False -P mathescape=True -o _minted-rust/684AE6306A2EECB4BA9BF1E5530058751
 
 \tf@snm=\write10
 \openout10 = `rust.snm'.
-
-runsystem(rm _minted-rust/113A06B107FB92ACAFA4C1AA1A036DFD14FC8E9253423B78F6D68
-C782EE391E6.pygtex)...executed.
 
  (./rust.aux)
 
@@ -5557,10 +5591,10 @@ runsystem(rm rust.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 31198 strings out of 474968
- 802161 string characters out of 5776083
- 1089411 words of memory out of 5000000
- 48807 multiletter control sequences out of 15000+600000
+ 31241 strings out of 474968
+ 804866 string characters out of 5776083
+ 1091825 words of memory out of 5000000
+ 48824 multiletter control sequences out of 15000+600000
  485164 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,870b,1087s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -5580,10 +5614,10 @@ al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
 texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on rust.pdf (400 pages, 2491038 bytes).
+Output written on rust.pdf (402 pages, 2496883 bytes).
 PDF statistics:
- 11801 PDF objects out of 12825 (max. 8388607)
- 11019 compressed objects within 111 object streams
- 829 named destinations out of 1000 (max. 500000)
+ 11855 PDF objects out of 12825 (max. 8388607)
+ 11071 compressed objects within 111 object streams
+ 833 named destinations out of 1000 (max. 500000)
  1477 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{job}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{receiver}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{unwrap}\PYG{p}{().}\PYG{n}{recv}\PYG{p}{().}\PYG{n}{unwrap}\PYG{p}{()}
+\end{Verbatim}

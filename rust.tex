@@ -3295,6 +3295,26 @@ For more examples see:  \href{https://veykril.github.io/tlborm/decl-macros/macro
 \end{frame}
 
 \begin{frame}[fragile]
+	\frametitle{Call Mutex lock in While let}
+	You might be wondering why we didn’t write the worker thread code as below: 
+	
+	\inputminted[fontsize=\scriptsize]{rust}{./code/http13.rs}
+	
+	\textbf{Why}?
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Call Mutex lock in While let (2)}
+	
+	\scriptsize
+	\begin{itemize}
+		\item This code compiles and runs but doesn’t result in the desired threading behavior: \textbf{a slow request will still cause other requests to wait to be processed}. 
+		\item 	The reason is somewhat subtle: the  \mintinline{rust}|Mutex| struct has no public unlock method because the ownership of the lock is based on the lifetime of the \mintinline{rust}|MutexGuard<T>| within the \mintinline{rust}|LockResult<MutexGuard<T>>| that the lock method returns. At compile time, the borrow checker can then enforce the rule that a resource guarded by a \mintinline{rust}|Mutex| cannot be accessed unless we hold the lock. However, this implementation can also result in \textbf{the lock being held longer }than intended if we aren’t mindful of the lifetime of the \mintinline{rust}|MutexGuard<T>|.
+		\item 	The code uses \mintinline{rust}|let job = receiver.lock().unwrap().recv().unwrap()|; works because with let, any temporary values used in the expression on the right hand side of the equals sign are \textbf{immediately dropped when the let statement ends}. However, while let (and if let and match) does not drop temporary values until the end of the associated block. In this case, the lock remains held for the duration of the call to job(), meaning other workers cannot receive jobs.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
 	\frametitle{Graceful Shutdown and Cleanup, Implementing the Drop Trait on ThreadPool}
 	\inputminted[fontsize=\scriptsize]{rust}{./code/http14.rs}
 	

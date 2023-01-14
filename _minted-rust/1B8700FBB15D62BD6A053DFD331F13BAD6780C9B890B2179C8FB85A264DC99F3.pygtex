@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Worker}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{new}\PYG{p}{(}\PYG{n}{id}: \PYG{k+kt}{usize}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{receiver}: \PYG{n+nc}{Arc}\PYG{o}{\PYGZlt{}}\PYG{n}{Mutex}\PYG{o}{\PYGZlt{}}\PYG{n}{mpsc}::\PYG{n}{Receiver}\PYG{o}{\PYGZlt{}}\PYG{n}{Job}\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{Worker}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{thread}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{thread}::\PYG{n}{spawn}\PYG{p}{(}\PYG{k}{move}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{while}\PYG{+w}{ }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nb}{Ok}\PYG{p}{(}\PYG{n}{job}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{receiver}\PYG{p}{.}\PYG{n}{lock}\PYG{p}{().}\PYG{n}{unwrap}\PYG{p}{().}\PYG{n}{recv}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Worker \PYGZob{}id\PYGZcb{} got a job; executing.\PYGZdq{}}\PYG{p}{);}
+
+\PYG{+w}{                }\PYG{n}{job}\PYG{p}{();}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{});}
+
+\PYG{+w}{        }\PYG{n}{Worker}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{id}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{thread}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
