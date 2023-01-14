@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYGZdl{} cargo run
+   Compiling hello v0.1.0 \PYG{o}{(}file:///projects/hello\PYG{o}{)}
+    Finished dev \PYG{o}{[}unoptimized + debuginfo\PYG{o}{]} target\PYG{o}{(}s\PYG{o}{)} \PYG{k}{in} \PYG{l+m}{0}.42s
+     Running \PYG{l+s+sb}{`}target/debug/hello\PYG{l+s+sb}{`}
+Request: \PYG{o}{[}
+    \PYG{l+s+s2}{\PYGZdq{}GET / HTTP/1.1\PYGZdq{}},
+    \PYG{l+s+s2}{\PYGZdq{}Host: 127.0.0.1:7878\PYGZdq{}},
+    \PYG{l+s+s2}{\PYGZdq{}User\PYGZhy{}Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:99.0) Gecko/20100101 Firefox/99.0\PYGZdq{}},
+    \PYG{l+s+s2}{\PYGZdq{}Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\PYGZdq{}},
+    \PYG{l+s+s2}{\PYGZdq{}Accept\PYGZhy{}Language: en\PYGZhy{}US,en;q=0.5\PYGZdq{}},
+    \PYG{l+s+s2}{\PYGZdq{}Accept\PYGZhy{}Encoding: gzip, deflate, br\PYGZdq{}},
+    \PYG{l+s+s2}{\PYGZdq{}DNT: 1\PYGZdq{}},
+    \PYG{l+s+s2}{\PYGZdq{}Connection: keep\PYGZhy{}alive\PYGZdq{}},
+    \PYG{l+s+s2}{\PYGZdq{}Upgrade\PYGZhy{}Insecure\PYGZhy{}Requests: 1\PYGZdq{}},
+    \PYG{l+s+s2}{\PYGZdq{}Sec\PYGZhy{}Fetch\PYGZhy{}Dest: document\PYGZdq{}},
+    \PYG{l+s+s2}{\PYGZdq{}Sec\PYGZhy{}Fetch\PYGZhy{}Mode: navigate\PYGZdq{}},
+    \PYG{l+s+s2}{\PYGZdq{}Sec\PYGZhy{}Fetch\PYGZhy{}Site: none\PYGZdq{}},
+    \PYG{l+s+s2}{\PYGZdq{}Sec\PYGZhy{}Fetch\PYGZhy{}User: ?1\PYGZdq{}},
+    \PYG{l+s+s2}{\PYGZdq{}Cache\PYGZhy{}Control: max\PYGZhy{}age=0\PYGZdq{}},
+\PYG{o}{]}
+\end{Verbatim}

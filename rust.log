@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  13 JAN 2023 16:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  14 JAN 2023 06:46
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3208,7 +3208,7 @@ E.pygtex))
 
 (./_minted-rust/EFFBF0E34CEEDB817552A11B49B8532FBA5FFB870F3277695E59D5E7C5E4ACD
 6.pygtex)
-Overfull \vbox (0.79576pt too high) detected at line 1814
+Overfull \vbox (0.79576pt too high) detected at line 1813
  []
 
 [204
@@ -3256,7 +3256,7 @@ Overfull \vbox (0.79576pt too high) detected at line 1814
 6.pygtex)
 (./_minted-rust/8A2006052E4C86E23304E00805962F56B92D80E88D2B552BE1FF7586C8226FE
 5.pygtex))
-Overfull \vbox (8.9958pt too high) detected at line 1827
+Overfull \vbox (8.9958pt too high) detected at line 1826
  []
 
 [206
@@ -3356,7 +3356,7 @@ C.pygtex)
 9.pygtex)
 (./_minted-rust/49A6D2F7FFA12B8A2DC8602737377189F56057346E00B6D7BD67BF02F9DE315
 A.pygtex))
-Overfull \vbox (3.09598pt too high) detected at line 1870
+Overfull \vbox (3.09598pt too high) detected at line 1869
  []
 
 [210
@@ -3436,7 +3436,7 @@ F.pygtex)
 9.pygtex)
 (./_minted-rust/D74E498DD23D04EFB196AF191F6D06F0159F8201C4C7F5C084E3E21F1E8037D
 4.pygtex))
-Overfull \vbox (3.36043pt too high) detected at line 1931
+Overfull \vbox (3.36043pt too high) detected at line 1930
  []
 
 [213
@@ -3544,7 +3544,7 @@ D.pygtex)) [224
  (./rust.vrb
 (./_minted-rust/17AE8AAB5F1EA0991502017E9535DDC240CD1B57F01012476191E97C5B56EBB
 A.pygtex))
-Overfull \vbox (0.59602pt too high) detected at line 2006
+Overfull \vbox (0.59602pt too high) detected at line 2005
  []
 
 [226
@@ -3567,7 +3567,7 @@ Overfull \vbox (0.59602pt too high) detected at line 2006
 9.pygtex)
 (./_minted-rust/B4D250A07EEBCC81A2B6494EC7ADC7F6E2ADD28BF54A99384077521B89E42B3
 2.pygtex))
-Overfull \vbox (3.19603pt too high) detected at line 2017
+Overfull \vbox (3.19603pt too high) detected at line 2016
  []
 
 [228
@@ -3804,7 +3804,7 @@ F.pygtex)
  (./rust.vrb
 (./_minted-rust/7177BA624D8EB6B86326F6C8E244B6C32F4BFE4B562F5680611E84EFA74F429
 7.pygtex))
-Overfull \vbox (0.59602pt too high) detected at line 2178
+Overfull \vbox (0.59602pt too high) detected at line 2177
  []
 
 [249
@@ -3822,7 +3822,7 @@ B.pygtex)) [250
  (./rust.vrb
 (./_minted-rust/05735A5115D8FFA46FA5AFA7EDEF6CE07F7623E59A411E74FCB9C8977901642
 6.pygtex))
-Overfull \vbox (1.09573pt too high) detected at line 2192
+Overfull \vbox (1.09573pt too high) detected at line 2191
  []
 
 [251
@@ -4122,7 +4122,7 @@ E.pygtex))
  (./rust.vrb
 (./_minted-rust/8AFFAE7896F230C50E7333E4E36672247348077571015ADE34E53A7D8B314AE
 5.pygtex))
-Overfull \vbox (2.0957pt too high) detected at line 2383
+Overfull \vbox (2.0957pt too high) detected at line 2382
  []
 
 [270
@@ -4175,7 +4175,7 @@ C.pygtex))
 
 (./_minted-rust/F713586845678649E9B1D719186F33B9BA5FFB870F3277695E59D5E7C5E4ACD
 6.pygtex)
-Overfull \vbox (10.29575pt too high) detected at line 2399
+Overfull \vbox (10.29575pt too high) detected at line 2398
  []
 
 [272
@@ -4364,7 +4364,7 @@ Package pdftex.def Info: img/trpl15-04.png  used on input line 4.
 
 (./_minted-rust/61C8E67A2F99E3CE3E9E7C6F4C5D47BABA5FFB870F3277695E59D5E7C5E4ACD
 6.pygtex)
-Overfull \vbox (1.09573pt too high) detected at line 2500
+Overfull \vbox (1.09573pt too high) detected at line 2499
  []
 
 [286
@@ -4375,7 +4375,7 @@ Overfull \vbox (1.09573pt too high) detected at line 2500
  (./rust.vrb
 (./_minted-rust/91434689BDF8AD7D985D3725051F43D90319AE78D5BEFFA17A4837877839FE4
 7.pygtex))
-Overfull \vbox (11.59569pt too high) detected at line 2506
+Overfull \vbox (11.59569pt too high) detected at line 2505
  []
 
 [287
@@ -4386,7 +4386,7 @@ Overfull \vbox (11.59569pt too high) detected at line 2506
 \openout4 = `rust.vrb'.
 
  (./rust.vrb)
-Overfull \vbox (1.72528pt too high) detected at line 2521
+Overfull \vbox (1.72528pt too high) detected at line 2520
  []
 
 [289
@@ -4402,7 +4402,7 @@ Overfull \vbox (1.72528pt too high) detected at line 2521
  (./rust.vrb
 (./_minted-rust/514B6C1CBC65B3F8A0E7493F5AC8D1B746293D9E7FB0E58C2DCCBBD9928C643
 1.pygtex))
-Overfull \vbox (0.59602pt too high) detected at line 2538
+Overfull \vbox (0.59602pt too high) detected at line 2537
  []
 
 [291
@@ -4420,7 +4420,7 @@ Overfull \vbox (0.59602pt too high) detected at line 2538
  (./rust.vrb
 (./_minted-rust/5BED392F32BFA66C7A26A3F07211126BC71E7DDC18F7DDEC26167C8C83A9D7D
 5.pygtex))
-Overfull \vbox (66.59602pt too high) detected at line 2549
+Overfull \vbox (66.59602pt too high) detected at line 2548
  []
 
 [293
@@ -4455,7 +4455,7 @@ F.pygtex)) [294
  (./rust.vrb
 (./_minted-rust/5B9DC9AC2F273621C692C69059EE0C16621BF52AB947CB8A0AE011F2FDD9F9C
 2.pygtex))
-Overfull \vbox (0.59602pt too high) detected at line 2577
+Overfull \vbox (0.59602pt too high) detected at line 2576
  []
 
 [297
@@ -4515,7 +4515,7 @@ A.pygtex)) [304
  (./rust.vrb
 (./_minted-rust/AC8BC4A974869A1EA92B7FFC3E101BC0D7B9CD7D39199DEB4924520E75E0070
 B.pygtex))
-Overfull \vbox (2.0957pt too high) detected at line 2666
+Overfull \vbox (2.0957pt too high) detected at line 2665
  []
 
 [306
@@ -4535,7 +4535,7 @@ A.pygtex)) [307
  (./rust.vrb
 (./_minted-rust/1400DD83DB0F5AC7D25D6F96BE6E97072AF9BE82E0BB8825C9B489C30B84260
 9.pygtex))
-Overfull \vbox (1.09573pt too high) detected at line 2683
+Overfull \vbox (1.09573pt too high) detected at line 2682
  []
 
 [308
@@ -4648,7 +4648,7 @@ B.pygtex)) [321
  (./rust.vrb
 (./_minted-rust/6D2182EA7F85FFE320F1C5A236E95900DD7808A145D4D3E82CA2E8B1BDBD945
 C.pygtex))
-Overfull \vbox (21.09567pt too high) detected at line 2773
+Overfull \vbox (21.09567pt too high) detected at line 2772
  []
 
 [322
@@ -4659,7 +4659,7 @@ Overfull \vbox (21.09567pt too high) detected at line 2773
  (./rust.vrb
 (./_minted-rust/98F4E38E082959BE700B1F6BDDDE3D050E48AC72790D7CC51396B40BE938AF4
 6.pygtex))
-Overfull \vbox (2.0957pt too high) detected at line 2778
+Overfull \vbox (2.0957pt too high) detected at line 2777
  []
 
 [323
@@ -4715,7 +4715,7 @@ D.pygtex))
  (./rust.vrb
 (./_minted-rust/E431C0716722A1F8BCE45826B7981DCF450628C51D4C08590708CCEAAABDFC9
 5.pygtex))
-Overfull \vbox (11.59602pt too high) detected at line 2816
+Overfull \vbox (11.59602pt too high) detected at line 2815
  []
 
 [329
@@ -4781,7 +4781,7 @@ A.pygtex)) [331
  (./rust.vrb
 (./_minted-rust/8D47F95893ED649087367C52BD32C5DE28E385990021C5216B20C0086954517
 1.pygtex))
-Overfull \vbox (2.0957pt too high) detected at line 2874
+Overfull \vbox (2.0957pt too high) detected at line 2873
  []
 
 [337
@@ -4892,7 +4892,7 @@ D.pygtex)) [348
 A.pygtex)
 (./_minted-rust/30431071B5CB223F15791A0954266AE89C687E5EB02A01F98FB5652ABF6F1CA
 A.pygtex))
-Overfull \vbox (0.59602pt too high) detected at line 2969
+Overfull \vbox (0.59602pt too high) detected at line 2968
  []
 
 [349
@@ -4945,7 +4945,7 @@ Overfull \vbox (0.59602pt too high) detected at line 2969
  (./rust.vrb
 (./_minted-rust/29C07820244B34167CF6B1477AEA795C0671911A603AFD7D166F3B4D694F349
 2.pygtex))
-Overfull \vbox (10.29575pt too high) detected at line 3028
+Overfull \vbox (10.29575pt too high) detected at line 3027
  []
 
 [356
@@ -5066,7 +5066,7 @@ E.pygtex)) [362
  (./rust.vrb
 (./_minted-rust/C3E197B0D0A81DCEE337613BD449B32F71A292D141161082914AA9A0891B0B4
 9.pygtex))
-Overfull \vbox (2.59605pt too high) detected at line 3099
+Overfull \vbox (2.59605pt too high) detected at line 3098
  []
 
 [363
@@ -5137,7 +5137,7 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/it' in size <9> not available
  (./rust.vrb
 (./_minted-rust/FEC751261FF732B522A0CAABEB18839EC723FCA36400A7269D07E6808EE4AE6
 3.pygtex))
-Overfull \vbox (2.0957pt too high) detected at line 3135
+Overfull \vbox (2.0957pt too high) detected at line 3134
  []
 
 [366
@@ -5240,7 +5240,7 @@ Overfull \vbox (2.0957pt too high) detected at line 3135
 6.pygtex)
 (./_minted-rust/B58285D28E4F92151BB7C70E86E32CE3B38EB00377000B10C4DE2DF55B8D1DD
 5.pygtex))
-Overfull \vbox (10.196pt too high) detected at line 3160
+Overfull \vbox (10.196pt too high) detected at line 3159
  []
 
 [369
@@ -5251,7 +5251,7 @@ Overfull \vbox (10.196pt too high) detected at line 3160
  (./rust.vrb
 (./_minted-rust/A0EC54A217DA26DC44360DEC855A9F3C8674BDBCE51E2DCBC42BE928A2CCA76
 0.pygtex))
-Overfull \vbox (11.59569pt too high) detected at line 3166
+Overfull \vbox (11.59569pt too high) detected at line 3165
  []
 
 [370
@@ -5329,19 +5329,206 @@ Overfull \vbox (11.59569pt too high) detected at line 3166
 \openout4 = `rust.vrb'.
 
  (./rust.vrb
-runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P str
-ipnl=False -P mathescape=True -o _minted-rust/D05DAC43AC7BD999DD1CC7EDAB03D8CA4
-277D806EC0D7FB354FE13A06FB52EAE.pygtex ./code/macro8.rs)...executed.
-
-
 (./_minted-rust/D05DAC43AC7BD999DD1CC7EDAB03D8CA4277D806EC0D7FB354FE13A06FB52EA
 E.pygtex)) [374
 
 ] [375
 
-] [376
+]
+\openout4 = `rust.vrb'.
 
-] [377
+ (./rust.vrb) [376
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/919000C26D646A635FA7CEE36765533327B626BD747727DB0DBA3BB2896037E
+4.pygtex))
+Overfull \vbox (11.59569pt too high) detected at line 3217
+ []
+
+[377
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/F6D3242B4F6672AFD7F10B92E6BF3F65BC3BC48456CBA5E0E63DAFC6CEAB70B
+F.pygtex
+Overfull \hbox (67.4605pt too wide) in paragraph at lines 10--10
+\OT1/cmtt/m/n/8 text/html,application/xhtml+xml,application/xml;q=0.9,image/avi
+f,image/webp,*/*;q=0.8"[],|  
+ []
+
+))
+Overfull \vbox (11.59572pt too high) detected at line 3222
+ []
+
+[378
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/E0E92ABB525D97B3C760121B5A23980EBBCF09E8C02FF07668C7E80EC6FAB55
+5.pygtex)) [379
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [380
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/CFA4763905175A261166210BAAEE9FC5F6505CA7079B48679579157832F572B
+8.pygtex)) [381
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/CFA4763905175A261166210BAAEE9FC5C464C2A87B156A67705138C65166834
+8.pygtex)) [382
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/12A97E334B8433B56ABF9D9655E3933672AB2117DBAA45B25EB6CEF07F065D6
+4.pygtex))
+Overfull \vbox (2.0957pt too high) detected at line 3253
+ []
+
+[383
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/C3D05138C3476BE4CFCF6B9D5243AA0D8DBD83718681A05E9AFE33D521041BD
+B.pygtex)) [384
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/5D0FA8D7982F124AD48F37BB1F447E26ECD383EA8C99DC9C19D3713F4B56268
+D.pygtex)) [385
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/FE117E734BD7B6428DF7FF5F6BA6C22B20C1F77E0754ABC3F7A4577061F760D
+5.pygtex)) [386
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/FE117E734BD7B6428DF7FF5F6BA6C22B20C1F77E0754ABC3F7A4577061F760D
+5.pygtex)) [387
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/541C788249A72DFB0B921530D7DF0B3B3E3F62FE9BD900F41BC315004127F52
+6.pygtex))
+Overfull \vbox (6.59566pt too high) detected at line 3279
+ []
+
+[388
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/0CCFC2EF3F1E07ECD68D8CE74C734AA5EFF21A1EA1CBCD4151493A318D9A6EC
+3.pygtex)) [389
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/798FDFA05A9542B54FDD2D3C90FFEDD19DB5A2378D936803F2081C0A0A5FC20
+A.pygtex)) [390
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/A0EFF0DAD4E06565647B95526DCF08B03264F5030662F1AEFDB80E787205DC6
+4.pygtex)) [391
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/2A5E1319C18D5E86561E2A55E3CB82BB4F73A75B5AB1610BEA368A06CA5B9B3
+4.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/A8FE800FDFCE014E69DF4F3030A72843BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)
+\openout6 = `rust.pyg'.
+
+
+(./_minted-rust/93E5D1D0E8C4DA0F12F5BAE2C2FCED78BA5FFB870F3277695E59D5E7C5E4ACD
+6.pygtex)) [392
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/68CEB6E031967FE0BDE5261537F589E16748D3FC328C9E4CBBB2089A7B510E2
+7.pygtex)) [393
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/7E15CE4F2E6A9FEA2301EBAB276865107AF691668352F6010254D55AF2EF9A2
+9.pygtex)) [394
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb) [395
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/2EB12577A06B11263335EFBED8E67EB9707C27D061C92BEE6C2D7894AEB085A
+0.pygtex)) [396
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+(./_minted-rust/684AE6306A2EECB4BA9BF1E553005875C3F364476F7ADDA4E0796B01FAEA1B4
+3.pygtex)) [397
+
+]
+\openout4 = `rust.vrb'.
+
+ (./rust.vrb
+runsystem(pygmentize -l rust -f latex -P commandprefix=PYG -F tokenmerge -P str
+ipnl=False -P mathescape=True -o _minted-rust/684AE6306A2EECB4BA9BF1E5530058751
+4FC8E9253423B78F6D68C782EE391E6.pygtex ./code/http19.rs)...executed.
+
+
+(./_minted-rust/684AE6306A2EECB4BA9BF1E55300587514FC8E9253423B78F6D68C782EE391E
+6.pygtex)) [398
+
+] [399
+
+] [400
 
 ]
 \tf@nav=\write8
@@ -5353,8 +5540,8 @@ E.pygtex)) [374
 \tf@snm=\write10
 \openout10 = `rust.snm'.
 
-runsystem(rm _minted-rust/D05DAC43AC7BD999DD1CC7EDAB03D8CAA4F83111C5D07630DC53D
-7C3C3FE52FD.pygtex)...executed.
+runsystem(rm _minted-rust/113A06B107FB92ACAFA4C1AA1A036DFD14FC8E9253423B78F6D68
+C782EE391E6.pygtex)...executed.
 
  (./rust.aux)
 
@@ -5370,10 +5557,10 @@ runsystem(rm rust.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 30932 strings out of 474968
- 790201 string characters out of 5776083
- 1080570 words of memory out of 5000000
- 48698 multiletter control sequences out of 15000+600000
+ 31198 strings out of 474968
+ 802161 string characters out of 5776083
+ 1089411 words of memory out of 5000000
+ 48807 multiletter control sequences out of 15000+600000
  485164 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,870b,1087s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -5393,10 +5580,10 @@ al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
 texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on rust.pdf (377 pages, 2431892 bytes).
+Output written on rust.pdf (400 pages, 2491038 bytes).
 PDF statistics:
- 11159 PDF objects out of 12825 (max. 8388607)
- 10406 compressed objects within 105 object streams
- 783 named destinations out of 1000 (max. 500000)
+ 11801 PDF objects out of 12825 (max. 8388607)
+ 11019 compressed objects within 111 object streams
+ 829 named destinations out of 1000 (max. 500000)
  1477 words of extra memory for PDF output out of 10000 (max. 10000000)
 

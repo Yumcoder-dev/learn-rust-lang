@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{fn} \PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{listener}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{TcpListener}::\PYG{n}{bind}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}127.0.0.1:7878\PYGZdq{}}\PYG{p}{).}\PYG{n}{unwrap}\PYG{p}{();}
+
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{stream}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{n}{listener}\PYG{p}{.}\PYG{n}{incoming}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{stream}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{stream}\PYG{p}{.}\PYG{n}{unwrap}\PYG{p}{();}
+
+\PYG{+w}{        }\PYG{n}{thread}::\PYG{n}{spawn}\PYG{p}{(}\PYG{o}{||}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{handle\PYGZus{}connection}\PYG{p}{(}\PYG{n}{stream}\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{});}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

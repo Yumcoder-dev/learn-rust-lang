@@ -3306,16 +3306,38 @@ For more examples see:  \href{https://veykril.github.io/tlborm/decl-macros/macro
 
 \begin{frame}[fragile]
 	\frametitle{Graceful Shutdown and Cleanup, Implementing the Drop Trait on ThreadPool(2)}
-	\inputminted[fontsize=\scriptsize]{rust}{./code/http15.rs}
+	\inputminted{rust}{./code/http15.rs}
 \end{frame}
-
 
 
 \begin{frame}[fragile]
-	\frametitle{Signaling to the Threads to Stop Listening for Jobs}
-	\inputminted[fontsize=\scriptsize]{rust}{./code/http15.rs}
+	\frametitle{Graceful Shutdown and Cleanup, Implementing the Drop Trait on ThreadPool(3)}
+	\inputminted{rust}{./code/http16.rs}
 \end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{Signaling to the Threads to Stop Listening for Jobs}
+	\begin{itemize}
+		\item The key is the logic in the closures run by the threads of the Worker instances: at the moment, we call join, but that \textbf{won’t shut down the threads} because they \textbf{loop forever} looking for jobs.
+		\item 	\textbf{To fix this problem}, we’ll need a \textbf{change} in \textbf{the ThreadPool drop implementation} and then a \textbf{change in the Worker loop}.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Change in the ThreadPool drop implementation}
+	\inputminted[fontsize=\fontsize{8}{8}]{rust}{./code/http17.rs}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Change in the ThreadPool drop implementation(2)}
+	\inputminted{rust}{./code/http18.rs}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Change in the Worker loop}
+	\inputminted{rust}{./code/http19.rs}
+\end{frame}
 
 \section{Tokio}
 

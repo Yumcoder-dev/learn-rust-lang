@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n+nb}{Drop}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{ThreadPool}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{drop}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nb}{drop}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{sender}\PYG{p}{.}\PYG{n}{take}\PYG{p}{());}\PYG{+w}{ }\PYG{c+c1}{// New!}
+
+\PYG{+w}{        }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{worker}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{k}{mut}\PYG{+w}{ }\PYG{n+nb+bp}{self}\PYG{p}{.}\PYG{n}{workers}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nf+fm}{println!}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Shutting down worker \PYGZob{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{worker}\PYG{p}{.}\PYG{n}{id}\PYG{p}{);}
+
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nb}{Some}\PYG{p}{(}\PYG{n}{thread}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{worker}\PYG{p}{.}\PYG{n}{thread}\PYG{p}{.}\PYG{n}{take}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n}{thread}\PYG{p}{.}\PYG{n}{join}\PYG{p}{().}\PYG{n}{unwrap}\PYG{p}{();}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

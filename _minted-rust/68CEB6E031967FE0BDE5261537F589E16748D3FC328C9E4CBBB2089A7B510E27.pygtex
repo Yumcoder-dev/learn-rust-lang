@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{struct} \PYG{n+nc}{Worker}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{id}: \PYG{k+kt}{usize}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{thread}: \PYG{n+nb}{Option}\PYG{o}{\PYGZlt{}}\PYG{n}{thread}::\PYG{n}{JoinHandle}\PYG{o}{\PYGZlt{}}\PYG{p}{()}\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{p}{,}\PYG{+w}{ }\PYG{c+c1}{// Chanage!}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{Worker}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{fn} \PYG{n+nf}{new}\PYG{p}{(}\PYG{n}{id}: \PYG{k+kt}{usize}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{receiver}: \PYG{n+nc}{Arc}\PYG{o}{\PYGZlt{}}\PYG{n}{Mutex}\PYG{o}{\PYGZlt{}}\PYG{n}{mpsc}::\PYG{n}{Receiver}\PYG{o}{\PYGZlt{}}\PYG{n}{Job}\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{Worker}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+\PYG{+w}{        }\PYG{n}{Worker}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{id}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n}{thread}: \PYG{n+nb}{Some}\PYG{p}{(}\PYG{n}{thread}\PYG{p}{),}\PYG{+w}{ }\PYG{c+c1}{// Chanage!}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

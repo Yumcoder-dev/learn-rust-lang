@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{use}\PYG{+w}{ }\PYG{n}{std}::\PYG{p}{\PYGZob{}}\PYG{n}{sync}::\PYG{n}{mpsc}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{thread}\PYG{p}{\PYGZcb{};}
+\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{struct} \PYG{n+nc}{ThreadPool}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{workers}: \PYG{n+nb}{Vec}\PYG{o}{\PYGZlt{}}\PYG{n}{Worker}\PYG{o}{\PYGZgt{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{sender}: \PYG{n+nc}{mpsc}::\PYG{n}{Sender}\PYG{o}{\PYGZlt{}}\PYG{n}{Job}\PYG{o}{\PYGZgt{}}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+\PYG{k}{struct} \PYG{n+nc}{Job}\PYG{p}{;}
+\PYG{k}{impl}\PYG{+w}{ }\PYG{n}{ThreadPool}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+\PYG{+w}{    }\PYG{k}{pub}\PYG{+w}{ }\PYG{k}{fn} \PYG{n+nf}{new}\PYG{p}{(}\PYG{n}{size}: \PYG{k+kt}{usize}\PYG{p}{)}\PYG{+w}{ }\PYGZhy{}\PYGZgt{} \PYG{n+nc}{ThreadPool}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nf+fm}{assert!}\PYG{p}{(}\PYG{n}{size}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{);}
+
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{sender}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{receiver}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{mpsc}::\PYG{n}{channel}\PYG{p}{();}
+
+\PYG{+w}{        }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{k}{mut}\PYG{+w}{ }\PYG{n}{workers}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{Vec}::\PYG{n}{with\PYGZus{}capacity}\PYG{p}{(}\PYG{n}{size}\PYG{p}{);}
+
+\PYG{+w}{        }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{id}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{o}{..}\PYG{n}{size}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{workers}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{Worker}::\PYG{n}{new}\PYG{p}{(}\PYG{n}{id}\PYG{p}{));}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{        }\PYG{n}{ThreadPool}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{workers}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{sender}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{c+c1}{// \PYGZhy{}\PYGZhy{}snip\PYGZhy{}\PYGZhy{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
